@@ -9,7 +9,7 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Home',
     component: Home,
     props: {
-      name: 'Templatus',
+      name: 'Templatus-Stimulus',
     },
   },
   {

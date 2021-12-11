@@ -12,7 +12,7 @@ describe('Basic tests', () => {
   });
 
   it('can click', () => {
-    cy.get('main h1').should('contain', 'Hello, Templatus!');
+    cy.get('main h1').should('contain', 'Hello, Templatus-Stimulus!');
     cy.get('#counter').should('contain', '0');
 
     cy.get('button').click();

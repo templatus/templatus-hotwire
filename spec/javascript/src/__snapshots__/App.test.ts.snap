@@ -17,7 +17,7 @@ exports[`App matches snapshot 1`] = `
   <main class="relative flex-grow sm:py-32 lg:py-24 px-4 sm:px-6 lg:px-8 pt-10 pb-24 mx-auto w-full max-w-5xl bg-transparent">Home page</main>
   <footer class="fixed bottom-0 pt-2 pb-4 w-full text-sm text-white bg-gray-700">
     <div class="flex flex-wrap px-4 sm:px-6 lg:px-8 mx-auto max-w-5xl">
-      <div class="w-full sm:w-1/4 text-center sm:text-left"><a class="hover:underline" target="_blank" rel="noopener noreferrer" href="https://github.com/ledermann/templatus"> Source on GitHub </a></div>
+      <div class="w-full sm:w-1/4 text-center sm:text-left"><a class="hover:underline" target="_blank" rel="noopener noreferrer" href="https://github.com/ledermann/templatus-stimulus"> Source on GitHub </a></div>
       <div class="w-full sm:w-1/4 text-center">
         <!--v-if-->
       </div>

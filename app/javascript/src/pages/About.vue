@@ -183,7 +183,7 @@ const features: {
 
   <div class="mt-6 mb-20 max-w-4xl text-xl">
     <p>
-      Templatus is an opinionated template for web applications with
+      Templatus-Stimulus is an opinionated template for web applications with
       <b>Ruby on Rails</b> and <b>Vue.js 3</b>
     </p>
   </div>

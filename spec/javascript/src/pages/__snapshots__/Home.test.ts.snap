@@ -4,7 +4,7 @@ exports[`Home matches snapshot 1`] = `
 <div class="flex flex-wrap justify-between">
   <div class="w-full md:w-1/2">
     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-red-800">Hello, World!</h1>
-    <p class="mt-6 max-w-4xl text-base lg:text-xl"> Templatus is an opinionated template for web applications with <b>Ruby on Rails</b> and <b>Vue.js 3</b></p>
+    <p class="mt-6 max-w-4xl text-base lg:text-xl"> Templatus-Stimulus is an opinionated template for web applications with <b>Ruby on Rails</b> and <b>Vue.js 3</b></p>
   </div>
   <div class="flex flex-col mt-5 sm:mt-0 w-full sm:w-56 lg:-translate-y-72">
     <div id="counter" class="p-2 lg:p-5 text-center bg-white rounded-t shadow">

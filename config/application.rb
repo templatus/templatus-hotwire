@@ -18,7 +18,7 @@ require 'rails/test_unit/railtie'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Templatus
+module TemplatusStimulus
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
@@ -33,7 +33,7 @@ module Templatus
 
     config.time_zone = ENV.fetch('TIME_ZONE', 'Berlin')
 
-    config.x.app_host = ENV.fetch('APP_HOST', 'templatus.test')
+    config.x.app_host = ENV.fetch('APP_HOST', 'templatus-stimulus.test')
 
     config.x.git.commit_version =
       ENV.fetch('COMMIT_VERSION') { `git describe --always`.chomp }

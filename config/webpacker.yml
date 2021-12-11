@@ -29,7 +29,7 @@ development:
     # Defaults to the inverse of hmr. Uncomment to manually set this.
     # live_reload: false
     client:
-      webSocketURL: 'wss://webpack.templatus.test/ws'
+      webSocketURL: 'wss://webpack.templatus-stimulus.test/ws'
       # Should we show a full-screen overlay in the browser when there are compiler errors or warnings?
       overlay: true
     # Should we use gzip compression?

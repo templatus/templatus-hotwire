@@ -29,7 +29,7 @@ onBeforeUnmount(() => {
       <page-title>Hello, {{ name }}!</page-title>
 
       <p class="mt-6 max-w-4xl text-base lg:text-xl">
-        Templatus is an opinionated template for web applications with
+        Templatus-Stimulus is an opinionated template for web applications with
         <b>Ruby on Rails</b> and <b>Vue.js 3</b>
       </p>
     </div>

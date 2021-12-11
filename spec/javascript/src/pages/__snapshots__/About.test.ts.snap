@@ -3,7 +3,7 @@
 exports[`About matches snapshot 1`] = `
 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-red-800">About</h1>
 <div class="mt-6 mb-20 max-w-4xl text-xl">
-  <p> Templatus is an opinionated template for web applications with <b>Ruby on Rails</b> and <b>Vue.js 3</b></p>
+  <p> Templatus-Stimulus is an opinionated template for web applications with <b>Ruby on Rails</b> and <b>Vue.js 3</b></p>
 </div>
 <div class="space-y-24">
   <div>

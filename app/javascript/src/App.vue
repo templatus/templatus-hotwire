@@ -97,7 +97,7 @@ const { online } = useOnlineOffline();
             class="hover:underline"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/ledermann/templatus"
+            href="https://github.com/ledermann/templatus-stimulus"
           >
             Source on GitHub
           </a>
