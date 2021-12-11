@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+sed '/CYPRESS=true/d' .env > temp && mv temp .env
+bin/rails restart
+
+foreman start -f Procfile.dev

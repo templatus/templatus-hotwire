@@ -1,0 +1,2 @@
+frontend: bin/webpack-dev-server
+cypress: bin/yarn cypress ${CYPRESS_COMMANDS}

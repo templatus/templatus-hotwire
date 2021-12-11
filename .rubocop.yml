@@ -1,0 +1,112 @@
+inherit_from:
+  - node_modules/@prettier/plugin-ruby/rubocop.yml
+
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 3.0
+  Exclude:
+    - app/javascript/**/*
+    - bin/**/*
+    - coverage/**/*
+    - db/schema.rb
+    - log/**/*
+    - node_modules/**/*
+    - public/**/*
+    - spec/javascript/**/*
+    - tmp/**/*
+    - vendor/**/*
+  EnabledByDefault: true
+
+### Rails
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Rails/SaveBang:
+  Enabled: false
+
+Rails/FilePath:
+  EnforcedStyle: arguments
+
+Rails/ApplicationController:
+  Enabled: false
+
+### Bundler
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Bundler/GemVersion:
+  Enabled: false
+
+### Style
+
+Style/BlockComments:
+  Exclude:
+    - 'spec/spec_helper.rb'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+
+Style/MissingElse:
+  Enabled: false
+
+Style/Copyright:
+  Enabled: false
+
+Style/InlineComment:
+  Enabled: false
+
+Style/StringHashKeys:
+  Enabled: false
+
+Style/DocumentationMethod:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/IpAddresses:
+  Enabled: false
+
+### Metrics
+
+Metrics/BlockLength:
+  Max: 100
+
+# Lint
+
+Lint/ConstantResolution:
+  Enabled: false
+
+Lint/NumberConversion:
+  Enabled: false
+
+# Performance
+
+Performance/ChainArrayAllocation:
+  Enabled: false
+
+# RSpec
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 20
+
+RSpec/AlignLeftLetBrace:
+  Enabled: false
+
+RSpec/AlignRightLetBrace:
+  Enabled: false
