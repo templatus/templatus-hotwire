@@ -1,0 +1,33 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/tmp/**": true,
+    "**/public/assets": true
+  },
+  "files.exclude": {
+    "**/docker-volumes": true
+  },
+
+  "search.exclude": {
+    "**/tmp": true,
+    "**/public/assets": true,
+    "**/node_modules": true
+  },
+
+  "eslint.validate": ["javascript", "vue"],
+
+  "ruby.lint": {
+    "rubocop": {
+      "forceExclusion": true
+    }
+  },
+
+  "[ruby]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  }
+}

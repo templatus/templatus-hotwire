@@ -1,0 +1,140 @@
+name: CI
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+
+    services:
+      postgres:
+        image: postgres:14-alpine
+        ports: ['5432:5432']
+        env:
+          POSTGRES_PASSWORD: postgres
+
+      redis:
+        image: redis:alpine
+        ports: ['6379:6379']
+
+    env:
+      DB_HOST: localhost
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      REDIS_URL: redis://localhost:6379/0
+      RAILS_ENV: test
+      CI: true
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          cache: yarn
+
+      - name: Install Yarn packages
+        run: bin/yarn install --frozen-lockfile
+
+      - name: Lint with RuboCop
+        run: bin/rubocop --parallel
+
+      - name: Run ESLint
+        run: bin/yarn lint
+
+      - name: Check for TypeScript errors
+        run: bin/yarn tsc
+
+      - name: Setup PostgreSQL
+        run: bin/rails db:create
+
+      - name: Compile assets
+        run: bin/rails assets:precompile
+
+      - name: Run Ruby Tests
+        run: bin/rspec
+
+      - name: Run JavaScript tests
+        run: bin/yarn test
+
+      - name: End-to-end tests
+        uses: cypress-io/github-action@v2
+        with:
+          start: bundle exec rails server
+          wait-on: http://localhost:3000
+          browser: chrome
+          record: true
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CYPRESS_BASE_URL: http://localhost:3000
+          CYPRESS: true
+
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: Screenshots
+          path: tmp/screenshots
+
+  deploy:
+    runs-on: ubuntu-20.04
+
+    if: github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags')
+
+    needs: test
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Fetch tag annotations
+        # https://github.com/actions/checkout/issues/290
+        run: git fetch --tags --force
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build the production image
+        run: |
+          export COMMIT_TIME=$(git show -s --format=%cI ${GITHUB_SHA})
+          export COMMIT_VERSION=$(git describe --always)
+          echo $GITHUB_SHA
+          echo $COMMIT_TIME
+          echo $COMMIT_VERSION
+          docker buildx build --build-arg COMMIT_TIME --build-arg COMMIT_VERSION -t app .
+
+      - name: Push the image tagged as LATEST to the container registry
+        if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags')
+        run: |
+          docker tag app ghcr.io/${{ github.repository }}:latest
+          docker push ghcr.io/${{ github.repository }}:latest
+
+      - name: Push the image tagged with version to the container registry
+        if: startsWith(github.ref, 'refs/tags')
+        run: |
+          docker tag app ghcr.io/${{ github.repository }}:${GITHUB_REF##*/}
+          docker push ghcr.io/${{ github.repository }}:${GITHUB_REF##*/}
+
+      - name: Send webhook to start deployment
+        env:
+          DEPLOY_HOOK: ${{ secrets.DEPLOY_HOOK }}
+        if: env.DEPLOY_HOOK != null
+        run: curl -X POST ${{ env.DEPLOY_HOOK }}
+
+      - name: Notify Honeybadger about deployment
+        env:
+          DEPLOY_HOOK: ${{ secrets.DEPLOY_HOOK }}
+          HONEYBADGER_API_KEY: ${{ secrets.HONEYBADGER_API_KEY }}
+        if: env.DEPLOY_HOOK != null && env.HONEYBADGER_API_KEY != null
+        uses: honeybadger-io/github-notify-deploy-action@v1
+        with:
+          api_key: ${{ secrets.HONEYBADGER_API_KEY }}

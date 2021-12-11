@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home matches snapshot 1`] = `
+<div class="flex flex-wrap justify-between">
+  <div class="w-full md:w-1/2">
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-red-800">Hello, World!</h1>
+    <p class="mt-6 max-w-4xl text-base lg:text-xl"> Templatus is an opinionated template for web applications with <b>Ruby on Rails</b> and <b>Vue.js 3</b></p>
+  </div>
+  <div class="flex flex-col mt-5 sm:mt-0 w-full sm:w-56 lg:-translate-y-72">
+    <div id="counter" class="p-2 lg:p-5 text-center bg-white rounded-t shadow">
+      <transition-stub>
+        <div class="text-5xl">42</div>
+      </transition-stub>
+      <div class="py-1 uppercase">Clicks</div>
+    </div><button type="button" class="py-2 px-4 w-full text-sm font-medium text-red-700 bg-red-100 hover:bg-red-200 rounded-b-md border border-red-200 focus:ring-2 focus:ring-red-500 focus:ring-offset-2 shadow focus:outline-none"> Click me! </button>
+    <p class="hidden sm:block mt-5 text-sm text-gray-600"> Tip: Open two browser windows in parallel and see what happens. </p>
+  </div>
+</div>
+<h2 class="mt-8 text-xl font-medium tracking-wide text-center sm:text-left text-red-800 uppercase"> Latest clicks </h2>
+<transition-group-stub>
+  <li class="p-2 mt-2 bg-red-100 rounded">
+    <p><span class="px-1 font-mono text-red-100 bg-gray-900 rounded">1.2.3.4</span><span class="px-1 ml-2 text-sm sm:text-base font-medium text-gray-900">Sun, 23 May 2021 09:27:21 GMT</span></p>
+    <p class="font-extralight text-gray-900">Jest</p>
+  </li>
+</transition-group-stub>
+`;

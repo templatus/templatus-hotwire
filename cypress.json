@@ -1,0 +1,12 @@
+{
+  "projectId": "5d6bqs",
+  "baseUrl": "https://templatus.test",
+  "screenshotsFolder": "tmp/cypress_screenshots",
+  "trashAssetsBeforeRuns": false,
+  "videosFolder": "tmp/cypress_videos",
+  "fixturesFolder": "spec/cypress/fixtures",
+  "integrationFolder": "spec/cypress/integration",
+  "pluginsFile": "spec/cypress/plugins/index.js",
+  "downloadsFolder": "spec/cypress/downloads",
+  "supportFile": "spec/cypress/support/index.js"
+}

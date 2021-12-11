@@ -1,0 +1,81 @@
+version: '3.8'
+
+x-app-base: &app_base
+  build: .
+  links:
+    - db
+    - redis
+  environment: &app_environment
+    APP_HOST: localhost
+    ASSET_HOST: ''
+    FORCE_SSL: 'false'
+    DB_HOST: db
+    DB_PASSWORD: my-secret-database-password
+    DB_USER: postgres
+    SECRET_KEY_BASE: something-long-and-secret
+    HONEYBADGER_API_KEY: ''
+
+services:
+  db:
+    environment:
+      POSTGRES_PASSWORD: my-secret-database-password
+    networks:
+      - internal
+    image: postgres:14-alpine
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres']
+    volumes:
+      - ./docker-volumes/postgresql:/var/lib/postgresql/data
+
+  redis:
+    networks:
+      - internal
+    image: redis:alpine
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+    volumes:
+      - ./docker-volumes/redis:/data
+
+  worker:
+    <<: *app_base
+    environment:
+      <<: *app_environment
+      REDIS_URL: redis://redis:6379/2
+    networks:
+      - internal
+    entrypoint: bundle exec sidekiq
+    healthcheck:
+      test: 'ps ax | grep -v grep | grep sidekiq'
+
+  cable:
+    <<: *app_base
+    environment:
+      <<: *app_environment
+      REDIS_URL: redis://redis:6379/1
+    entrypoint: bundle exec puma -p 28080 cable/config.ru
+    healthcheck:
+      test: ['CMD-SHELL', 'nc -z 127.0.0.1 28080 || exit 1']
+    networks:
+      - public
+      - internal
+
+  app:
+    <<: *app_base
+    environment:
+      <<: *app_environment
+      REDIS_URL: redis://redis:6379/0
+    ports:
+      - 3000
+    command: bundle exec puma -C config/puma.rb
+    healthcheck:
+      test: ['CMD-SHELL', 'nc -z 127.0.0.1 3000 || exit 1']
+    networks:
+      - public
+      - internal
+
+networks:
+  public:
+    external: true
+  internal:
+    driver_opts:
+      encrypted: ''

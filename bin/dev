@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+if grep -q CYPRESS=true .env; then
+  echo ".env contains CYPRESS=true, so remove it and restart Rails"
+
+  sed '/CYPRESS=true/d' .env > temp && mv temp .env
+  touch tmp/restart.txt
+else
+  echo "ok, .env does NOT contain CYPRESS=true, no restart required"
+fi
+
+foreman start -f Procfile.dev

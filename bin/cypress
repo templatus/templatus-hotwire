@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Use puma-dev in `development` environment (not `test` !) to run Cypress tests. This allows
+# editing the code while writing Cypress tests.
+if grep -q CYPRESS=true .env; then
+  echo "ok, .env already contains CYPRESS=true, no restart required"
+else
+  echo ".env does NOT contain CYPRESS=true, so add it and restart Rails"
+
+  grep -qxF 'CYPRESS=true' .env || echo 'CYPRESS=true' >> .env
+  touch tmp/restart.txt
+fi
+
+# Redirect arguments to cypress binary
+export CYPRESS_COMMANDS="$*"
+
+foreman start -f Procfile.cypress
+
+# Cleanup
+bin/rails db:environment:set RAILS_ENV=test
+bin/rails restart

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GitVersion matches snapshot 1`] = `<div><code>v0.0.1-123-7654321</code><b class="ml-3"><time datetime="2021-06-01T12:00:00+02:00" timeago-id="4"></time></b></div>`;
