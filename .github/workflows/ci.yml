@@ -62,7 +62,7 @@ jobs:
           start: bundle exec rails server
           wait-on: http://localhost:3000
           browser: chrome
-          record: true
+          record: false
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
