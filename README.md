@@ -4,7 +4,7 @@
 
 # Templatus-Stimulus
 
-Templatus-Stimulus is an opinionated template to build web applications with Ruby on Rails and Vue.js 3. It simplifies the process of setting up a new application while following best practices.
+Templatus-Stimulus is an opinionated template to build web applications with Ruby on Rails and Stimulus. It simplifies the process of setting up a new application while following best practices.
 
 Live demo available at https://templatus-stimulus.ledermann.dev
 
@@ -21,13 +21,10 @@ Live demo available at https://templatus-stimulus.ledermann.dev
 
 ### Frontend
 
-- [Webpacker](https://github.com/rails/webpacker) 6 (still not released, but this allows using Webpack v5 and webpack-dev-server v4)
-- [Vue 3](https://v3.vuejs.org/) as frontend framework
-- [Vue Router 4](https://next.router.vuejs.org/) for frontend routing
-- [Pinia](https://pinia.esm.dev/) for frontend state management
+- [Hotwire](https://hotwire.io/) for building the frontend without using much JavaScript by sending HTML instead of JSON over the wire
+- [ViewComponent](https://viewcomponent.org/) for creating reusable, testable & encapsulated view components
 - [Tailwind CSS 3](https://tailwindcss.com/) to not have to write CSS at all
-- [HeadlessUI](https://headlessui.dev/) unstyled, fully accessible UI components designed to integrate with Tailwind CSS
-- [Heroicons](https://heroicons.com/) for SVG icons as Vue components
+- [Heroicons](https://heroicons.com/) for beautiful hand-crafted SVG icons
 - [Rails Request.JS](https://github.com/rails/request.js) for AJAX requests with default headers
 
 ### Development
@@ -101,47 +98,13 @@ Why is there a failing test? It's about missing [Subresource Integrity](https://
 
 ### JavaScript size
 
-150 KB of compiled JavaScript (minified, uncompressed). The largest parts are:
+xxx KB of compiled JavaScript (minified, uncompressed). The largest parts are:
 
-- Vue.js + Vue Router (77 KB)
-- Headless UI (10 KB)
 - Honeybadger (22 KB)
-- Pinia (6 KB)
 - ActionCable (10 KB)
 
 ```
 RAILS_ENV=production SECRET_KEY_BASE=temp bin/rails webpacker:clobber webpacker:compile
-Compiling...
-Compiled all packs in /Users/ledermann/Projects/templatus-stimulus/public/packs
-assets by path static/ 4.45 KiB
-  assets by path static/*.svg 2.33 KiB 2 assets
-  assets by path static/*.gz 1.13 KiB
-    asset static/rails-bcb6d75d927347158af5.svg.gz 902 bytes [emitted] [immutable] [compressed]
-    asset static/vue-f04dfe30a8ad8eb5c4e0.svg.gz 254 bytes [emitted] [immutable] [compressed]
-  assets by path static/*.br 1020 bytes
-    asset static/rails-bcb6d75d927347158af5.svg.br 796 bytes [emitted] [immutable] [compressed]
-    asset static/vue-f04dfe30a8ad8eb5c4e0.svg.br 224 bytes [emitted] [immutable] [compressed]
-assets by path js/*.js 150 KiB
-  asset js/395-b227a3cb720709516a53.js 133 KiB [emitted] [immutable] [minimized] (id hint: vendors) 4 related assets
-  asset js/application-152600e4c361ce30cc75.js 15.8 KiB [emitted] [immutable] [minimized] (name: application) 3 related assets
-  asset js/runtime-218550da3001279e7e74.js 1.46 KiB [emitted] [immutable] [minimized] (name: runtime) 3 related assets
-asset css/application-1857ea4a.css 17 KiB [emitted] [immutable] [minimized] (name: application) 3 related assets
-asset manifest.json 2.99 KiB [emitted] 2 related assets
-Entrypoint application 167 KiB (229 KiB) = js/runtime-218550da3001279e7e74.js 1.46 KiB js/395-b227a3cb720709516a53.js 133 KiB css/application-1857ea4a.css 17 KiB js/application-152600e4c361ce30cc75.js 15.8 KiB 6 auxiliary assets
-orphan modules 391 KiB (javascript) 997 bytes (runtime) [orphan] 333 modules
-runtime modules 3.47 KiB 7 modules
-built modules 788 KiB (javascript) 2.33 KiB (asset) 25.1 KiB (css/mini-extract) [built]
-  modules by path ./node_modules/ 759 KiB
-    modules by path ./node_modules/@vue/ 424 KiB 4 modules
-    modules by path ./node_modules/@honeybadger-io/ 62.6 KiB 2 modules
-    modules by path ./node_modules/@rails/ 26.1 KiB
-      ./node_modules/@rails/actioncable/app/assets/javascripts/action_cable.js 18.6 KiB [built] [code generated]
-      ./node_modules/@rails/request.js/src/verbs.js + 4 modules 7.52 KiB [built] [code generated]
-  modules by path ./app/javascript/ 29.4 KiB (javascript) 2.33 KiB (asset) 25.1 KiB (css/mini-extract)
-    modules by path ./app/javascript/images/ 274 bytes (javascript) 2.33 KiB (asset) 3 modules
-    ./app/javascript/application.ts + 31 modules 29.1 KiB [built] [code generated]
-    css ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-3.use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-3.use[2]!./app/javascript/stylesheets/application.css 25.1 KiB [built] [code generated]
-webpack 5.65.0 compiled successfully in 6455 ms
 ```
 
 ### Network transfer
@@ -191,10 +154,6 @@ brew bundle
 sudo puma-dev -setup
 puma-dev -install
 puma-dev link
-
-# Use https in development and load webpack from subdomain
-# https://github.com/puma/puma-dev#webpack-dev-server
-echo 3035 > ~/.puma-dev/webpack.templatus-stimulus
 ```
 
 4. Setup the application to install gems and NPM packages and create the database:
@@ -223,12 +182,6 @@ ESLint:
 
 ```
 bin/yarn lint
-```
-
-TypeScript compiler:
-
-```
-bin/yarn tsc
 ```
 
 ### Running tests locally

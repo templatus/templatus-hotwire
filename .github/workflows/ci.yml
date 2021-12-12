@@ -46,14 +46,11 @@ jobs:
       - name: Run ESLint
         run: bin/yarn lint
 
-      - name: Check for TypeScript errors
-        run: bin/yarn tsc
-
       - name: Setup PostgreSQL
         run: bin/rails db:create
 
       - name: Compile assets
-        run: bin/rails webpacker:compile
+        run: bin/rails assets:precompile
 
       - name: Run Ruby Tests
         run: bin/rspec

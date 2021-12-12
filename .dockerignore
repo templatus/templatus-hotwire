@@ -25,16 +25,13 @@ Procfile*
 Guardfile
 log/*
 node_modules
-public/packs-test
-public/packs/*
+public/assets
 tmp/*
 !/tmp/pids/
 !/tmp/pids/.keep
 yarn-error.log
 config/environments/test.rb
 config/environments/development.rb
-config/webpack/test.js
-config/webpack/development.js
 jest.config.js
 spec
 README.md

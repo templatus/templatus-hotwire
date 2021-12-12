@@ -19,28 +19,4 @@ describe 'Clicks' do
       expect(Click.last.ip).to eq('1.2.3.0')
     end
   end
-
-  describe 'GET /index' do
-    around { |example| freeze_time(&example) }
-
-    before { Click.create! ip: ip, user_agent: user_agent }
-
-    it 'save click and returns http success' do
-      get '/clicks', headers: { ACCEPT: 'application/json' }
-
-      expect(response).to have_http_status(:success)
-      expect(JSON.parse(response.body)).to match(
-        'total' => 1,
-        'items' => [
-          hash_including(
-            {
-              'created_at' => Time.current.as_json,
-              'ip' => ip,
-              'user_agent' => user_agent,
-            },
-          ),
-        ],
-      )
-    end
-  end
 end

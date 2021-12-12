@@ -33,7 +33,7 @@ FileUtils.chdir APP_ROOT do
   system! 'bin/rails db:prepare'
 
   puts "\n== Removing old logs, tempfiles, and assets =="
-  system! 'bin/rails log:clear tmp:clear webpacker:clobber assets:clean'
+  system! 'bin/rails log:clear tmp:clear assets:clean'
 
   puts "\n== Restarting application server =="
   system! 'bin/rails restart'

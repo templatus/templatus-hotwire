@@ -27,8 +27,7 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-/public/packs
-/public/packs-test
+public/assets
 /node_modules
 /yarn-error.log
 yarn-debug.log*
@@ -44,3 +43,6 @@ yarn-debug.log*
 # Docker volumes
 /docker-volumes
 !/docker-volumes/.keep
+
+/app/assets/builds/*
+!/app/assets/builds/.keep

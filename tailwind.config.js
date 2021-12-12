@@ -3,11 +3,10 @@ module.exports = {
     extend: {},
   },
   content: [
-    './app/**/*.html',
-    './app/**/*.html.erb',
-    './app/**/*.rb',
-    './app/javascript/**/*.vue',
-    './app/javascript/**/*.js',
+    './app/components/**/*.html.erb',
+    './app/views/**/*.html.erb',
+    './app/helpers/**/*.rb',
+    './app/javascript/**/*.js'
   ],
   plugins: [require('@tailwindcss/forms')],
 };

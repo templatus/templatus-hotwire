@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :clicks, only: %i[index create]
 
   get '/manifest.v1.webmanifest', to: 'statics#manifest', as: :webmanifest
+  get '/about', to: 'about#index', as: :about
 
-  root to: 'vue#index'
+  root to: 'clicks#index'
 end
