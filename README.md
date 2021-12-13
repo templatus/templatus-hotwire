@@ -130,9 +130,9 @@ IMAGE                                      DIGEST       SIZE
 ghcr.io/ledermann/templatus-hotwire        sha256:...   117.3M
 ```
 
-## Getting
+## Getting startet
 
-### Development installation
+### Install for development
 
 1. Clone the repo locally:
 
@@ -169,7 +169,7 @@ bin/dev
 
 Then open https://templatus-hotwire.test in your browser.
 
-### Running linters
+### Run linters
 
 RuboCop:
 
@@ -183,7 +183,7 @@ ESLint:
 bin/yarn lint
 ```
 
-### Running tests locally
+### Run tests locally
 
 Ruby tests:
 
@@ -212,7 +212,7 @@ To run Cypress in headless mode:
 bin/cypress run
 ```
 
-### Test deployment locally
+### Deploy locally
 
 ```
 docker network create public
