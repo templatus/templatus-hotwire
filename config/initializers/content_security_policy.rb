@@ -6,11 +6,8 @@
 
 Rails.application.config.content_security_policy do |policy|
   if Rails.env.development?
-    policy.script_src :self,
-                      :unsafe_eval,
-                      :unsafe_inline
-    policy.connect_src :self,
-                       "wss://#{ENV['APP_HOST']}"
+    policy.script_src :self, :unsafe_eval, :unsafe_inline
+    policy.connect_src :self, "wss://#{ENV['APP_HOST']}"
   else
     policy.default_src :none
     policy.font_src(
@@ -21,7 +18,13 @@ Rails.application.config.content_security_policy do |policy|
     )
     policy.object_src :none
     policy.script_src(*[:self, Rails.configuration.asset_host.presence].compact)
-    policy.style_src(*[:self, Rails.configuration.asset_host.presence].compact)
+    policy.style_src(
+      *[
+        :self,
+        Rails.configuration.asset_host.presence,
+        'sha256-rql2tlBWA4Hb3HHbUfw797urk+ifBd6EAovoOUGt0oI=', # Turbo progress bar
+      ].compact,
+    )
     policy.frame_src(*[:self, Rails.configuration.asset_host.presence].compact)
     policy.connect_src(
       *[
