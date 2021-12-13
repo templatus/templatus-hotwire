@@ -7,7 +7,9 @@
 Rails.application.config.content_security_policy do |policy|
   if Rails.env.development?
     policy.script_src :self, :unsafe_eval, :unsafe_inline
-    policy.connect_src :self, "wss://#{ENV['APP_HOST']}"
+    policy.connect_src :self,
+                       "wss://#{ENV['APP_HOST']}",
+                       'http://localhost:8082'
   else
     policy.default_src :none
     policy.font_src(
