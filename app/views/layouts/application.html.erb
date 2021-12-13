@@ -29,7 +29,7 @@
   <%= tag :link, href: asset_path('/favicon-16x16.png'),    rel: 'icon',             type: 'image/png', sizes: '16x16' %>
   <%= tag :link, href: webmanifest_path, rel: 'manifest' %>
 
-  <%= javascript_include_tag 'application', 'data-turbo-track': 'reload', defer: true %>
+  <%= javascript_include_tag 'application', 'data-turbo-track': 'reload', integrity: true, crossorigin: 'anonymous', defer: true %>
   <%= stylesheet_link_tag "application" %>
 </head>
 
