@@ -22,7 +22,7 @@ Rails.application.config.content_security_policy do |policy|
       *[
         :self,
         Rails.configuration.asset_host.presence,
-        'sha256-rql2tlBWA4Hb3HHbUfw797urk+ifBd6EAovoOUGt0oI=', # Turbo progress bar
+        "'sha256-rql2tlBWA4Hb3HHbUfw797urk+ifBd6EAovoOUGt0oI='", # Turbo progress bar
       ].compact,
     )
     policy.frame_src(*[:self, Rails.configuration.asset_host.presence].compact)
