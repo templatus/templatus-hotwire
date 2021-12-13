@@ -96,13 +96,13 @@ https://github.com/rails/rails/pull/41994
 
 ### JavaScript size
 
-xxx KB of compiled JavaScript (minified, uncompressed). The largest parts are:
+136 KB of compiled JavaScript (minified, uncompressed). The largest parts are:
 
 - Honeybadger (22 KB)
 - ActionCable (10 KB)
 
 ```
-RAILS_ENV=production SECRET_KEY_BASE=temp bin/rails webpacker:clobber webpacker:compile
+RAILS_ENV=production SECRET_KEY_BASE=temp bin/rails assets:clobber assets:precompile
 ```
 
 ### Network transfer
@@ -146,7 +146,7 @@ cd templatus-hotwire
 brew bundle
 ```
 
-3. Install and set up [puma-dev](https://github.com/puma/puma-dev) to use HTTPS for both the application and `webpack-dev-server`. Do this on macOS:
+3. Install and set up [puma-dev](https://github.com/puma/puma-dev) to use HTTPS. Do this on macOS:
 
 ```bash
 sudo puma-dev -setup
@@ -160,7 +160,7 @@ puma-dev link
 bin/setup
 ```
 
-5. Start the application (and webpack-dev-server) locally:
+5. Start the application locally:
 
 ```bash
 bin/dev
