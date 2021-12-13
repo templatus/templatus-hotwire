@@ -4,7 +4,7 @@
 
 # Templatus-Hotwire
 
-Templatus-Hotwire is an opinionated template to build web applications with Ruby on Rails and Stimulus. It simplifies the process of setting up a new application while following best practices.
+Templatus-Hotwire is an opinionated template to build web applications with Ruby on Rails and Hotwire. It simplifies the process of setting up a new application while following best practices.
 
 Live demo available at https://templatus-hotwire.ledermann.dev
 
