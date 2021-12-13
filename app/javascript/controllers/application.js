@@ -1,5 +1,5 @@
 import { Application } from '@hotwired/stimulus';
-import * as Honeybadger from '@honeybadger-io/js';
+import Honeybadger from '@honeybadger-io/js';
 import { metaContent } from '../utils/metaContent';
 
 const honeybadgerApiKey = metaContent('honeybadger-api-key');
