@@ -118,7 +118,7 @@ With multi-stage building and using [DockerRailsBase](https://github.com/lederma
 
 ### Docker image size
 
-The Docker image is based on Alpine Linux and is optimized for minimal size (currently **115 MB** uncompressed disk size). It includes just the bare minimum - no build tools like Node.js, no JS sources (just the compiled assets), no tests.
+The Docker image is based on Alpine Linux and is optimized for minimal size (currently **118 MB** uncompressed disk size). It includes just the bare minimum - no build tools like Node.js, no JS sources (just the compiled assets), no tests.
 
 ```
 $ container-diff analyze ghcr.io/ledermann/templatus-hotwire -n
@@ -126,8 +126,8 @@ $ container-diff analyze ghcr.io/ledermann/templatus-hotwire -n
 -----Size-----
 
 Analysis for ghcr.io/ledermann/templatus-hotwire:
-IMAGE                              DIGEST         SIZE
-ghcr.io/ledermann/templatus-hotwire        sha256:...   114.9M
+IMAGE                                      DIGEST       SIZE
+ghcr.io/ledermann/templatus-hotwire        sha256:..    118.4M
 ```
 
 ## Getting
