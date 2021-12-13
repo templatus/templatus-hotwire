@@ -3,33 +3,23 @@
   <div>
     <div class='lg:grid lg:grid-cols-3 lg:gap-x-8'>
       <div>
-        <h2 class='text-base font-semibold tracking-wide text-red-800 uppercase'>
-          <%= group[:slogan] %>
-        </h2>
-        <p class='mt-2 text-3xl font-extrabold text-gray-900'>
-          <%= group[:name] %>
-        </p>
+        <%= tag.h2 group[:slogan], class: 'text-base font-semibold tracking-wide text-red-800 uppercase' %>
+        <%= tag.p group[:name], class: 'mt-2 text-3xl font-extrabold text-gray-900' %>
       </div>
       <div class='lg:col-span-2 mt-12 lg:mt-0'>
         <dl class='sm:grid sm:grid-cols-2 sm:gap-x-6 lg:gap-x-8 sm:gap-y-10 space-y-10 sm:space-y-0'>
           <% group[:items].each do |feature| %>
           <div class='relative'>
             <dt>
-              <%= helpers.heroicon 'check', variant: 'outline', options: { class: 'absolute w-6 h-6 text-green-500', 'aria-hidden' => 'true'  } %>
+              <%= helpers.heroicon 'check', variant: 'outline', options: { class: 'absolute w-6 h-6 text-green-500', 'aria-hidden' => 'true' } %>
               <p class='ml-9 text-lg font-medium leading-6 text-red-800'>
-                <%= link_to feature[:href], class: 'hover:underline', target: '_blank', rel: 'noopener noreferrer' do %>
-                  <%= feature[:name] %>
-                <% end %>
-
-                <% if feature[:version].present? %>
-                <span
-                  class='inline-flex items-center py-0.5 px-2.5 ml-2 text-xs font-medium text-red-900 bg-red-200 rounded-full'>
-                  <%= feature[:version] %>
-                </span>
-                <% end %>
+                <%= link_to feature[:name], feature[:href], class: 'hover:underline', target: '_blank', rel: 'noopener noreferrer' %>
+                <%= tag.span feature[:version],
+                             class: 'inline-flex items-center py-0.5 px-2.5 ml-2 text-xs
+                                     font-medium text-red-900 bg-red-200 rounded-full' if feature[:version].present? %>
               </p>
             </dt>
-            <dd class='mt-2 ml-9 text-base text-gray-600'><%=raw feature[:description] %></dd>
+            <%= tag.dd raw(feature[:description]), class: 'mt-2 ml-9 text-base text-gray-600' %>
           </div>
           <% end %>
         </dl>
