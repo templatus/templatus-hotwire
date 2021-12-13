@@ -12,14 +12,19 @@ export default class extends Controller {
   async increaseCounter() {
     await leave(this.counterTarget);
 
-    this.counterTarget.textContent =
-      parseInt(this.counterTarget.textContent) + 1;
+    this.counterTarget.textContent = this.counterValue + 1;
 
     await enter(this.counterTarget);
   }
 
   async updateList() {
+    if (this.counterValue > 5) this.listTarget.lastElementChild.remove();
+
     await leave(this.listTarget);
     await enter(this.listTarget);
+  }
+
+  get counterValue() {
+    return parseInt(this.counterTarget.textContent);
   }
 }

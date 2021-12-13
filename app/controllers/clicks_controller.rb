@@ -1,11 +1,7 @@
 class ClicksController < ApplicationController
   def index
-    @name = 'Templatus'
     @clicks = Click.order(created_at: :desc).limit(5).to_a
     @clicks_count = Click.count
-
-    return unless stale?(@clicks, template: false, public: true)
-    expires_in 0, must_revalidate: true
   end
 
   def create
