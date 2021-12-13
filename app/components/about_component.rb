@@ -75,6 +75,7 @@ class AboutComponent < ViewComponent::Base # rubocop:disable Metrics/ClassLength
           },
           {
             name: 'ViewComponent',
+            version: view_component_version,
             href: 'https://viewcomponent.org/',
             description:
               'A framework for creating reusable, testable & encapsulated view components, built to integrate seamlessly
@@ -169,18 +170,6 @@ class AboutComponent < ViewComponent::Base # rubocop:disable Metrics/ClassLength
     `cat /etc/alpine-release 2>/dev/null`.chomp
   end
 
-  def ruby_version
-    RUBY_VERSION
-  end
-
-  def rails_version
-    Rails.version
-  end
-
-  def puma_version
-    Puma::Const::PUMA_VERSION
-  end
-
   def postgres_version
     ActiveRecord::Base.connection.select_value('SHOW server_version;')
   end
@@ -189,7 +178,23 @@ class AboutComponent < ViewComponent::Base # rubocop:disable Metrics/ClassLength
     Redis.new.info['redis_version']
   end
 
+  def ruby_version
+    RUBY_VERSION
+  end
+
+  def puma_version
+    Gem.loaded_specs['puma'].version
+  end
+
+  def rails_version
+    Gem.loaded_specs['rails'].version
+  end
+
   def sidekiq_version
-    Sidekiq::VERSION
+    Gem.loaded_specs['sidekiq'].version
+  end
+
+  def view_component_version
+    Gem.loaded_specs['view_component'].version
   end
 end
