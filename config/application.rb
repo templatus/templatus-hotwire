@@ -18,7 +18,7 @@ require 'sprockets/railtie'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module TemplatusStimulus
+module TemplatusHotwire
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
@@ -33,7 +33,7 @@ module TemplatusStimulus
 
     config.time_zone = ENV.fetch('TIME_ZONE', 'Berlin')
 
-    config.x.app_host = ENV.fetch('APP_HOST', 'templatus-stimulus.test')
+    config.x.app_host = ENV.fetch('APP_HOST', 'templatus-hotwire.test')
 
     config.x.git.commit_version =
       ENV.fetch('COMMIT_VERSION') { `git describe --always`.chomp }

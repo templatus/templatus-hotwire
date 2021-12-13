@@ -1,5 +1,5 @@
 {
-  "name": "templatus-stimulus",
+  "name": "templatus-hotwire",
   "private": true,
   "scripts": {
     "test": "jest --coverage",

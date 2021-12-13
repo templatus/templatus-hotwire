@@ -1,6 +1,6 @@
 module.exports = {
   verbose: true,
-  testURL: 'https://templatus-stimulus.test/',
+  testURL: 'https://templatus-hotwire.test/',
   roots: ['spec/javascript'],
   moduleDirectories: ['node_modules', 'app/javascript'],
   moduleNameMapper: {

@@ -1,12 +1,12 @@
-[![Build Status](https://github.com/ledermann/templatus-stimulus/workflows/CI/badge.svg)](https://github.com/ledermann/templatus-stimulus/actions)
+[![Build Status](https://github.com/ledermann/templatus-hotwire/workflows/CI/badge.svg)](https://github.com/ledermann/templatus-hotwire/actions)
 [![Cypress](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/5d6bqs&style=flat-square&logo=cypress)](https://dashboard.cypress.io/projects/5d6bqs/runs)
-[![DeepSource](https://deepsource.io/gh/ledermann/templatus-stimulus.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/ledermann/templatus-stimulus/?ref=repository-badge)
+[![DeepSource](https://deepsource.io/gh/ledermann/templatus-hotwire.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/ledermann/templatus-hotwire/?ref=repository-badge)
 
-# Templatus-Stimulus
+# Templatus-Hotwire
 
-Templatus-Stimulus is an opinionated template to build web applications with Ruby on Rails and Stimulus. It simplifies the process of setting up a new application while following best practices.
+Templatus-Hotwire is an opinionated template to build web applications with Ruby on Rails and Stimulus. It simplifies the process of setting up a new application while following best practices.
 
-Live demo available at https://templatus-stimulus.ledermann.dev
+Live demo available at https://templatus-hotwire.ledermann.dev
 
 ## Features / Technology stack
 
@@ -73,14 +73,14 @@ performed against the demo installation on production. It uses an inexpensive vi
 
 ### Secure headers
 
-[![Secure headers](docs/secure-headers.png)](https://securityheaders.com/?q=templatus-stimulus.ledermann.dev&followRedirects=on)
+[![Secure headers](docs/secure-headers.png)](https://securityheaders.com/?q=templatus-hotwire.ledermann.dev&followRedirects=on)
 
 What's the red _Permissions-Policy_ badge? This seems to be fixed with one of the next Rails update:
 https://github.com/rails/rails/pull/41994
 
 ### Mozilla Observatory
 
-[![Mozilla Observatory](docs/mozilla-observatory.png)](https://observatory.mozilla.org/analyze/templatus-stimulus.ledermann.dev)
+[![Mozilla Observatory](docs/mozilla-observatory.png)](https://observatory.mozilla.org/analyze/templatus-hotwire.ledermann.dev)
 
 Why is there a failing test? It's about missing [Subresource Integrity](https://infosec.mozilla.org/guidelines/web_security#subresource-integrity), which is currently not supported by Webpacker. There is a [stale issue](https://github.com/rails/webpacker/issues/323) about it, I don't expect a fix shortly.
 
@@ -90,11 +90,11 @@ Why is there a failing test? It's about missing [Subresource Integrity](https://
 
 ### GTmetrix
 
-[![GTmetrix](docs/GTmetrix.png)](https://gtmetrix.com/reports/templatus-stimulus.ledermann.dev/0tAiViV6/)
+[![GTmetrix](docs/GTmetrix.png)](https://gtmetrix.com/reports/templatus-hotwire.ledermann.dev/0tAiViV6/)
 
 ### Check-your-website
 
-[![Check-your-website](docs/check-your-website.png)](https://check-your-website.server-daten.de/?q=templatus-stimulus.ledermann.dev)
+[![Check-your-website](docs/check-your-website.png)](https://check-your-website.server-daten.de/?q=templatus-hotwire.ledermann.dev)
 
 ### JavaScript size
 
@@ -115,20 +115,20 @@ Small footprint: The demo application transfers only **65 KB** of data on the fi
 
 ### Docker build time
 
-With multi-stage building and using [DockerRailsBase](https://github.com/ledermann/docker-rails-base) the build of the Docker image takes very little time. Currently, the build job requires about 1,5 minutes on GitHub Actions (see https://github.com/ledermann/templatus-stimulus/actions)
+With multi-stage building and using [DockerRailsBase](https://github.com/ledermann/docker-rails-base) the build of the Docker image takes very little time. Currently, the build job requires about 1,5 minutes on GitHub Actions (see https://github.com/ledermann/templatus-hotwire/actions)
 
 ### Docker image size
 
 The Docker image is based on Alpine Linux and is optimized for minimal size (currently **115 MB** uncompressed disk size). It includes just the bare minimum - no build tools like Node.js, no JS sources (just the compiled assets), no tests.
 
 ```
-$ container-diff analyze ghcr.io/ledermann/templatus-stimulus -n
+$ container-diff analyze ghcr.io/ledermann/templatus-hotwire -n
 
 -----Size-----
 
-Analysis for ghcr.io/ledermann/templatus-stimulus:
+Analysis for ghcr.io/ledermann/templatus-hotwire:
 IMAGE                              DIGEST         SIZE
-ghcr.io/ledermann/templatus-stimulus        sha256:...   114.9M
+ghcr.io/ledermann/templatus-hotwire        sha256:...   114.9M
 ```
 
 ## Getting
@@ -138,8 +138,8 @@ ghcr.io/ledermann/templatus-stimulus        sha256:...   114.9M
 1. Clone the repo locally:
 
 ```bash
-git clone git@github.com:ledermann/templatus-stimulus.git
-cd templatus-stimulus
+git clone git@github.com:ledermann/templatus-hotwire.git
+cd templatus-hotwire
 ```
 
 2. Install PostgreSQL, Redis, and puma-dev (if not already present). On a Mac with HomeBrew, run this to install from the `Brewfile`:
@@ -168,7 +168,7 @@ bin/setup
 bin/dev
 ```
 
-Then open https://templatus-stimulus.test in your browser.
+Then open https://templatus-hotwire.test in your browser.
 
 ### Running linters
 
