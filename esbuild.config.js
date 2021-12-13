@@ -6,7 +6,6 @@ const path = require('path');
 esbuild.build({
   entryPoints: ["application.js"],
   bundle: true,
-  sourcemap: true,
   minify: true,
   write: false, // write must be false for gzip() to work
   outdir: path.join(process.cwd(), "app/assets/builds"),
