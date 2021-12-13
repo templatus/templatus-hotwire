@@ -30,7 +30,7 @@
   <%= tag :link, href: webmanifest_path, rel: 'manifest' %>
 
   <%= javascript_include_tag 'application', 'data-turbo-track': 'reload', integrity: true, crossorigin: 'anonymous', defer: true %>
-  <%= stylesheet_link_tag "application" %>
+  <%= stylesheet_link_tag 'application', 'data-turbo-track': 'reload' %>
 </head>
 
 <body>
