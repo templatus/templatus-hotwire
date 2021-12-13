@@ -5,7 +5,7 @@
     "test": "jest --coverage",
     "lint": "eslint --ext .js --cache .",
     "build": "node esbuild.config.js",
-    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css"
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify"
   },
   "dependencies": {
     "@honeybadger-io/js": "^3.2.7",
