@@ -1,7 +1,4 @@
 import { register } from 'register-service-worker';
-import '@hotwired/turbo-rails';
-import './channels/**/*_channel.js';
-import './controllers';
 
 register('/sw.js', {
   registrationOptions: { scope: './' },
@@ -29,3 +26,8 @@ register('/sw.js', {
     console.error('Error during service worker registration:', error);
   },
 });
+
+import '@hotwired/turbo-rails';
+
+import './channels/**/*_channel.js';
+import './controllers';
