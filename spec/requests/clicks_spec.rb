@@ -1,22 +1,44 @@
 describe 'Clicks' do
-  include ActiveSupport::Testing::TimeHelpers
+  describe 'GET /' do
+    it 'finds existing clicks' do
+      get root_path
 
-  let(:user_agent) { 'Netscape Navigator' }
-  let(:ip) { '1.2.3.4' }
+      expect(response).to have_http_status(:success)
+    end
+  end
 
-  describe 'POST /create' do
-    it 'save click and returns http success' do
-      post '/clicks',
+  describe 'POST /clicks' do
+    let(:user_agent) { 'Netscape Navigator' }
+
+    def call(ip)
+      post clicks_path,
            headers: {
              HTTP_USER_AGENT: user_agent,
              REMOTE_ADDR: ip,
-             ACCEPT: 'application/json',
            }
 
       expect(response).to have_http_status(:success)
-
       expect(Click.last.user_agent).to eq(user_agent)
-      expect(Click.last.ip).to eq('1.2.3.0')
+    end
+
+    context 'when IPv4' do
+      let(:ipv4) { '1.2.3.4' }
+
+      it 'save click and returns http success' do
+        call(ipv4)
+
+        expect(Click.last.ip).to eq('1.2.3.0')
+      end
+    end
+
+    context 'when IPv6' do
+      let(:ipv6) { '2001:db8::1' }
+
+      it 'save click and returns http success' do
+        call(ipv6)
+
+        expect(Click.last.ip).to eq('2001:0db8:0:0:0:0:0:0')
+      end
     end
   end
 end
