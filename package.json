@@ -35,7 +35,7 @@
     "eslint-plugin-jest": "^25.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-tailwindcss": "^1.17.2",
-    "jest": "^27.4.4",
+    "jest": "^27.4.5",
     "jest-transform-stub": "^2.0.0",
     "prettier": "^2.5.1"
   },
