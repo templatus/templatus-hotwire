@@ -43,12 +43,12 @@
 
       <div class="relative bg-red-800 sm:bg-transparent">
         <div class="py-8 sm:py-10 px-4 sm:px-6 lg:px-8 mx-auto max-w-5xl">
-          <div class="flex items-center space-x-5 sm:space-x-10">
-            <%= image_tag asset_path('rails.svg'), alt: 'Ruby on Rails', class: 'p-3 bg-red-100 rounded', width: 191, height: 87 %>
+          <div class="flex items-center space-x-5 md:space-x-10">
+            <%= image_tag asset_path('rails.svg'), alt: 'Ruby on Rails', class: 'p-3 bg-red-100 rounded h-16 md:h-24 w-auto', width: 215, height: 96 %>
 
-            <div class="text-4xl sm:text-8xl text-red-100">&plus;</div>
+            <div class="text-4xl md:text-8xl text-red-100">&plus;</div>
 
-            <%= image_tag asset_path('hotwire.svg'), alt: 'Hotwire', class: 'p-3 bg-red-100 rounded', width: 252, height: 87 %>
+            <%= image_tag asset_path('hotwire.svg'), alt: 'Hotwire', class: 'p-3 bg-red-100 rounded h-16 md:h-24 w-auto', width: 285, height: 96 %>
           </div>
 
           <div class="mt-10">
@@ -64,7 +64,7 @@
     </header>
 
     <main
-      class="relative flex-grow sm:py-32 lg:py-24 px-4 sm:px-6 lg:px-8 pt-10 pb-24 mx-auto w-full max-w-5xl bg-transparent">
+      class="relative flex-grow sm:py-32 lg:py-24 px-5 pt-10 pb-24 mx-auto max-w-5xl">
       <%= yield %>
     </main>
 
