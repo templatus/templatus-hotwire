@@ -55,7 +55,7 @@ class AboutComponent < ViewComponent::Base # rubocop:disable Metrics/ClassLength
               'Simple, efficient background processing for Ruby
                <p class="mt-2 text-xs">
                  →
-                 <a class="font-medium uppercase hover:underline" href="/sidekiq">
+                 <a class="font-medium uppercase hover:underline" href="/sidekiq" data-turbo="false">
                    Admin frontend
                  </a>
                </p>',
