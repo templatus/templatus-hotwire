@@ -309,7 +309,7 @@ DEPENDENCIES
   rack-brotli
   rack-canonical-host
   rack-cors
-  rails (~> 6.1.4, >= 6.1.4.1)
+  rails (~> 6.1.4, >= 6.1.4.3)
   redis
   rspec-rails
   rubocop
