@@ -1,0 +1,8 @@
+<li class="p-2 mt-2 bg-red-100 rounded">
+  <p>
+    <%= tag.span click.ip, class: 'px-1 font-mono text-red-100 bg-gray-900 rounded' %>
+    <%= tag.span click.created_at.to_formatted_s(:long), class: 'px-1 ml-2 text-sm sm:text-base font-medium text-gray-900' %>
+  </p>
+
+  <%= tag.p click.user_agent, class: 'font-extralight text-gray-900' %>
+</li>
