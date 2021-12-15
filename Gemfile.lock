@@ -110,7 +110,7 @@ GEM
     honeybadger (4.9.0)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
-    jsbundling-rails (0.2.2)
+    jsbundling-rails (1.0.0)
       railties (>= 6.0.0)
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
