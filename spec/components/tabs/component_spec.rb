@@ -1,4 +1,4 @@
-describe TabsComponent, type: :component do
+describe Tabs::Component, type: :component do
   it 'renders links' do
     result =
       render_inline(described_class.new) do |c|

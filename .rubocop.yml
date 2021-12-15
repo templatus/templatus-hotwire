@@ -82,6 +82,9 @@ Style/IpAddresses:
 Style/DisableCopsWithinSourceCodeDirective:
   Enabled: false
 
+Style/ClassAndModuleChildren:
+  Enabled: false
+
 ### Metrics
 
 Metrics/BlockLength:

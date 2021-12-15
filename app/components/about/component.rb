@@ -1,4 +1,4 @@
-class AboutComponent < ViewComponent::Base # rubocop:disable Metrics/ClassLength
+class About::Component < ViewComponent::Base # rubocop:disable Metrics/ClassLength
   def features # rubocop:disable Metrics/MethodLength
     [
       {

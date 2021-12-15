@@ -1,4 +1,4 @@
-describe GitVersionComponent, type: :component do
+describe GitVersion::Component, type: :component do
   let(:instance) { described_class.new }
 
   it 'renders version' do

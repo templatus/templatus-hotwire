@@ -1,4 +1,4 @@
-class GitVersionComponent < ViewComponent::Base
+class GitVersion::Component < ViewComponent::Base
   def commit_version
     Rails.configuration.x.git.commit_version
   end

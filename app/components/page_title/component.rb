@@ -1,4 +1,4 @@
-class PageTitleComponent < ViewComponent::Base
+class PageTitle::Component < ViewComponent::Base
   def initialize(title)
     @title = title
     super

@@ -1,4 +1,4 @@
-class TabsComponent < ViewComponent::Base
+class Tabs::Component < ViewComponent::Base
   renders_many :tabs, 'Tab'
 
   class Tab < ViewComponent::Base
