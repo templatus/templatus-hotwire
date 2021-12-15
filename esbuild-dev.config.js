@@ -35,10 +35,11 @@ async function builder() {
     [
       "./app/javascript/**/*.js",
       "./app/components/**/*.html.erb",
+      "./app/components/**/*.js",
       "./app/views/**/*.html.erb",
       "./app/assets/stylesheets/*.css"
     ]).on('all', (_event, path) => {
-      if (path.includes("javascript")) {
+      if (path.endsWith(".js")) {
         result.rebuild();
       }
       clients.forEach((res) => res.write('data: update\n\n'));

@@ -1,9 +1,9 @@
 <%= helpers.turbo_stream_from 'clicks' %>
 
-<div data-controller="clicks">
+<div data-controller="clicks--component">
   <div class="sm:absolute sm:top-0 sm:right-5 w-full sm:w-56 sm:-translate-y-24">
     <div class="p-2 lg:p-5 text-center bg-white rounded-t shadow">
-      <div class="text-5xl" data-clicks-target="counter" id="counter"
+      <div class="text-5xl" data-clicks--component-target="counter" id="counter"
         data-transition-enter="transition-transform duration-300 ease-out" data-transition-enter-start="scale-0"
         data-transition-enter-end="scale-100" data-transition-leave="transition-transform duration-200 ease-in"
         data-transition-leave-start="scale-100" data-transition-leave-end="scale-0">
@@ -27,12 +27,14 @@
              class: 'mt-5 sm:mt-0 text-xl font-medium tracking-wide text-center sm:text-left text-red-800 uppercase'
   %>
 
-  <%= helpers.turbo_frame_tag 'clicks', data: { action: 'turbo:before-stream-render@document->clicks#receive' } do %>
+  <%= helpers.turbo_frame_tag 'clicks',
+                              data: { action: 'turbo:before-stream-render@document->clicks--component#receive' } do
+  %>
   <%= tag.ul render(Click::Component.with_collection(clicks)),
               id: 'list',
               class: 'relative',
               data: {
-                clicks_target: 'list',
+                clicks__component_target: 'list',
                 transition_leave: 'transition-all duration-200 ease-out',
                 transition_leave_start: 'translate-y-0',
                 transition_leave_end: 'translate-y-24'
