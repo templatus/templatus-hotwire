@@ -12,7 +12,7 @@
     "@honeybadger-io/js": "^3.2.7",
     "@hotwired/stimulus": "^3.0.1",
     "@hotwired/turbo-rails": "^7.1.0",
-    "@rails/actioncable": "^6.1.4-3",
+    "@rails/actioncable": "^7.0.0",
     "@rails/request.js": "^0.0.6",
     "@tailwindcss/forms": "^0.4.0",
     "autoprefixer": "^10.4.0",
