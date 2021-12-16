@@ -15,7 +15,7 @@ describe('Basic tests', () => {
     cy.get('main h1').should('contain', 'Hello, Templatus!');
     cy.get('#counter').should('contain', '0');
 
-    cy.get('input[type=submit]').click();
+    cy.get('button').click();
     cy.get('#counter').should('contain', '1');
     cy.get('ul').should('contain', '127.0.0.0');
     cy.get('li').should('have.length', 1);
