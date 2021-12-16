@@ -40,10 +40,10 @@ if Rails.application.config.x.app_host
 
   # CDN: Allow Cloudfront for assets only
   if Rails.application.config.asset_host
-    require 'cloudfront_denier'
-
-    Rails.application.config.middleware.use CloudfrontDenier,
-                                            target:
-                                              "https://#{Rails.application.config.x.app_host}"
+    Rails.application.config.to_prepare do
+      Rails.application.config.middleware.use CloudfrontDenier,
+                                              target:
+                                                "https://#{Rails.application.config.x.app_host}"
+    end
   end
 end
