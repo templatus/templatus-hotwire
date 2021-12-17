@@ -12,8 +12,6 @@
     "@hotwired/stimulus": "^3.0.1",
     "@hotwired/turbo-rails": "^7.1.0",
     "@rails/actioncable": "^7.0.0",
-    "@rails/request.js": "^0.0.6",
-    "@tailwindcss/forms": "^0.4.0",
     "autoprefixer": "^10.4.0",
     "el-transition": "^0.0.7",
     "esbuild": "^0.14.5",

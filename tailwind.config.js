@@ -9,5 +9,5 @@ module.exports = {
     './app/**/*.rb',
     './app/**/*.js',
   ],
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [],
 };
