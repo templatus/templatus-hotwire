@@ -8,9 +8,6 @@ enabled = true
 name = "javascript"
 enabled = true
 
-  [analyzers.meta]
-  plugins = ["vue"]
-
 [[analyzers]]
 name = "ruby"
 enabled = true

@@ -28,6 +28,12 @@ Rails.application.configure do
     'Cache-Control' => 'public, s-maxage=31536000, max-age=31536000, immutable',
   }
 
+  # Compress CSS using a preprocessor.
+  # config.assets.css_compressor = :sass
+
+  # Do not fallback to assets pipeline if a precompiled asset is missed.
+  config.assets.compile = false
+
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   config.asset_host = ENV.fetch('ASSET_HOST', nil).presence
 
@@ -74,14 +80,8 @@ Rails.application.configure do
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
 
-  # Send deprecation notices to registered listeners.
-  config.active_support.deprecation = :notify
-
-  # Log disallowed deprecations.
-  config.active_support.disallowed_deprecation = :log
-
-  # Tell Active Support which deprecation messages to disallow.
-  config.active_support.disallowed_deprecation_warnings = []
+  # Don't log any deprecations.
+  config.active_support.report_deprecations = false
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
@@ -126,4 +126,14 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+
+  # Inserts middleware to perform automatic shard swapping. The `shard_selector` hash
+  # can be used to pass options to the `ShardSelector` middleware. The `lock` option is
+  # used to determine whether shard swapping should be prohibited for the request.
+  #
+  # The `shard_resolver` option is used by the middleware to determine which shard
+  # to switch to. The application must provide a mechanism for finding the shard name
+  # in a proc. See guides for an example.
+  # config.active_record.shard_selector = { lock: true }
+  # config.active_record.shard_resolver = ->(request) { Tenant.find_by!(host: request.host).shard }
 end

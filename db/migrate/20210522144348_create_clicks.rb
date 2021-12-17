@@ -1,4 +1,4 @@
-class CreateClicks < ActiveRecord::Migration[6.1]
+class CreateClicks < ActiveRecord::Migration[7.0]
   def change
     create_table :clicks do |t|
       t.inet :ip, null: false

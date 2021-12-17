@@ -79,6 +79,12 @@ Style/IfUnlessModifier:
 Style/IpAddresses:
   Enabled: false
 
+Style/DisableCopsWithinSourceCodeDirective:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
 ### Metrics
 
 Metrics/BlockLength:

@@ -12,16 +12,16 @@ require 'action_cable/engine'
 require 'action_mailbox/engine'
 require 'action_text/engine'
 require 'rails/test_unit/railtie'
-# require "sprockets/railtie"
+require 'sprockets/railtie'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Templatus
+module TemplatusHotwire
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.1
+    config.load_defaults 7.0
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -33,7 +33,7 @@ module Templatus
 
     config.time_zone = ENV.fetch('TIME_ZONE', 'Berlin')
 
-    config.x.app_host = ENV.fetch('APP_HOST', 'templatus.test')
+    config.x.app_host = ENV.fetch('APP_HOST', 'templatus-hotwire.test')
 
     config.x.git.commit_version =
       ENV.fetch('COMMIT_VERSION') { `git describe --always`.chomp }
@@ -48,6 +48,3 @@ module Templatus
         ActiveModel::Type::Boolean.new.cast(ENV.fetch('CYPRESS', false))
   end
 end
-
-# Makes sure the TailwindCSS JIT doesn't run forever
-Webpacker::Compiler.env['TAILWIND_MODE'] = 'build'

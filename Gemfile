@@ -4,16 +4,37 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.3'
 
 # Full-stack web application framework. (https://rubyonrails.org)
-gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
+gem 'rails', '~> 7.0.0'
+
+# Sprockets Rails integration (https://github.com/rails/sprockets-rails)
+gem 'sprockets-rails'
+
+# The speed of a single-page web application without having to write any JavaScript. (https://github.com/hotwired/turbo-rails)
+gem 'turbo-rails'
+
+# A modest JavaScript framework for the HTML you already have. (https://stimulus.hotwired.dev)
+gem 'stimulus-rails'
+
+# Bundle and transpile JavaScript in Rails with esbuild, rollup.js, or Webpack. (https://github.com/rails/jsbundling-rails)
+gem 'jsbundling-rails'
+
+# Bundle and process CSS with Tailwind, Bootstrap, PostCSS, Sass in Rails via Node.js. (https://github.com/rails/cssbundling-rails)
+gem 'cssbundling-rails'
+
+# View components for Rails (https://github.com/github/view_component)
+gem 'view_component'
+
+# Slim is a template language. (http://slim-lang.com/)
+gem 'slim'
+
+# Rails View Helpers for Heroicons. (https://github.com/bharget/heroicon)
+gem 'heroicon'
 
 # Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org/] (https://github.com/ged/ruby-pg)
 gem 'pg', '~> 1.1'
 
 # Puma is a simple, fast, threaded, and highly parallel HTTP 1.1 server for Ruby/Rack applications (https://puma.io)
 gem 'puma', '~> 5.0'
-
-# Use webpack to manage app-like JavaScript modules in Rails (https://github.com/rails/webpacker)
-gem 'webpacker', '>= 6.0.0.rc.5'
 
 # Boot large ruby/rails apps faster (https://github.com/Shopify/bootsnap)
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -46,17 +67,11 @@ gem 'sidekiq'
 gem 'sidekiq-cron'
 
 group :development, :test do
-  # Ruby fast debugger - base + CLI (https://github.com/deivid-rodriguez/byebug)
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
-
-  # Rails application preloader (https://github.com/rails/spring)
-  gem 'spring'
+  # Debugging functionality for Ruby (https://github.com/ruby/debug)
+  gem 'debug', '>= 1.0.0', platforms: %i[ mri mingw x64_mingw ]
 
   # Autoload dotenv in Rails. (https://github.com/bkeepers/dotenv)
   gem 'dotenv-rails'
-
-  # rspec command for spring (https://github.com/jonleighton/spring-commands-rspec)
-  gem 'spring-commands-rspec'
 
   # RSpec for Rails (https://github.com/rspec/rspec-rails)
   gem 'rspec-rails'
@@ -72,6 +87,9 @@ group :development, :test do
 
   # Code style checking for RSpec files (https://github.com/rubocop/rubocop-rspec)
   gem 'rubocop-rspec', require: false
+
+  # Slim template linting tool (https://github.com/sds/slim-lint)
+  gem 'slim_lint'
 end
 
 group :development do

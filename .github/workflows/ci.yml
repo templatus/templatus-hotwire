@@ -22,7 +22,7 @@ jobs:
       DB_PASSWORD: postgres
       REDIS_URL: redis://localhost:6379/0
       RAILS_ENV: test
-      DISABLE_SPRING: 1
+      CI: true
 
     steps:
       - uses: actions/checkout@v2
@@ -46,14 +46,14 @@ jobs:
       - name: Run ESLint
         run: bin/yarn lint
 
-      - name: Check for TypeScript errors
-        run: bin/yarn tsc
+      - name: Lint with SlimLint
+        run: bundle exec slim-lint .
 
       - name: Setup PostgreSQL
         run: bin/rails db:create
 
       - name: Compile assets
-        run: bin/rails webpacker:compile
+        run: bin/rails assets:precompile
 
       - name: Run Ruby Tests
         run: bin/rspec
@@ -67,7 +67,7 @@ jobs:
           start: bundle exec rails server
           wait-on: http://localhost:3000
           browser: chrome
-          record: true
+          record: false
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

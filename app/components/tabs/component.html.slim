@@ -1,0 +1,9 @@
+nav class="flex space-x-4"
+  - tabs.each do |tab|
+    = link_to tab.text,
+                  tab.href,
+                  class: [ 'px-4 py-1 font-medium text-lg rounded-md border border-red-200',
+                           current_page?(tab.href) ? 'bg-red-200 text-red-900' : \
+                                                     'bg-red-800 text-red-200 hover:bg-red-300 hover:text-red-800' \
+                         ],
+                  data: { turbo_action: 'replace' }

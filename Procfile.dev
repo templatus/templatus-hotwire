@@ -1,1 +1,2 @@
-frontend: bin/webpack-dev-server
+js: yarn start
+css: yarn build:css --watch

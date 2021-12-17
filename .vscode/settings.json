@@ -6,8 +6,7 @@
   "files.trimTrailingWhitespace": true,
   "files.watcherExclude": {
     "**/tmp/**": true,
-    "**/public/packs": true,
-    "**/public/packs-test": true
+    "**/public/assets": true
   },
   "files.exclude": {
     "**/docker-volumes": true
@@ -15,12 +14,11 @@
 
   "search.exclude": {
     "**/tmp": true,
-    "**/public/packs": true,
-    "**/public/packs-test": true,
+    "**/public/assets": true,
     "**/node_modules": true
   },
 
-  "eslint.validate": ["javascript", "vue"],
+  "eslint.validate": ["javascript"],
 
   "ruby.lint": {
     "rubocop": {

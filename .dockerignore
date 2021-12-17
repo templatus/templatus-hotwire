@@ -14,6 +14,7 @@
 .yarnclean
 .prettierignore
 .prettierrc.json
+.slim-lint.yml
 docs
 **/*.DS_Store
 Brewfile
@@ -25,16 +26,14 @@ Procfile*
 Guardfile
 log/*
 node_modules
-public/packs-test
-public/packs/*
+public/assets
 tmp/*
 !/tmp/pids/
 !/tmp/pids/.keep
 yarn-error.log
 config/environments/test.rb
 config/environments/development.rb
-config/webpack/test.js
-config/webpack/development.js
 jest.config.js
+cypress.json
 spec
 README.md

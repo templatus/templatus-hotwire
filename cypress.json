@@ -1,6 +1,6 @@
 {
   "projectId": "5d6bqs",
-  "baseUrl": "https://templatus.test",
+  "baseUrl": "https://templatus-hotwire.test",
   "screenshotsFolder": "tmp/cypress_screenshots",
   "trashAssetsBeforeRuns": false,
   "videosFolder": "tmp/cypress_videos",
