@@ -2,7 +2,6 @@
   "name": "templatus-hotwire",
   "private": true,
   "scripts": {
-    "test": "jest --coverage",
     "lint": "eslint --ext .js --cache .",
     "start": "node esbuild-dev.config.js",
     "build": "node esbuild.config.js",
@@ -32,11 +31,8 @@
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-cypress": "^2.12.1",
-    "eslint-plugin-jest": "^25.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-tailwindcss": "^1.17.2",
-    "jest": "^27.4.5",
-    "jest-transform-stub": "^2.0.0",
     "prettier": "^2.5.1"
   },
   "browserslist": [

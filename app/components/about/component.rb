@@ -123,12 +123,6 @@ class About::Component < ViewComponent::Base # rubocop:disable Metrics/ClassLeng
             description: 'The Ruby Linter/Formatter that Serves and Protects',
           },
           {
-            name: 'Jest',
-            href: 'https://jestjs.io/',
-            description:
-              'Jest is a delightful JavaScript Testing Framework with a focus on simplicity',
-          },
-          {
             name: 'ESLint',
             href: 'https://eslint.org/',
             description:

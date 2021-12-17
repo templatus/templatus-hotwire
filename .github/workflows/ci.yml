@@ -58,9 +58,6 @@ jobs:
       - name: Run Ruby Tests
         run: bin/rspec
 
-      - name: Run JavaScript tests
-        run: bin/yarn test
-
       - name: End-to-end tests
         uses: cypress-io/github-action@v2
         with:

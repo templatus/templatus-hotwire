@@ -2,13 +2,11 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    jest: true,
     node: true,
   },
   plugins: ['tailwindcss'],
   extends: [
     'eslint:recommended',
-    'plugin:jest/recommended',
     'prettier',
     'plugin:prettier/recommended',
     'plugin:tailwindcss/recommended',
