@@ -1,4 +1,4 @@
-= helpers.turbo_stream_from 'clicks'
+= turbo_stream_from 'clicks'
 
 div data-controller="clicks--component"
   div class="sm:absolute sm:top-0 sm:right-5 w-full sm:w-56 sm:-translate-y-24"
@@ -30,10 +30,8 @@ div data-controller="clicks--component"
   h2 class='mt-5 sm:mt-0 text-xl font-medium tracking-wide text-center sm:text-left text-red-800 uppercase'
     | Latest clicks
 
-  turbo-frame[
-    id="clicks"
-    data-action='turbo:before-stream-render@document->clicks--component#receive'
-  ]
+  = turbo_frame_tag 'clicks',
+                    data: { action: 'turbo:before-stream-render@document->clicks--component#receive' } do
     ul[
       id='list'
       class='relative'
