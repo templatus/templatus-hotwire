@@ -1,9 +1,9 @@
 class GitVersion::Component < ViewComponent::Base
-  def commit_version
-    Rails.configuration.x.git.commit_version
+  def initialize(commit_version:, commit_time:)
+    super
+    @commit_version = commit_version
+    @commit_time = commit_time
   end
 
-  def commit_time
-    Rails.configuration.x.git.commit_time
-  end
+  attr_reader :commit_version, :commit_time
 end

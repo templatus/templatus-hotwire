@@ -1,5 +1,7 @@
 div
-  = tag.code commit_version
+  code
+    = commit_version
 
   b class="ml-3"
-    = tag.time datetime: commit_time, data: { controller: 'timeago' }
+    time datetime= commit_time data-controller="timeago"
+      = commit_time
