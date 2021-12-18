@@ -1,7 +1,7 @@
 describe PageTitle::Component, type: :component do
-  it 'renders title' do
-    expect(
-      render_inline(described_class.new('Hello, world!')).css('h1').to_html,
-    ).to include('Hello, world!')
-  end
+  subject(:output) { render_inline(described_class.new('Hello, world!')) }
+
+  let(:instance) { described_class.new }
+
+  it { is_expected.to have_css('h1', text: 'Hello, world!') }
 end
