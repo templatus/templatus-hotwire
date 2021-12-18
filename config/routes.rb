@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   mount Sidekiq::Web => '/sidekiq'
 
+  mount Lookbook::Engine, at: '/lookbook' if Rails.env.development?
+
   if Rails.configuration.x.cypress
     namespace :cypress do
       delete 'cleanup', to: 'cleanup#destroy'

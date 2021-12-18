@@ -91,4 +91,9 @@ Rails.application.configure do
   end
 
   Rails.application.config.hosts << ENV['APP_HOST']
+
+  config.view_component.default_preview_layout = 'preview'
+
+  config.view_component.preview_paths <<
+    Rails.root.join('spec', 'component_previews')
 end

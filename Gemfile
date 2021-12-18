@@ -24,6 +24,9 @@ gem 'cssbundling-rails'
 # View components for Rails (https://github.com/github/view_component)
 gem 'view_component'
 
+# A native development UI for ViewComponent (https://github.com/allmarkedup/lookbook)
+gem 'lookbook'
+
 # Slim is a template language. (http://slim-lang.com/)
 gem 'slim'
 

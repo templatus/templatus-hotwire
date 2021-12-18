@@ -78,14 +78,25 @@
     ]
   },
   {
-    "name": "Continuous integration",
-    "slogan": "Quality insurance",
+    "name": "Development",
+    "slogan": "Developer happiness",
     "items": [
       {
-        "name": "GitHub Actions",
-        "href": "https://github.com/features/actions",
-        "description": "Test, build and deliver on every push to GitHub"
+        "name": "Prettier",
+        "href": "https://prettier.io/",
+        "description": "Auto-formatting JavaScript and Ruby code in Visual Studio Code"
       },
+      {
+        "name": "Lookbook",
+        "href": "https://github.com/allmarkedup/lookbook",
+        "description": "A native development UI for ViewComponent"
+      }
+    ]
+  },
+  {
+    "name": "Testing",
+    "slogan": "Quality insurance",
+    "items": [
       {
         "name": "RSpec",
         "href": "https://rspec.info/",
@@ -100,6 +111,11 @@
         "name": "ESLint",
         "href": "https://eslint.org/",
         "description": "ESLint statically analyzes your code to quickly find problems"
+      },
+      {
+        "name": "GitHub Actions",
+        "href": "https://github.com/features/actions",
+        "description": "Test, build and deliver on every push to GitHub"
       },
       {
         "name": "Cypress",
