@@ -104,6 +104,12 @@ group :development do
 
   # Guard gem for RSpec (https://github.com/guard/guard-rspec)
   gem 'guard-rspec', require: false
+
+  # Rails application preloader (https://github.com/rails/spring)
+  gem 'spring'
+
+  # rspec command for spring (https://github.com/jonleighton/spring-commands-rspec)
+  gem 'spring-commands-rspec'
 end
 
 group :test do
