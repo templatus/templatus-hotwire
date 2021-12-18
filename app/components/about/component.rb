@@ -82,6 +82,14 @@ class About::Component < ViewComponent::Base # rubocop:disable Metrics/ClassLeng
                with Ruby on Rails.',
           },
           {
+            name: 'Slim',
+            version: slim_version,
+            href: 'http://slim-lang.com/',
+            description:
+              'Slim is a template language whose goal is to reduce the syntax to the essential parts
+              without becoming cryptic.',
+          },
+          {
             name: 'Tailwind CSS 3',
             href: 'https://tailwindcss.com/',
             description:
@@ -190,5 +198,9 @@ class About::Component < ViewComponent::Base # rubocop:disable Metrics/ClassLeng
 
   def view_component_version
     Gem.loaded_specs['view_component'].version
+  end
+
+  def slim_version
+    Gem.loaded_specs['slim'].version
   end
 end

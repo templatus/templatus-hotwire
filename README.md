@@ -23,6 +23,7 @@ Live demo available at https://templatus-hotwire.ledermann.dev
 
 - [Hotwire](https://hotwire.io/) for building the frontend without using much JavaScript by sending HTML instead of JSON over the wire
 - [ViewComponent](https://viewcomponent.org/) for creating reusable, testable & encapsulated view components
+- [Slim](http://slim-lang.com/) for writing templates instead of ERB
 - [Tailwind CSS 3](https://tailwindcss.com/) to not have to write CSS at all
 - [Heroicons](https://heroicons.com/) for beautiful hand-crafted SVG icons
 - [Rails Request.JS](https://github.com/rails/request.js) for AJAX requests with default headers
