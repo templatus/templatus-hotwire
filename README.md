@@ -57,7 +57,7 @@ Live demo available at https://templatus-hotwire.ledermann.dev
 ### Production
 
 - [Lograge](https://github.com/roidrage/lograge) for single-line logging
-- Gzip and Brotli compression of all dynamic responses (HTML, JSON) using [Rack::Deflater](https://github.com/rack/rack/blob/master/lib/rack/deflater.rb) and [Rack::Brotli](https://github.com/marcotc/rack-brotli)
+- Gzip and Brotli compression of all responses (HTML, JSON, assets) using [Rack::Deflater](https://github.com/rack/rack/blob/master/lib/rack/deflater.rb), [Rack::Brotli](https://github.com/marcotc/rack-brotli) and [Sprockets::ExportersPack](https://github.com/hansottowirtz/sprockets-exporters_pack)
 - Fine-tuned Content Security Policy (CSP)
 - Ready for PWA (manifest, service-worker)
 
@@ -97,18 +97,59 @@ https://github.com/rails/rails/pull/41994
 
 ### JavaScript size
 
-136 KB of compiled JavaScript (minified, uncompressed). The largest parts are:
+132 KB of compiled JavaScript (minified, uncompressed). The largest parts are:
 
 - Honeybadger (22 KB)
 - ActionCable (10 KB)
 
 ```
-RAILS_ENV=production SECRET_KEY_BASE=temp bin/rails assets:clobber assets:precompile
+$ yarn build
+yarn run v1.22.17
+$ node esbuild.config.js
+
+  ../assets/builds/application.js                                                                        132.4kb  100.0%
+   ├ ../../node_modules/@hotwired/turbo/dist/turbo.es2017-esm.js                                          62.5kb   47.2%
+   ├ ../../node_modules/@hotwired/stimulus/dist/stimulus.js                                               31.8kb   24.0%
+   ├ ../../node_modules/@honeybadger-io/js/dist/browser/honeybadger.js                                    21.1kb   16.0%
+   ├ ../../node_modules/@hotwired/turbo-rails/node_modules/@rails/actioncable/src/connection.js            2.8kb    2.1%
+   ├ ../../node_modules/@hotwired/turbo-rails/node_modules/@rails/actioncable/src/connection_monitor.js    2.3kb    1.7%
+   ├ ../../node_modules/register-service-worker/index.js                                                   1.7kb    1.3%
+   ├ ../../node_modules/@hotwired/turbo-rails/node_modules/@rails/actioncable/src/subscriptions.js        1021b     0.8%
+   ├ ../../node_modules/el-transition/index.js                                                             805b     0.6%
+   ├ ../../node_modules/timeago.js/esm/utils/date.js                                                       659b     0.5%
+   ├ ../../node_modules/@hotwired/turbo-rails/node_modules/@rails/actioncable/src/consumer.js              585b     0.4%
+   ├ controllers/online_status_controller.js                                                               568b     0.4%
+   ├ ../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/cable_stream_source_element.js          522b     0.4%
+   ├ utils/setupServiceWorker.js                                                                           519b     0.4%
+   ├ ../components/clicks/component_controller.js                                                          480b     0.4%
+   ├ ../../node_modules/@hotwired/turbo-rails/node_modules/@rails/actioncable/src/index.js                 468b     0.3%
+   ├ ../../node_modules/timeago.js/esm/realtime.js                                                         409b     0.3%
+   ├ ../../node_modules/@hotwired/turbo-rails/node_modules/@rails/actioncable/src/subscription.js          400b     0.3%
+   ├ ../../node_modules/@hotwired/turbo-rails/node_modules/@rails/actioncable/src/internal.js              365b     0.3%
+   ├ ../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/cable.js                                256b     0.2%
+   ├ ../../node_modules/timeago.js/esm/lang/zh_CN.js                                                       220b     0.2%
+   ├ ../../node_modules/timeago.js/esm/lang/en_US.js                                                       197b     0.1%
+   ├ ../../node_modules/timeago.js/esm/utils/dom.js                                                        158b     0.1%
+   ├ utils/setupHoneyBadger.js                                                                             157b     0.1%
+   ├ rails:/Users/ledermann/Projects/templatus-hotwire/app/javascript/controllers/**/*_controller.js       151b     0.1%
+   ├ ../../node_modules/@hotwired/turbo-rails/node_modules/@rails/actioncable/src/logger.js                108b     0.1%
+   ├ controllers/timeago_controller.js                                                                     104b     0.1%
+   ├ rails:/Users/ledermann/Projects/templatus-hotwire/app/components/**/*_controller.js                    96b     0.1%
+   ├ utils/metaContent.js                                                                                   92b     0.1%
+   ├ utils/setupStimulus.js                                                                                 78b     0.1%
+   ├ ../../node_modules/timeago.js/esm/register.js                                                          75b     0.1%
+   ├ ../components/index.js                                                                                 68b     0.1%
+   ├ controllers/index.js                                                                                   68b     0.1%
+   ├ ../../node_modules/@hotwired/turbo-rails/node_modules/@rails/actioncable/src/adapters.js               67b     0.0%
+   └ ../../node_modules/timeago.js/esm/index.js                                                             30b     0.0%
+
+✨  Done in 0.29s.
+~/Projects/templatus-hotwire main ⇡1 !2 ❯
 ```
 
 ### Network transfer
 
-Small footprint: The demo application transfers only **54 KB** of data on the first visit.
+Small footprint: The demo application transfers only **51 KB** of data on the first visit.
 
 ![Network](docs/network.png)
 
@@ -118,7 +159,7 @@ With multi-stage building and using [DockerRailsBase](https://github.com/lederma
 
 ### Docker image size
 
-The Docker image is based on Alpine Linux and is optimized for minimal size (currently **117 MB** uncompressed disk size). It includes just the bare minimum - no build tools like Node.js, no JS sources (just the compiled assets), no tests.
+The Docker image is based on Alpine Linux and is optimized for minimal size (currently **130 MB** uncompressed disk size). It includes just the bare minimum - no build tools like Node.js, no JS sources (just the compiled assets), no tests.
 
 ```
 $ container-diff analyze ghcr.io/ledermann/templatus-hotwire -n
@@ -127,7 +168,7 @@ $ container-diff analyze ghcr.io/ledermann/templatus-hotwire -n
 
 Analysis for ghcr.io/ledermann/templatus-hotwire:
 IMAGE                                      DIGEST       SIZE
-ghcr.io/ledermann/templatus-hotwire        sha256:...   117.3M
+ghcr.io/ledermann/templatus-hotwire        sha256:...   130M
 ```
 
 ## Getting startet

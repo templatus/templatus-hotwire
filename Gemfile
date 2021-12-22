@@ -9,6 +9,9 @@ gem 'rails', '~> 7.0.0'
 # Sprockets Rails integration (https://github.com/rails/sprockets-rails)
 gem 'sprockets-rails'
 
+# Adds multiple exporters to Sprockets (https://github.com/hansottowirtz/sprockets-exporters_pack)
+gem 'sprockets-exporters_pack'
+
 # The speed of a single-page web application without having to write any JavaScript. (https://github.com/hotwired/turbo-rails)
 gem 'turbo-rails'
 
