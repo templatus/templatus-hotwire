@@ -669,10 +669,10 @@ cssesc@^3.0.0:
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
 
-cypress@^9.1.1:
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/cypress/-/cypress-9.1.1.tgz#26720ca5a22077cd85f49745616b7a08152a298f"
-  integrity sha512-yWcYD8SEQ8F3okFbRPqSDj5V0xhrZBT5QRIH+P1J2vYvtEmZ4KGciHE7LCcZZLILOrs7pg4WNCqkj/XRvReQlQ==
+cypress@^9.2.0:
+  version "9.2.0"
+  resolved "https://registry.yarnpkg.com/cypress/-/cypress-9.2.0.tgz#727c20b4662167890db81d5f6ba615231835b17d"
+  integrity sha512-Jn26Tprhfzh/a66Sdj9SoaYlnNX6Mjfmj5PHu2a7l3YHXhrgmavM368wjCmgrxC6KHTOv9SpMQGhAJn+upDViA==
   dependencies:
     "@cypress/request" "^2.88.10"
     "@cypress/xvfb" "^1.2.4"
