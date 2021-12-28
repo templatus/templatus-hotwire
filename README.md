@@ -143,8 +143,7 @@ $ node esbuild.config.js
    ├ ../../node_modules/@hotwired/turbo-rails/node_modules/@rails/actioncable/src/adapters.js               67b     0.0%
    └ ../../node_modules/timeago.js/esm/index.js                                                             30b     0.0%
 
-✨  Done in 0.29s.
-~/Projects/templatus-hotwire main ⇡1 !2 ❯
+✨  Done in 0.46s.
 ```
 
 ### Network transfer
