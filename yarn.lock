@@ -946,14 +946,14 @@ eslint-plugin-prettier@^4.0.0:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-tailwindcss@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-tailwindcss/-/eslint-plugin-tailwindcss-3.0.0.tgz#68211298921ddbae52e6472c1d08343a2fe1cda5"
-  integrity sha512-GJgFgLV/41QPQqiiqymsiQHy4zVdS1tzMrH2YKxdavFlBGm9uLrHoiOb0ulFCw2Fd+9jTzlL2EtHbdGUMarKDg==
+eslint-plugin-tailwindcss@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-tailwindcss/-/eslint-plugin-tailwindcss-3.0.1.tgz#c0e8750e6d2a1f753d37d0d24dcedeb6cc57bac3"
+  integrity sha512-ddzqWKf8WkfwKIT/6GX5lwgx9Y7rJ5hdiknp0UYYG3s3WFnBUCZl7IEBjeuSfIuIANNYwZs8kOTjw31gML7AoA==
   dependencies:
     fast-glob "^3.2.5"
     postcss "^8.4.4"
-    tailwindcss "^3.0.0"
+    tailwindcss "^3.0.7"
 
 eslint-scope@^7.1.0:
   version "7.1.0"
@@ -2146,7 +2146,7 @@ supports-color@^8.1.1:
   dependencies:
     has-flag "^4.0.0"
 
-tailwindcss@^3.0.0, tailwindcss@^3.0.7:
+tailwindcss@^3.0.7:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.0.7.tgz#15936881f042a7eb8d6f2b6a454bac9f51181bbd"
   integrity sha512-rZdKNHtC64jcQncLoWOuCzj4lQDTAgLtgK3WmQS88tTdpHh9OwLqULTQxI3tw9AMJsqSpCKlmcjW/8CSnni6zQ==
