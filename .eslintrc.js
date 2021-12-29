@@ -11,12 +11,7 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:tailwindcss/recommended',
   ],
-  globals: {
-    defineProps: 'readonly',
-    defineEmits: 'readonly',
-    defineExpose: 'readonly',
-    withDefaults: 'readonly',
-  },
+  globals: {},
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
