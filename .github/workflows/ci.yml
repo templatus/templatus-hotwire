@@ -52,9 +52,6 @@ jobs:
       - name: Setup PostgreSQL
         run: bin/rails db:create
 
-      - name: Compile assets
-        run: bin/rails assets:precompile
-
       - name: Run Ruby Tests
         run: bin/rspec
 
