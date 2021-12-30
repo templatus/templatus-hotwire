@@ -8,6 +8,9 @@ Templatus-Hotwire is an opinionated template to build web applications with Ruby
 
 Live demo available at https://templatus-hotwire.ledermann.dev
 
+There is a sister repository that uses Vue.js instead of Hotwire:
+https://github.com/ledermann/templatus/
+
 ## Features / Technology stack
 
 ### Backend
