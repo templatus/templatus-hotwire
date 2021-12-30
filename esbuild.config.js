@@ -4,12 +4,12 @@ const path = require('path');
 
 (async () => {
   const result = await esbuild.build({
-    entryPoints: ["application.js"],
+    entryPoints: ['application.js'],
     bundle: true,
     minify: true,
     metafile: true,
-    outdir: path.join(process.cwd(), "app/assets/builds"),
-    absWorkingDir: path.join(process.cwd(), "app/javascript"),
+    outdir: path.join(process.cwd(), 'app/assets/builds'),
+    absWorkingDir: path.join(process.cwd(), 'app/javascript'),
     plugins: [rails()],
   });
 

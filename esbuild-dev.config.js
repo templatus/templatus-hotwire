@@ -8,37 +8,40 @@ const rails = require('esbuild-rails');
 
 const clients = [];
 
-http.createServer((req, res) =>
-  clients.push(
-    res.writeHead(200, {
-      "Content-Type": "text/event-stream",
-      "Cache-Control": "no-cache",
-      "Access-Control-Allow-Origin": "*",
-      Connection: "keep-alive",
-    }),
+http
+  .createServer((req, res) =>
+    clients.push(
+      res.writeHead(200, {
+        'Content-Type': 'text/event-stream',
+        'Cache-Control': 'no-cache',
+        'Access-Control-Allow-Origin': '*',
+        Connection: 'keep-alive',
+      }),
+    ),
   )
-).listen(8082);
+  .listen(8082);
 
 async function builder() {
-  let result = await require("esbuild").build({
-    entryPoints: ["application.js"],
+  let result = await require('esbuild').build({
+    entryPoints: ['application.js'],
     bundle: true,
-    outdir: path.join(process.cwd(), "app/assets/builds"),
-    absWorkingDir: path.join(process.cwd(), "app/javascript"),
+    outdir: path.join(process.cwd(), 'app/assets/builds'),
+    absWorkingDir: path.join(process.cwd(), 'app/javascript'),
     incremental: true,
     plugins: [rails()],
     banner: {
       js: ' (() => new EventSource("http://localhost:8082").onmessage = () => location.reload())();',
     },
   });
-  chokidar.watch(
-    [
+  chokidar
+    .watch([
       './app/**/*.html.*',
       './app/**/*.rb',
       './app/**/*.js',
-      "./app/assets/stylesheets/*.css"
-    ]).on('all', (_event, path) => {
-      if (path.endsWith(".js")) {
+      './app/assets/stylesheets/*.css',
+    ])
+    .on('all', (_event, path) => {
+      if (path.endsWith('.js')) {
         result.rebuild();
       }
       clients.forEach((res) => res.write('data: update\n\n'));
