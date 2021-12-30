@@ -68,6 +68,15 @@ GEM
       msgpack (~> 1.0)
     brotli (0.4.0)
     builder (3.2.4)
+    capybara (3.36.0)
+      addressable
+      matrix
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.8)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (>= 1.5, < 3.0)
+      xpath (~> 3.2)
     coderay (1.1.3)
     concurrent-ruby (1.1.9)
     connection_pool (2.2.5)
@@ -107,7 +116,10 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
+    heroicon (0.4.0)
+      rails (>= 5.2)
     honeybadger (4.9.0)
+    htmlbeautifier (1.4.1)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     io-console (0.5.9)
@@ -126,10 +138,19 @@ GEM
     loofah (2.13.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
+    lookbook (0.4.8)
+      htmlbeautifier (~> 1.3)
+      listen (~> 3.0)
+      rails (>= 5.0)
+      redcarpet (~> 3.5)
+      rouge (~> 3.26)
+      view_component (~> 2.0)
+      yard (~> 0.9.25)
     lumberjack (1.2.8)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.2)
+    matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
     mini_portile2 (2.6.1)
@@ -199,6 +220,7 @@ GEM
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redcarpet (3.5.1)
     redis (4.5.1)
     regexp_parser (2.2.0)
     reline (0.3.0)
@@ -206,6 +228,7 @@ GEM
     request_store (1.5.0)
       rack (>= 1.4)
     rexml (3.2.5)
+    rouge (3.27.0)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
       rspec-expectations (~> 3.10.0)
@@ -262,6 +285,15 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.3)
+    slim (4.1.0)
+      temple (>= 0.7.6, < 0.9)
+      tilt (>= 2.0.6, < 2.1)
+    slim_lint (0.22.1)
+      rubocop (>= 0.78.0)
+      slim (>= 3.0, < 5.0)
+    spring (4.0.0)
+    spring-commands-rspec (1.0.4)
+      spring (>= 0.9.1)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -272,18 +304,33 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    stimulus-rails (1.0.2)
+      railties (>= 6.0.0)
+    temple (0.8.2)
     thor (1.1.0)
+    tilt (2.0.10)
+    turbo-rails (1.0.0)
+      actionpack (>= 6.0.0)
+      railties (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
+    view_component (2.47.0)
+      activesupport (>= 5.0.0, < 8.0)
+      method_source (~> 1.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
+    webrick (1.7.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    xpath (3.2.0)
+      nokogiri (~> 1.8)
+    yard (0.9.27)
+      webrick (~> 1.7.0)
     zeitwerk (2.5.2)
 
 PLATFORMS
@@ -291,14 +338,18 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bootsnap
+  bootsnap (>= 1.4.4)
+  capybara
   cssbundling-rails
-  debug
+  debug (>= 1.0.0)
   dotenv-rails
   guard-rspec
+  heroicon
   honeybadger
   jsbundling-rails
+  listen (~> 3.3)
   lograge
+  lookbook
   pg (~> 1.1)
   puma (~> 5.0)
   rack-brotli
@@ -314,10 +365,17 @@ DEPENDENCIES
   sidekiq
   sidekiq-cron
   simplecov
+  slim
+  slim_lint
+  spring
+  spring-commands-rspec
   sprockets-exporters_pack
   sprockets-rails
+  stimulus-rails
+  turbo-rails
   tzinfo-data
-  web-console
+  view_component
+  web-console (>= 4.1.0)
 
 RUBY VERSION
    ruby 3.0.3p157

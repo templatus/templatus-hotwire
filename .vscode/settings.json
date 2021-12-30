@@ -18,7 +18,7 @@
     "**/node_modules": true
   },
 
-  "eslint.validate": ["javascript", "vue"],
+  "eslint.validate": ["javascript"],
 
   "ruby.lint": {
     "rubocop": {

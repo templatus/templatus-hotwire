@@ -1,0 +1,76 @@
+doctype html
+html lang="en"
+  head
+    meta content="text/html; charset=UTF-8" http-equiv="Content-Type"
+    meta charset="utf-8"
+
+    title Templatus-Hotwire
+
+    meta content="Ruby on Rails template for using Hotwire" name="description"
+    meta content="width=device-width,initial-scale=1" name="viewport" /
+    meta content="yes" name="mobile-web-app-capable" /
+    meta content="Templatus-Hotwire" name="application-name" /
+    meta content="#991c1c" name="theme-color" /
+    meta content="yes" name="apple-mobile-web-app-capable" /
+    meta content="Templatus-Hotwire" name="apple-mobile-web-app-title" /
+    meta content="black" name="apple-mobile-web-app-status-bar-style" /
+    meta content="#{Rails.configuration.x.git.commit_version}" name="git-commit-version" /
+    meta content="#{Rails.configuration.x.git.commit_time}" name="git-commit-time" /
+    meta content="#{Rails.configuration.x.honeybadger.api_key}" name="honeybadger-api-key" /
+
+    = csrf_meta_tags
+    = action_cable_meta_tag
+
+    = tag.link href: asset_path('/apple-touch-icon.png'), rel: 'apple-touch-icon', type: 'image/png', sizes: '180x180'
+    = tag.link href: asset_path('/favicon-32x32.png'),    rel: 'icon',             type: 'image/png', sizes: '32x32'
+    = tag.link href: asset_path('/favicon-16x16.png'),    rel: 'icon',             type: 'image/png', sizes: '16x16'
+    = tag.link href: webmanifest_path, rel: 'manifest'
+
+    = javascript_include_tag 'application',
+                             'data-turbo-track': 'reload',
+                             integrity: true,
+                             crossorigin: 'anonymous',
+                             defer: true
+    = stylesheet_link_tag 'application',
+                          'data-turbo-track': 'reload'
+
+  body
+    div class="flex flex-col min-h-screen bg-red-50"
+      header
+        svg class="hidden sm:block absolute inset-0 w-full h-96 drop-shadow-xl" fill="none" preserveaspectratio="none" viewbox="0 0 100 100"
+          polygon class="text-red-800" fill="currentColor" points="0,0 0,100 100,0"
+
+        div class="relative bg-red-800 sm:bg-transparent"
+          div class="py-8 sm:py-10 px-4 sm:px-6 lg:px-8 mx-auto max-w-5xl"
+            div class="flex items-center space-x-5 md:space-x-10"
+              = image_tag asset_path('rails.svg'),
+                          alt: 'Ruby on Rails',
+                          class: 'p-3 bg-red-100 rounded h-16 md:h-24 w-auto', width: 215, height: 96
+              div class="text-4xl md:text-8xl text-red-100"
+                | &plus;
+              = image_tag asset_path('hotwire.svg'),
+                          alt: 'Hotwire',
+                          class: 'p-3 bg-red-100 rounded h-16 md:h-24 w-auto', width: 285, height: 96
+
+            div class="mt-10"
+              = render Tabs::Component.new do |c|
+                - c.tabs [ \
+                 { text: 'Home',  href: root_path  },
+                 { text: 'About', href: about_path } \
+                ]
+
+      main class="relative flex-grow sm:py-32 lg:py-24 px-5 pt-10 pb-24 mx-auto max-w-5xl"
+        = yield
+
+      footer class="fixed bottom-0 pt-2 pb-4 w-full text-sm text-white bg-gray-700"
+        div class="flex flex-wrap px-4 sm:px-6 lg:px-8 mx-auto max-w-5xl"
+          div class="w-full text-center sm:text-left sm:w-1/4"
+            a class="hover:underline" href="https://github.com/ledermann/templatus-hotwire" rel="noopener noreferrer" target="_blank"
+              | Source on GitHub
+
+          div class="w-full text-center sm:w-1/4" data-controller="online-status"
+            span class="hidden py-px px-1 font-bold tracking-wide text-red-700 uppercase bg-white rounded" data-online-status-target="indicator"
+
+          div class="w-full text-center sm:text-right sm:w-1/2"
+            = render GitVersion::Component.new commit_version: Rails.configuration.x.git.commit_version,
+                                               commit_time: Rails.configuration.x.git.commit_time

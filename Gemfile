@@ -12,11 +12,29 @@ gem 'sprockets-rails'
 # Adds multiple exporters to Sprockets (https://github.com/hansottowirtz/sprockets-exporters_pack)
 gem 'sprockets-exporters_pack'
 
+# The speed of a single-page web application without having to write any JavaScript. (https://github.com/hotwired/turbo-rails)
+gem 'turbo-rails'
+
+# A modest JavaScript framework for the HTML you already have. (https://stimulus.hotwired.dev)
+gem 'stimulus-rails'
+
 # Bundle and transpile JavaScript in Rails with esbuild, rollup.js, or Webpack. (https://github.com/rails/jsbundling-rails)
 gem 'jsbundling-rails'
 
 # Bundle and process CSS with Tailwind, Bootstrap, PostCSS, Sass in Rails via Node.js. (https://github.com/rails/cssbundling-rails)
 gem 'cssbundling-rails'
+
+# View components for Rails (https://github.com/github/view_component)
+gem 'view_component'
+
+# A native development UI for ViewComponent (https://github.com/allmarkedup/lookbook)
+gem 'lookbook'
+
+# Slim is a template language. (http://slim-lang.com/)
+gem 'slim'
+
+# Rails View Helpers for Heroicons. (https://github.com/bharget/heroicon)
+gem 'heroicon'
 
 # Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org/] (https://github.com/ged/ruby-pg)
 gem 'pg', '~> 1.1'
@@ -25,7 +43,7 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 
 # Boot large ruby/rails apps faster (https://github.com/Shopify/bootsnap)
-gem 'bootsnap', require: false
+gem 'bootsnap', '>= 1.4.4', require: false
 
 # Timezone Data for TZInfo (https://tzinfo.github.io)
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
@@ -56,7 +74,7 @@ gem 'sidekiq-cron'
 
 group :development, :test do
   # Debugging functionality for Ruby (https://github.com/ruby/debug)
-  gem 'debug', platforms: %i[ mri mingw x64_mingw ]
+  gem 'debug', '>= 1.0.0', platforms: %i[ mri mingw x64_mingw ]
 
   # Autoload dotenv in Rails. (https://github.com/bkeepers/dotenv)
   gem 'dotenv-rails'
@@ -75,20 +93,35 @@ group :development, :test do
 
   # Code style checking for RSpec files (https://github.com/rubocop/rubocop-rspec)
   gem 'rubocop-rspec', require: false
+
+  # Slim template linting tool (https://github.com/sds/slim-lint)
+  gem 'slim_lint'
 end
 
 group :development do
   # A debugging tool for your Ruby on Rails applications. (https://github.com/rails/web-console)
-  gem 'web-console'
+  gem 'web-console', '>= 4.1.0'
 
   # Profiles loading speed for rack applications. (https://miniprofiler.com)
-  # gem 'rack-mini-profiler'
+  # gem 'rack-mini-profiler', '~> 2.0'
+
+  # Listen to file modifications (https://github.com/guard/listen)
+  gem 'listen', '~> 3.3'
 
   # Guard gem for RSpec (https://github.com/guard/guard-rspec)
   gem 'guard-rspec', require: false
+
+  # Rails application preloader (https://github.com/rails/spring)
+  gem 'spring'
+
+  # rspec command for spring (https://github.com/jonleighton/spring-commands-rspec)
+  gem 'spring-commands-rspec'
 end
 
 group :test do
   # Code coverage for Ruby (https://github.com/simplecov-ruby/simplecov)
   gem 'simplecov', require: false
+
+  # Capybara aims to simplify the process of integration testing Rack applications, such as Rails, Sinatra or Merb (https://github.com/teamcapybara/capybara)
+  gem 'capybara'
 end

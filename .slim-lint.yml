@@ -1,0 +1,9 @@
+exclude:
+  - 'vendor/**/*.slim'
+
+linters:
+  LineLength:
+    enabled: false
+
+  RuboCop:
+    enabled: true
