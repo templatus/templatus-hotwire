@@ -1,69 +1,41 @@
 {
-  "name": "templatus",
+  "name": "templatus-hotwire",
   "private": true,
   "scripts": {
-    "test": "jest --coverage",
-    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify",
-    "build": "node esbuild.config.js",
-    "lint": "eslint --ext .js,.ts,.vue --cache .",
+    "lint": "eslint --ext .js --cache .",
     "start": "node esbuild-dev.config.js",
-    "tsc": "vue-tsc --noEmit"
+    "build": "node esbuild.config.js",
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify"
   },
   "dependencies": {
-    "@babel/core": "^7.16.5",
-    "@babel/preset-typescript": "^7.16.5",
-    "@headlessui/vue": "^1.4.2",
-    "@heroicons/vue": "^1.0.5",
-    "@honeybadger-io/vue": "^3.0.0",
+    "@honeybadger-io/js": "^3.2.7",
+    "@hotwired/stimulus": "^3.0.1",
+    "@hotwired/turbo-rails": "^7.1.0",
     "@rails/actioncable": "^7.0.0",
-    "@rails/request.js": "^0.0.6",
     "@tailwindcss/forms": "^0.4.0",
-    "@types/rails__actioncable": "^6.1.6",
-    "@vue/compiler-sfc": "^3.2.25",
     "autoprefixer": "^10.4.1",
+    "el-transition": "^0.0.7",
     "esbuild": "^0.14.9",
     "esbuild-rails": "^1.0.3",
-    "pinia": "^2.0.9",
     "postcss": "^8.4.5",
     "register-service-worker": "^1.7.2",
     "tailwindcss": "^3.0.8",
-    "timeago.js": "^4.0.2",
-    "typescript": "^4.5.4",
-    "vue": "^3.2.26",
-    "vue-router": "^4.0.12"
+    "timeago.js": "^4.0.2"
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@babel/eslint-parser": "^7.16.5",
     "@prettier/plugin-ruby": "^2.0.0",
-    "@types/jest": "^27.0.3",
-    "@typescript-eslint/eslint-plugin": "^5.8.1",
-    "@typescript-eslint/parser": "^5.8.1",
-    "@vue/test-utils": "2.0.0-rc.4",
-    "@vue/vue3-jest": "^27.0.0-alpha.4",
-    "babel-jest": "^27.4.5",
     "chokidar": "^3.5.2",
     "cypress": "^9.2.0",
-    "esbuild-plugin-vue3": "^0.3.0",
     "eslint": "^8.5.0",
     "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-cypress": "^2.12.1",
-    "eslint-plugin-jest": "^25.3.2",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-tailwindcss": "^3.0.2",
-    "eslint-plugin-vue": "^8.2.0",
-    "jest": "^27.4.5",
-    "jest-serializer-vue": "^2.0.2",
-    "jest-transform-stub": "^2.0.0",
-    "prettier": "^2.5.1",
-    "ts-jest": "^27.1.2",
-    "vue-tsc": "^0.30.1"
+    "prettier": "^2.5.1"
   },
   "browserslist": [
     "defaults",
     "not IE 11"
-  ],
-  "resolutions": {
-    "esbuild-plugin-vue3/esbuild": "^0.14.7"
-  }
+  ]
 }
