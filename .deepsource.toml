@@ -27,3 +27,11 @@ enabled = true
 [[analyzers]]
 name = "secrets"
 enabled = true
+
+[[transformers]]
+name = "prettier"
+enabled = true
+
+[[transformers]]
+name = "rubocop"
+enabled = true
