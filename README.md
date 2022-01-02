@@ -2,9 +2,9 @@
 [![Cypress](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/5d6bqs&style=flat-square&logo=cypress)](https://dashboard.cypress.io/projects/5d6bqs/runs)
 [![DeepSource](https://deepsource.io/gh/ledermann/templatus-hotwire.svg/?label=active+issues&show_trend=true&token=P_LIyx8VyJ9JkU_9Qcnf1nwX)](https://deepsource.io/gh/ledermann/templatus-hotwire/?ref=repository-badge)
 
-# Templatus-Hotwire
+# Templatus (Hotwire edition)
 
-Templatus-Hotwire is an opinionated template to build web applications with Ruby on Rails and Hotwire. It simplifies the process of setting up a new application while following best practices.
+Templatus is an opinionated template to build web applications with Ruby on Rails and Hotwire. It simplifies the process of setting up a new application while following best practices.
 
 Live demo available at https://templatus-hotwire.ledermann.dev
 
