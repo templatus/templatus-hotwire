@@ -1,8 +1,8 @@
-nav class="flex space-x-4"
+nav class="flex space-x-5 text-lg font-medium text-center uppercase lg:flex-col lg:space-y-5 lg:space-x-0"
   - tabs.each do |tab|
     = link_to tab.text,
                   tab.href,
-                  class: [ 'px-4 py-1 font-medium text-lg rounded-md border border-red-200',
-                           current_page?(tab.href) ? 'bg-red-200 text-red-900' : 'bg-red-800 text-red-200 hover:bg-red-300 hover:text-red-800' \
+                  class: [ 'px-2 py-1 rounded-md lg:shadow',
+                           current_page?(tab.href) ? 'text-rails-dark bg-white lg:bg-rails-dark lg:text-white' : 'hover:bg-slate-300 hover:text-rails-dark bg-transparent text-white lg:text-rails-dark lg:bg-white' \
                          ],
                   data: { turbo_action: 'replace' }

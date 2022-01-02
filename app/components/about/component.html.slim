@@ -1,10 +1,10 @@
 - cache do
-  div class='space-y-24'
+  div class='mt-20 space-y-24'
     - features.each do |group|
       div
         div class='lg:grid lg:grid-cols-3 lg:gap-x-8'
           div
-            h2 class='text-base font-semibold tracking-wide text-red-800 uppercase'
+            h2 class='text-base font-semibold tracking-wide text-rails-dark uppercase'
               = group['slogan']
 
             p class='mt-2 text-3xl font-extrabold text-gray-900'
@@ -17,14 +17,14 @@
                   dt
                     = helpers.heroicon 'check',
                                       variant: 'outline',
-                                      options: { class: 'absolute w-6 h-6 text-green-500', 'aria-hidden' => 'true' }
+                                      options: { class: 'absolute w-6 h-6 text-hotwire', 'aria-hidden' => 'true' }
 
-                    p class='ml-9 text-lg font-medium leading-6 text-red-800'
+                    p class='flex items-center ml-9 text-lg font-medium leading-6 text-rails-dark'
                       = link_to feature['name'], feature['href'], class: 'hover:underline', target: '_blank', rel: 'noopener noreferrer'
 
                       - if version(feature)
                         = tag.span version(feature),
-                                  class: 'inline-flex items-center py-0.5 px-2.5 ml-2 text-xs font-medium text-red-900 bg-red-200 rounded-full'
+                                  class: 'inline-flex items-center py-0.5 px-2.5 ml-2 text-xs font-medium text-black bg-rose rounded-full'
 
                   dd class='mt-2 ml-9 text-base text-gray-600'
                     = feature['description']

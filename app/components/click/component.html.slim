@@ -1,10 +1,10 @@
-li class="p-2 mt-2 bg-red-100 rounded"
+li class="py-4"
   p
-    span class='px-1 font-mono text-red-100 bg-gray-900 rounded'
+    span class='py-1 px-2 font-mono text-rose bg-gray-900 rounded'
       = click.ip
 
-    span class='px-1 ml-2 text-sm sm:text-base font-medium text-gray-900'
+    span class='px-1 ml-2 font-medium text-gray-900'
       = click.created_at.to_formatted_s(:long)
 
-  p class='font-extralight text-gray-900'
+  code class="block mt-4 font-extralight text-gray-500"
     = click.user_agent

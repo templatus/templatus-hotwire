@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-rails-light: theme('colors.rails.light');
+  --color-rails-dark: theme('colors.rails.dark');
+}
+
+.gradient__rails-light {
+  stop-color: var(--color-rails-light);
+}
+
+.gradient__rails-dark {
+  stop-color: var(--color-rails-dark);
+}

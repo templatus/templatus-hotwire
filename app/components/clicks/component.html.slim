@@ -1,40 +1,38 @@
 = turbo_stream_from 'clicks'
 
 div data-controller="clicks--component"
-  div class="sm:absolute sm:top-0 sm:right-5 w-full sm:w-56 sm:-translate-y-24"
-    div class="p-2 lg:p-5 text-center bg-white rounded-t shadow"
-      div [
-        id="counter"
-        class="text-5xl"
-        data-clicks--component-target="counter"
-        data-transition-enter="transition-transform duration-300 ease-out"
-        data-transition-enter-start="scale-0"
-        data-transition-enter-end="scale-100"
-        data-transition-leave="transition-transform duration-200 ease-in"
-        data-transition-leave-start="scale-100"
-        data-transition-leave-end="scale-0"
-      ]
-        = count
+  div class="flex flex-col mt-5 w-full lg:absolute lg:-top-5 lg:-right-10 lg:p-3 lg:mt-0 lg:w-56 lg:bg-gradient-to-br lg:from-slate-100 lg:to-white lg:rounded lg:shadow"
+    div [
+      id="counter"
+      class="text-center text-5xl font-bold"
+      data-clicks--component-target="counter"
+      data-transition-enter="transition-transform duration-300 ease-out"
+      data-transition-enter-start="scale-0"
+      data-transition-enter-end="scale-100"
+      data-transition-leave="transition-transform duration-200 ease-in"
+      data-transition-leave-start="scale-100"
+      data-transition-leave-end="scale-0"
+    ]
+      = count
 
-      div class="py-1 uppercase"
-        | Clicks
+    div class="py-1 uppercase text-center"
+      | Clicks
 
     = button_to 'Click me!',
                 clicks_path,
-                class: 'py-2 px-4 w-full text-sm font-medium text-red-700 bg-red-100 hover:bg-red-200' \
-                       'rounded-b-md border border-red-200 focus:ring-2 focus:ring-red-500 focus:ring-offset-2 shadow focus:outline-none'
+                class: 'py-2 mt-3 w-full font-medium text-black hover:text-white bg-rose hover:bg-rails-light rounded active:outline-none active:ring-2 active:ring-rails-light active:ring-offset-1'
 
-    p class="hidden sm:block mt-5 text-sm text-gray-600"
+    p class="hidden mt-3 text-xs text-center text-gray-600 sm:block"
       | Tip: Open two browser windows in parallel and see what happens.
 
-  h2 class='mt-5 sm:mt-0 text-xl font-medium tracking-wide text-center sm:text-left text-red-800 uppercase'
+  h2 class='mt-20 text-xl font-medium tracking-wide text-center text-rails-dark uppercase sm:text-left'
     | Latest clicks
 
   = turbo_frame_tag 'clicks',
                     data: { action: 'turbo:before-stream-render@document->clicks--component#receive' } do
     ul[
       id='list'
-      class='relative'
+      class='text-sm md:text-base'
       data-clicks--component-target='list'
       data-transition-leave='transition-all duration-200 ease-out'
       data-transition-leave-start='translate-y-0'
