@@ -35,7 +35,8 @@ async function builder() {
     [
       './app/**/*.html.*',
       './app/**/*.rb',
-      './app/**/*.js',
+      './app/components/**/*.js',
+      './app/javascript/**/*.js',
       "./app/assets/stylesheets/*.css"
     ]).on('all', (_event, path) => {
       if (path.endsWith(".js")) {
