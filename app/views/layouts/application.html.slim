@@ -11,6 +11,7 @@ html lang="en"
     meta content="yes" name="mobile-web-app-capable" /
     meta content="Templatus (Hotwire edition)" name="application-name" /
     meta content="#991c1c" name="theme-color" /
+    meta content="#ffc40d" name="msapplication-TileColor" /
     meta content="yes" name="apple-mobile-web-app-capable" /
     meta content="Templatus (Hotwire edition)" name="apple-mobile-web-app-title" /
     meta content="black" name="apple-mobile-web-app-status-bar-style" /
@@ -24,6 +25,7 @@ html lang="en"
     = tag.link href: asset_path('/apple-touch-icon.png'), rel: 'apple-touch-icon', type: 'image/png', sizes: '180x180'
     = tag.link href: asset_path('/favicon-32x32.png'),    rel: 'icon',             type: 'image/png', sizes: '32x32'
     = tag.link href: asset_path('/favicon-16x16.png'),    rel: 'icon',             type: 'image/png', sizes: '16x16'
+    = tag.link href: asset_path('/safari-pinned-tab.svg'),rel: 'mask-icon',        color: '#d30001'
     = tag.link href: webmanifest_path, rel: 'manifest'
 
     = javascript_include_tag 'application',
