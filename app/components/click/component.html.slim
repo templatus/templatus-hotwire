@@ -1,10 +1,10 @@
 li class="py-4"
   p
-    span class='py-1 px-2 font-mono text-rose bg-gray-900 rounded'
+    span class='px-2 py-1 font-mono bg-gray-900 rounded text-rose'
       = click.ip
 
     span class='px-1 ml-2 font-medium text-gray-900'
       = click.created_at.to_formatted_s(:long)
 
-  code class="block mt-4 font-extralight text-gray-500"
+  code class="block mt-4 text-gray-500 font-extralight"
     = click.user_agent

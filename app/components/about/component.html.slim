@@ -4,14 +4,14 @@
       div
         div class='lg:grid lg:grid-cols-3 lg:gap-x-8'
           div
-            h2 class='text-base font-semibold tracking-wide text-rails-dark uppercase'
+            h2 class='text-base font-semibold tracking-wide uppercase text-rails-dark'
               = group['slogan']
 
             p class='mt-2 text-3xl font-extrabold text-gray-900'
               = group['name']
 
-          div class='lg:col-span-2 mt-12 lg:mt-0'
-            dl class='sm:grid sm:grid-cols-2 sm:gap-x-6 lg:gap-x-8 sm:gap-y-10 space-y-10 sm:space-y-0'
+          div class='mt-12 lg:col-span-2 lg:mt-0'
+            dl class='space-y-10 sm:grid sm:grid-cols-2 sm:gap-x-6 lg:gap-x-8 sm:gap-y-10 sm:space-y-0'
               - group['items'].each do |feature|
                 div class='relative'
                   dt
@@ -19,14 +19,14 @@
                                       variant: 'outline',
                                       options: { class: 'absolute w-6 h-6 text-hotwire', 'aria-hidden' => 'true' }
 
-                    p class='flex items-center ml-9 text-lg font-medium leading-6 text-rails-dark'
+                    p class='flex items-center text-lg font-medium leading-6 ml-9 text-rails-dark'
                       = link_to feature['name'], feature['href'], class: 'hover:underline', target: '_blank', rel: 'noopener noreferrer'
 
                       - if version(feature)
                         = tag.span version(feature),
                                   class: 'inline-flex items-center py-0.5 px-2.5 ml-2 text-xs font-medium text-black bg-rose rounded-full'
 
-                  dd class='mt-2 ml-9 text-base text-gray-600'
+                  dd class='mt-2 text-base text-gray-600 ml-9'
                     = feature['description']
 
                     - if feature['gem'] == 'sidekiq'

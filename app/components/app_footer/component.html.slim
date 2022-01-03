@@ -1,5 +1,5 @@
 footer class= ['flex flex-wrap justify-between items-end px-4 space-y-2 text-sm text-white sm:px-6 lg:px-0', @class]
-  div class="flex items-end space-x-2 w-full sm:w-auto"
+  div class="flex items-end w-full space-x-2 sm:w-auto"
     a class="hover:underline" target="_blank" rel="noopener noreferrer" href="https://github.com/ledermann/templatus-hotwire"
       svg class="w-6 h-6" viewbox="0 0 24 24" fill="currentColor"
         title GitHub
@@ -9,7 +9,7 @@ footer class= ['flex flex-wrap justify-between items-end px-4 space-y-2 text-sm 
                                        commit_time: Rails.configuration.x.git.commit_time
 
   div class="w-full sm:w-auto" data-controller="online-status"
-    span class="hidden py-px px-1 font-bold tracking-wide text-red-700 uppercase bg-white rounded" data-online-status-target="indicator"
+    span class="hidden px-1 py-px font-bold tracking-wide text-red-700 uppercase bg-white rounded" data-online-status-target="indicator"
       | You are offline
 
   div class="flex items-end w-full sm:w-auto"

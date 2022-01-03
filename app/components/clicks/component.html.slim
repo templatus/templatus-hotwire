@@ -1,10 +1,10 @@
 = turbo_stream_from 'clicks'
 
 div data-controller="clicks--component"
-  div class="flex flex-col mt-5 w-full lg:absolute lg:-top-5 lg:-right-10 lg:p-3 lg:mt-0 lg:w-56 lg:bg-gradient-to-br lg:from-slate-100 lg:to-white lg:rounded lg:shadow"
+  div class="flex flex-col w-full mt-5 lg:absolute lg:-top-5 lg:-right-10 lg:p-3 lg:mt-0 lg:w-56 lg:bg-gradient-to-br lg:from-slate-100 lg:to-white lg:rounded lg:shadow"
     div [
       id="counter"
-      class="text-center text-5xl font-bold"
+      class="text-5xl font-bold text-center"
       data-clicks--component-target="counter"
       data-transition-enter="transition-transform duration-300 ease-out"
       data-transition-enter-start="scale-0"
@@ -15,7 +15,7 @@ div data-controller="clicks--component"
     ]
       = count
 
-    div class="py-1 uppercase text-center"
+    div class="py-1 text-center uppercase"
       | Clicks
 
     = button_to 'Click me!',
@@ -25,7 +25,7 @@ div data-controller="clicks--component"
     p class="hidden mt-3 text-xs text-center text-gray-600 sm:block"
       | Tip: Open two browser windows in parallel and see what happens.
 
-  h2 class='mt-20 text-xl font-medium tracking-wide text-center text-rails-dark uppercase sm:text-left'
+  h2 class='mt-20 text-xl font-medium tracking-wide text-center uppercase text-rails-dark sm:text-left'
     | Latest clicks
 
   = turbo_frame_tag 'clicks',
