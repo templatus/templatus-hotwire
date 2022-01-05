@@ -29,7 +29,6 @@ https://github.com/ledermann/templatus/
 - [Slim](http://slim-lang.com/) for writing templates instead of ERB
 - [Tailwind CSS 3](https://tailwindcss.com/) to not have to write CSS at all
 - [Heroicons](https://heroicons.com/) for beautiful hand-crafted SVG icons
-- [Rails Request.JS](https://github.com/rails/request.js) for AJAX requests with default headers
 - [esbuild](https://esbuild.github.io/) for bundling JavaScript
 
 ### Development
@@ -88,11 +87,11 @@ https://github.com/rails/rails/pull/41994
 
 ### WebPageTest
 
-[![WebPageTest](docs/web-page-test.png)](https://webpagetest.org/result/211213_AiDcS0_a690602e1bbcc6121d478fbd94f323b2/)
+[![WebPageTest](docs/web-page-test.png)](https://webpagetest.org/result/220105_BiDcP1_bf262a68c289184ff361e448f75f9ca2/)
 
 ### GTmetrix
 
-[![GTmetrix](docs/GTmetrix.png)](https://gtmetrix.com/reports/templatus-hotwire.ledermann.dev/wEwahJmQ/)
+[![GTmetrix](docs/GTmetrix.png)](https://gtmetrix.com/reports/templatus-hotwire.ledermann.dev/rrL1D1P7/)
 
 ### Check-your-website
 
