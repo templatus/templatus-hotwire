@@ -130,7 +130,7 @@ GEM
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     io-console (0.5.11)
-    io-wait (0.2.0)
+    io-wait (0.2.1)
     irb (1.4.1)
       reline (>= 0.3.0)
     jsbundling-rails (1.0.0)
