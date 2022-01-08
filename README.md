@@ -15,7 +15,7 @@ https://github.com/ledermann/templatus/
 
 ### Backend
 
-- [Ruby](https://www.ruby-lang.org/de/) 3
+- [Ruby](https://www.ruby-lang.org/de/) 3.1
 - [Ruby on Rails](https://rubyonrails.org/) 7.0
 - [ActionCable](https://guides.rubyonrails.org/action_cable_overview.html) for WebSocket communication
 - [PostgreSQL](https://www.postgresql.org/) for using as SQL database
@@ -161,7 +161,7 @@ With multi-stage building and using [DockerRailsBase](https://github.com/lederma
 
 ### Docker image size
 
-The Docker image is based on Alpine Linux and is optimized for minimal size (currently **130 MB** uncompressed disk size). It includes just the bare minimum - no build tools like Node.js, no JS sources (just the compiled assets), no tests.
+The Docker image is based on Alpine Linux and is optimized for minimal size (currently **136 MB** uncompressed disk size). It includes just the bare minimum - no build tools like Node.js, no JS sources (just the compiled assets), no tests.
 
 ```
 $ container-diff analyze ghcr.io/ledermann/templatus-hotwire -n
@@ -170,7 +170,7 @@ $ container-diff analyze ghcr.io/ledermann/templatus-hotwire -n
 
 Analysis for ghcr.io/ledermann/templatus-hotwire:
 IMAGE                                      DIGEST       SIZE
-ghcr.io/ledermann/templatus-hotwire        sha256:...   130.1M
+ghcr.io/ledermann/templatus-hotwire        sha256:...   136.4M
 ```
 
 ## Getting started
