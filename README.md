@@ -196,6 +196,10 @@ brew bundle
 sudo puma-dev -setup
 puma-dev -install
 puma-dev link
+
+# Auto-reload esbuild via puma-dev proxy
+# https://github.com/puma/puma-dev#webpack-dev-server
+echo 8082 > ~/.puma-dev/esbuild.templatus-hotwire
 ```
 
 4. Setup the application to install gems and NPM packages and create the database:

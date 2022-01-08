@@ -11,7 +11,7 @@ Rails.application.configure do
       policy.script_src :self, :unsafe_eval, :unsafe_inline
       policy.connect_src :self,
                          "wss://#{ENV['APP_HOST']}",
-                         'http://localhost:8082'
+                         'https://esbuild.templatus-hotwire.test'
     else
       policy.default_src :none
       policy.font_src(
