@@ -1,6 +1,6 @@
 class ClicksController < ApplicationController
   def index
-    @clicks = Click.order(created_at: :desc).limit(5).to_a
+    @clicks = Click.order(created_at: :desc).limit(5).load_async
     @clicks_count = Click.count
   end
 
