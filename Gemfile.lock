@@ -102,7 +102,7 @@ GEM
     erubi (1.10.0)
     et-orbi (1.2.6)
       tzinfo
-    ffi (1.15.4)
+    ffi (1.15.5)
     formatador (0.3.0)
     fugit (1.5.2)
       et-orbi (~> 1.1, >= 1.1.8)
