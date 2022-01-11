@@ -6,7 +6,7 @@ x-app-base: &app_base
     - db
     - redis
   environment: &app_environment
-    APP_HOST: my-production-domain.com
+    APP_HOST: localhost
     ASSET_HOST: ''
     FORCE_SSL: 'false'
     DB_HOST: db
