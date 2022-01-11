@@ -1,10 +1,9 @@
 /node_modules
 /coverage
 /public
+/app/assets/builds
 /vendor
 /tmp
 /log
 /db
 /config
-/*.config.js
-/app/assets/builds

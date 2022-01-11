@@ -2,23 +2,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'rails': {
+        rails: {
           light: '#D30001',
-          dark: '#690000'
+          dark: '#690000',
         },
-        'hotwire': {
+        hotwire: {
           DEFAULT: '#15d1d8',
         },
-        'rose': {
-          DEFAULT: '#F0E7E9'
-        }
-      }
+        rose: {
+          DEFAULT: '#F0E7E9',
+        },
+      },
     },
   },
-  content: [
-    './app/**/*.html.*',
-    './app/**/*.rb',
-    './app/**/*.js',
-  ],
+  content: ['./app/**/*.html.*', './app/**/*.rb', './app/**/*.js'],
   plugins: [require('@tailwindcss/forms')],
 };
