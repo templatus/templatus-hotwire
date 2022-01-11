@@ -3,6 +3,8 @@
 // Live reloading with Ruby on Rails and esbuild
 // Inspired by:
 // https://www.colby.so/posts/live-reloading-with-esbuild-and-rails
+// and
+// https://gorails.com/episodes/live-reload-esbuild-rails
 
 // Esbuild is configured with 3 modes:
 //
@@ -22,7 +24,7 @@ const watchDirectories = [
   './app/**/*.html.*',
   './app/components/**/*.js',
   './app/javascript/**/*.js',
-  './app/assets/stylesheets/*.css',
+  './app/assets/builds/**/*.css',
 ];
 const config = {
   absWorkingDir: path.join(process.cwd(), 'app/javascript'),
