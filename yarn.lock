@@ -952,10 +952,10 @@ eslint-plugin-prettier@^4.0.0:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-tailwindcss@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-tailwindcss/-/eslint-plugin-tailwindcss-3.1.2.tgz#c8a8161a962a7c019f1188ee16a9f640f5c5399d"
-  integrity sha512-wuhnf+hc3/3+8SWe9Hy+eIL+JAdSAR0dtCbtCYIVy69ULzobO0xRql7O1uJ1sRyrQpjxMezSygQJA1MiCYv5SQ==
+eslint-plugin-tailwindcss@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-tailwindcss/-/eslint-plugin-tailwindcss-3.2.0.tgz#f614910bc6d102f272844ce0a31b16797fff3b62"
+  integrity sha512-u/07TN03dYaqjRqY2LPA9LjkM5rO7Z02aXNJ/5PwnB4AHVZrI++7qbr0E3WLKaHQzsF/bsrrxuTd502h3IyNhg==
   dependencies:
     fast-glob "^3.2.5"
     postcss "^8.4.4"
