@@ -102,6 +102,11 @@ GEM
     erubi (1.10.0)
     et-orbi (1.2.6)
       tzinfo
+    factory_bot (6.2.0)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
     ffi (1.15.5)
     formatador (0.3.0)
     fugit (1.5.2)
@@ -368,6 +373,7 @@ DEPENDENCIES
   cssbundling-rails
   debug (>= 1.0.0)
   dotenv-rails
+  factory_bot_rails
   guard-rspec
   heroicon
   honeybadger

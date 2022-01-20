@@ -45,6 +45,7 @@ https://github.com/ledermann/templatus/
 - [RuboCop](https://rubocop.org/) for Ruby static code analysis
 - [ESLint](https://eslint.org/) for JavaScript static code analysis
 - [RSpec](https://rspec.info/) for Ruby testing
+- [Factory Bot](https://github.com/thoughtbot/factory_bot) for setting up Ruby objects as test data
 - [Cypress](https://www.cypress.io/) for E2E testing
 
 ### Deployment
