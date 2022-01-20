@@ -4,7 +4,7 @@
       div
         div class='lg:grid lg:grid-cols-3 lg:gap-x-8'
           div
-            h2 class='text-base font-semibold tracking-wide uppercase text-rails-dark'
+            h2 class='text-base font-semibold tracking-wide uppercase text-primary'
               = group['slogan']
 
             p class='mt-2 text-3xl font-extrabold text-gray-900'
@@ -17,14 +17,14 @@
                   dt
                     = helpers.heroicon 'check',
                                       variant: 'outline',
-                                      options: { class: 'absolute w-6 h-6 text-hotwire', 'aria-hidden' => 'true' }
+                                      options: { class: 'absolute w-6 h-6 text-accent', 'aria-hidden' => 'true' }
 
-                    p class='flex items-center text-lg font-medium leading-6 ml-9 text-rails-dark'
+                    p class='flex items-center text-lg font-medium leading-6 ml-9 text-primary'
                       = link_to feature['name'], feature['href'], class: 'hover:underline', target: '_blank', rel: 'noopener noreferrer'
 
                       - if version(feature)
                         = tag.span version(feature),
-                                  class: 'inline-flex items-center py-0.5 px-2.5 ml-2 text-xs font-medium text-black bg-rose rounded-full'
+                                  class: 'inline-flex items-center py-0.5 px-2.5 ml-2 text-xs font-medium text-black bg-tertiary rounded-full'
 
                   dd class='mt-2 text-base text-gray-600 ml-9'
                     = feature['description']

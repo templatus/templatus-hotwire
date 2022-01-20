@@ -3,14 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --color-rails-light: theme('colors.rails.light');
-  --color-rails-dark: theme('colors.rails.dark');
+  --color-primary: 105 0 0; /* dark red */
+  --color-secondary: 211 0 1; /* light red */
+  --color-tertiary: 240 231 233; /* rose */
+  --color-accent: 21 209 216; /* cyan */
 }
 
-.gradient__rails-light {
-  stop-color: var(--color-rails-light);
+.gradient__primary {
+  stop-color: rgb(var(--color-primary));
 }
 
-.gradient__rails-dark {
-  stop-color: var(--color-rails-dark);
+.gradient__secondary {
+  stop-color: rgb(var(--color-secondary));
 }

@@ -20,12 +20,12 @@ div data-controller="clicks--component"
 
     = button_to 'Click me!',
                 clicks_path,
-                class: 'py-2 mt-3 w-full font-medium text-black hover:text-white bg-rose hover:bg-rails-light rounded active:outline-none active:ring-2 active:ring-rails-light active:ring-offset-1'
+                class: 'py-2 mt-3 w-full font-medium text-black hover:text-white bg-tertiary hover:bg-secondary rounded active:outline-none active:ring-2 active:ring-secondary active:ring-offset-1'
 
     p class="hidden mt-3 text-xs text-center text-gray-600 sm:block"
       | Tip: Open two browser windows in parallel and see what happens.
 
-  h2 class='mt-20 text-xl font-medium tracking-wide text-center uppercase text-rails-dark sm:text-left'
+  h2 class='mt-20 text-xl font-medium tracking-wide text-center uppercase text-primary sm:text-left'
     | Latest clicks
 
   = turbo_frame_tag 'clicks',

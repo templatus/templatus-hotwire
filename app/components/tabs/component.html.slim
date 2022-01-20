@@ -3,6 +3,6 @@ nav class="flex space-x-5 text-lg font-medium text-center uppercase lg:flex-col 
     = link_to tab.text,
                   tab.href,
                   class: [ 'px-2 py-1 rounded-md lg:shadow',
-                           current_page?(tab.href) ? 'text-rails-dark bg-white lg:bg-rails-dark lg:text-white' : 'hover:bg-slate-300 hover:text-rails-dark bg-transparent text-white lg:text-rails-dark lg:bg-white' \
+                           current_page?(tab.href) ? 'text-primary bg-white lg:bg-primary lg:text-white' : 'hover:font-bold bg-transparent text-white lg:text-primary lg:bg-white' \
                          ],
                   data: { turbo_action: 'replace' }

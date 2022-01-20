@@ -1,17 +1,20 @@
+function withOpacityValue(variable) {
+  return ({ opacityValue }) => {
+    if (opacityValue === undefined) {
+      return `rgb(var(${variable}))`;
+    }
+    return `rgb(var(${variable}) / ${opacityValue})`;
+  };
+}
+
 module.exports = {
   theme: {
     extend: {
       colors: {
-        rails: {
-          light: '#D30001',
-          dark: '#690000',
-        },
-        hotwire: {
-          DEFAULT: '#15d1d8',
-        },
-        rose: {
-          DEFAULT: '#F0E7E9',
-        },
+        primary: withOpacityValue('--color-primary'),
+        secondary: withOpacityValue('--color-secondary'),
+        tertiary: withOpacityValue('--color-tertiary'),
+        accent: withOpacityValue('--color-accent'),
       },
     },
   },
