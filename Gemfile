@@ -69,6 +69,9 @@ gem 'rack-brotli'
 # Simple, efficient background processing for Ruby (https://sidekiq.org)
 gem 'sidekiq'
 
+# Lock staging servers from search engines and prying eyes. (http://lockup.interdiscipline.com)
+gem 'lockup'
+
 # Sidekiq Cron helps to add repeated scheduled jobs (http://github.com/ondrejbartas/sidekiq-cron)
 gem 'sidekiq-cron'
 

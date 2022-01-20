@@ -143,6 +143,8 @@ GEM
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    lockup (1.7)
+      rails (>= 3, < 7.1)
     lograge (0.11.2)
       actionpack (>= 4)
       activesupport (>= 4)
@@ -379,6 +381,7 @@ DEPENDENCIES
   honeybadger
   jsbundling-rails
   listen (~> 3.3)
+  lockup
   lograge
   lookbook
   pg (~> 1.1)
