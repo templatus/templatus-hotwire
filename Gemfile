@@ -30,8 +30,8 @@ gem 'view_component'
 # A native development UI for ViewComponent (https://github.com/allmarkedup/lookbook)
 gem 'lookbook'
 
-# Slim is a template language. (http://slim-lang.com/)
-gem 'slim'
+# Slim templates generator for Rails (https://github.com/slim-template/slim-rails)
+gem 'slim-rails'
 
 # Rails View Helpers for Heroicons. (https://github.com/bharget/heroicon)
 gem 'heroicon'
