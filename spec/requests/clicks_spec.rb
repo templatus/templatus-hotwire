@@ -1,6 +1,8 @@
 describe 'Clicks' do
   describe 'GET /' do
-    it 'finds existing clicks' do
+    before { create_list(:click, 10) }
+
+    it 'lists existing clicks' do
       get root_path
 
       expect(response).to have_http_status(:success)
