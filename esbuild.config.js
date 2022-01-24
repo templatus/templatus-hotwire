@@ -23,7 +23,10 @@ const entryPoints = ['application.js'];
 const watchDirectories = [
   './app/**/*.html.*',
   './app/components/**/*.js',
+  './app/components/**/*.rb',
+  './app/helpers/**/*.rb',
   './app/javascript/**/*.js',
+  './app/assets/images/**/*',
   './app/assets/builds/**/*.css',
 ];
 const config = {
