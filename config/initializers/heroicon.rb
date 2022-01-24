@@ -1,5 +1,5 @@
 Heroicon.configure do |config|
-  config.variant = :solid # Options are :solid and :outline
+  config.variant = :outline # Options are :solid and :outline
 
   ##
   # You can set a default class, which will get applied to every icon with
