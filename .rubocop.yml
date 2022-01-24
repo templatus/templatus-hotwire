@@ -13,6 +13,7 @@ AllCops:
     - bin/**/*
     - coverage/**/*
     - db/schema.rb
+    - db/migrate/**/*
     - log/**/*
     - node_modules/**/*
     - public/**/*
@@ -36,6 +37,12 @@ Rails/ApplicationController:
   Enabled: false
 
 Rails/SchemaComment:
+  Enabled: false
+
+Rails/DefaultScope:
+  Enabled: false
+
+Rails/HasAndBelongsToMany:
   Enabled: false
 
 ### Bundler
@@ -88,10 +95,17 @@ Style/DisableCopsWithinSourceCodeDirective:
 Style/ClassAndModuleChildren:
   Enabled: false
 
+Style/MethodCalledOnDoEndBlock:
+  Enabled: false
+
 ### Metrics
 
 Metrics/BlockLength:
-  Max: 100
+  IgnoredMethods:
+    ['describe', 'context', 'configure', 'content_security_policy']
+
+RSpec/ExampleLength:
+  Enabled: false
 
 # Lint
 
@@ -110,9 +124,6 @@ Performance/ChainArrayAllocation:
 
 RSpec/MultipleExpectations:
   Enabled: false
-
-RSpec/ExampleLength:
-  Max: 20
 
 RSpec/AlignLeftLetBrace:
   Enabled: false
