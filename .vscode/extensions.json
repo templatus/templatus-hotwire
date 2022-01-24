@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "aliariff.slim-lint",
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "github.copilot"
+  ]
+}
