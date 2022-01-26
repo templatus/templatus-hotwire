@@ -14,7 +14,7 @@
     "@tailwindcss/forms": "^0.4.0",
     "autoprefixer": "^10.4.2",
     "el-transition": "^0.0.7",
-    "esbuild": "^0.14.13",
+    "esbuild": "^0.14.14",
     "esbuild-rails": "^1.0.3",
     "postcss": "^8.4.5",
     "register-service-worker": "^1.7.2",
