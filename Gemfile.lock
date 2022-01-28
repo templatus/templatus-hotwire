@@ -132,7 +132,7 @@ GEM
       rails (>= 5.2)
     honeybadger (4.10.0)
     htmlbeautifier (1.4.1)
-    i18n (1.9.0)
+    i18n (1.9.1)
       concurrent-ruby (~> 1.0)
     io-console (0.5.11)
     io-wait (0.2.1)
