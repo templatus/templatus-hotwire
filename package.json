@@ -30,7 +30,7 @@
     "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-tailwindcss": "^3.4.0",
+    "eslint-plugin-tailwindcss": "^3.4.3",
     "prettier": "^2.5.1"
   },
   "browserslist": [
