@@ -72,9 +72,6 @@ gem 'sidekiq'
 # Lock staging servers from search engines and prying eyes. (http://lockup.interdiscipline.com)
 gem 'lockup'
 
-# Sidekiq Cron helps to add repeated scheduled jobs (http://github.com/ondrejbartas/sidekiq-cron)
-gem 'sidekiq-cron'
-
 group :development, :test do
   # Debugging functionality for Ruby (https://github.com/ruby/debug)
   gem 'debug', '>= 1.0.0', platforms: %i[ mri mingw x64_mingw ]

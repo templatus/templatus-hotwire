@@ -1,5 +1,4 @@
 require 'sidekiq/web'
-require 'sidekiq/cron/web'
 require 'lockup'
 
 Rails.application.routes.draw do
