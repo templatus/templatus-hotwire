@@ -7,7 +7,7 @@
     "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify"
   },
   "dependencies": {
-    "@honeybadger-io/js": "^3.2.7",
+    "@honeybadger-io/js": "^3.2.8",
     "@hotwired/stimulus": "^3.0.1",
     "@hotwired/turbo-rails": "^7.1.1",
     "@rails/actioncable": "^7.0.2",
