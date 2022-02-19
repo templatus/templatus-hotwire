@@ -133,7 +133,7 @@ GEM
     io-wait (0.2.1)
     irb (1.4.1)
       reline (>= 0.3.0)
-    jsbundling-rails (1.0.0)
+    jsbundling-rails (1.0.1)
       railties (>= 6.0.0)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
