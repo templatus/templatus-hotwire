@@ -330,7 +330,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    stimulus-rails (1.0.2)
+    stimulus-rails (1.0.3)
       railties (>= 6.0.0)
     strscan (3.0.1)
     temple (0.8.2)
