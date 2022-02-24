@@ -111,10 +111,10 @@ $ yarn build
 yarn run v1.22.17
 $ node esbuild.config.js
 
-  ../assets/builds/application.js                                                                     133.6kb  100.0%
-   ├ ../../node_modules/@hotwired/turbo/dist/turbo.es2017-esm.js                                       62.5kb   46.8%
+  ../assets/builds/application.js                                                                     133.7kb  100.0%
+   ├ ../../node_modules/@hotwired/turbo/dist/turbo.es2017-esm.js                                       62.5kb   46.7%
    ├ ../../node_modules/@hotwired/stimulus/dist/stimulus.js                                            31.8kb   23.8%
-   ├ ../../node_modules/@honeybadger-io/js/dist/browser/honeybadger.js                                 21.1kb   15.8%
+   ├ ../../node_modules/@honeybadger-io/js/dist/browser/honeybadger.js                                 21.2kb   15.8%
    ├ ../../node_modules/@rails/actioncable/src/connection.js                                            2.8kb    2.1%
    ├ ../../node_modules/@rails/actioncable/src/connection_monitor.js                                    2.3kb    1.7%
    ├ ../../node_modules/register-service-worker/index.js                                                1.7kb    1.3%
