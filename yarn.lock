@@ -143,10 +143,10 @@
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-7.0.2.tgz#69a6d999f4087e0537dd38fe0963db1f4305d650"
   integrity sha512-G26maXW1Kx0LxQdmNNuNjQlRO/QlXNr3QfuwKiOKb5FZQGYe2OwtHTGXBAjSoiu4dW36XYMT/+L1Wo1Yov4ZXA==
 
-"@tailwindcss/forms@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/forms/-/forms-0.4.0.tgz#a46715e347a32d216a3973eb67473bd29ae3798e"
-  integrity sha512-DeaQBx6EgEeuZPQACvC+mKneJsD8am1uiJugjgQK1+/Vt+Ai0GpFBC2T2fqnUad71WgOxyrZPE6BG1VaI6YqfQ==
+"@tailwindcss/forms@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/forms/-/forms-0.5.0.tgz#d4bea2560a10aac642573e72d3b4d62a88960449"
+  integrity sha512-KzWugryEBFkmoaYcBE18rs6gthWCFHHO7cAZm2/hv3hwD67AzwP7udSCa22E7R1+CEJL/FfhYsJWrc0b1aeSzw==
   dependencies:
     mini-svg-data-uri "^1.2.3"
 
