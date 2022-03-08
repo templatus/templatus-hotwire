@@ -16,7 +16,7 @@
     "el-transition": "^0.0.7",
     "esbuild": "^0.14.25",
     "esbuild-rails": "^1.0.3",
-    "postcss": "^8.4.7",
+    "postcss": "^8.4.8",
     "register-service-worker": "^1.7.2",
     "tailwindcss": "^3.0.23",
     "timeago.js": "^4.0.2"
