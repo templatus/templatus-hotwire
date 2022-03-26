@@ -100,7 +100,7 @@ https://github.com/rails/rails/pull/41994
 
 ### JavaScript size
 
-134 KB of compiled JavaScript (minified, uncompressed). The largest parts are:
+133 KB of compiled JavaScript (minified, uncompressed). The largest parts are:
 
 - Turbo with ActionCable (72 KB)
 - Stimulus (32 KB)
@@ -108,12 +108,12 @@ https://github.com/rails/rails/pull/41994
 
 ```
 $ yarn build
-yarn run v1.22.17
+yarn run v1.22.18
 $ node esbuild.config.js
 
-  ../assets/builds/application.js                                                                     133.5kb  100.0%
+  ../assets/builds/application.js                                                                     133.4kb  100.0%
    ├ ../../node_modules/@hotwired/turbo/dist/turbo.es2017-esm.js                                       62.3kb   46.7%
-   ├ ../../node_modules/@hotwired/stimulus/dist/stimulus.js                                            31.8kb   23.8%
+   ├ ../../node_modules/@hotwired/stimulus/dist/stimulus.js                                            31.8kb   23.9%
    ├ ../../node_modules/@honeybadger-io/js/dist/browser/honeybadger.js                                 21.2kb   15.9%
    ├ ../../node_modules/@rails/actioncable/src/connection.js                                            2.8kb    2.1%
    ├ ../../node_modules/@rails/actioncable/src/connection_monitor.js                                    2.3kb    1.7%
@@ -148,7 +148,7 @@ $ node esbuild.config.js
    ├ ../../node_modules/@rails/actioncable/src/adapters.js                                               67b     0.0%
    └ ../../node_modules/timeago.js/esm/index.js                                                          30b     0.0%
 
-✨  Done in 0.20s.
+✨  Done in 0.21s.
 ```
 
 ### Network transfer
@@ -172,7 +172,7 @@ $ container-diff analyze ghcr.io/ledermann/templatus-hotwire -n
 
 Analysis for ghcr.io/ledermann/templatus-hotwire:
 IMAGE                                      DIGEST       SIZE
-ghcr.io/ledermann/templatus-hotwire        sha256:... 127.4M
+ghcr.io/ledermann/templatus-hotwire        sha256:... 128.9M
 ```
 
 ## Getting started
