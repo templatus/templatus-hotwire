@@ -15,7 +15,8 @@
   "search.exclude": {
     "**/tmp": true,
     "**/public/assets": true,
-    "**/node_modules": true
+    "**/node_modules": true,
+    "**/app/assets/builds": true
   },
 
   "eslint.validate": ["javascript"],
