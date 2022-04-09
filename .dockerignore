@@ -3,6 +3,7 @@
 .env*
 .eslintignore
 .eslintrc.js
+.eslintcache
 .foreman
 .git
 .github
@@ -16,6 +17,7 @@
 .prettierrc.json
 .slim-lint.yml
 docs
+coverage
 **/*.DS_Store
 Brewfile
 Brewfile.lock.json
@@ -36,3 +38,10 @@ config/environments/development.rb
 cypress.json
 spec
 README.md
+bin/bundle
+bin/cypress
+bin/dev
+bin/rspec
+bin/rubocop
+bin/setup
+bin/yarn
