@@ -74,7 +74,7 @@ gem 'lockup'
 
 group :development, :test do
   # Debugging functionality for Ruby (https://github.com/ruby/debug)
-  gem 'debug', '>= 1.0.0', platforms: %i[ mri mingw x64_mingw ]
+  gem 'debug', '>= 1.0.0', platforms: %i[mri mingw x64_mingw]
 
   # Autoload dotenv in Rails. (https://github.com/bkeepers/dotenv)
   gem 'dotenv-rails'
