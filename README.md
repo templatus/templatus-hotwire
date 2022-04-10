@@ -88,11 +88,11 @@ https://github.com/rails/rails/pull/41994
 
 ### WebPageTest
 
-[![WebPageTest](docs/web-page-test.png)](https://webpagetest.org/result/220105_BiDcP1_bf262a68c289184ff361e448f75f9ca2/)
+[![WebPageTest](docs/web-page-test.png)](https://webpagetest.org/result/220410_AiDcPD_a65331d5b67a6db2582f4f179db22e69/)
 
 ### GTmetrix
 
-[![GTmetrix](docs/GTmetrix.png)](https://gtmetrix.com/reports/templatus-hotwire.ledermann.dev/rrL1D1P7/)
+[![GTmetrix](docs/GTmetrix.png)](https://gtmetrix.com/reports/templatus-hotwire.ledermann.dev/l8u5i19P/)
 
 ### Check-your-website
 
