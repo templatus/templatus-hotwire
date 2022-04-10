@@ -27,9 +27,6 @@ gem 'cssbundling-rails'
 # View components for Rails (https://github.com/github/view_component)
 gem 'view_component'
 
-# A native development UI for ViewComponent (https://github.com/allmarkedup/lookbook)
-gem 'lookbook'
-
 # Slim templates generator for Rails (https://github.com/slim-template/slim-rails)
 gem 'slim-rails'
 
@@ -119,6 +116,9 @@ group :development do
 
   # rspec command for spring (https://github.com/jonleighton/spring-commands-rspec)
   gem 'spring-commands-rspec'
+
+  # A native development UI for ViewComponent (https://github.com/allmarkedup/lookbook)
+  gem 'lookbook'
 end
 
 group :test do
