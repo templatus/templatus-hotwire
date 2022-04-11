@@ -72,7 +72,7 @@ jobs:
           CYPRESS_BASE_URL: http://localhost:3000
           CYPRESS: true
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: failure()
         with:
           name: Screenshots
