@@ -77,7 +77,7 @@ Rails.application.configure do
       # Ensure that http://localhost:3000 redirects to https://{APP_HOST},
       # because there is no https://localhost:3000
       redirect: {
-        host: ENV['APP_HOST'],
+        host: ENV.fetch('APP_HOST', nil),
         port: 80,
       },
       # Don't cache the HTTPS redirect to avoid conflicts with other apps
@@ -85,7 +85,7 @@ Rails.application.configure do
     }
   end
 
-  Rails.application.config.hosts << ENV['APP_HOST']
+  Rails.application.config.hosts << ENV.fetch('APP_HOST', nil)
 
   config.view_component.default_preview_layout = 'preview'
 
