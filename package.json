@@ -25,7 +25,7 @@
   "devDependencies": {
     "@prettier/plugin-ruby": "^2.1.0",
     "chokidar": "^3.5.3",
-    "cypress": "^9.5.4",
+    "cypress": "^9.6.0",
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-cypress": "^2.12.1",
