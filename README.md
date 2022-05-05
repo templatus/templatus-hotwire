@@ -111,10 +111,10 @@ $ yarn build
 yarn run v1.22.18
 $ node esbuild.config.js
 
-  ../assets/builds/application.js                                                                     133.4kb  100.0%
-   ├ ../../node_modules/@hotwired/turbo/dist/turbo.es2017-esm.js                                       62.3kb   46.7%
-   ├ ../../node_modules/@hotwired/stimulus/dist/stimulus.js                                            31.8kb   23.8%
-   ├ ../../node_modules/@honeybadger-io/js/dist/browser/honeybadger.js                                 21.2kb   15.9%
+  ../assets/builds/application.js                                                                     137.4kb  100.0%
+   ├ ../../node_modules/@hotwired/turbo/dist/turbo.es2017-esm.js                                       62.3kb   45.3%
+   ├ ../../node_modules/@hotwired/stimulus/dist/stimulus.js                                            31.8kb   23.2%
+   ├ ../../node_modules/@honeybadger-io/js/dist/browser/honeybadger.js                                 25.2kb   18.3%
    ├ ../../node_modules/@rails/actioncable/src/connection.js                                            2.8kb    2.1%
    ├ ../../node_modules/@rails/actioncable/src/connection_monitor.js                                    2.3kb    1.7%
    ├ ../../node_modules/register-service-worker/index.js                                                1.7kb    1.3%
@@ -127,7 +127,7 @@ $ node esbuild.config.js
    ├ ../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/cable_stream_source_element.js       522b     0.4%
    ├ utils/setupServiceWorker.js                                                                        519b     0.4%
    ├ ../../node_modules/@rails/actioncable/src/index.js                                                 499b     0.4%
-   ├ ../components/clicks/component_controller.js                                                       480b     0.4%
+   ├ ../components/clicks/component_controller.js                                                       480b     0.3%
    ├ ../../node_modules/timeago.js/esm/realtime.js                                                      409b     0.3%
    ├ ../../node_modules/@rails/actioncable/src/subscription.js                                          400b     0.3%
    ├ ../../node_modules/@rails/actioncable/src/internal.js                                              365b     0.3%
@@ -141,14 +141,14 @@ $ node esbuild.config.js
    ├ controllers/timeago_controller.js                                                                  104b     0.1%
    ├ rails:/Users/ledermann/Projects/templatus-hotwire/app/components/**/*_controller.js                 96b     0.1%
    ├ utils/metaContent.js                                                                                92b     0.1%
-   ├ utils/setupStimulus.js                                                                              77b     0.1%
+   ├ utils/setupStimulus.js                                                                              78b     0.1%
    ├ ../../node_modules/timeago.js/esm/register.js                                                       75b     0.1%
    ├ ../components/index.js                                                                              68b     0.0%
    ├ controllers/index.js                                                                                68b     0.0%
    ├ ../../node_modules/@rails/actioncable/src/adapters.js                                               67b     0.0%
    └ ../../node_modules/timeago.js/esm/index.js                                                          30b     0.0%
 
-✨  Done in 0.22s.
+✨  Done in 0.13s.
 ```
 
 ### Network transfer
