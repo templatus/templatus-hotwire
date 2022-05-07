@@ -54,10 +54,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@honeybadger-io/js@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@honeybadger-io/js/-/js-4.0.0.tgz#8396c89beac813c1c4287b4c750134faa500cd0a"
-  integrity sha512-e3XPm3PDNyJV8jzfo2oaJAjb5KcdxcXoJywQzxTMF63pXW8VtOyYknvdcBfo2cno+ATzTIqiGHvfHPkIQJUKfg==
+"@honeybadger-io/js@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@honeybadger-io/js/-/js-4.0.1.tgz#52da376fbf450e9123d55cd6076b706948ac2117"
+  integrity sha512-PjJCAY47M6jVedU/Pp60iTzZLtl3VicaQyZGb/yk7p/YmZzdRHyJFubPcdirzqBBcLMMiGb5TaLdzhvj1gakzg==
   dependencies:
     stacktrace-parser "^0.1.10"
 
