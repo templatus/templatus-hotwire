@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js --cache .",
+    "size": "yarn run size-limit",
     "build": "node esbuild.config.js",
     "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify"
   },
@@ -24,6 +25,7 @@
   "version": "0.1.0",
   "devDependencies": {
     "@prettier/plugin-ruby": "^2.1.0",
+    "@size-limit/file": "^7.0.8",
     "chokidar": "^3.5.3",
     "cypress": "^9.6.1",
     "eslint": "^8.15.0",
@@ -31,8 +33,15 @@
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-tailwindcss": "^3.5.0",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "size-limit": "^7.0.8"
   },
+  "size-limit": [
+    {
+      "limit": "45 kB",
+      "path": "app/assets/builds/application.js"
+    }
+  ],
   "browserslist": [
     "defaults",
     "not IE 11"

@@ -72,6 +72,9 @@ jobs:
           CYPRESS_BASE_URL: http://localhost:3000
           CYPRESS: true
 
+      - name: Check JS size limit
+        run: yarn size
+
       - uses: actions/upload-artifact@v3
         if: failure()
         with:
