@@ -24,7 +24,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@prettier/plugin-ruby": "^2.1.0",
+    "@prettier/plugin-ruby": "^3.1.2",
     "@size-limit/file": "^7.0.8",
     "chokidar": "^3.5.3",
     "cypress": "^9.6.1",

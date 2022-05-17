@@ -99,6 +99,15 @@ Style/ClassAndModuleChildren:
 Style/MethodCalledOnDoEndBlock:
   Enabled: false
 
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: single_quotes
+
+Style/QuotedSymbols:
+  EnforcedStyle: single_quotes
+
 ### Metrics
 
 Metrics/BlockLength:

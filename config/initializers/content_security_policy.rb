@@ -25,15 +25,15 @@ Rails.application.configure do
         *[
           :self,
           Rails.configuration.asset_host.presence,
-          "'sha256-W49+qLXTvblxo3uhW+zCJ7W79iSK1/XLC2fBoPuDgHM='", # Lockup
+          '\'sha256-W49+qLXTvblxo3uhW+zCJ7W79iSK1/XLC2fBoPuDgHM=\'', # Lockup
         ].compact,
       )
       policy.style_src(
         *[
           :self,
           Rails.configuration.asset_host.presence,
-          "'sha256-rql2tlBWA4Hb3HHbUfw797urk+ifBd6EAovoOUGt0oI='", # Turbo progress bar
-          "'sha256-MU5QaehzQCq1x6U38PLxcooVZTB7oVn8ZtoAKdaog8Q='", # Lockup
+          '\'sha256-rql2tlBWA4Hb3HHbUfw797urk+ifBd6EAovoOUGt0oI=\'', # Turbo progress bar
+          '\'sha256-MU5QaehzQCq1x6U38PLxcooVZTB7oVn8ZtoAKdaog8Q=\'', # Lockup
         ].compact,
       )
       policy.frame_src(

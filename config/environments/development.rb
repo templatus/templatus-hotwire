@@ -89,8 +89,10 @@ Rails.application.configure do
 
   config.view_component.default_preview_layout = 'preview'
 
-  config.view_component.preview_paths <<
-    Rails.root.join('spec', 'component_previews')
+  config.view_component.preview_paths << Rails.root.join(
+    'spec',
+    'component_previews',
+  )
 
   # Enable load_async
   config.active_record.async_query_executor = :global_thread_pool

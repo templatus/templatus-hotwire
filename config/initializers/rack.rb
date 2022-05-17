@@ -22,7 +22,8 @@ module ActionDispatch
           index:,
           headers:,
           ##### Added "image/svg+xml"
-          compressible_content_types: %r{\A(?:text/|application/javascript|image/svg\+xml)},
+          compressible_content_types:
+            %r{\A(?:text/|application/javascript|image/svg\+xml)},
           #####
         )
     end
@@ -43,7 +44,6 @@ if Rails.application.config.x.app_host
     require 'cloudfront_denier'
 
     Rails.application.config.middleware.use CloudfrontDenier,
-                                            target:
-                                              "https://#{Rails.application.config.x.app_host}"
+                    target: "https://#{Rails.application.config.x.app_host}"
   end
 end
