@@ -25,12 +25,6 @@ AllCops:
 
 ### Rails
 
-Rails/SkipsModelValidations:
-  Enabled: false
-
-Rails/SaveBang:
-  Enabled: false
-
 Rails/FilePath:
   EnforcedStyle: arguments
 
@@ -41,9 +35,6 @@ Rails/SchemaComment:
   Enabled: false
 
 Rails/DefaultScope:
-  Enabled: false
-
-Rails/HasAndBelongsToMany:
   Enabled: false
 
 ### Bundler
@@ -111,8 +102,7 @@ Style/QuotedSymbols:
 ### Metrics
 
 Metrics/BlockLength:
-  IgnoredMethods:
-    ['describe', 'context', 'configure', 'content_security_policy']
+  IgnoredMethods: ['configure', 'content_security_policy']
 
 RSpec/ExampleLength:
   Enabled: false
@@ -120,14 +110,6 @@ RSpec/ExampleLength:
 # Lint
 
 Lint/ConstantResolution:
-  Enabled: false
-
-Lint/NumberConversion:
-  Enabled: false
-
-# Performance
-
-Performance/ChainArrayAllocation:
   Enabled: false
 
 # RSpec
