@@ -28,7 +28,7 @@
     "@size-limit/file": "^7.0.8",
     "chokidar": "^3.5.3",
     "cypress": "^9.6.1",
-    "eslint": "^8.15.0",
+    "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-prettier": "^4.0.0",
