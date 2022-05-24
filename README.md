@@ -100,22 +100,22 @@ https://github.com/rails/rails/pull/41994
 
 ### JavaScript size
 
-133 KB of compiled JavaScript (minified, uncompressed). The largest parts are:
+138 KB of compiled JavaScript (minified, uncompressed). The largest parts are:
 
 - Turbo with ActionCable (72 KB)
 - Stimulus (32 KB)
-- Honeybadger (22 KB)
+- Honeybadger (25 KB)
 
 ```
 $ yarn build
 yarn run v1.22.18
 $ node esbuild.config.js
 
-  ../assets/builds/application.js                                                                     137.4kb  100.0%
-   ├ ../../node_modules/@hotwired/turbo/dist/turbo.es2017-esm.js                                       62.3kb   45.3%
-   ├ ../../node_modules/@hotwired/stimulus/dist/stimulus.js                                            31.8kb   23.2%
+  ../assets/builds/application.js                                                                     137.9kb  100.0%
+   ├ ../../node_modules/@hotwired/turbo/dist/turbo.es2017-esm.js                                       62.3kb   45.2%
+   ├ ../../node_modules/@hotwired/stimulus/dist/stimulus.js                                            31.8kb   23.1%
    ├ ../../node_modules/@honeybadger-io/js/dist/browser/honeybadger.js                                 25.2kb   18.3%
-   ├ ../../node_modules/@rails/actioncable/src/connection.js                                            2.8kb    2.1%
+   ├ ../../node_modules/@rails/actioncable/src/connection.js                                            2.8kb    2.0%
    ├ ../../node_modules/@rails/actioncable/src/connection_monitor.js                                    2.3kb    1.7%
    ├ ../../node_modules/register-service-worker/index.js                                                1.7kb    1.3%
    ├ ../../node_modules/@rails/actioncable/src/subscriptions.js                                         1.2kb    0.9%
@@ -124,19 +124,21 @@ $ node esbuild.config.js
    ├ ../../node_modules/timeago.js/esm/utils/date.js                                                    668b     0.5%
    ├ ../../node_modules/@rails/actioncable/src/consumer.js                                              583b     0.4%
    ├ controllers/online_status_controller.js                                                            568b     0.4%
-   ├ ../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/cable_stream_source_element.js       522b     0.4%
+   ├ ../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/cable_stream_source_element.js       547b     0.4%
    ├ utils/setupServiceWorker.js                                                                        519b     0.4%
    ├ ../../node_modules/@rails/actioncable/src/index.js                                                 499b     0.4%
    ├ ../components/clicks/component_controller.js                                                       480b     0.3%
    ├ ../../node_modules/timeago.js/esm/realtime.js                                                      409b     0.3%
    ├ ../../node_modules/@rails/actioncable/src/subscription.js                                          400b     0.3%
    ├ ../../node_modules/@rails/actioncable/src/internal.js                                              365b     0.3%
+   ├ ../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/snakeize.js                          275b     0.2%
    ├ ../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/cable.js                             256b     0.2%
    ├ ../../node_modules/timeago.js/esm/lang/zh_CN.js                                                    220b     0.2%
    ├ ../../node_modules/timeago.js/esm/lang/en_US.js                                                    197b     0.1%
    ├ ../../node_modules/timeago.js/esm/utils/dom.js                                                     158b     0.1%
    ├ utils/setupHoneyBadger.js                                                                          157b     0.1%
    ├ rails:/Users/ledermann/Projects/templatus-hotwire/app/javascript/controllers/**/*_controller.js    151b     0.1%
+   ├ ../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/form_submissions.js                  138b     0.1%
    ├ ../../node_modules/@rails/actioncable/src/logger.js                                                107b     0.1%
    ├ controllers/timeago_controller.js                                                                  104b     0.1%
    ├ rails:/Users/ledermann/Projects/templatus-hotwire/app/components/**/*_controller.js                 96b     0.1%
@@ -146,14 +148,15 @@ $ node esbuild.config.js
    ├ ../components/index.js                                                                              68b     0.0%
    ├ controllers/index.js                                                                                68b     0.0%
    ├ ../../node_modules/@rails/actioncable/src/adapters.js                                               67b     0.0%
+   ├ ../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/index.js                              42b     0.0%
    └ ../../node_modules/timeago.js/esm/index.js                                                          30b     0.0%
 
-✨  Done in 0.13s.
+✨  Done in 0.14s.
 ```
 
 ### Network transfer
 
-Small footprint: The demo application transfers only **52 KB** of data on the first visit.
+Small footprint: The demo application transfers only **53 KB** of data on the first visit.
 
 ![Network](docs/network.png)
 
@@ -172,7 +175,7 @@ $ container-diff analyze ghcr.io/ledermann/templatus-hotwire -n
 
 Analysis for ghcr.io/ledermann/templatus-hotwire:
 IMAGE                                      DIGEST       SIZE
-ghcr.io/ledermann/templatus-hotwire        sha256:... 117.1M
+ghcr.io/ledermann/templatus-hotwire        sha256:... 117.7M
 ```
 
 ## Getting started
