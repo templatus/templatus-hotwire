@@ -138,7 +138,7 @@ $ node esbuild.config.js
    ├ ../../node_modules/timeago.js/esm/utils/dom.js                                                     158b     0.1%
    ├ utils/setupHoneyBadger.js                                                                          157b     0.1%
    ├ rails:/Users/ledermann/Projects/templatus-hotwire/app/javascript/controllers/**/*_controller.js    151b     0.1%
-   ├ ../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/form_submissions.js                  138b     0.1%
+   ├ ../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/form_submissions.js                  143b     0.1%
    ├ ../../node_modules/@rails/actioncable/src/logger.js                                                107b     0.1%
    ├ controllers/timeago_controller.js                                                                  104b     0.1%
    ├ rails:/Users/ledermann/Projects/templatus-hotwire/app/components/**/*_controller.js                 96b     0.1%
