@@ -1,7 +1,6 @@
 /node_modules
 /coverage
 /public
-/app/assets/builds
 /vendor
 /tmp
 /log

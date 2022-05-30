@@ -28,7 +28,7 @@ https://github.com/ledermann/templatus/
 - [Slim](http://slim-lang.com/) for writing templates instead of ERB
 - [Tailwind CSS 3](https://tailwindcss.com/) to not have to write CSS at all
 - [Heroicons](https://heroicons.com/) for beautiful hand-crafted SVG icons
-- [esbuild](https://esbuild.github.io/) for bundling JavaScript
+- [Vite](https://vitejs.dev/) for bundling JavaScript and CSS with Hot Module Replacement (HMR) in development
 
 ### Development
 
@@ -60,7 +60,7 @@ https://github.com/ledermann/templatus/
 ### Production
 
 - [Lograge](https://github.com/roidrage/lograge) for single-line logging
-- Gzip and Brotli compression of all responses (HTML, JSON, assets) using [Rack::Deflater](https://github.com/rack/rack/blob/master/lib/rack/deflater.rb), [Rack::Brotli](https://github.com/marcotc/rack-brotli) and [Sprockets::ExportersPack](https://github.com/hansottowirtz/sprockets-exporters_pack)
+- Gzip and Brotli compression of all responses (HTML, JSON, assets) using [Rack::Deflater](https://github.com/rack/rack/blob/master/lib/rack/deflater.rb), [Rack::Brotli](https://github.com/marcotc/rack-brotli)
 - Fine-tuned Content Security Policy (CSP)
 - Ready for PWA (manifest, service-worker)
 
@@ -88,11 +88,11 @@ https://github.com/rails/rails/pull/41994
 
 ### WebPageTest
 
-[![WebPageTest](docs/web-page-test.png)](https://webpagetest.org/result/220410_AiDcPD_a65331d5b67a6db2582f4f179db22e69/)
+[![WebPageTest](docs/web-page-test.png)](https://www.webpagetest.org/result/220530_BiDcQQ_83b754931114d99469b521e72731eb4d/)
 
 ### GTmetrix
 
-[![GTmetrix](docs/GTmetrix.png)](https://gtmetrix.com/reports/templatus-hotwire.ledermann.dev/l8u5i19P/)
+[![GTmetrix](docs/GTmetrix.png)](https://gtmetrix.com/reports/templatus-hotwire.ledermann.dev/rSqolxsw/)
 
 ### Check-your-website
 
@@ -107,56 +107,30 @@ https://github.com/rails/rails/pull/41994
 - Honeybadger (25 KB)
 
 ```
-$ yarn build
-yarn run v1.22.18
-$ node esbuild.config.js
-
-  ../assets/builds/application.js                                                                     137.9kb  100.0%
-   ├ ../../node_modules/@hotwired/turbo/dist/turbo.es2017-esm.js                                       62.3kb   45.2%
-   ├ ../../node_modules/@hotwired/stimulus/dist/stimulus.js                                            31.8kb   23.1%
-   ├ ../../node_modules/@honeybadger-io/js/dist/browser/honeybadger.js                                 25.2kb   18.3%
-   ├ ../../node_modules/@rails/actioncable/src/connection.js                                            2.8kb    2.0%
-   ├ ../../node_modules/@rails/actioncable/src/connection_monitor.js                                    2.3kb    1.7%
-   ├ ../../node_modules/register-service-worker/index.js                                                1.7kb    1.3%
-   ├ ../../node_modules/@rails/actioncable/src/subscriptions.js                                         1.2kb    0.9%
-   ├ ../../node_modules/@rails/actioncable/src/subscription_guarantor.js                                864b     0.6%
-   ├ ../../node_modules/el-transition/index.js                                                          805b     0.6%
-   ├ ../../node_modules/timeago.js/esm/utils/date.js                                                    668b     0.5%
-   ├ ../../node_modules/@rails/actioncable/src/consumer.js                                              583b     0.4%
-   ├ controllers/online_status_controller.js                                                            568b     0.4%
-   ├ ../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/cable_stream_source_element.js       547b     0.4%
-   ├ utils/setupServiceWorker.js                                                                        519b     0.4%
-   ├ ../../node_modules/@rails/actioncable/src/index.js                                                 499b     0.4%
-   ├ ../components/clicks/component_controller.js                                                       480b     0.3%
-   ├ ../../node_modules/timeago.js/esm/realtime.js                                                      409b     0.3%
-   ├ ../../node_modules/@rails/actioncable/src/subscription.js                                          400b     0.3%
-   ├ ../../node_modules/@rails/actioncable/src/internal.js                                              365b     0.3%
-   ├ ../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/snakeize.js                          275b     0.2%
-   ├ ../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/cable.js                             256b     0.2%
-   ├ ../../node_modules/timeago.js/esm/lang/zh_CN.js                                                    220b     0.2%
-   ├ ../../node_modules/timeago.js/esm/lang/en_US.js                                                    197b     0.1%
-   ├ ../../node_modules/timeago.js/esm/utils/dom.js                                                     158b     0.1%
-   ├ utils/setupHoneyBadger.js                                                                          157b     0.1%
-   ├ rails:/Users/ledermann/Projects/templatus-hotwire/app/javascript/controllers/**/*_controller.js    151b     0.1%
-   ├ ../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/form_submissions.js                  143b     0.1%
-   ├ ../../node_modules/@rails/actioncable/src/logger.js                                                107b     0.1%
-   ├ controllers/timeago_controller.js                                                                  104b     0.1%
-   ├ rails:/Users/ledermann/Projects/templatus-hotwire/app/components/**/*_controller.js                 96b     0.1%
-   ├ utils/metaContent.js                                                                                92b     0.1%
-   ├ utils/setupStimulus.js                                                                              78b     0.1%
-   ├ ../../node_modules/timeago.js/esm/register.js                                                       75b     0.1%
-   ├ ../components/index.js                                                                              68b     0.0%
-   ├ controllers/index.js                                                                                68b     0.0%
-   ├ ../../node_modules/@rails/actioncable/src/adapters.js                                               67b     0.0%
-   ├ ../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/index.js                              42b     0.0%
-   └ ../../node_modules/timeago.js/esm/index.js                                                          30b     0.0%
-
-✨  Done in 0.14s.
+$ RAILS_ENV=production bin/rails assets:precompile
+yarn install v1.22.19
+[1/5] 🔍  Resolving packages...
+success Already up-to-date.
+✨  Done in 0.08s.
+Building with Vite ⚡️
+vite v2.9.9 building for production...
+transforming...
+✓ 41 modules transformed.
+rendering chunks...
+../../public/vite/assets/logo.cfef1aba.svg          0.48 KiB
+../../public/vite/manifest-assets.json              0.22 KiB
+../../public/vite/manifest.json                     0.42 KiB
+../../public/vite/assets/index.39115729.js          8.83 KiB / gzip: 2.83 KiB
+../../public/vite/assets/index.39115729.js.map      28.40 KiB
+../../public/vite/assets/application.007f0d03.css   19.03 KiB / gzip: 4.49 KiB
+../../public/vite/assets/application.d80aa4c4.js    129.81 KiB / gzip: 36.21 KiB
+../../public/vite/assets/application.d80aa4c4.js.map 407.07 KiB
+Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
 ```
 
 ### Network transfer
 
-Small footprint: The demo application transfers only **53 KB** of data on the first visit.
+Small footprint: The demo application transfers only **51 KB** of data on the first visit.
 
 ![Network](docs/network.png)
 
@@ -175,7 +149,7 @@ $ container-diff analyze ghcr.io/ledermann/templatus-hotwire -n
 
 Analysis for ghcr.io/ledermann/templatus-hotwire:
 IMAGE                                      DIGEST       SIZE
-ghcr.io/ledermann/templatus-hotwire        sha256:... 117.7M
+ghcr.io/ledermann/templatus-hotwire        sha256:... 116.4M
 ```
 
 ## Getting started
@@ -202,9 +176,9 @@ sudo puma-dev -setup
 puma-dev -install
 puma-dev link
 
-# Auto-reload esbuild via puma-dev proxy
-# https://github.com/puma/puma-dev#webpack-dev-server
-echo 8082 > ~/.puma-dev/esbuild.templatus-hotwire
+# Use Vite via puma-dev proxy
+# Adopted from https://github.com/puma/puma-dev#webpack-dev-server
+echo 3036 > ~/.puma-dev/vite.templatus-hotwire
 ```
 
 4. Setup the application to install gems and NPM packages and create the database:

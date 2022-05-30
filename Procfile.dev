@@ -1,2 +1,1 @@
-js: yarn build --reload
-css: yarn build:css --watch
+vite: bin/vite dev

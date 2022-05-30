@@ -6,7 +6,7 @@
   "files.trimTrailingWhitespace": true,
   "files.watcherExclude": {
     "**/tmp/**": true,
-    "**/public/assets": true
+    "**/public/vite*": true
   },
   "files.exclude": {
     "**/docker-volumes": true
@@ -14,9 +14,8 @@
 
   "search.exclude": {
     "**/tmp": true,
-    "**/public/assets": true,
-    "**/node_modules": true,
-    "**/app/assets/builds": true
+    "**/public/vite*": true,
+    "**/node_modules": true
   },
 
   "eslint.validate": ["javascript"],

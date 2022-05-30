@@ -1,4 +1,5 @@
 import { Application } from '@hotwired/stimulus';
+import { registerControllers } from 'stimulus-vite-helpers';
 
 // Start Stimulus application
 const application = Application.start();
@@ -9,9 +10,13 @@ application.debug = false;
 window.Stimulus = application;
 
 // Load and register global controllers
-import registerGlobalControllers from './../controllers';
-registerGlobalControllers(application);
+registerControllers(
+  application,
+  import.meta.globEager('../controllers/*_controller.js'),
+);
 
 // Load and register view_component controllers
-import registerComponentControllers from '../../components';
-registerComponentControllers(application);
+registerControllers(
+  application,
+  import.meta.globEager('../../components/**/*_controller.js'),
+);

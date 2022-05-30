@@ -28,18 +28,6 @@ Rails.application.configure do
     'Cache-Control' => 'public, s-maxage=31536000, max-age=31536000, immutable',
   }
 
-  # Compress CSS using a preprocessor.
-  # config.assets.css_compressor = :sass
-
-  # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
-
-  # Compress assets with Brotli
-  config.assets.configure do |env|
-    env.register_exporter %w[text/css application/javascript image/svg+xml],
-                          Sprockets::ExportersPack::BrotliExporter
-  end
-
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   config.asset_host = ENV.fetch('ASSET_HOST', nil).presence
 

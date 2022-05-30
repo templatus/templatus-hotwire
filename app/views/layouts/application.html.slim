@@ -28,13 +28,9 @@ html lang="en"
     = tag.link href: asset_path('/safari-pinned-tab.svg'),rel: 'mask-icon',        color: '#d30001'
     = tag.link href: webmanifest_path, rel: 'manifest'
 
-    = javascript_include_tag 'application',
-                             'data-turbo-track': 'reload',
-                             integrity: true,
-                             crossorigin: 'anonymous',
-                             defer: true
-    = stylesheet_link_tag 'application',
-                          'data-turbo-track': 'reload'
+    = vite_client_tag
+    = vite_javascript_tag 'application', 'data-turbo-track': 'reload'
+    = vite_stylesheet_tag 'application', 'data-turbo-track': 'reload'
 
   body
     div class="flex flex-col min-h-screen bg-gradient-to-br from-primary to-secondary lg:bg-tertiary lg:from-inherit lg:to-inherit"
