@@ -2,8 +2,7 @@
   "name": "templatus-hotwire",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js --cache .",
-    "size": "yarn run size-limit"
+    "lint": "eslint --ext .js --cache ."
   },
   "dependencies": {
     "@honeybadger-io/js": "^4.0.3",
