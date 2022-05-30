@@ -18,6 +18,6 @@ module.exports = {
       },
     },
   },
-  content: ['./app/**/*.html.*', './app/**/*.rb', './app/**/*.js'],
+  content: ['./app/**/*.html.*', './app/**/*.{rb,js}'],
   plugins: [require('@tailwindcss/forms')],
 };
