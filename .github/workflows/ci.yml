@@ -71,6 +71,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CYPRESS_BASE_URL: http://localhost:3000
           CYPRESS: true
+        if: env.CYPRESS_RECORD_KEY != null
 
       - name: Check JS size limit
         run: yarn size-limit
