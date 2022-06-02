@@ -17,20 +17,27 @@ export default class extends Controller {
     this.increaseCounter();
   }
 
-  async increaseCounter() {
-    await leave(this.counterTarget);
+  increaseCounter() {
+    leave(this.counterTarget).then(() => {
+      this.currentCount++;
+      this.renderCount();
 
-    this.currentCount++;
-    this.renderCount();
-
-    await enter(this.counterTarget);
+      enter(this.counterTarget);
+    });
   }
 
-  async updateList() {
-    if (this.currentCount > 5) this.listTarget.lastElementChild.remove();
+  updateList() {
+    // Scroll down list
+    enter(this.listTarget).then(() => {
+      // Fade in new element
+      enter(this.listTarget.firstElementChild);
+    });
 
-    await leave(this.listTarget);
-    await enter(this.listTarget);
+    if (this.currentCount > 5)
+      // Fade out and remove last element
+      leave(this.listTarget.lastElementChild).then(() =>
+        this.listTarget.lastElementChild.remove(),
+      );
   }
 
   renderCount() {

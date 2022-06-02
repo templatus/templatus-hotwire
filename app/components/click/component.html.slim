@@ -1,4 +1,12 @@
-li class="py-4"
+li[
+  class= ['py-5', will_animate ? 'hidden' : nil]
+  data-transition-enter="transition duration-200 ease-out"
+  data-transition-enter-start="scale-0 bg-secondary"
+  data-transition-enter-end="scale-100"
+  data-transition-leave="transition duration-200 ease-out"
+  data-transition-leave-start="opacity-100"
+  data-transition-leave-end="opacity-0"
+]
   p
     span class='px-2 py-1 font-mono bg-gray-900 rounded text-tertiary'
       = click.ip

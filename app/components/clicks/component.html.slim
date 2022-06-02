@@ -6,7 +6,7 @@ div data-controller="clicks--component" data-clicks--component-count-value= coun
       id="counter"
       class="text-5xl font-bold text-center"
       data-clicks--component-target="counter"
-      data-transition-enter="transition-transform duration-300 ease-out"
+      data-transition-enter="transition-transform duration-200 ease-out"
       data-transition-enter-start="scale-0"
       data-transition-enter-end="scale-100"
       data-transition-leave="transition-transform duration-200 ease-in"
@@ -35,8 +35,8 @@ div data-controller="clicks--component" data-clicks--component-count-value= coun
       id='list'
       class='text-sm md:text-base'
       data-clicks--component-target='list'
-      data-transition-leave='transition-all duration-200 ease-out'
-      data-transition-leave-start='translate-y-0'
-      data-transition-leave-end='translate-y-24'
+      data-transition-enter='transition duration-200 ease-in'
+      data-transition-enter-start='translate-y-0'
+      data-transition-enter-end='translate-y-32'
     ]
       = render Click::Component.with_collection(clicks)
