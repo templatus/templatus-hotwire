@@ -3,6 +3,14 @@ import { enter, leave } from 'el-transition';
 
 export default class extends Controller {
   static targets = ['counter', 'list'];
+  static values = {
+    count: Number,
+  };
+
+  connect() {
+    this.currentCount = this.countValue;
+    this.renderCount();
+  }
 
   receive() {
     this.updateList();
@@ -12,19 +20,20 @@ export default class extends Controller {
   async increaseCounter() {
     await leave(this.counterTarget);
 
-    this.counterTarget.textContent = this.counterValue + 1;
+    this.currentCount++;
+    this.renderCount();
 
     await enter(this.counterTarget);
   }
 
   async updateList() {
-    if (this.counterValue > 5) this.listTarget.lastElementChild.remove();
+    if (this.currentCount > 5) this.listTarget.lastElementChild.remove();
 
     await leave(this.listTarget);
     await enter(this.listTarget);
   }
 
-  get counterValue() {
-    return parseInt(this.counterTarget.textContent);
+  renderCount() {
+    this.counterTarget.textContent = this.currentCount.toLocaleString();
   }
 }

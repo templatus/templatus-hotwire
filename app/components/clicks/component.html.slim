@@ -1,6 +1,6 @@
 = turbo_stream_from 'clicks'
 
-div data-controller="clicks--component"
+div data-controller="clicks--component" data-clicks--component-count-value= count
   div class="flex flex-col w-full mt-5 lg:absolute lg:-top-5 lg:-right-10 lg:p-3 lg:mt-0 lg:w-56 lg:bg-gradient-to-br lg:from-slate-100 lg:to-white lg:rounded lg:shadow"
     div [
       id="counter"
@@ -13,7 +13,8 @@ div data-controller="clicks--component"
       data-transition-leave-start="scale-100"
       data-transition-leave-end="scale-0"
     ]
-      = count
+      / Just a Placeholder. The number is rendered with Stimulus to use language sensitive representation via `toLocaleString()`
+      '&nbsp;
 
     div class="py-1 text-center uppercase"
       | Clicks
