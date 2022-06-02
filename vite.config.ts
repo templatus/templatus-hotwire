@@ -10,7 +10,7 @@ export default defineConfig({
   plugins: [
     RubyPlugin(),
     StimulusHMR(),
-    FullReload(['config/routes.rb', 'app/views/**/*']),
+    FullReload(['config/routes.rb', 'app/views/**/*', 'app/components/**/*']),
     // Create gzip copies of relevant assets
     gzipPlugin(),
     // Create brotli copies of relevant assets
