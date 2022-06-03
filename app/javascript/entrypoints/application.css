@@ -16,3 +16,7 @@
 .gradient__secondary {
   stop-color: rgb(var(--color-secondary));
 }
+
+.gradient__accent {
+  stop-color: rgb(var(--color-accent));
+}
