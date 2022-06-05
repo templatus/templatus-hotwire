@@ -57,6 +57,7 @@ Rails.application.configure do
               'https://api.honeybadger.io'
             end
           ),
+          Rails.configuration.x.plausible_url.presence,
         ].compact,
       )
       policy.manifest_src :self

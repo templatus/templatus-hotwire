@@ -55,6 +55,7 @@ https://github.com/ledermann/templatus/
 - [Dependabot](https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/about-dependabot-version-updates) configuration for updating dependencies (with auto-merge)
 - Ready for serving assets via CDN like CloudFront
 - [Honeybadger](https://www.honeybadger.io/) for error tracking in Ruby and JavaScript
+- [Plausible](https://plausible.io/) for privacy friendly analytics
 - [Lockup](https://lockup.interdiscipline.com/) to place a staging server behind a basic codeword
 
 ### Production
@@ -100,7 +101,7 @@ https://github.com/rails/rails/pull/41994
 
 ### JavaScript size
 
-138 KB of compiled JavaScript (minified, uncompressed). The largest parts are:
+132 KB of compiled JavaScript (minified, uncompressed). The largest parts are:
 
 - Turbo with ActionCable (72 KB)
 - Stimulus (32 KB)
@@ -111,20 +112,20 @@ $ RAILS_ENV=production bin/rails assets:precompile
 yarn install v1.22.19
 [1/5] 🔍  Resolving packages...
 success Already up-to-date.
-✨  Done in 0.08s.
+✨  Done in 0.07s.
 Building with Vite ⚡️
 vite v2.9.9 building for production...
 transforming...
-✓ 41 modules transformed.
+✓ 45 modules transformed.
 rendering chunks...
 ../../public/vite/assets/logo.cfef1aba.svg          0.48 KiB
 ../../public/vite/manifest-assets.json              0.22 KiB
 ../../public/vite/manifest.json                     0.42 KiB
 ../../public/vite/assets/index.39115729.js          8.83 KiB / gzip: 2.83 KiB
 ../../public/vite/assets/index.39115729.js.map      28.40 KiB
-../../public/vite/assets/application.007f0d03.css   19.03 KiB / gzip: 4.49 KiB
-../../public/vite/assets/application.d80aa4c4.js    129.81 KiB / gzip: 36.21 KiB
-../../public/vite/assets/application.d80aa4c4.js.map 407.07 KiB
+../../public/vite/assets/application.dd436e2a.css   19.81 KiB / gzip: 4.58 KiB
+../../public/vite/assets/application.4c275e71.js    132.44 KiB / gzip: 37.10 KiB
+../../public/vite/assets/application.4c275e71.js.map 424.20 KiB
 Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
 ```
 

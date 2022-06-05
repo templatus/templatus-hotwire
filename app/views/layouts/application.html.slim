@@ -19,6 +19,10 @@ html lang="en"
     = tag.meta content: Rails.configuration.x.git.commit_time, name: 'git-commit-time'
     = tag.meta content: Rails.configuration.x.honeybadger.api_key, name: 'honeybadger-api-key'
 
+    = tag.meta name: 'app-host', content: Rails.configuration.x.app_host
+    - if Rails.configuration.x.plausible_url
+      = tag.meta name: 'plausible-url', content: Rails.configuration.x.plausible_url
+
     = csrf_meta_tags
     = action_cable_meta_tag
 

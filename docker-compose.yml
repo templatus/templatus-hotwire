@@ -14,6 +14,7 @@ x-app-base: &app_base
     DB_USER: postgres
     SECRET_KEY_BASE: something-long-and-secret
     HONEYBADGER_API_KEY: ''
+    PLAUSIBLE_URL: ''
     LOCKUP_CODEWORD: ''
 
 services:

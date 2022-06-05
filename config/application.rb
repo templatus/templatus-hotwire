@@ -42,6 +42,8 @@ module TemplatusHotwire
 
     config.x.honeybadger.api_key = ENV['HONEYBADGER_API_KEY'].presence
 
+    config.x.plausible_url = ENV.fetch('PLAUSIBLE_URL', nil)
+
     config.x.cypress =
       (Rails.env.development? || Rails.env.test?) &&
         ActiveModel::Type::Boolean.new.cast(ENV.fetch('CYPRESS', false))
