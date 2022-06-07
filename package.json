@@ -29,7 +29,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-tailwindcss": "^3.5.0",
     "prettier": "^2.6.2",
-    "rollup": "^2.75.5",
+    "rollup": "^2.75.6",
     "rollup-plugin-gzip": "^3.0.1",
     "size-limit": "^7.0.8",
     "vite": "^2.9.10",
