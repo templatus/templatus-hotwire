@@ -16,7 +16,9 @@ html lang="en"
     = tag.meta content: 'black', name: 'apple-mobile-web-app-status-bar-style'
     = tag.meta content: Rails.configuration.x.git.commit_version, name: 'git-commit-version'
     = tag.meta content: Rails.configuration.x.git.commit_time, name: 'git-commit-time'
-    = tag.meta content: Rails.configuration.x.honeybadger.api_key, name: 'honeybadger-api-key'
+
+    - if Rails.configuration.x.honeybadger.api_key
+      = tag.meta content: Rails.configuration.x.honeybadger.api_key, name: 'honeybadger-api-key'
 
     = tag.meta name: 'app-host', content: Rails.configuration.x.app_host
     - if Rails.configuration.x.plausible_url

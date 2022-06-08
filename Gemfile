@@ -39,9 +39,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # A Ruby client library for Redis (https://github.com/redis/redis-rb)
 gem 'redis'
 
-# Error reports you can be happy about. (https://github.com/honeybadger-io/honeybadger-ruby)
-gem 'honeybadger'
-
 # Tame Rails' multi-line logging into a single line per request (https://github.com/roidrage/lograge)
 gem 'lograge'
 
@@ -132,4 +129,9 @@ group :test do
 
   # Capybara aims to simplify the process of integration testing Rack applications, such as Rails, Sinatra or Merb (https://github.com/teamcapybara/capybara)
   gem 'capybara'
+end
+
+group :production do
+  # Error reports you can be happy about. (https://github.com/honeybadger-io/honeybadger-ruby)
+  gem 'honeybadger'
 end
