@@ -42,9 +42,5 @@
       "limit": "45 kB",
       "path": "public/{vite,vite-dev,vite-test}/assets/*.js"
     }
-  ],
-  "browserslist": [
-    "defaults",
-    "not IE 11"
   ]
 }
