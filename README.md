@@ -101,7 +101,7 @@ https://github.com/rails/rails/pull/41994
 
 ### JavaScript size
 
-132 KB of compiled JavaScript (minified, uncompressed). The largest parts are:
+142 KB of compiled JavaScript (minified, uncompressed). The largest parts are:
 
 - Turbo with ActionCable (72 KB)
 - Stimulus (32 KB)
@@ -120,12 +120,14 @@ transforming...
 rendering chunks...
 ../../public/vite/assets/logo.cfef1aba.svg          0.48 KiB
 ../../public/vite/manifest-assets.json              0.22 KiB
-../../public/vite/manifest.json                     0.42 KiB
+../../public/vite/manifest.json                     0.54 KiB
+../../public/vite/assets/application.a7350dde.js    2.86 KiB / gzip: 1.17 KiB
+../../public/vite/assets/application.a7350dde.js.map 6.74 KiB
 ../../public/vite/assets/index.39115729.js          8.83 KiB / gzip: 2.83 KiB
 ../../public/vite/assets/index.39115729.js.map      28.40 KiB
-../../public/vite/assets/application.dd436e2a.css   19.81 KiB / gzip: 4.58 KiB
-../../public/vite/assets/application.49bfdcf3.js    132.51 KiB / gzip: 37.12 KiB
-../../public/vite/assets/application.49bfdcf3.js.map 424.47 KiB
+../../public/vite/assets/application.c0c33b68.css   20.00 KiB / gzip: 4.60 KiB
+../../public/vite/assets/vendor.cf1be3db.js         129.85 KiB / gzip: 36.37 KiB
+../../public/vite/assets/vendor.cf1be3db.js.map     417.59 KiB
 Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
 ```
 
