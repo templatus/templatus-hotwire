@@ -125,7 +125,7 @@ rendering chunks...
 ../../public/vite/assets/application.a7350dde.js.map 6.74 KiB
 ../../public/vite/assets/index.39115729.js          8.83 KiB / gzip: 2.83 KiB
 ../../public/vite/assets/index.39115729.js.map      28.40 KiB
-../../public/vite/assets/application.c0c33b68.css   20.00 KiB / gzip: 4.60 KiB
+../../public/vite/assets/application.91d604b4.css   21.04 KiB / gzip: 4.63 KiB
 ../../public/vite/assets/vendor.cf1be3db.js         129.85 KiB / gzip: 36.37 KiB
 ../../public/vite/assets/vendor.cf1be3db.js.map     417.59 KiB
 Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
