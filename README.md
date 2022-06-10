@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/ledermann/templatus-hotwire/workflows/CI/badge.svg)](https://github.com/ledermann/templatus-hotwire/actions)
+[![Build Status](https://github.com/templatus/templatus-hotwire/workflows/CI/badge.svg)](https://github.com/templatus/templatus-hotwire/actions)
 [![Cypress](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/5d6bqs&style=flat-square&logo=cypress)](https://dashboard.cypress.io/projects/5d6bqs/runs)
 
 # Templatus (Hotwire edition)
@@ -7,8 +7,13 @@ Templatus is an opinionated template to build web applications with Ruby on Rail
 
 Live demo available at https://templatus-hotwire.ledermann.dev
 
-There is a sister repository that uses Vue.js instead of Hotwire:
+There are two sister repositories:
+
+Using Vue.js instead of Hotwire;
 https://github.com/ledermann/templatus/
+
+Using Inertia and Svelte.js instead of Hotwire;
+https://github.com/templatus/templatus-inertia/
 
 ## Features / Technology stack
 
@@ -139,7 +144,7 @@ Small footprint: The demo application transfers only **51 KB** of data on the fi
 
 ### Docker build time
 
-With multi-stage building and using [DockerRailsBase](https://github.com/ledermann/docker-rails-base) the build of the Docker image takes very little time. Currently, the build job requires about 1,5 minutes on GitHub Actions (see https://github.com/ledermann/templatus-hotwire/actions)
+With multi-stage building and using [DockerRailsBase](https://github.com/ledermann/docker-rails-base) the build of the Docker image takes very little time. Currently, the build job requires about 1,5 minutes on GitHub Actions (see https://github.com/templatus/templatus-hotwire/actions)
 
 ### Docker image size
 
