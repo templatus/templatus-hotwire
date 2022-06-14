@@ -32,6 +32,7 @@ html lang="en"
     = tag.link href: asset_path('/favicon-16x16.png'),    rel: 'icon',             type: 'image/png', sizes: '16x16'
     = tag.link href: asset_path('/safari-pinned-tab.svg'),rel: 'mask-icon',        color: '#d30001'
     = tag.link href: webmanifest_path, rel: 'manifest'
+    = tag.link href: vite_asset_path('images/logo.svg'), rel: 'preload', as: 'image'
 
     = vite_client_tag
     = vite_javascript_tag 'application', 'data-turbo-track': 'reload'
