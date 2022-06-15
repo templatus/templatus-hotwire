@@ -349,7 +349,7 @@ GEM
     view_component (2.57.0)
       activesupport (>= 5.0.0, < 8.0)
       method_source (~> 1.0)
-    vite_rails (3.0.9)
+    vite_rails (3.0.10)
       railties (>= 5.1, < 8)
       vite_ruby (~> 3.0)
     vite_ruby (3.1.6)
