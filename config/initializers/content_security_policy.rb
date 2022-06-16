@@ -20,6 +20,7 @@ Rails.application.configure do
 
       policy.connect_src :self,
                          # Allow @vite/client to hot reload CSS changes
+                         "wss://#{ENV.fetch('APP_HOST', nil)}",
                          "wss://#{ViteRuby.config.host}"
     else
       policy.default_src :none
