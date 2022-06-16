@@ -10,7 +10,7 @@ Live demo available at https://templatus-hotwire.ledermann.dev
 There are two sister repositories:
 
 Using Vue.js instead of Hotwire;
-https://github.com/ledermann/templatus/
+https://github.com/templatus/templatus-vue/
 
 Using Inertia and Svelte.js instead of Hotwire;
 https://github.com/templatus/templatus-inertia/
@@ -151,13 +151,13 @@ With multi-stage building and using [DockerRailsBase](https://github.com/lederma
 The Docker image is based on Alpine Linux and is optimized for minimal size (currently **117 MB** uncompressed disk size). It includes just the bare minimum - no build tools like Node.js, no JS sources (just the compiled assets), no tests.
 
 ```
-$ container-diff analyze ghcr.io/ledermann/templatus-hotwire -n
+$ container-diff analyze ghcr.io/templatus/templatus-hotwire -n
 
 -----Size-----
 
-Analysis for ghcr.io/ledermann/templatus-hotwire:
+Analysis for ghcr.io/templatus/templatus-hotwire:
 IMAGE                                      DIGEST       SIZE
-ghcr.io/ledermann/templatus-hotwire        sha256:... 116.4M
+ghcr.io/templatus/templatus-hotwire        sha256:... 116.7M
 ```
 
 ## Getting started
@@ -167,7 +167,7 @@ ghcr.io/ledermann/templatus-hotwire        sha256:... 116.4M
 1. Clone the repo locally:
 
 ```bash
-git clone git@github.com:ledermann/templatus-hotwire.git
+git clone git@github.com:templatus/templatus-hotwire.git
 cd templatus-hotwire
 ```
 
