@@ -325,7 +325,7 @@ GEM
     stimulus-rails (1.0.4)
       railties (>= 6.0.0)
     strscan (3.0.3)
-    syntax_tree (2.7.1)
+    syntax_tree (2.8.0)
       prettier_print
     syntax_tree-haml (1.2.0)
       haml (>= 5.2)
