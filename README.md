@@ -119,20 +119,20 @@ yarn install v1.22.19
 success Already up-to-date.
 ✨  Done in 0.07s.
 Building with Vite ⚡️
-vite v2.9.13 building for production...
+vite v3.0.0 building for production...
 transforming...
 ✓ 45 modules transformed.
 rendering chunks...
 ../../public/vite/assets/logo.cfef1aba.svg          0.48 KiB
-../../public/vite/manifest-assets.json              0.22 KiB
-../../public/vite/manifest.json                     0.54 KiB
-../../public/vite/assets/application.a7350dde.js    2.86 KiB / gzip: 1.17 KiB
-../../public/vite/assets/application.a7350dde.js.map 6.74 KiB
-../../public/vite/assets/index.39115729.js          8.83 KiB / gzip: 2.83 KiB
-../../public/vite/assets/index.39115729.js.map      28.40 KiB
-../../public/vite/assets/application.dbacb8e7.css   21.82 KiB / gzip: 4.63 KiB
-../../public/vite/assets/vendor.cf1be3db.js         129.50 KiB / gzip: 36.22 KiB
-../../public/vite/assets/vendor.cf1be3db.js.map     417.64 KiB
+../../public/vite/manifest-assets.json              0.10 KiB
+../../public/vite/manifest.json                     0.78 KiB
+../../public/vite/assets/application.5d15022b.js    2.90 KiB / gzip: 1.18 KiB
+../../public/vite/assets/application.5d15022b.js.map 7.04 KiB
+../../public/vite/assets/index.78c8fc7f.js          8.83 KiB / gzip: 2.82 KiB
+../../public/vite/assets/index.78c8fc7f.js.map      28.38 KiB
+../../public/vite/assets/application.951e3df3.css   21.82 KiB / gzip: 4.63 KiB
+../../public/vite/assets/vendor.22fdadb8.js         129.44 KiB / gzip: 36.23 KiB
+../../public/vite/assets/vendor.22fdadb8.js.map     415.62 KiB
 Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
 ```
 
