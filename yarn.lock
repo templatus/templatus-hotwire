@@ -2248,10 +2248,10 @@ vite-plugin-full-reload@^1.0.1:
     picocolors "^1.0.0"
     picomatch "^2.3.1"
 
-vite-plugin-ruby@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/vite-plugin-ruby/-/vite-plugin-ruby-3.1.1.tgz#5424a2b82d94b5f24379477b86cf93ba57b286ee"
-  integrity sha512-AT2cwdTJFjcjMkPOQsf2DZUZ1JVMYBWhL58JQ0sPOfyLCLqRfAOVldeZHpDto+ljkehdcUuKtnq/YZS5qT6PGQ==
+vite-plugin-ruby@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/vite-plugin-ruby/-/vite-plugin-ruby-3.1.2.tgz#513297e64e3c9a2e2eace6c39856870f5aef0e90"
+  integrity sha512-Pp/NR79lV96wEOjp5MhVHuFxqUhEMNqc7L/02i+XXl1Mq1ab7s2j9kAgtiqp5QKxMd1jy8gV32PgWWVOmcd7/Q==
   dependencies:
     debug "^4.3.4"
     fast-glob "^3.2.11"
