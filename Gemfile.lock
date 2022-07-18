@@ -324,7 +324,7 @@ GEM
     spring (4.0.0)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
-    stimulus-rails (1.0.4)
+    stimulus-rails (1.1.0)
       railties (>= 6.0.0)
     strscan (3.0.3)
     syntax_tree (3.0.1)
