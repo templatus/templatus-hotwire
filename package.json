@@ -20,7 +20,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@prettier/plugin-ruby": "^3.1.2",
+    "@prettier/plugin-ruby": "^3.2.0",
     "@size-limit/file": "^7.0.8",
     "cypress": "^10.3.1",
     "eslint": "^8.20.0",
