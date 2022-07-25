@@ -127,12 +127,12 @@ rendering chunks...
 ../../public/vite/manifest-assets.json              0.10 KiB
 ../../public/vite/manifest.json                     0.78 KiB
 ../../public/vite/assets/application.8808c64a.js    2.90 KiB / gzip: 1.18 KiB
-../../public/vite/assets/application.8808c64a.js.map 7.04 KiB
+../../public/vite/assets/application.8808c64a.js.map 7.40 KiB
 ../../public/vite/assets/index.78c8fc7f.js          8.83 KiB / gzip: 2.82 KiB
-../../public/vite/assets/index.78c8fc7f.js.map      28.38 KiB
+../../public/vite/assets/index.78c8fc7f.js.map      29.40 KiB
 ../../public/vite/assets/application.951e3df3.css   21.82 KiB / gzip: 4.63 KiB
 ../../public/vite/assets/vendor.ce459bf0.js         129.51 KiB / gzip: 36.01 KiB
-../../public/vite/assets/vendor.ce459bf0.js.map     417.58 KiB
+../../public/vite/assets/vendor.ce459bf0.js.map     437.81 KiB
 Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
 ```
 
