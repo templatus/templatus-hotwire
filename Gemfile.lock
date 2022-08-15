@@ -127,7 +127,7 @@ GEM
       tilt
     heroicon (0.4.0)
       rails (>= 5.2)
-    honeybadger (4.12.1)
+    honeybadger (4.12.2)
     htmlbeautifier (1.4.2)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
