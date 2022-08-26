@@ -102,7 +102,7 @@ Style/QuotedSymbols:
 ### Metrics
 
 Metrics/BlockLength:
-  IgnoredMethods: ['configure', 'content_security_policy']
+  AllowedMethods: ['configure', 'content_security_policy']
 
 RSpec/ExampleLength:
   Enabled: false
