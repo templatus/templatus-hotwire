@@ -2,7 +2,7 @@
 
 require_relative 'config/environment'
 
-if Rails.env.production?
+if Rails.env.production? && Rails.configuration.x.app_host
   # Redirect to a canonical host
   use Rack::CanonicalHost,
       Rails.configuration.x.app_host,

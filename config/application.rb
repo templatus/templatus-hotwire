@@ -32,7 +32,7 @@ module TemplatusHotwire
 
     config.time_zone = ENV.fetch('TIME_ZONE', 'Berlin')
 
-    config.x.app_host = ENV.fetch('APP_HOST', 'templatus-hotwire.test')
+    config.x.app_host = ENV.fetch('APP_HOST', nil)
 
     config.x.git.commit_version =
       ENV.fetch('COMMIT_VERSION') { `git describe --always`.chomp }

@@ -20,7 +20,8 @@ html lang="en"
     - if Rails.configuration.x.honeybadger.api_key
       = tag.meta content: Rails.configuration.x.honeybadger.api_key, name: 'honeybadger-api-key'
 
-    = tag.meta name: 'app-host', content: Rails.configuration.x.app_host
+    - if Rails.configuration.x.app_host
+      = tag.meta name: 'app-host', content: Rails.configuration.x.app_host
     - if Rails.configuration.x.plausible_url
       = tag.meta name: 'plausible-url', content: Rails.configuration.x.plausible_url
 

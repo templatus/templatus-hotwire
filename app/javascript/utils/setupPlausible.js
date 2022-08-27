@@ -4,7 +4,7 @@ import { metaContent } from './metaContent';
 const plausibleUrl = metaContent('plausible-url');
 if (plausibleUrl) {
   window.plausible = Plausible({
-    domain: metaContent('app-host'),
+    domain: metaContent('app-host') || window.location.host,
     apiHost: plausibleUrl,
   });
 
