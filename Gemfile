@@ -37,7 +37,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # A Ruby client library for Redis (https://github.com/redis/redis-rb)
-gem 'redis', '!= 4.8.0' # https://github.com/mperham/sidekiq/issues/5488
+gem 'redis'
 
 # Tame Rails' multi-line logging into a single line per request (https://github.com/roidrage/lograge)
 gem 'lograge'
