@@ -66,12 +66,13 @@
   dependencies:
     stacktrace-parser "^0.1.10"
 
-"@honeybadger-io/js@^4.1.1":
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/@honeybadger-io/js/-/js-4.1.1.tgz#bcd1e4d1e4787a94aa171fbf3de85c807dddecac"
-  integrity sha512-wAA7XUyjaEWWu92V//NanuMNqCbcXDoozOrCOqOaajGSQPj+qN1TabbEcCYCdUk8H+1/vkakXbBAJvf9ccgOOw==
+"@honeybadger-io/js@^4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@honeybadger-io/js/-/js-4.1.2.tgz#1d8fa887d12f2a9b0fe7473f905317da9cc7632d"
+  integrity sha512-rZV6lJ5X3K1CUq9iX9mhXujywEKPlPY/jixTeWaXqqo5yJrBY/ODdnGNY8Pdh8TOtGI2BjQ01vnZGBhR7KiYeg==
   dependencies:
     "@honeybadger-io/core" "^4.1.1"
+    "@types/aws-lambda" "^8.10.89"
 
 "@hotwired/stimulus@^3.1.0":
   version "3.1.0"
@@ -161,6 +162,11 @@
   integrity sha512-pSrFeJB6Bg1Mrg9CdQW3+hqZXAKsBrSG9MAfFLKy1pVA4Mb4W7C0k7mEhlmS2Dfo/otxrQOET7NJiJ9RrS563w==
   dependencies:
     mini-svg-data-uri "^1.2.3"
+
+"@types/aws-lambda@^8.10.89":
+  version "8.10.102"
+  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.102.tgz#d2402224ec30cdddfb669005c25b6ee01fd6f5be"
+  integrity sha512-BT05v46n9KtSHa9SgGuOvm49eSruJ9utD8iNXpdpuUVYk8wOcqmm1LEzpNRkrXxD0CULc38sdLpk6q3Wa2WOwg==
 
 "@types/node@*":
   version "18.7.13"
