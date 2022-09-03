@@ -125,7 +125,7 @@ GEM
     haml (5.2.2)
       temple (>= 0.8.0)
       tilt
-    heroicon (0.4.0)
+    heroicon (1.0.0)
       rails (>= 5.2)
     honeybadger (4.12.2)
     htmlbeautifier (1.4.2)
