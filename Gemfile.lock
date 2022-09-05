@@ -151,7 +151,7 @@ GEM
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    lookbook (1.0.1)
+    lookbook (1.0.3)
       actioncable
       css_parser
       htmlbeautifier (~> 1.3)
