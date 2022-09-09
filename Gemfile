@@ -15,7 +15,7 @@ gem 'turbo-rails'
 # A modest JavaScript framework for the HTML you already have. (https://stimulus.hotwired.dev)
 gem 'stimulus-rails'
 
-# View components for Rails (https://github.com/github/view_component)
+# A framework for building reusable, testable & encapsulated view components in Ruby on Rails. (https://viewcomponent.org)
 gem 'view_component'
 
 # Slim templates generator for Rails (https://github.com/slim-template/slim-rails)
