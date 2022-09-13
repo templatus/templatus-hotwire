@@ -22,7 +22,7 @@
   "devDependencies": {
     "@prettier/plugin-ruby": "^3.2.0",
     "@size-limit/file": "^8.1.0",
-    "cypress": "^10.7.0",
+    "cypress": "^10.8.0",
     "eslint": "^8.23.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-cypress": "^2.12.1",
