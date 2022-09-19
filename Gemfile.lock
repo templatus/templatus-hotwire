@@ -338,7 +338,7 @@ GEM
       haml (>= 5.2)
       prettier_print
       syntax_tree (>= 2.0.1)
-    syntax_tree-rbs (0.5.0)
+    syntax_tree-rbs (0.5.1)
       prettier_print
       rbs
       syntax_tree (>= 2.0.1)
