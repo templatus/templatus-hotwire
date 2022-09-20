@@ -306,7 +306,7 @@ GEM
       rubocop (~> 1.33)
     ruby-progressbar (1.11.0)
     shellany (0.0.1)
-    sidekiq (6.5.6)
+    sidekiq (6.5.7)
       connection_pool (>= 2.2.5)
       rack (~> 2.0)
       redis (>= 4.5.0, < 5)
