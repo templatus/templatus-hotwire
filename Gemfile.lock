@@ -124,8 +124,9 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    haml (5.2.2)
-      temple (>= 0.8.0)
+    haml (6.0.0)
+      temple (>= 0.8.2)
+      thor
       tilt
     heroicon (1.0.0)
       rails (>= 5.2)
@@ -200,6 +201,10 @@ GEM
     parser (3.1.2.1)
       ast (~> 2.4.1)
     pg (1.4.3)
+    prettier (3.2.2)
+      syntax_tree (>= 2.7.1)
+      syntax_tree-haml (>= 1.1.0)
+      syntax_tree-rbs (>= 0.2.0)
     prettier_print (0.1.0)
     pry (0.14.1)
       coderay (~> 1.1)
@@ -397,7 +402,7 @@ DEPENDENCIES
   lograge
   lookbook
   pg (~> 1.1)
-  prettier_print
+  prettier
   puma (~> 5.0)
   rack-brotli
   rack-canonical-host
@@ -416,9 +421,6 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   stimulus-rails
-  syntax_tree
-  syntax_tree-haml
-  syntax_tree-rbs
   turbo-rails
   tzinfo-data
   view_component
