@@ -10,8 +10,10 @@ load File.expand_path('spring', __dir__)
 #
 
 require 'pathname'
-ENV['BUNDLE_GEMFILE'] ||=
-  File.expand_path('../../Gemfile', Pathname.new(__FILE__).realpath)
+ENV['BUNDLE_GEMFILE'] ||= File.expand_path(
+  '../../Gemfile',
+  Pathname.new(__FILE__).realpath,
+)
 
 bundle_binstub = File.expand_path('../bundle', __FILE__)
 

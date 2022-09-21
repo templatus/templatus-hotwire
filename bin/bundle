@@ -103,9 +103,9 @@ m =
       return if gem_error.nil?
       require_error = activation_error_handling { require 'bundler/version' }
       if require_error.nil? &&
-           Gem::Requirement
-             .new(bundler_requirement)
-             .satisfied_by?(Gem::Version.new(Bundler::VERSION))
+           Gem::Requirement.new(bundler_requirement).satisfied_by?(
+             Gem::Version.new(Bundler::VERSION),
+           )
         return
       end
       warn "Activating bundler (#{bundler_requirement}) failed:\n#{gem_error.message}\n\nTo install the version of bundler this project requires, run `gem install bundler -v '#{bundler_requirement}'`"
