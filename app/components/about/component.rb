@@ -1,6 +1,6 @@
 class About::Component < ViewComponent::Base
   def features
-    filename = self.class._sidecar_files(['json']).first
+    filename = self.class.sidecar_files(['json']).first
     file = File.read(filename)
     JSON.parse(file)
   end
