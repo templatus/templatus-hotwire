@@ -119,20 +119,20 @@ yarn install v1.22.19
 success Already up-to-date.
 ✨  Done in 0.07s.
 Building with Vite ⚡️
-vite v3.1.3 building for production...
+vite v3.1.4 building for production...
 transforming...
 ✓ 45 modules transformed.
 rendering chunks...
 ../../public/vite/assets/logo.cfef1aba.svg          0.48 KiB
 ../../public/vite/manifest-assets.json              0.10 KiB
 ../../public/vite/manifest.json                     0.78 KiB
-../../public/vite/assets/application.21c84fff.js    2.91 KiB / gzip: 1.19 KiB
-../../public/vite/assets/application.21c84fff.js.map 7.10 KiB
+../../public/vite/assets/application.465e4d44.js    2.91 KiB / gzip: 1.19 KiB
+../../public/vite/assets/application.465e4d44.js.map 7.10 KiB
 ../../public/vite/assets/index.78c8fc7f.js          8.83 KiB / gzip: 2.82 KiB
 ../../public/vite/assets/index.78c8fc7f.js.map      29.44 KiB
-../../public/vite/assets/application.286e14b5.css   21.69 KiB / gzip: 4.61 KiB
-../../public/vite/assets/vendor.ec091f05.js         144.43 KiB / gzip: 39.88 KiB
-../../public/vite/assets/vendor.ec091f05.js.map     482.22 KiB
+../../public/vite/assets/application.9f0093dd.css   20.74 KiB / gzip: 4.60 KiB
+../../public/vite/assets/vendor.d680ccb6.js         144.43 KiB / gzip: 39.88 KiB
+../../public/vite/assets/vendor.d680ccb6.js.map     482.22 KiB
 Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
 ```
 
