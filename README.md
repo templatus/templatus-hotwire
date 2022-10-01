@@ -9,11 +9,8 @@ Live demo available at https://templatus-hotwire.ledermann.dev
 
 There are two sister repositories:
 
-Using Vue.js instead of Hotwire;
-https://github.com/templatus/templatus-vue/
-
-Using Inertia and Svelte.js instead of Hotwire;
-https://github.com/templatus/templatus-inertia/
+- Using Vue.js instead of Hotwire: https://github.com/templatus/templatus-vue/
+- Using Inertia and Svelte.js instead of Hotwire: https://github.com/templatus/templatus-inertia/
 
 ## Features / Technology stack
 
