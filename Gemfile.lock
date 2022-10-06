@@ -400,7 +400,7 @@ DEPENDENCIES
   rack-brotli
   rack-canonical-host
   rack-cors
-  rails (~> 7.0.3)
+  rails (~> 7.0.4)
   redis
   rspec-rails
   rubocop
@@ -424,4 +424,4 @@ RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   2.3.22
+   2.3.23
