@@ -47,7 +47,7 @@ Rails.application.configure do
         *[
           :self,
           Rails.configuration.asset_host.presence,
-          '\'sha256-rql2tlBWA4Hb3HHbUfw797urk+ifBd6EAovoOUGt0oI=\'', # Turbo progress bar
+          '\'sha256-WAyOw4V+FqDc35lQPyRADLBWbuNK8ahvYEaQIYF1+Ps=\'', # Turbo progress bar
           '\'sha256-MU5QaehzQCq1x6U38PLxcooVZTB7oVn8ZtoAKdaog8Q=\'', # Lockup
         ].compact,
       )
