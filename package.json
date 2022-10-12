@@ -7,7 +7,7 @@
   "dependencies": {
     "@honeybadger-io/js": "^4.3.1",
     "@hotwired/stimulus": "^3.1.0",
-    "@hotwired/turbo-rails": "^7.2.0",
+    "@hotwired/turbo-rails": "^7.2.2",
     "@rails/actioncable": "^7.0.4",
     "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "^10.4.12",
