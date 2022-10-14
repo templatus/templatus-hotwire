@@ -28,7 +28,7 @@ gem 'heroicon'
 gem 'pg', '~> 1.1'
 
 # Puma is a simple, fast, threaded, and highly parallel HTTP 1.1 server for Ruby/Rack applications (https://puma.io)
-gem 'puma', '~> 5.0'
+gem 'puma'
 
 # Boot large ruby/rails apps faster (https://github.com/Shopify/bootsnap)
 gem 'bootsnap', '>= 1.4.4', require: false
