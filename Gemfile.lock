@@ -200,7 +200,7 @@ GEM
       syntax_tree (>= 2.7.1)
       syntax_tree-haml (>= 1.1.0)
       syntax_tree-rbs (>= 0.2.0)
-    prettier_print (0.1.0)
+    prettier_print (1.0.0)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -331,8 +331,8 @@ GEM
       spring (>= 0.9.1)
     stimulus-rails (1.1.0)
       railties (>= 6.0.0)
-    syntax_tree (3.6.3)
-      prettier_print
+    syntax_tree (4.0.0)
+      prettier_print (>= 1.0.0)
     syntax_tree-haml (1.3.2)
       haml (>= 5.2)
       prettier_print
