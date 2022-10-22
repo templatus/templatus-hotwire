@@ -19,5 +19,6 @@ describe('Basic tests', () => {
     cy.get('#counter').should('contain', '1');
     cy.get('ul').should('contain', '127.0.0.0');
     cy.get('li').should('have.length', 1);
+    cy.get('#flash').should('contain', 'successfully');
   });
 });

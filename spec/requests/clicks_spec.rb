@@ -13,14 +13,11 @@ describe 'Clicks' do
     let(:user_agent) { 'Netscape Navigator' }
 
     def call(ip)
-      post clicks_path,
+      post clicks_path(format: :turbo_stream),
            headers: {
              HTTP_USER_AGENT: user_agent,
              REMOTE_ADDR: ip,
            }
-
-      expect(response).to have_http_status(:success)
-      expect(Click.last.user_agent).to eq(user_agent)
     end
 
     context 'when IPv4' do
@@ -30,6 +27,8 @@ describe 'Clicks' do
         call(ipv4)
 
         expect(Click.last.ip).to eq('1.2.3.0')
+        expect(response).to have_http_status(:success)
+        expect(Click.last.user_agent).to eq(user_agent)
       end
     end
 
@@ -40,6 +39,18 @@ describe 'Clicks' do
         call(ipv6)
 
         expect(Click.last.ip).to eq('2001:0db8:0:0:0:0:0:0')
+        expect(response).to have_http_status(:success)
+        expect(Click.last.user_agent).to eq(user_agent)
+      end
+    end
+
+    context 'when saving fails' do
+      let(:ipv6) { 'invalid' }
+
+      it 'fails and returns http failure' do
+        call(ipv6)
+
+        expect(response).to have_http_status(:unprocessable_entity)
       end
     end
   end

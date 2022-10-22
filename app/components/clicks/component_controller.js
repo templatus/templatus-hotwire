@@ -12,9 +12,11 @@ export default class extends Controller {
     this.renderCount();
   }
 
-  receive() {
-    this.updateList();
-    this.increaseCounter();
+  receive(event) {
+    if (event.target.target === 'list') {
+      this.updateList();
+      this.increaseCounter();
+    }
   }
 
   increaseCounter() {
