@@ -118,18 +118,18 @@ success Already up-to-date.
 Building with Vite ⚡️
 vite v3.1.8 building for production...
 transforming...
-✓ 45 modules transformed.
+✓ 46 modules transformed.
 rendering chunks...
 ../../public/vite/assets/logo.cfef1aba.svg          0.48 KiB
 ../../public/vite/manifest-assets.json              0.10 KiB
 ../../public/vite/manifest.json                     0.78 KiB
-../../public/vite/assets/application.ccca36ce.js    2.91 KiB / gzip: 1.19 KiB
-../../public/vite/assets/application.ccca36ce.js.map 7.10 KiB
+../../public/vite/assets/application.89f4ae31.js    3.25 KiB / gzip: 1.27 KiB
+../../public/vite/assets/application.89f4ae31.js.map 7.86 KiB
 ../../public/vite/assets/index.78c8fc7f.js          8.83 KiB / gzip: 2.82 KiB
 ../../public/vite/assets/index.78c8fc7f.js.map      29.44 KiB
-../../public/vite/assets/application.9f0093dd.css   20.74 KiB / gzip: 4.60 KiB
-../../public/vite/assets/vendor.917f000c.js         145.74 KiB / gzip: 40.22 KiB
-../../public/vite/assets/vendor.917f000c.js.map     484.65 KiB
+../../public/vite/assets/application.219ad49c.css   22.39 KiB / gzip: 4.91 KiB
+../../public/vite/assets/vendor.82d17dc2.js         145.69 KiB / gzip: 40.20 KiB
+../../public/vite/assets/vendor.82d17dc2.js.map     484.44 KiB
 Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
 ```
 
