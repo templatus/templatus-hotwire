@@ -45,6 +45,10 @@ html lang="en"
 
       = render AppHeader::Component.new class: 'lg:fixed lg:top-10 lg:left-10'
 
+      = turbo_frame_tag 'flash' do
+        - if flash.present?
+          = render AppFlash::Component.new(notice:, alert:)
+
       main class="relative flex-1 px-4 py-5 bg-white shadow-md sm:px-6 lg:px-8 lg:mt-10 lg:mr-16 lg:ml-96 lg:max-w-5xl lg:rounded-xl"
         = yield
 

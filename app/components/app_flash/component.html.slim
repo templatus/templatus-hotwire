@@ -1,0 +1,15 @@
+.z-50.fixed.bottom-0.inset-x-0.border-t-4.p-8.hidden[
+  class= background_class
+  data-controller= 'app-flash--component'
+
+  data-transition-enter=       'transition duration-500 ease-out'
+  data-transition-enter-start= 'translate-y-32'
+  data-transition-enter-end=   'translate-y-0'
+  data-transition-leave=       'transition duration-500 ease-in'
+  data-transition-leave-start= 'translate-y-0'
+  data-transition-leave-end=   'translate-y-32'
+]
+  .flex.justify-center.items-center.mx-auto
+    = helpers.heroicon icon_name, variant: :solid, options: { class: [ icon_class, 'h-8 w-8' ].join(' ') }
+    p.text-base.font-medium.ml-2 class= text_class
+      = text
