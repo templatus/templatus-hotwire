@@ -1,4 +1,4 @@
-describe ClicksChannel, type: :channel do
+describe ClicksChannel do
   it 'successfully subscribes and unsubscribes' do
     subscribe
     expect(subscription).to be_confirmed
