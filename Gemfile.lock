@@ -333,7 +333,7 @@ GEM
     spring (4.1.0)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
-    stimulus-rails (1.1.0)
+    stimulus-rails (1.1.1)
       railties (>= 6.0.0)
     syntax_tree (4.3.0)
       prettier_print (>= 1.0.2)
@@ -380,7 +380,7 @@ GEM
       nokogiri (~> 1.8)
     yard (0.9.28)
       webrick (~> 1.7.0)
-    zeitwerk (2.6.1)
+    zeitwerk (2.6.2)
 
 PLATFORMS
   ruby
