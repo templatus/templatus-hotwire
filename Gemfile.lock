@@ -309,7 +309,7 @@ GEM
       rubocop (~> 1.33)
     ruby-progressbar (1.11.0)
     shellany (0.0.1)
-    sidekiq (7.0.0)
+    sidekiq (7.0.1)
       concurrent-ruby (< 2)
       connection_pool (>= 2.3.0)
       rack (>= 2.2.4)
