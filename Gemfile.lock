@@ -129,7 +129,7 @@ GEM
       tilt
     heroicon (1.0.0)
       rails (>= 5.2)
-    honeybadger (5.0.1)
+    honeybadger (5.0.2)
     htmlbeautifier (1.4.2)
     htmlentities (4.3.4)
     i18n (1.12.0)
