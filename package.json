@@ -27,7 +27,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-tailwindcss": "^3.6.2",
+    "eslint-plugin-tailwindcss": "^3.7.0",
     "prettier": "^2.7.1",
     "size-limit": "^8.1.0",
     "vite": "^3.2.3",
