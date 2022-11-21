@@ -61,6 +61,11 @@
         "description": "Slim is a template language whose goal is to reduce the syntax to the essential parts without becoming cryptic."
       },
       {
+        "name": "TypeScript",
+        "href": "https://www.typescriptlang.org/",
+        "description": "TypeScript is an open-source language which builds on JavaScript, one of the world’s most used tools, by adding static type definitions."
+      },
+      {
         "name": "Tailwind CSS 3",
         "href": "https://tailwindcss.com/",
         "description": "A utility-first CSS framework packed with classes that can be composed to build any design, directly in your markup."

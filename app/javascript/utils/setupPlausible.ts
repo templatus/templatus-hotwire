@@ -3,14 +3,12 @@ import { metaContent } from './metaContent';
 
 const plausibleUrl = metaContent('plausible-url');
 if (plausibleUrl) {
-  window.plausible = Plausible({
+  const plausible = Plausible({
     domain: metaContent('app-host') || window.location.host,
     apiHost: plausibleUrl,
   });
 
-  window.plausible.enableAutoOutboundTracking();
+  plausible.enableAutoOutboundTracking();
 
-  document.addEventListener('turbo:load', () =>
-    window.plausible.trackPageview(),
-  );
+  document.addEventListener('turbo:load', () => plausible.trackPageview());
 }

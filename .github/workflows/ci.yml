@@ -51,6 +51,9 @@ jobs:
       - name: Run ESLint
         run: bin/yarn lint
 
+      - name: Check for TypeScript errors
+        run: bin/yarn tsc
+
       - name: Lint with SlimLint
         run: bundle exec slim-lint .
 

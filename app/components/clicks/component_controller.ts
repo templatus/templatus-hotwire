@@ -1,19 +1,38 @@
 import { Controller } from '@hotwired/stimulus';
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { enter, leave } from 'el-transition';
+
+import { StreamElement } from '@hotwired/turbo';
 
 export default class extends Controller {
   static targets = ['counter', 'list'];
+
+  declare readonly hasCounterTarget: boolean;
+  declare readonly counterTarget: HTMLElement;
+  declare readonly counterTargets: HTMLElement[];
+
+  declare readonly haslistTarget: boolean;
+  declare readonly listTarget: HTMLElement;
+  declare readonly listTargets: HTMLElement[];
+
   static values = {
     count: Number,
   };
+
+  declare countValue: number;
+  declare readonly hasCountValue: boolean;
+
+  currentCount = 0;
 
   connect() {
     this.currentCount = this.countValue;
     this.renderCount();
   }
 
-  receive(event) {
-    if (event.target.target === 'list') {
+  receive(event: Event) {
+    if ((event.target as StreamElement).target === 'list') {
       this.updateList();
       this.increaseCounter();
     }
@@ -38,7 +57,7 @@ export default class extends Controller {
     if (this.currentCount > 5)
       // Fade out and remove last element
       leave(this.listTarget.lastElementChild).then(() =>
-        this.listTarget.lastElementChild.remove(),
+        this.listTarget.lastElementChild?.remove(),
       );
   }
 

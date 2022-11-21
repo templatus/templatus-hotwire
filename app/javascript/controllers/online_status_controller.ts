@@ -3,6 +3,10 @@ import { Controller } from '@hotwired/stimulus';
 export default class extends Controller {
   static targets = ['indicator'];
 
+  declare readonly hasIndicatorTarget: boolean;
+  declare readonly indicatorTarget: HTMLElement;
+  declare readonly indicatorTargets: HTMLElement[];
+
   connect() {
     window.addEventListener('online', this.setOnline.bind(this));
     window.addEventListener('offline', this.setOffline.bind(this));

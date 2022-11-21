@@ -36,7 +36,7 @@ html lang="en"
     = tag.link href: vite_asset_path('images/logo.svg'), rel: 'preload', as: 'image'
 
     = vite_client_tag
-    = vite_javascript_tag 'application', 'data-turbo-track': 'reload'
+    = vite_typescript_tag 'application', 'data-turbo-track': 'reload'
     = vite_stylesheet_tag 'application', 'data-turbo-track': 'reload'
 
   body
