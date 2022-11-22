@@ -7,10 +7,12 @@ Templatus is an opinionated template to build web applications with Ruby on Rail
 
 Live demo available at https://templatus-hotwire.ledermann.dev
 
+## Similar projects
+
 There are two sister repositories:
 
-- Using Vue.js instead of Hotwire: https://github.com/templatus/templatus-vue/
-- Using Inertia and Svelte.js instead of Hotwire: https://github.com/templatus/templatus-inertia/
+- For using Vue.js instead of Hotwire: https://github.com/templatus/templatus-vue/
+- For using Inertia and Svelte.js instead of Hotwire: https://github.com/templatus/templatus-inertia/
 
 ## Features / Technology stack
 
@@ -26,6 +28,7 @@ There are two sister repositories:
 ### Frontend
 
 - [Hotwire](https://hotwire.io/) for building the frontend without using much JavaScript by sending HTML instead of JSON over the wire
+- [TypeScript](https://www.typescriptlang.org/) for static type checking in Stimulus controllers and other script code
 - [ViewComponent](https://viewcomponent.org/) for creating reusable, testable & encapsulated view components
 - [Slim](http://slim-lang.com/) for writing templates instead of ERB
 - [Tailwind CSS 3](https://tailwindcss.com/) to not have to write CSS at all
@@ -103,7 +106,7 @@ https://github.com/rails/rails/pull/41994
 
 ### JavaScript size
 
-142 KB of compiled JavaScript (minified, uncompressed). The largest parts are:
+159 KB of compiled JavaScript (minified, uncompressed). The largest parts are:
 
 - Turbo with ActionCable (72 KB)
 - Stimulus (32 KB)
@@ -135,7 +138,7 @@ Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vit
 
 ### Network transfer
 
-Small footprint: The demo application transfers only **51 KB** of data on the first visit.
+Small footprint: The demo application transfers only **62 KB** of (compressed) data on the first visit.
 
 ![Network](docs/network.png)
 
