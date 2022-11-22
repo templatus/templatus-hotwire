@@ -105,7 +105,7 @@ group :development do
   # rspec command for spring (https://github.com/jonleighton/spring-commands-rspec)
   gem 'spring-commands-rspec'
 
-  # A native development UI for ViewComponent (https://github.com/allmarkedup/lookbook)
+  # A native development UI for ViewComponent (https://github.com/ViewComponent/lookbook)
   gem 'lookbook'
 
   # prettier plugin for the Ruby programming language (https://github.com/prettier/plugin-ruby#readme)
