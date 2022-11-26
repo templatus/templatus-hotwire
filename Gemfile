@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.2'
+ruby '3.1.3'
 
 # Full-stack web application framework. (https://rubyonrails.org)
 gem 'rails', '~> 7.0.4'
@@ -58,9 +58,6 @@ gem 'sidekiq'
 gem 'lockup'
 
 group :development, :test do
-  # Debugging functionality for Ruby (https://github.com/ruby/debug)
-  gem 'debug', '>= 1.0.0', platforms: %i[mri mingw x64_mingw]
-
   # Autoload dotenv in Rails. (https://github.com/bkeepers/dotenv)
   gem 'dotenv-rails'
 
