@@ -7,7 +7,7 @@ concurrency:
 
 jobs:
   test:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     services:
       postgres:
@@ -93,7 +93,7 @@ jobs:
           if-no-files-found: ignore
 
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     if: github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags')
 
