@@ -729,10 +729,10 @@ cssesc@^3.0.0:
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
 
-cypress@^12.0.0:
-  version "12.0.0"
-  resolved "https://registry.yarnpkg.com/cypress/-/cypress-12.0.0.tgz#97138b6a92836b4f37138703d396f20925cb6a13"
-  integrity sha512-hX/UeaKrL4uiRxJh+eX9t5YFXJconJyqG0hkFkK6CG+4xj2mMmzvJERF3e2h/9TzvLxPAkQ6cGz8eaHfJZeyGg==
+cypress@^12.0.1:
+  version "12.0.1"
+  resolved "https://registry.yarnpkg.com/cypress/-/cypress-12.0.1.tgz#3a51a38b2f162256c7226e68e902cfe1750e3d92"
+  integrity sha512-I1Ag5RsPEINfUlQtV6xwkd6ktJuu5QGiKZ3pFa/IXjcyCY6I7CH3gOz0juLOhg/LXOPrQtZH35ulcWDQohyyEA==
   dependencies:
     "@cypress/request" "^2.88.10"
     "@cypress/xvfb" "^1.2.4"
