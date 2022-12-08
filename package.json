@@ -34,7 +34,7 @@
     "eslint-plugin-tailwindcss": "^3.7.1",
     "prettier": "^2.8.1",
     "size-limit": "^8.1.0",
-    "typescript": "^4.9.3",
+    "typescript": "^4.9.4",
     "vite": "^3.2.5",
     "vite-plugin-full-reload": "^1.0.4",
     "vite-plugin-ruby": "^3.1.3",
