@@ -99,6 +99,9 @@ Style/StringLiteralsInInterpolation:
 Style/QuotedSymbols:
   EnforcedStyle: single_quotes
 
+Style/RequireOrder:
+  Enabled: false
+
 ### Metrics
 
 Metrics/BlockLength:
