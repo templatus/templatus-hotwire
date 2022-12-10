@@ -57,7 +57,7 @@
       {
         "name": "Slim",
         "gem": "slim",
-        "href": "http://slim-lang.com/",
+        "href": "https://github.com/slim-template/slim",
         "description": "Slim is a template language whose goal is to reduce the syntax to the essential parts without becoming cryptic."
       },
       {
