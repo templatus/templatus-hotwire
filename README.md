@@ -117,22 +117,20 @@ $ RAILS_ENV=production bin/rails assets:precompile
 yarn install v1.22.19
 [1/5] 🔍  Resolving packages...
 success Already up-to-date.
-✨  Done in 0.09s.
+✨  Done in 0.08s.
 Building with Vite ⚡️
-vite v3.2.5 building for production...
+vite v4.0.0 building for production...
 transforming...
 ✓ 46 modules transformed.
 rendering chunks...
-../../public/vite/assets/logo.cfef1aba.svg          0.48 KiB
-../../public/vite/manifest-assets.json              0.10 KiB
-../../public/vite/manifest.json                     0.78 KiB
-../../public/vite/assets/application.a5f00ed6.js    3.25 KiB / gzip: 1.28 KiB
-../../public/vite/assets/application.a5f00ed6.js.map 8.76 KiB
-../../public/vite/assets/index.78c8fc7f.js          8.83 KiB / gzip: 2.82 KiB
-../../public/vite/assets/index.78c8fc7f.js.map      29.44 KiB
-../../public/vite/assets/application.0e9fa7ed.css   21.70 KiB / gzip: 4.79 KiB
-../../public/vite/assets/vendor.78e743db.js         154.21 KiB / gzip: 42.14 KiB
-../../public/vite/assets/vendor.78e743db.js.map     510.93 KiB
+computing gzip size...
+../../public/vite/manifest-assets.json               0.10 kB
+../../public/vite/assets/logo.cfef1aba.svg           0.50 kB
+../../public/vite/manifest.json                      0.80 kB
+../../public/vite/assets/application.0e9fa7ed.css   22.22 kB │ gzip:  4.90 kB
+../../public/vite/assets/application.274d4981.js     3.38 kB │ gzip:  1.35 kB │ map:   8.97 kB
+../../public/vite/assets/index.9174f13a.js           9.08 kB │ gzip:  2.92 kB │ map:  30.15 kB
+../../public/vite/assets/vendor.a3c5bc25.js        157.86 kB │ gzip: 43.21 kB │ map: 523.19 kB
 Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
 ```
 
