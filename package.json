@@ -45,5 +45,8 @@
       "limit": "50 kB",
       "path": "public/{vite,vite-dev,vite-test}/assets/*.js"
     }
-  ]
+  ],
+  "engines": {
+    "node": ">=18"
+  }
 }

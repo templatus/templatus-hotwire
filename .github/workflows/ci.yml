@@ -41,6 +41,7 @@ jobs:
         uses: actions/setup-node@v3.5.1
         with:
           cache: yarn
+          node-version-file: 'package.json'
 
       - name: Install Yarn packages
         run: bin/yarn install --frozen-lockfile
