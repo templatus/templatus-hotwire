@@ -264,7 +264,7 @@ GEM
     redis-client (0.11.2)
       connection_pool
     regexp_parser (2.6.1)
-    reline (0.3.1)
+    reline (0.3.2)
       io-console (~> 0.5)
     request_store (1.5.1)
       rack (>= 1.4)
