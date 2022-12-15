@@ -13,7 +13,7 @@ export default class extends Controller {
   declare readonly counterTarget: HTMLElement;
   declare readonly counterTargets: HTMLElement[];
 
-  declare readonly haslistTarget: boolean;
+  declare readonly hasListTarget: boolean;
   declare readonly listTarget: HTMLElement;
   declare readonly listTargets: HTMLElement[];
 
