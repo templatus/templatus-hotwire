@@ -115,11 +115,12 @@ https://github.com/rails/rails/pull/41994
 ```
 $ RAILS_ENV=production bin/rails assets:precompile
 yarn install v1.22.19
-[1/5] 🔍  Resolving packages...
+[1/6] 🔍  Validating package.json...
+[2/6] 🔍  Resolving packages...
 success Already up-to-date.
 ✨  Done in 0.08s.
 Building with Vite ⚡️
-vite v4.0.0 building for production...
+vite v4.0.1 building for production...
 transforming...
 ✓ 46 modules transformed.
 rendering chunks...
@@ -128,9 +129,9 @@ computing gzip size...
 ../../public/vite/assets/logo.cfef1aba.svg           0.50 kB
 ../../public/vite/manifest.json                      0.80 kB
 ../../public/vite/assets/application.0e9fa7ed.css   22.22 kB │ gzip:  4.90 kB
-../../public/vite/assets/application.274d4981.js     3.38 kB │ gzip:  1.35 kB │ map:   8.97 kB
+../../public/vite/assets/application.225edefd.js     3.38 kB │ gzip:  1.35 kB │ map:   8.97 kB
 ../../public/vite/assets/index.9174f13a.js           9.08 kB │ gzip:  2.92 kB │ map:  30.15 kB
-../../public/vite/assets/vendor.a3c5bc25.js        157.86 kB │ gzip: 43.21 kB │ map: 523.19 kB
+../../public/vite/assets/vendor.2440ebba.js        159.84 kB │ gzip: 43.46 kB │ map: 531.58 kB
 Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
 ```
 
