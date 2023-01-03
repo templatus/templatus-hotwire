@@ -28,7 +28,7 @@
     "@typescript-eslint/parser": "^5.48.0",
     "cypress": "^12.2.0",
     "eslint": "^8.31.0",
-    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-tailwindcss": "^3.8.0",
