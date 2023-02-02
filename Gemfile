@@ -121,6 +121,6 @@ group :test do
 end
 
 group :production do
-  # Error reports you can be happy about. (https://github.com/honeybadger-io/honeybadger-ruby)
+  # Error reports you can be happy about. (https://www.honeybadger.io/for/ruby/)
   gem 'honeybadger'
 end
