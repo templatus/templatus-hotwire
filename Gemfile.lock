@@ -166,7 +166,7 @@ GEM
       yard (~> 0.9.25)
       zeitwerk (~> 2.5)
     lumberjack (1.2.8)
-    mail (2.8.0.1)
+    mail (2.8.1)
       mini_mime (>= 0.1.1)
       net-imap
       net-pop
