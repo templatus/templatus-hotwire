@@ -28,6 +28,7 @@ jobs:
       RAILS_ENV: test
       DISABLE_SPRING: true
       CI: true
+      RUBY_YJIT_ENABLE: 1
 
     steps:
       - uses: actions/checkout@v3
