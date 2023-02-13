@@ -250,10 +250,10 @@
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-7.0.4.tgz#70a3ca56809f7aaabb80af2f9c01ae51e1a8ed41"
   integrity sha512-tz4oM+Zn9CYsvtyicsa/AwzKZKL+ITHWkhiu7x+xF77clh2b4Rm+s6xnOgY/sGDWoFWZmtKsE95hxBPkgQQNnQ==
 
-"@size-limit/file@^8.1.2":
-  version "8.1.2"
-  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-8.1.2.tgz#f733b05acd168ee1ddd467f059d62b30c1667607"
-  integrity sha512-cjtGk1GejrmT+ik3LjXpRe+zrS/U15h+Py3L8sYN0XGat0+Y6pPbli1VuRRRcdXZNegpiW+UcxDxPN1AuZC5qA==
+"@size-limit/file@^8.2.4":
+  version "8.2.4"
+  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-8.2.4.tgz#3624527cc9644c700697322d533e157b4a809a2b"
+  integrity sha512-xLuF97W7m7lxrRJvqXRlxO/4t7cpXtfxOnjml/t4aRVUCMXLdyvebRr9OM4jjoK8Fmiz8jomCbETUCI3jVhLzA==
   dependencies:
     semver "7.3.8"
 
@@ -2231,10 +2231,10 @@ signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
 
-size-limit@^8.1.2:
-  version "8.1.2"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-8.1.2.tgz#dee99a39442e96092ab143d620d679215901abe2"
-  integrity sha512-/EfKz9I/K2ouBN+BcrTX2WiaPTOX5yiCXtM07jYpuVtyzX9r4FDUsuCq13nNmoWqRFYbtH/7wqgRLvF40AGKoQ==
+size-limit@^8.2.4:
+  version "8.2.4"
+  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-8.2.4.tgz#0ab0df7cbc89007d544a50b451f5fb4d110694ca"
+  integrity sha512-Un16nSreD1v2CYwSorattiJcHuAWqXvg4TsGgzpjnoByqQwsSfCIEQHuaD14HNStzredR8cdsO9oGH91ibypTA==
   dependencies:
     bytes-iec "^3.1.1"
     chokidar "^3.5.3"
