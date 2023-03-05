@@ -315,7 +315,7 @@ GEM
     rubocop-rspec (2.18.1)
       rubocop (~> 1.33)
       rubocop-capybara (~> 2.17)
-    ruby-progressbar (1.12.0)
+    ruby-progressbar (1.13.0)
     shellany (0.0.1)
     sidekiq (7.0.6)
       concurrent-ruby (< 2)
