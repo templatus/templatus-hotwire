@@ -343,7 +343,7 @@ GEM
       spring (>= 0.9.1)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
-    syntax_tree (6.0.2)
+    syntax_tree (6.1.0)
       prettier_print (>= 1.2.0)
     syntax_tree-haml (4.0.3)
       haml (>= 5.2)
