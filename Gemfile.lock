@@ -133,7 +133,7 @@ GEM
     honeybadger (5.2.1)
     htmlbeautifier (1.4.2)
     htmlentities (4.3.4)
-    i18n (1.12.0)
+    i18n (1.13.0)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
     irb (1.6.4)
