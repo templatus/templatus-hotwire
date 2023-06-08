@@ -118,9 +118,9 @@ yarn install v1.22.19
 [1/6] 🔍  Validating package.json...
 [2/6] 🔍  Resolving packages...
 success Already up-to-date.
-✨  Done in 0.08s.
+✨  Done in 0.09s.
 Building with Vite ⚡️
-vite v4.3.7 building for production...
+vite v4.3.9 building for production...
 transforming...
 ✓ 46 modules transformed.
 rendering chunks...
@@ -129,10 +129,10 @@ computing gzip size...
 ../../public/vite/assets/logo-cfef1aba.svg           0.50 kB │ gzip:  0.30 kB
 ../../public/vite/manifest.json                      0.79 kB │ gzip:  0.28 kB
 ../../public/vite/assets/application-0dc15c2c.css   22.77 kB │ gzip:  4.94 kB
-../../public/vite/assets/application-3eae6da3.js     3.38 kB │ gzip:  1.35 kB │ map:   8.96 kB
+../../public/vite/assets/application-d01a0750.js     3.38 kB │ gzip:  1.35 kB │ map:   8.96 kB
 ../../public/vite/assets/index-9174f13a.js           9.08 kB │ gzip:  2.92 kB │ map:  30.22 kB
-../../public/vite/assets/vendor-966a98f4.js        166.87 kB │ gzip: 45.88 kB │ map: 558.19 kB
-✓ built in 823ms
+../../public/vite/assets/vendor-f0211308.js        166.90 kB │ gzip: 45.88 kB │ map: 558.53 kB
+✓ built in 895ms
 Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
 ```
 
