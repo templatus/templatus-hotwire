@@ -30,4 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: 'Hello world'
+  clicks:
+    create:
+      success: Click was successfully recorded.
+      fail: Click recording failed!

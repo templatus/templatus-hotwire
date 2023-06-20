@@ -7,9 +7,9 @@ class ClicksController < ApplicationController
   def create
     Click.create! user_agent: request.user_agent,
                   ip: anonymize(request.remote_ip)
-    flash.now[:notice] = 'Click was successfully recorded.'
+    flash.now[:notice] = t('.success')
   rescue StandardError
-    flash.now[:alert] = 'Click recording failed!'
+    flash.now[:alert] = t('.fail')
     render status: :unprocessable_entity
   end
 
