@@ -26,7 +26,7 @@
     "@types/rails__actioncable": "^6.1.6",
     "@typescript-eslint/eslint-plugin": "^5.60.0",
     "@typescript-eslint/parser": "^5.60.0",
-    "cypress": "^12.14.0",
+    "cypress": "^12.15.0",
     "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-cypress": "^2.13.3",
