@@ -39,7 +39,7 @@ jobs:
           bundler-cache: true
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3.6.0
+        uses: actions/setup-node@v3.7.0
         with:
           cache: yarn
           node-version-file: 'package.json'
