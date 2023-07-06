@@ -21,7 +21,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@prettier/plugin-ruby": "^3.2.2",
+    "@prettier/plugin-ruby": "^4.0.0",
     "@size-limit/file": "^8.2.6",
     "@types/rails__actioncable": "^6.1.6",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
