@@ -1,0 +1,17 @@
+.z-50.fixed.bottom-0.inset-x-0.border-t-4.p-8.hidden{
+  class: background_class,
+  data: {
+    controller: 'app-flash--component',
+    transition_enter: 'transition duration-500 ease-out',
+    transition_enter_start: 'translate-y-32',
+    transition_enter_end: 'translate-y-0',
+    transition_leave: 'transition duration-500 ease-in',
+    transition_leave_start: 'translate-y-0',
+    transition_leave_end: 'translate-y-32'
+  }
+}
+  .flex.justify-center.items-center.mx-auto
+    = helpers.heroicon icon_name, variant: :solid, options: { class: [ icon_class, 'h-8 w-8' ].join(' ') }
+
+    %p.text-base.font-medium.ml-2{class: text_class}
+      = text

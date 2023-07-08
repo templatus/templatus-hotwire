@@ -1,6 +1,6 @@
 {
   "recommendations": [
-    "aliariff.slim-lint",
+    "karunamurti.haml",
     "bradlc.vscode-tailwindcss",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",

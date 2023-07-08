@@ -1,9 +1,10 @@
 exclude:
-  - 'vendor/**/*.slim'
+  - 'vendor/**/*'
 
 linters:
   LineLength:
     enabled: false
 
-  RuboCop:
+  SpaceInsideHashAttributes:
     enabled: true
+    style: no_space

@@ -1,0 +1,25 @@
+%svg.fixed.inset-0.hidden.w-full.h-96.drop-shadow-xl.lg:block{
+  fill: 'none',
+  preserveaspectratio: 'none',
+  viewbox: '0 0 100 100'
+}
+  %defs
+    %lineargradient#grad1{x1: '0', y1: '0', x2: '100%', y2: '0'}
+      %stop.gradient__primary{offset: '0%'}
+      %stop.gradient__secondary{offset: '30%'}
+      %stop.gradient__accent{offset: '100%'}
+
+  %polygon{fill: 'url(#grad1)', points: '0,0 0,100 100,40 100,0'}
+
+%svg.fixed.bottom-0.hidden.w-full.h-96.drop-shadow-xl.lg:block{
+  fill: 'none',
+  preserveaspectratio: 'none',
+  viewbox: '0 0 100 100'
+}
+  %defs
+    %lineargradient#grad2{x1: '0', y1: '0', x2: '100%', y2: '0'}
+      %stop.gradient__primary{offset: '0%'}
+      %stop.gradient__secondary{offset: '60%'}
+      %stop.gradient__accent{offset: '100%'}
+
+  %polygon{fill: 'url(#grad2)', points: '0,80 0,100 100,100 100,50'}
