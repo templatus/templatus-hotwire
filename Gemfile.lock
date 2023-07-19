@@ -165,7 +165,7 @@ GEM
       view_component (>= 2.0)
       yard (~> 0.9.25)
       zeitwerk (~> 2.5)
-    lumberjack (1.2.8)
+    lumberjack (1.2.9)
     mail (2.8.1)
       mini_mime (>= 0.1.1)
       net-imap
