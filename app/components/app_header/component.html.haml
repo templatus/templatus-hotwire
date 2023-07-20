@@ -1,0 +1,10 @@
+%header{
+  class: [
+    'flex justify-between items-end p-5 space-x-5 lg:flex-col lg:items-stretch lg:p-0 lg:space-y-36 lg:space-x-0',
+    @class,
+  ]
+}
+  = image_tag vite_asset_path('images/logo.svg'), class: 'p-3 w-20 h-20 bg-gradient-to-br from-tertiary to-white rounded lg:w-56 lg:h-56', alt: 'Logo', width: 150, height: 150
+
+  = render Tabs::Component.new do |c|
+    - c.with_tabs [ { text: 'Home',  href: root_path  }, { text: 'About', href: about_path }  ]

@@ -128,6 +128,17 @@ GEM
       temple (>= 0.8.2)
       thor
       tilt
+    haml-rails (2.1.0)
+      actionpack (>= 5.1)
+      activesupport (>= 5.1)
+      haml (>= 4.0.6)
+      railties (>= 5.1)
+    haml_lint (0.48.0)
+      haml (>= 4.0, < 6.2)
+      parallel (~> 1.10)
+      rainbow
+      rubocop (>= 1.0)
+      sysexits (~> 1.1)
     heroicon (1.0.0)
       rails (>= 5.2)
     honeybadger (5.2.1)
@@ -335,16 +346,6 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
-    slim (5.1.1)
-      temple (~> 0.10.0)
-      tilt (>= 2.1.0)
-    slim-rails (3.6.2)
-      actionpack (>= 3.1)
-      railties (>= 3.1)
-      slim (>= 3.0, < 6.0, != 5.0.0)
-    slim_lint (0.24.0)
-      rubocop (>= 1.0, < 2.0)
-      slim (>= 3.0, < 6.0)
     spring (4.1.1)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
@@ -360,6 +361,7 @@ GEM
       prettier_print
       rbs
       syntax_tree (>= 2.0.1)
+    sysexits (1.2.0)
     temple (0.10.2)
     thor (1.2.2)
     tilt (2.2.0)
@@ -406,6 +408,8 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails
   guard-rspec
+  haml-rails
+  haml_lint
   heroicon
   honeybadger
   listen (~> 3.3)
@@ -427,11 +431,10 @@ DEPENDENCIES
   rubocop-rspec
   sidekiq
   simplecov
-  slim-rails
-  slim_lint
   spring
   spring-commands-rspec
   stimulus-rails
+  syntax_tree-haml
   turbo-rails
   tzinfo-data
   view_component

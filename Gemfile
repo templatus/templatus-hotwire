@@ -18,8 +18,8 @@ gem 'stimulus-rails'
 # A framework for building reusable, testable & encapsulated view components in Ruby on Rails. (https://viewcomponent.org)
 gem 'view_component'
 
-# Slim templates generator for Rails (https://github.com/slim-template/slim-rails)
-gem 'slim-rails'
+# let your Gemfile do the configuring (https://github.com/haml/haml-rails)
+gem 'haml-rails'
 
 # Rails View Helpers for Heroicons. (https://github.com/bharget/heroicon)
 gem 'heroicon'
@@ -82,8 +82,8 @@ group :development, :test do
   # Code style checking for RSpec files (https://github.com/rubocop/rubocop-rspec)
   gem 'rubocop-rspec', require: false
 
-  # Slim template linting tool (https://github.com/sds/slim-lint)
-  gem 'slim_lint'
+  # HAML lint tool (https://github.com/sds/haml-lint)
+  gem 'haml_lint', require: false
 end
 
 group :development do
@@ -110,6 +110,9 @@ group :development do
 
   # prettier plugin for the Ruby programming language (https://github.com/prettier/plugin-ruby#readme)
   gem 'prettier'
+
+  # Syntax Tree support for Haml (https://github.com/ruby-syntax-tree/syntax_tree-haml)
+  gem 'syntax_tree-haml'
 end
 
 group :test do

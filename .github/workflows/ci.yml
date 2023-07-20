@@ -56,8 +56,8 @@ jobs:
       - name: Check for TypeScript errors
         run: bin/yarn tsc
 
-      - name: Lint with SlimLint
-        run: bundle exec slim-lint .
+      - name: Lint with Haml-Lint
+        run: bundle exec haml-lint .
 
       - name: Setup PostgreSQL
         run: bin/rails db:create

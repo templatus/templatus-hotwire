@@ -1,0 +1,32 @@
+= turbo_stream_from 'clicks'
+= tag.div data: { controller: 'clicks--component', 'clicks--component-count-value': count } do
+  .flex.flex-col.w-full.mt-5.lg:absolute.lg:-top-5.lg:-right-10.lg:p-3.lg:mt-0.lg:w-56.lg:bg-gradient-to-br.lg:from-slate-100.lg:to-white.lg:rounded.lg:shadow
+    .text-5xl.font-bold.text-center#counter{
+      'data-clicks--component-target': 'counter',
+      'data-transition-enter': 'transition-transform duration-200 ease-out',
+      'data-transition-enter-start': 'scale-0',
+      'data-transition-enter-end': 'scale-100',
+      'data-transition-leave': 'transition-transform duration-200 ease-in',
+      'data-transition-leave-start': 'scale-100',
+      'data-transition-leave-end': 'scale-0'
+    }
+      / Just a Placeholder. The number is rendered with Stimulus to use language sensitive representation via `toLocaleString()`
+      '&nbsp;
+    .py-1.text-center.uppercase Clicks
+
+    = button_to 'Click me!', clicks_path, class: 'mt-3 w-full rounded bg-tertiary py-2 font-medium text-black transition hover:bg-secondary hover:text-white active:outline-none active:ring-2 active:ring-secondary active:ring-offset-1'
+
+    %p.hidden.mt-3.text-xs.text-center.text-gray-600.sm:block
+      Tip: Open two browser windows in parallel and see what happens.
+
+  %h2.mt-20.text-xl.font-medium.tracking-wide.text-center.uppercase.text-primary.sm:text-left
+    Latest clicks
+
+  = turbo_frame_tag 'clicks', data: { action: 'turbo:before-stream-render@document->clicks--component#receive' } do
+    %ul.text-sm.md:text-base#list{
+      'data-clicks--component-target': 'list',
+      'data-transition-enter': 'transition duration-200 ease-in',
+      'data-transition-enter-start': 'translate-y-0',
+      'data-transition-enter-end': 'translate-y-32'
+    }
+      = render Click::Component.with_collection(clicks)

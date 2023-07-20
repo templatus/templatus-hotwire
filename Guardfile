@@ -56,7 +56,7 @@ guard :rspec, cmd: 'bin/rspec --colour --format documentation --fail-fast' do
   dsl.watch_spec_files_for(ruby.lib_files)
 
   # Rails files
-  rails = dsl.rails(view_extensions: %w[erb slim])
+  rails = dsl.rails(view_extensions: %w[erb haml])
 
   dsl.watch_spec_files_for(rails.app_files)
   dsl.watch_spec_files_for(rails.views)

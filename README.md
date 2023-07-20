@@ -30,7 +30,7 @@ There are two sister repositories:
 - [Hotwire](https://hotwire.io/) for building the frontend without using much JavaScript by sending HTML instead of JSON over the wire
 - [TypeScript](https://www.typescriptlang.org/) for static type checking in Stimulus controllers and other script code
 - [ViewComponent](https://viewcomponent.org/) for creating reusable, testable & encapsulated view components
-- [Slim](https://github.com/slim-template/slim) for writing templates instead of ERB
+- [Haml](https://haml.info/) for writing templates instead of ERB
 - [Tailwind CSS 3](https://tailwindcss.com/) to not have to write CSS at all
 - [Heroicons](https://heroicons.com/) for beautiful hand-crafted SVG icons
 - [Vite](https://vitejs.dev/) for bundling JavaScript and CSS with Hot Module Replacement (HMR) in development

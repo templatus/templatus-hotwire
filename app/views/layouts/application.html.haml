@@ -1,8 +1,7 @@
-doctype html
-html lang="en"
-  head
+!!! 5
+%html{lang: 'en'}
+  %head
     = tag.meta charset: 'utf-8'
-
     = tag.title 'Templatus-Hotwire'
 
     = tag.meta content: 'Ruby on Rails template for using Hotwire', name: 'description'
@@ -16,10 +15,8 @@ html lang="en"
     = tag.meta content: 'black', name: 'apple-mobile-web-app-status-bar-style'
     = tag.meta content: Rails.configuration.x.git.commit_version, name: 'git-commit-version'
     = tag.meta content: Rails.configuration.x.git.commit_time, name: 'git-commit-time'
-
     - if Rails.configuration.x.honeybadger.api_key
       = tag.meta content: Rails.configuration.x.honeybadger.api_key, name: 'honeybadger-api-key'
-
     - if Rails.configuration.x.app_host
       = tag.meta name: 'app-host', content: Rails.configuration.x.app_host
     - if Rails.configuration.x.plausible_url
@@ -39,17 +36,16 @@ html lang="en"
     = vite_typescript_tag 'application', 'data-turbo-track': 'reload'
     = vite_stylesheet_tag 'application', 'data-turbo-track': 'reload'
 
-  body
-    div class="flex flex-col min-h-screen bg-gradient-to-br from-primary to-secondary lg:bg-tertiary lg:from-inherit lg:to-inherit"
+  %body
+    .flex.flex-col.min-h-screen.bg-gradient-to-br.from-primary.to-secondary.lg:bg-tertiary.lg:from-inherit.lg:to-inherit
       = render AppBackground::Component.new
-
       = render AppHeader::Component.new class: 'lg:fixed lg:top-10 lg:left-10'
 
       = turbo_frame_tag 'flash' do
         - if flash.present?
           = render AppFlash::Component.new(notice:, alert:)
 
-      main class="relative flex-1 px-4 py-5 bg-white shadow-md sm:px-6 lg:px-8 lg:mt-10 lg:mr-16 lg:ml-96 lg:max-w-5xl lg:rounded-xl"
+      %main.relative.flex-1.px-4.py-5.bg-white.shadow-md.sm:px-6.lg:px-8.lg:mt-10.lg:mr-16.lg:ml-96.lg:max-w-5xl.lg:rounded-xl
         = yield
 
       = render AppFooter::Component.new class: 'relative mt-2 mb-6 lg:px-0 lg:mr-16 lg:ml-96 lg:max-w-5xl'
