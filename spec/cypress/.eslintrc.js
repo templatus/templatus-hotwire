@@ -4,12 +4,7 @@ module.exports = {
     node: true,
   },
   plugins: ['cypress'],
-  extends: [
-    'eslint:recommended',
-    'prettier',
-    'plugin:prettier/recommended',
-    'plugin:cypress/recommended',
-  ],
+  extends: ['eslint:recommended', 'plugin:cypress/recommended'],
   globals: {
     cy: 'readonly',
   },
