@@ -56,8 +56,8 @@ export default class extends Controller {
 
     if (this.currentCount > 5)
       // Fade out and remove last element
-      leave(this.listTarget.lastElementChild).then(() =>
-        this.listTarget.lastElementChild?.remove(),
+      leave(this.listTarget.lastElementChild).then(
+        () => this.listTarget.lastElementChild?.remove(),
       );
   }
 
