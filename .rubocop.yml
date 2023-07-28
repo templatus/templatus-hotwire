@@ -1,3 +1,6 @@
+inherit_from:
+  - node_modules/@prettier/plugin-ruby/rubocop.yml
+
 require:
   - rubocop-performance
   - rubocop-rails
@@ -43,32 +46,6 @@ Bundler/OrderedGems:
 
 Bundler/GemVersion:
   Enabled: false
-
-### Metrics
-
-Metrics/AbcSize:
-  Max: 35
-
-Metrics/MethodLength:
-  Max: 50
-
-Metrics/BlockLength:
-  Max: 100
-
-Metrics/ClassLength:
-  Max: 150
-
-Metrics/ParameterLists:
-  Max: 6
-
-### Layout
-
-Layout:
-  Enabled: false
-
-Layout/LineLength:
-  Max: 190
-  AllowedPatterns: ['\A#'] # Allow long comments
 
 ### Style
 
@@ -124,26 +101,15 @@ Style/StringLiteralsInInterpolation:
 Style/QuotedSymbols:
   EnforcedStyle: single_quotes
 
-Style/FormatStringToken:
-  Exclude:
-    - config/routes.rb
-
 Style/RequireOrder:
   Enabled: false
 
-Style/TrailingCommaInArrayLiteral:
-  Enabled: false
+### Metrics
 
-Style/TrailingCommaInArguments:
-  Enabled: false
+Metrics/BlockLength:
+  AllowedMethods: ['configure', 'content_security_policy']
 
-Style/TrailingCommaInHashLiteral:
-  Enabled: false
-
-Style/EmptyMethod:
-  EnforcedStyle: expanded
-
-Style/Lambda:
+RSpec/ExampleLength:
   Enabled: false
 
 # Lint
@@ -152,9 +118,6 @@ Lint/ConstantResolution:
   Enabled: false
 
 # RSpec
-
-RSpec/ExampleLength:
-  Enabled: false
 
 RSpec/MultipleExpectations:
   Enabled: false

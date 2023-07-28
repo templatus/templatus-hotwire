@@ -107,6 +107,9 @@ group :development do
 
   # A native development UI for ViewComponent (https://github.com/ViewComponent/lookbook)
   gem 'lookbook'
+
+  # prettier plugin for the Ruby programming language (https://github.com/prettier/plugin-ruby#readme)
+  gem 'prettier'
 end
 
 group :test do

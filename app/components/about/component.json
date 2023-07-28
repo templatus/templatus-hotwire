@@ -89,12 +89,7 @@
       {
         "name": "Prettier",
         "href": "https://prettier.io/",
-        "description": "Auto-formatting JavaScript code in Visual Studio Code"
-      },
-      {
-        "name": "SyntaxTree",
-        "href": "https://github.com/ruby-syntax-tree/syntax_tree",
-        "description": "Auto-formatting Ruby code in Visual Studio Code"
+        "description": "Auto-formatting JavaScript and Ruby code in Visual Studio Code"
       },
       {
         "name": "Lookbook",
