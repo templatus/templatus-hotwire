@@ -4,6 +4,7 @@
     "bradlc.vscode-tailwindcss",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
+    "foxundermoon.shell-format",
     "github.copilot"
   ]
 }

@@ -7,7 +7,7 @@ if grep -q CYPRESS=true .env; then
 else
   echo ".env does NOT contain CYPRESS=true, so add it and restart Rails"
 
-  grep -qxF 'CYPRESS=true' .env || echo 'CYPRESS=true' >> .env
+  grep -qxF 'CYPRESS=true' .env || echo 'CYPRESS=true' >>.env
   touch tmp/restart.txt
 fi
 
