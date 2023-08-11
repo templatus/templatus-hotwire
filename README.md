@@ -38,7 +38,7 @@ There are two sister repositories:
 ### Development
 
 - [Puma-dev](https://github.com/puma/puma-dev) for using .test-domain and HTTPS in development
-- [Foreman](https://github.com/ddollar/foreman) for starting up the application locally
+- [Overmind](https://github.com/DarthSim/overmind) for starting up the application locally (Procfile handling like Foreman)
 - [dotenv](https://github.com/bkeepers/dotenv) to load environment variables from .env into ENV
 - [Prettier](https://prettier.io/) for auto-formatting JavaScript and Ruby code in Visual Studio Code
 - [Lookbook](https://github.com/allmarkedup/lookbook) as development UI for ViewComponent

@@ -9,4 +9,4 @@ else
   echo "ok, .env does NOT contain CYPRESS=true, no restart required"
 fi
 
-foreman start -f Procfile.dev
+overmind start -f Procfile.dev

@@ -4,7 +4,6 @@
 .eslintignore
 .eslintrc.js
 .eslintcache
-.foreman
 .git
 .github
 .gitignore

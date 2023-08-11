@@ -14,7 +14,7 @@ fi
 # Redirect arguments to cypress binary
 export CYPRESS_COMMANDS="$*"
 
-foreman start -f Procfile.cypress
+overmind start -f Procfile.cypress
 
 # Cleanup
 bin/rails db:environment:set RAILS_ENV=test
