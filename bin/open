@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+# Load environment variables
+source .env.development
+
+# Set the protocol based on FORCE_SSL value
+if [ "$FORCE_SSL" == "false" ]; then
+  PROTOCOL="http"
+else
+  PROTOCOL="https"
+fi
+
+# Set the application URL
+URL="$PROTOCOL://$APP_HOST"
+
+# Open the URL in Google Chrome
+osascript <<EOD
+tell application "Google Chrome"
+    if it is running then
+        set tabFound to false
+        # Loop through windows
+        repeat with w from 1 to count of windows
+            set tabCount to count of tabs in window w
+            # Loop through tabs
+            repeat with t from 1 to tabCount
+                if URL of tab t of window w starts with "$URL" then
+                    set tabFound to true
+                    set theTabIndex to t
+                    set theWindow to window w
+                    exit repeat
+                end if
+            end repeat
+            if tabFound then exit repeat
+        end repeat
+        # If the tab with the URL was found, activate it.
+        if tabFound then
+            set active tab index of theWindow to theTabIndex
+            set index of theWindow to 1
+            activate
+        else
+            # If the tab wasn't found, open a new one.
+            tell window 1
+                make new tab with properties {URL:"$URL"}
+                activate
+            end tell
+        end if
+    else
+        # If Chrome isn't running, just open the URL.
+        activate
+        open location "$URL"
+    end if
+end tell
+EOD

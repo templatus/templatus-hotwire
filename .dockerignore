@@ -44,3 +44,4 @@ bin/rspec
 bin/rubocop
 bin/setup
 bin/yarn
+bin/open

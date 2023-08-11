@@ -1,1 +1,2 @@
 vite: bin/vite dev
+browser: bin/open && while true; do sleep 60; done
