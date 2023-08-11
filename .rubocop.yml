@@ -104,10 +104,16 @@ Style/QuotedSymbols:
 Style/RequireOrder:
   Enabled: false
 
+### Layout
+
+Layout/LineLength:
+  Max: 190
+  AllowedPatterns: ['\A#'] # Allow long comments
+
 ### Metrics
 
 Metrics/BlockLength:
-  AllowedMethods: ['configure', 'content_security_policy']
+  AllowedMethods: ['configure', 'content_security_policy', 'task']
 
 RSpec/ExampleLength:
   Enabled: false
