@@ -268,7 +268,7 @@ GEM
     redcarpet (3.6.0)
     redis (5.0.7)
       redis-client (>= 0.9.0)
-    redis-client (0.15.0)
+    redis-client (0.16.0)
       connection_pool
     regexp_parser (2.8.1)
     reline (0.3.7)
