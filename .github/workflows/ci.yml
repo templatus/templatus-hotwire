@@ -69,7 +69,7 @@ jobs:
         run: bin/rspec
 
       - name: End-to-end tests
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v6
         with:
           start: bundle exec rails server
           wait-on: http://localhost:3000
