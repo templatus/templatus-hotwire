@@ -1,7 +1,7 @@
 import '@hotwired/turbo-rails';
-import.meta.glob('../channels/**/*_channel.js', { eager: true });
+import.meta.glob('../channels/**/*_channel.ts', { eager: true });
 
-import '../utils/setupServiceWorker.js';
-import '../utils/setupHoneybadger.js';
-import '../utils/setupPlausible.js';
-import '../utils/setupStimulus.js';
+import '../utils/setupServiceWorker.ts';
+import '../utils/setupHoneybadger.ts';
+import '../utils/setupPlausible.ts';
+import '../utils/setupStimulus.ts';
