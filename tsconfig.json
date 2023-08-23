@@ -102,5 +102,5 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "include": ["app/javascript/**/*.ts", "app/components/**/*.ts"]
+  "include": ["app/frontend/**/*.ts", "app/components/**/*.ts"]
 }

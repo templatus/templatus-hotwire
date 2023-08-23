@@ -11,7 +11,7 @@ require:
 AllCops:
   TargetRubyVersion: 3.2
   Exclude:
-    - app/javascript/**/*
+    - app/frontend/**/*
     - bin/**/*
     - coverage/**/*
     - db/schema.rb
