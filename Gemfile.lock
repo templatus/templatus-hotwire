@@ -91,7 +91,7 @@ GEM
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
     crass (1.0.6)
-    css_parser (1.14.0)
+    css_parser (1.15.0)
       addressable
     date (3.3.3)
     debug (1.8.0)
