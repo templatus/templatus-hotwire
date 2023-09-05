@@ -112,7 +112,7 @@ GEM
       railties (>= 5.0.0)
     ffi (1.15.5)
     formatador (1.1.0)
-    globalid (1.2.0)
+    globalid (1.2.1)
       activesupport (>= 6.1)
     guard (2.18.0)
       formatador (>= 0.2.4)
