@@ -129,11 +129,11 @@ computing gzip size...
 ../../public/vite/manifest-assets.json               0.10 kB │ gzip:  0.09 kB
 ../../public/vite/assets/logo-cfef1aba.svg           0.50 kB │ gzip:  0.30 kB
 ../../public/vite/manifest.json                      0.79 kB │ gzip:  0.28 kB
-../../public/vite/assets/application-62dec3e7.css   22.98 kB │ gzip:  5.00 kB
-../../public/vite/assets/application-21c38c12.js     3.59 kB │ gzip:  1.44 kB │ map:   9.88 kB
+../../public/vite/assets/application-04c6f6bc.css   23.02 kB │ gzip:  5.01 kB
+../../public/vite/assets/application-891931a9.js     3.59 kB │ gzip:  1.44 kB │ map:   9.88 kB
 ../../public/vite/assets/index-9174f13a.js           9.08 kB │ gzip:  2.92 kB │ map:  30.33 kB
-../../public/vite/assets/vendor-c45f5937.js        172.62 kB │ gzip: 46.95 kB │ map: 579.54 kB
-✓ built in 848ms
+../../public/vite/assets/vendor-72a7ef4d.js        172.74 kB │ gzip: 46.97 kB │ map: 579.91 kB
+✓ built in 894ms
 Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
 ```
 
