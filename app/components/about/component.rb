@@ -19,7 +19,7 @@ class About::Component < ViewComponent::Base
   private
 
   def alpine_version
-    return unless RUBY_PLATFORM.include?('linux')
+    return if RUBY_PLATFORM.exclude?('linux')
 
     # :nocov:
     `cat /etc/alpine-release 2>/dev/null`.chomp.presence
