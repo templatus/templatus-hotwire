@@ -1,4 +1,4 @@
 brew 'puma/puma/puma-dev'
-brew 'postgresql@15'
+brew 'postgresql@16'
 brew 'redis'
 brew 'overmind'
