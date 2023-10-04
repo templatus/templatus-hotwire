@@ -128,7 +128,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    haml (6.2.0)
+    haml (6.2.3)
       temple (>= 0.8.2)
       thor
       tilt
@@ -371,7 +371,7 @@ GEM
       prettier_print
       rbs
       syntax_tree (>= 2.0.1)
-    temple (0.10.2)
+    temple (0.10.3)
     thor (1.2.2)
     tilt (2.3.0)
     timeout (0.4.0)
