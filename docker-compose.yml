@@ -45,7 +45,7 @@ services:
       REDIS_URL: redis://redis:6379/2
     networks:
       - internal
-    entrypoint: bundle exec sidekiq
+    command: bundle exec sidekiq
     healthcheck:
       test: 'ps ax | grep -v grep | grep sidekiq'
 
@@ -54,7 +54,7 @@ services:
     environment:
       <<: *app_environment
       REDIS_URL: redis://redis:6379/1
-    entrypoint: bundle exec puma -p 28080 cable/config.ru
+    command: bundle exec puma -p 28080 cable/config.ru
     healthcheck:
       test: ['CMD-SHELL', 'nc -z 127.0.0.1 28080 || exit 1']
     networks:
@@ -68,7 +68,6 @@ services:
       REDIS_URL: redis://redis:6379/0
     ports:
       - 3000
-    command: bundle exec puma -C config/puma.rb
     healthcheck:
       test: ['CMD-SHELL', 'nc -z 127.0.0.1 3000 || exit 1']
     networks:

@@ -19,7 +19,7 @@ There are two sister repositories:
 ### Backend
 
 - [Ruby](https://www.ruby-lang.org/de/) 3.2
-- [Ruby on Rails](https://rubyonrails.org/) 7.0
+- [Ruby on Rails](https://rubyonrails.org/) 7.1
 - [ActionCable](https://guides.rubyonrails.org/action_cable_overview.html) for WebSocket communication
 - [PostgreSQL](https://www.postgresql.org/) for using as SQL database
 - [Sidekiq](https://sidekiq.org/) for background processing
@@ -120,6 +120,7 @@ yarn install v1.22.19
 [2/6] 🔍  Resolving packages...
 success Already up-to-date.
 ✨  Done in 0.09s.
+I, [2023-10-05T11:35:35.997822 #82249]  INFO -- honeybadger: ** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=5.2.1 framework=rails level=1 pid=82249
 Building with Vite ⚡️
 vite v4.4.11 building for production...
 transforming...
@@ -130,10 +131,10 @@ computing gzip size...
 ../../public/vite/assets/logo-cfef1aba.svg           0.50 kB │ gzip:  0.30 kB
 ../../public/vite/manifest.json                      0.79 kB │ gzip:  0.28 kB
 ../../public/vite/assets/application-04c6f6bc.css   23.02 kB │ gzip:  5.01 kB
-../../public/vite/assets/application-d5399784.js     3.59 kB │ gzip:  1.44 kB │ map:   9.88 kB
-../../public/vite/assets/index-9174f13a.js           9.08 kB │ gzip:  2.92 kB │ map:  30.33 kB
-../../public/vite/assets/vendor-20c36371.js        172.86 kB │ gzip: 47.00 kB │ map: 580.20 kB
-✓ built in 841ms
+../../public/vite/assets/application-397f4f56.js     3.59 kB │ gzip:  1.44 kB │ map:   9.88 kB
+../../public/vite/assets/index-0d2cde2c.js           9.48 kB │ gzip:  3.02 kB │ map:  31.38 kB
+../../public/vite/assets/vendor-abf6f98c.js        172.86 kB │ gzip: 47.00 kB │ map: 580.20 kB
+✓ built in 858ms
 Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
 ```
 

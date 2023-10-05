@@ -18,7 +18,7 @@
 !/tmp/pids/
 !/tmp/pids/.keep
 
-# Ignore uploaded files in development.
+# Ignore storage (uploaded files in development and any SQLite databases).
 /storage/*
 !/storage/.keep
 /tmp/storage/*
@@ -35,8 +35,9 @@ yarn-debug.log*
 .yarn-integrity
 .eslintcache
 
-# dotenv
-.env
+# Ignore all environment files (except templates).
+/.env*
+!/.env*.erb
 
 # SimpleCoverage report
 /coverage/*

@@ -26,7 +26,6 @@ jobs:
       DB_PASSWORD: postgres
       REDIS_URL: redis://localhost:6379/0
       RAILS_ENV: test
-      DISABLE_SPRING: true
       CI: true
       RUBY_YJIT_ENABLE: 1
 

@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.2.2'
 
 # Full-stack web application framework. (https://rubyonrails.org)
-gem 'rails', '~> 7.0.8'
+gem 'rails', '~> 7.1.0'
 
 # Use Vite in Rails and bring joy to your JavaScript experience (https://github.com/ElMassimo/vite_ruby)
 gem 'vite_rails'
@@ -28,16 +27,16 @@ gem 'heroicon'
 gem 'pg', '~> 1.1'
 
 # Puma is a simple, fast, threaded, and highly parallel HTTP 1.1 server for Ruby/Rack applications (https://puma.io)
-gem 'puma'
+gem 'puma', '>= 5.0'
 
 # Boot large ruby/rails apps faster (https://github.com/Shopify/bootsnap)
 gem 'bootsnap', '>= 1.4.4', require: false
 
 # Timezone Data for TZInfo (https://tzinfo.github.io)
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'tzinfo-data', platforms: %i[windows jruby]
 
 # A Ruby client library for Redis (https://github.com/redis/redis-rb)
-gem 'redis'
+gem 'redis', '>= 4.0.1'
 
 # Tame Rails' multi-line logging into a single line per request (https://github.com/roidrage/lograge)
 gem 'lograge'
@@ -55,11 +54,11 @@ gem 'rack-brotli'
 gem 'sidekiq'
 
 # Lock staging servers from search engines and prying eyes. (http://lockup.interdiscipline.com)
-gem 'lockup'
+gem 'lockup', github: 'ledermann/lockup', branch: 'rails-7-1'
 
 group :development, :test do
   # Debugging functionality for Ruby (https://github.com/ruby/debug)
-  gem 'debug', '>= 1.0.0', platforms: %i[mri mingw x64_mingw]
+  gem 'debug', platforms: %i[mri windows]
 
   # Autoload dotenv in Rails. (https://github.com/bkeepers/dotenv)
   gem 'dotenv-rails'
@@ -98,12 +97,6 @@ group :development do
 
   # Guard gem for RSpec (https://github.com/guard/guard-rspec)
   gem 'guard-rspec', require: false
-
-  # Rails application preloader (https://github.com/rails/spring)
-  gem 'spring'
-
-  # rspec command for spring (https://github.com/jonleighton/spring-commands-rspec)
-  gem 'spring-commands-rspec'
 
   # A native development UI for ViewComponent (https://github.com/ViewComponent/lookbook)
   gem 'lookbook'

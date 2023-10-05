@@ -15,5 +15,8 @@ USER app
 # Enable YJIT
 ENV RUBY_YJIT_ENABLE=1
 
-# Script to be executed every time the container starts
+# Entrypoint prepares the database.
 ENTRYPOINT ["docker/startup.sh"]
+
+# Start the server by default, this can be overwritten at runtime
+CMD ["./bin/rails", "server"]
