@@ -232,7 +232,7 @@ GEM
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    psych (5.1.0)
+    psych (5.1.1)
       stringio
     public_suffix (5.0.3)
     puma (6.4.0)
@@ -393,7 +393,7 @@ GEM
     thor (1.2.2)
     tilt (2.3.0)
     timeout (0.4.0)
-    turbo-rails (1.4.0)
+    turbo-rails (1.5.0)
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
       railties (>= 6.0.0)
