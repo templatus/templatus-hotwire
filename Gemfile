@@ -47,9 +47,6 @@ gem 'rack-cors', require: 'rack/cors'
 # Rack middleware for defining a canonical host name. (https://github.com/tylerhunt/rack-canonical-host)
 gem 'rack-canonical-host'
 
-# Brotli compression for Rack responses (http://github.com/marcotc/rack-brotli/)
-gem 'rack-brotli'
-
 # Simple, efficient background processing for Ruby (https://sidekiq.org)
 gem 'sidekiq'
 

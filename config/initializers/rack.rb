@@ -5,8 +5,7 @@ Rails.application.config.middleware.delete(Rack::Runtime)
 # list of defaults: https://github.com/rack/rack/blob/master/lib/rack/mime.rb
 Rack::Mime::MIME_TYPES['.webmanifest'] = 'application/manifest+json'
 
-# Enable gzip and brotli compression
-Rails.application.config.middleware.insert(0, Rack::Brotli)
+# Enable gzip compression
 Rails.application.config.middleware.insert(0, Rack::Deflater)
 
 if Rails.application.config.x.app_host

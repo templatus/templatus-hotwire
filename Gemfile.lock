@@ -93,7 +93,6 @@ GEM
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
-    brotli (0.4.0)
     builder (3.2.4)
     capybara (3.39.2)
       addressable
@@ -240,9 +239,6 @@ GEM
       nio4r (~> 2.0)
     racc (1.7.1)
     rack (3.0.8)
-    rack-brotli (1.2.0)
-      brotli (>= 0.1.7)
-      rack (>= 1.4)
     rack-canonical-host (1.2.0)
       addressable (> 0, < 3)
       rack (>= 1, < 4)
@@ -450,7 +446,6 @@ DEPENDENCIES
   pg (~> 1.1)
   prettier
   puma (>= 5.0)
-  rack-brotli
   rack-canonical-host
   rack-cors
   rails (~> 7.1.0)
