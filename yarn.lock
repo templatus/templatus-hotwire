@@ -319,10 +319,10 @@
   resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-7.1.1.tgz#e8c49769d41f35a4473133c259cc98adc04dddf8"
   integrity sha512-ZRJ9rdwFQQjRbtgJnweY0/4UQyxN6ojEGRdib0JkjnuIciv+4ok/aAeZmBJqNreTMaBqS0eHyA9hCArwN58opg==
 
-"@size-limit/file@^9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-9.0.0.tgz#eed5415f5bcc8407979e47ffa49ffaf12d2d2378"
-  integrity sha512-oM2UaH2FRq4q22k+R+P6xCpzET10T94LFdSjb9svVu/vOD7NaB9LGcG6se8TW1BExXiyXO4GEhLsBt3uMKM3qA==
+"@size-limit/file@^10.0.1":
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-10.0.1.tgz#be434e582935416c57e75cf679da7ddb0ed68324"
+  integrity sha512-xQMh/Hy8QgyHaac+DSSKcwmcJlQglDTY67L5ouUf78SlDxiKQrr8QMiYdCj7Zl5KM+gmee/eIbl6v2qbpf/Vxw==
   dependencies:
     semver "7.5.4"
 
@@ -1596,6 +1596,17 @@ globby@^11.1.0:
     merge2 "^1.4.1"
     slash "^3.0.0"
 
+globby@^13.2.2:
+  version "13.2.2"
+  resolved "https://registry.yarnpkg.com/globby/-/globby-13.2.2.tgz#63b90b1bf68619c2135475cbd4e71e66aa090592"
+  integrity sha512-Y1zNGV+pzQdh7H39l9zgB4PJqjRNqydvdYCDG4HFXM4XuvSaQQlEc91IU1yALL8gUTDomgBAfz3XJdmUS+oo0w==
+  dependencies:
+    dir-glob "^3.0.1"
+    fast-glob "^3.3.0"
+    ignore "^5.2.4"
+    merge2 "^1.4.1"
+    slash "^4.0.0"
+
 gopd@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gopd/-/gopd-1.0.1.tgz#29ff76de69dac7489b7c0918a5788e56477c332c"
@@ -2528,14 +2539,14 @@ signal-exit@^3.0.2, signal-exit@^3.0.3, signal-exit@^3.0.7:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
 
-size-limit@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-9.0.0.tgz#203c47303462a8351976eb26175acea5f4e80447"
-  integrity sha512-DrA7o2DeRN3s+vwCA9nn7Ck9Y4pn9t0GNUwQRpKqBtBmNkl6LA2s/NlNCdtKHrEkRTeYA1ZQ65mnYveo9rUqgA==
+size-limit@^10.0.1:
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-10.0.1.tgz#50f8208a883a961c948b8379e074aa0a00a76528"
+  integrity sha512-lANGZsG+kk5P9zv84J/ratfT6LPTbWR8IitFXNfy41OyfnxoDBHqsl5+JVcG4YSU1UYcmShbp99O/SEPlDs1ZA==
   dependencies:
     bytes-iec "^3.1.1"
     chokidar "^3.5.3"
-    globby "^11.1.0"
+    globby "^13.2.2"
     lilconfig "^2.1.0"
     nanospinner "^1.1.0"
     picocolors "^1.0.0"
@@ -2544,6 +2555,11 @@ slash@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
+
+slash@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/slash/-/slash-4.0.0.tgz#2422372176c4c6c5addb5e2ada885af984b396a7"
+  integrity sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==
 
 slice-ansi@^3.0.0:
   version "3.0.0"
