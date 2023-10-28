@@ -50,7 +50,7 @@ module TemplatusHotwire
     config.x.plausible_url = ENV.fetch('PLAUSIBLE_URL', nil)
 
     config.x.cypress =
-      (Rails.env.development? || Rails.env.test?) &&
+      Rails.env.local? &&
         ActiveModel::Type::Boolean.new.cast(ENV.fetch('CYPRESS', false))
   end
 end
