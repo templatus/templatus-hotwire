@@ -288,7 +288,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rbs (3.2.2)
-    rdoc (6.5.0)
+    rdoc (6.6.0)
       psych (>= 4.0.0)
     redcarpet (3.6.0)
     redis (5.0.8)
