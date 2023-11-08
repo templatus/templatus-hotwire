@@ -206,7 +206,7 @@ GEM
       net-protocol
     net-pop (0.1.2)
       net-protocol
-    net-protocol (0.2.1)
+    net-protocol (0.2.2)
       timeout
     net-smtp (0.4.0)
       net-protocol
@@ -391,7 +391,7 @@ GEM
     temple (0.10.3)
     thor (1.3.0)
     tilt (2.3.0)
-    timeout (0.4.0)
+    timeout (0.4.1)
     turbo-rails (1.5.0)
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
