@@ -329,10 +329,10 @@
   resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-10.0.3.tgz#0d8f0e57055d4e69f78ec83d1f2f9959dc615877"
   integrity sha512-q+AlmVwSU7Adw3TwSwxr8ITZfVt16Lb1Uq7JTD0Ng2+ZnLDu9wY1cVE15yG4l2hN5pOQfdHZ1p9kb6unYmYT3w==
 
-"@tailwindcss/forms@^0.5.6":
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/forms/-/forms-0.5.6.tgz#29c6c2b032b363e0c5110efed1499867f6d7e868"
-  integrity sha512-Fw+2BJ0tmAwK/w01tEFL5TiaJBX1NLT1/YbWgvm7ws3Qcn11kiXxzNTEQDMs5V3mQemhB56l3u0i9dwdzSQldA==
+"@tailwindcss/forms@^0.5.7":
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/forms/-/forms-0.5.7.tgz#db5421f062a757b5f828bc9286ba626c6685e821"
+  integrity sha512-QE7X69iQI+ZXwldE+rzasvbJiyV/ju1FGHH0Qn2W3FKbuYtqp8LKcy6iSw79fVUT5/Vvf+0XgLCeYVG+UV6hOw==
   dependencies:
     mini-svg-data-uri "^1.2.3"
 
