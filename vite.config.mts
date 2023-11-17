@@ -5,6 +5,9 @@ import StimulusHMR from 'vite-plugin-stimulus-hmr';
 import { fileURLToPath, URL } from 'url';
 
 export default defineConfig({
+  build: {
+    assetsInlineLimit: 0,
+  },
   plugins: [
     splitVendorChunkPlugin(),
     RubyPlugin(),
