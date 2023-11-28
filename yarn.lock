@@ -332,10 +332,10 @@
     picocolors "^1.0.0"
     tslib "^2.6.0"
 
-"@prettier/plugin-ruby@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@prettier/plugin-ruby/-/plugin-ruby-4.0.2.tgz#55bc899d2265de09c1f48493324c269ecb95126c"
-  integrity sha512-TOGsMoOLF0BLwRozqtTB/w7HpDHotDSBPfLsMBpCjlMONLSoCWBF1NhZQjiioyLim7tCltzFrCqZp11WcrPOzA==
+"@prettier/plugin-ruby@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@prettier/plugin-ruby/-/plugin-ruby-4.0.3.tgz#5d916bd25a9c107b71782ede5383154233f30999"
+  integrity sha512-SrPEjTqqsCoDBJ3UlReLnKZFqE76o4TBOlsIwRCnqPiO7O3kvy8k5ETG0IiGcNf9wqXLSCRzZXsK4+0cb26SQQ==
 
 "@rails/actioncable@^7.0", "@rails/actioncable@^7.1.2":
   version "7.1.2"
