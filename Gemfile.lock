@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/ledermann/lockup.git
-  revision: aca565cc1e4886ac11266566e1e52a2a1f8dc74f
-  branch: rails-7-1
-  specs:
-    lockup (1.7)
-      rails (>= 3, < 7.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -168,6 +160,8 @@ GEM
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    lockup (1.7.1)
+      rails (>= 3, < 7.2)
     lograge (0.14.0)
       actionpack (>= 4)
       activesupport (>= 4)
@@ -443,7 +437,7 @@ DEPENDENCIES
   heroicon
   honeybadger
   listen (~> 3.3)
-  lockup!
+  lockup
   lograge
   lookbook
   pg (~> 1.1)

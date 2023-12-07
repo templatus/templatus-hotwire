@@ -51,7 +51,7 @@ gem 'rack-canonical-host'
 gem 'sidekiq'
 
 # Lock staging servers from search engines and prying eyes. (http://lockup.interdiscipline.com)
-gem 'lockup', github: 'ledermann/lockup', branch: 'rails-7-1'
+gem 'lockup'
 
 group :development, :test do
   # Debugging functionality for Ruby (https://github.com/ruby/debug)
