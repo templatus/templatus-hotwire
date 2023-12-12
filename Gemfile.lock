@@ -104,9 +104,9 @@ GEM
     css_parser (1.16.0)
       addressable
     date (3.3.4)
-    debug (1.8.0)
-      irb (>= 1.5.0)
-      reline (>= 0.3.1)
+    debug (1.9.0)
+      irb (~> 1.10)
+      reline (>= 0.3.8)
     diff-lcs (1.5.0)
     docile (1.4.0)
     dotenv (2.8.1)
