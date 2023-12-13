@@ -220,7 +220,7 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.4)
-    prettier (4.0.3)
+    prettier (4.0.4)
       syntax_tree (>= 4.0.1)
       syntax_tree-haml (>= 2.0.0)
       syntax_tree-rbs (>= 0.2.0)
