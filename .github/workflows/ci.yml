@@ -85,7 +85,7 @@ jobs:
       - name: Check JS size limit
         run: yarn size-limit
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: failure()
         with:
           name: Cypress screenshots and videos
