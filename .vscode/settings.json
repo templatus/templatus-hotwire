@@ -27,7 +27,7 @@
   },
 
   "[ruby]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "ruby-syntax-tree.vscode-syntax-tree",
     "editor.formatOnSave": true
   },
 

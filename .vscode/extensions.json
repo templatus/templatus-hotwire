@@ -5,6 +5,7 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "foxundermoon.shell-format",
-    "github.copilot"
+    "github.copilot",
+    "ruby-syntax-tree.vscode-syntax-tree"
   ]
 }
