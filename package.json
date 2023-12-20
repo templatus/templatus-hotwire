@@ -17,7 +17,7 @@
     "plausible-tracker": "^0.3.8",
     "postcss": "^8.4.32",
     "register-service-worker": "^1.7.2",
-    "tailwindcss": "^3.3.7",
+    "tailwindcss": "^3.4.0",
     "timeago.js": "^4.0.2"
   },
   "version": "0.1.0",
