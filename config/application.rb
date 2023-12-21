@@ -53,5 +53,7 @@ module TemplatusHotwire
     config.x.cypress =
       Rails.env.local? &&
         ActiveModel::Type::Boolean.new.cast(ENV.fetch('CYPRESS', false))
+
+    config.view_component.capture_compatibility_patch_enabled = true
   end
 end
