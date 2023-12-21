@@ -61,6 +61,7 @@ There are two sister repositories:
 - [Dependabot](https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/about-dependabot-version-updates) configuration for updating dependencies (with auto-merge)
 - Ready for serving assets via CDN like CloudFront
 - [Honeybadger](https://www.honeybadger.io/) for error tracking in Ruby and JavaScript
+- [RorVsWild](https://www.rorvswild.com/) for performance monitoring
 - [Plausible](https://plausible.io/) for privacy friendly analytics
 - [Lockup](https://lockup.interdiscipline.com/) to place a staging server behind a basic codeword
 

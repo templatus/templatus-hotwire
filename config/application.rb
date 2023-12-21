@@ -46,6 +46,7 @@ module TemplatusHotwire
       ENV.fetch('COMMIT_TIME') { `git show -s --format=%cI`.chomp }
 
     config.x.honeybadger.api_key = ENV['HONEYBADGER_API_KEY'].presence
+    config.x.rorvswild.api_key = ENV['RORVSWILD_API_KEY'].presence
 
     config.x.plausible_url = ENV.fetch('PLAUSIBLE_URL', nil)
 

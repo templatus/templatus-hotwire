@@ -299,6 +299,7 @@ GEM
     request_store (1.5.1)
       rack (>= 1.4)
     rexml (3.2.6)
+    rorvswild (1.6.3)
     rouge (4.2.0)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
@@ -449,6 +450,7 @@ DEPENDENCIES
   rack-cors
   rails (~> 7.1.0)
   redis (>= 4.0.1)
+  rorvswild
   rspec-rails
   rubocop
   rubocop-performance
