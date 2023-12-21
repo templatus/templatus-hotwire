@@ -11,11 +11,9 @@ export default class extends Controller {
 
   declare readonly hasCounterTarget: boolean;
   declare readonly counterTarget: HTMLElement;
-  declare readonly counterTargets: HTMLElement[];
 
   declare readonly hasListTarget: boolean;
   declare readonly listTarget: HTMLElement;
-  declare readonly listTargets: HTMLElement[];
 
   static values = {
     count: Number,
@@ -39,12 +37,13 @@ export default class extends Controller {
   }
 
   increaseCounter() {
-    leave(this.counterTarget).then(() => {
-      this.currentCount++;
-      this.renderCount();
+    if (this.hasCounterTarget)
+      leave(this.counterTarget).then(() => {
+        this.currentCount++;
+        this.renderCount();
 
-      enter(this.counterTarget);
-    });
+        enter(this.counterTarget);
+      });
   }
 
   updateList() {
@@ -62,6 +61,7 @@ export default class extends Controller {
   }
 
   renderCount() {
-    this.counterTarget.textContent = this.currentCount.toLocaleString();
+    if (this.hasCounterTarget)
+      this.counterTarget.textContent = this.currentCount.toLocaleString();
   }
 }
