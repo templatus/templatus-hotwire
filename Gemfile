@@ -103,6 +103,9 @@ group :development do
 
   # Annotates Rails Models, routes, fixtures, and others based on the database schema. (https://github.com/ctran/annotate_models)
   gem 'annotate'
+
+  # Pretty print Ruby objects with proper indentation and colors (https://github.com/amazing-print/amazing_print)
+  gem 'amazing_print'
 end
 
 group :test do
