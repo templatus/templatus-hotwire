@@ -128,12 +128,12 @@ rendering chunks...
 computing gzip size...
 ../../public/vite/.vite/manifest-assets.json         0.10 kB │ gzip:  0.09 kB
 ../../public/vite/assets/logo-3amqgDdM.svg           0.50 kB │ gzip:  0.30 kB
-../../public/vite/.vite/manifest.json                0.79 kB │ gzip:  0.29 kB
-../../public/vite/assets/application-I39WZP54.css   23.44 kB │ gzip:  5.06 kB
-../../public/vite/assets/application-aPLr3dUF.js     3.59 kB │ gzip:  1.44 kB │ map:   9.88 kB
+../../public/vite/.vite/manifest.json                0.79 kB │ gzip:  0.28 kB
+../../public/vite/assets/application-khfDISII.css   23.42 kB │ gzip:  5.03 kB
+../../public/vite/assets/application-AGZF-dBE.js     3.65 kB │ gzip:  1.44 kB │ map:   9.85 kB
 ../../public/vite/assets/index-GVA0YpUy.js           9.48 kB │ gzip:  3.02 kB │ map:  31.38 kB
 ../../public/vite/assets/vendor-EJSvyBgX.js        178.04 kB │ gzip: 48.05 kB │ map: 598.94 kB
-✓ built in 739ms
+✓ built in 785ms
 Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
 ```
 
