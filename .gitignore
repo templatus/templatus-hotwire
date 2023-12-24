@@ -30,9 +30,6 @@
 
 public/assets
 /node_modules
-/yarn-error.log
-yarn-debug.log*
-.yarn-integrity
 .eslintcache
 
 # Ignore all environment files (except templates).
@@ -56,3 +53,12 @@ node_modules
 # Vite uses dotenv and suggests to ignore local-only env files. See
 # https://vitejs.dev/guide/env-and-mode.html#env-files
 *.local
+
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

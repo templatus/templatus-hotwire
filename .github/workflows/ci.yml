@@ -45,7 +45,7 @@ jobs:
           node-version-file: 'package.json'
 
       - name: Install Yarn packages
-        run: bin/yarn install --frozen-lockfile
+        run: bin/yarn install --immutable
 
       - name: Lint with RuboCop
         run: bin/rubocop --parallel
