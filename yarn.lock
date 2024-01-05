@@ -303,9 +303,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@honeybadger-io/js@npm:^6.8.1":
-  version: 6.8.1
-  resolution: "@honeybadger-io/js@npm:6.8.1"
+"@honeybadger-io/js@npm:^6.8.2":
+  version: 6.8.2
+  resolution: "@honeybadger-io/js@npm:6.8.2"
   dependencies:
     "@honeybadger-io/core": "npm:^6.5.1"
     "@types/aws-lambda": "npm:^8.10.89"
@@ -313,7 +313,7 @@ __metadata:
     cosmiconfig: "npm:^8.3.6"
   bin:
     honeybadger-checkins-sync: dist/server/check-ins-sync-exec.js
-  checksum: fe7481d759b5e48280807b97c65c4b65a5fa0f7ccdd927c79d74658c6e244379840add5d327c6e915775a625ea89b58514c7ac981e3add196bdf9980bd8acf76
+  checksum: fa84a61ee8d0f43166599267cf1541643abfa46672d2e0e39949a60dcfe96553a422b4a9cfbd3eac2982f7869a12e61b013f2a9837b9dfd971179da3bd82cf11
   languageName: node
   linkType: hard
 
@@ -4746,7 +4746,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "templatus-hotwire@workspace:."
   dependencies:
-    "@honeybadger-io/js": "npm:^6.8.1"
+    "@honeybadger-io/js": "npm:^6.8.2"
     "@hotwired/stimulus": "npm:^3.2.2"
     "@hotwired/turbo-rails": "npm:^7.3.0"
     "@prettier/plugin-ruby": "npm:^4.0.4"
