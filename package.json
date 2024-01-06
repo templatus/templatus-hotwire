@@ -34,7 +34,7 @@
     "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-tailwindcss": "^3.13.1",
     "prettier": "^3.1.1",
-    "prettier-plugin-tailwindcss": "^0.5.10",
+    "prettier-plugin-tailwindcss": "^0.5.11",
     "rollup": "^4.9.3",
     "size-limit": "^11.0.1",
     "typescript": "^5.3.3",
