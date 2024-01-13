@@ -1,0 +1,2 @@
+development:
+  editor_url: <%= ENV.fetch("RORVSWILD_EDITOR_URL", "vscode://file${path}:${line}") %>
