@@ -599,12 +599,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@size-limit/file@npm:^11.0.1":
-  version: 11.0.1
-  resolution: "@size-limit/file@npm:11.0.1"
+"@size-limit/file@npm:^11.0.2":
+  version: 11.0.2
+  resolution: "@size-limit/file@npm:11.0.2"
   peerDependencies:
-    size-limit: 11.0.1
-  checksum: b8124123bb81da91b7825c2c36c2a2dab71be27ba9a9fd3e3ac6555cdc256423787dc3a000130a6c75b213ac2e81508005664dc1a16bb8f96267ab6752e85eeb
+    size-limit: 11.0.2
+  checksum: 499c46879711db5c4c415dc1fcf81cd051c936037b9883104753ca0ecf80c062664d469d715ec159bcf040d40366887548c7867264aa81a9eb259d544bf3ceef
   languageName: node
   linkType: hard
 
@@ -4394,7 +4394,7 @@ __metadata:
     "@hotwired/turbo-rails": "npm:^7.3.0"
     "@prettier/plugin-ruby": "npm:^4.0.4"
     "@rails/actioncable": "npm:^7.1.2"
-    "@size-limit/file": "npm:^11.0.1"
+    "@size-limit/file": "npm:^11.0.2"
     "@tailwindcss/forms": "npm:^0.5.7"
     "@types/rails__actioncable": "npm:^6.1.10"
     "@typescript-eslint/eslint-plugin": "npm:^6.19.0"
