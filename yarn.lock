@@ -713,15 +713,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.17.5":
-  version: 18.19.6
-  resolution: "@types/node@npm:18.19.6"
-  dependencies:
-    undici-types: "npm:~5.26.4"
-  checksum: 6cfffb738124d43bc240d21f3196270c15b9a4137644eee35a7e75460fda8df881630e350d00fcfd66caa37bf1ed80771f2da0d4c7cd0016c9f616934a2377c5
-  languageName: node
-  linkType: hard
-
 "@types/qs@npm:*":
   version: 6.9.11
   resolution: "@types/qs@npm:6.9.11"
@@ -1552,13 +1543,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:^13.6.2":
-  version: 13.6.2
-  resolution: "cypress@npm:13.6.2"
+"cypress@npm:^13.6.3":
+  version: 13.6.3
+  resolution: "cypress@npm:13.6.3"
   dependencies:
     "@cypress/request": "npm:^3.0.0"
     "@cypress/xvfb": "npm:^1.2.4"
-    "@types/node": "npm:^18.17.5"
     "@types/sinonjs__fake-timers": "npm:8.1.1"
     "@types/sizzle": "npm:^2.3.2"
     arch: "npm:^2.2.0"
@@ -1601,7 +1591,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: deee1d7c876db5b6078ea80c0a3fbdefac399c68ee71ab461944d3f091c6ba8409bb36ca759ee25559b069bae2cd01214f87dea62527da2afb71219e17921d58
+  checksum: dc6038ff7b36aeef7cc97918fbdc848f43175cd3396df9f0d723f8fbb172b2f0ced98ddcd55786f38b57a9634f9a1dc446d5712ac20d30ae7c786f626dc28adc
   languageName: node
   linkType: hard
 
@@ -4400,7 +4390,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^6.19.0"
     "@typescript-eslint/parser": "npm:^6.19.0"
     autoprefixer: "npm:^10.4.16"
-    cypress: "npm:^13.6.2"
+    cypress: "npm:^13.6.3"
     el-transition: "npm:^0.0.7"
     eslint: "npm:^8.56.0"
     eslint-config-prettier: "npm:^9.1.0"
