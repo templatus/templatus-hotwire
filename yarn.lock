@@ -494,10 +494,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rails/actioncable@npm:^7.0, @rails/actioncable@npm:^7.1.2":
+"@rails/actioncable@npm:^7.0":
   version: 7.1.2
   resolution: "@rails/actioncable@npm:7.1.2"
   checksum: e16674e93f8c30bf5976c92d926812bba7368f88e4e4a174dcece916f8c64c2d3edd443c71cb7cd1d0df9c5058713bc50958a081f584234fd4c0fd976c28810e
+  languageName: node
+  linkType: hard
+
+"@rails/actioncable@npm:^7.1.3":
+  version: 7.1.3
+  resolution: "@rails/actioncable@npm:7.1.3"
+  checksum: 6019097498387a9c0684df0be380182820a0480173e05a5c5a830cef6cf3e40c9ec75b834af0396b0f57b4e658891c820163e84b9f2bd1ac293c90f5a12ce488
   languageName: node
   linkType: hard
 
@@ -4383,7 +4390,7 @@ __metadata:
     "@hotwired/stimulus": "npm:^3.2.2"
     "@hotwired/turbo-rails": "npm:^7.3.0"
     "@prettier/plugin-ruby": "npm:^4.0.4"
-    "@rails/actioncable": "npm:^7.1.2"
+    "@rails/actioncable": "npm:^7.1.3"
     "@size-limit/file": "npm:^11.0.2"
     "@tailwindcss/forms": "npm:^0.5.7"
     "@types/rails__actioncable": "npm:^6.1.10"
