@@ -4089,9 +4089,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"size-limit@npm:^11.0.1":
-  version: 11.0.1
-  resolution: "size-limit@npm:11.0.1"
+"size-limit@npm:^11.0.2":
+  version: 11.0.2
+  resolution: "size-limit@npm:11.0.2"
   dependencies:
     bytes-iec: "npm:^3.1.1"
     chokidar: "npm:^3.5.3"
@@ -4101,7 +4101,7 @@ __metadata:
     picocolors: "npm:^1.0.0"
   bin:
     size-limit: bin.js
-  checksum: 6b22e371f730ca4b19f5f5f5ae897ddcca03c3fcdbc0fb8b07e825160a4404d37b7e13b986e9f306368fb3a75f3ca5ba5a232611a0f1822d983d60f3571875ec
+  checksum: 943161c0d13bc600d264025b0755ffe247f6b956deb4b87ce2f6a2753444777ef38306f1529450fcf2bb742c1407a5f20d3c3b5e8ce72bc5fceb2f2e6f96e4e7
   languageName: node
   linkType: hard
 
@@ -4413,7 +4413,7 @@ __metadata:
     prettier-plugin-tailwindcss: "npm:^0.5.11"
     register-service-worker: "npm:^1.7.2"
     rollup: "npm:^4.9.5"
-    size-limit: "npm:^11.0.1"
+    size-limit: "npm:^11.0.2"
     tailwindcss: "npm:^3.4.1"
     timeago.js: "npm:^4.0.2"
     typescript: "npm:^5.3.3"
