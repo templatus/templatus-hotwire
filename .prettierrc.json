@@ -4,5 +4,13 @@
   "singleQuote": true,
   "rubyPlugins": "plugin/single_quotes,plugin/trailing_comma",
   "printWidth": 80,
-  "tabWidth": 2
+  "tabWidth": 2,
+  "overrides": [
+    {
+      "files": ["tsconfig.json"],
+      "options": {
+        "trailingComma": "none"
+      }
+    }
+  ]
 }
