@@ -116,12 +116,16 @@ https://github.com/rails/rails/pull/41994
 
 ```
 $ RAILS_ENV=production bin/rails assets:precompile
-yarn install v1.22.21
-[1/5] 🔍  Resolving packages...
-success Already up-to-date.
-✨  Done in 0.08s.
+➤ YN0000: · Yarn 4.1.0
+➤ YN0000: ┌ Resolution step
+➤ YN0000: └ Completed
+➤ YN0000: ┌ Fetch step
+➤ YN0000: └ Completed
+➤ YN0000: ┌ Link step
+➤ YN0000: └ Completed
+➤ YN0000: · Done in 0s 320ms
 Building with Vite ⚡️
-vite v5.0.10 building for production...
+vite v5.0.12 building for production...
 transforming...
 ✓ 47 modules transformed.
 rendering chunks...
@@ -130,10 +134,10 @@ computing gzip size...
 ../../public/vite/assets/logo-3amqgDdM.svg           0.50 kB │ gzip:  0.30 kB
 ../../public/vite/.vite/manifest.json                0.79 kB │ gzip:  0.28 kB
 ../../public/vite/assets/application-khfDISII.css   23.42 kB │ gzip:  5.03 kB
-../../public/vite/assets/application-AGZF-dBE.js     3.65 kB │ gzip:  1.44 kB │ map:   9.85 kB
-../../public/vite/assets/index-GVA0YpUy.js           9.48 kB │ gzip:  3.02 kB │ map:  31.38 kB
-../../public/vite/assets/vendor-EJSvyBgX.js        178.04 kB │ gzip: 48.05 kB │ map: 598.94 kB
-✓ built in 785ms
+../../public/vite/assets/application-7C6RE58r.js     3.65 kB │ gzip:  1.44 kB │ map:   9.85 kB
+../../public/vite/assets/index-chyaxaBb.js           9.52 kB │ gzip:  3.03 kB │ map:  31.50 kB
+../../public/vite/assets/vendor-GGtozdWq.js        178.06 kB │ gzip: 48.06 kB │ map: 599.04 kB
+✓ built in 767ms
 Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
 ```
 
