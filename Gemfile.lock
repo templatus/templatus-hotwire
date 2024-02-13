@@ -111,9 +111,6 @@ GEM
     diff-lcs (1.5.1)
     docile (1.4.0)
     dotenv (3.0.0)
-    dotenv-rails (3.0.0)
-      dotenv (= 3.0.0)
-      railties (>= 6.1)
     drb (2.2.0)
       ruby2_keywords
     dry-cli (1.0.0)
@@ -434,7 +431,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   capybara
   debug
-  dotenv-rails
+  dotenv
   factory_bot_rails
   guard-rspec
   heroicon
