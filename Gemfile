@@ -60,8 +60,8 @@ group :development, :test do
   # Debugging functionality for Ruby (https://github.com/ruby/debug)
   gem 'debug', platforms: %i[mri windows]
 
-  # Autoload dotenv in Rails. (https://github.com/bkeepers/dotenv)
-  gem 'dotenv-rails'
+  # Loads environment variables from `.env`. (https://github.com/bkeepers/dotenv)
+  gem 'dotenv'
 
   # RSpec for Rails (https://github.com/rspec/rspec-rails)
   gem 'rspec-rails'
