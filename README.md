@@ -123,21 +123,21 @@ $ RAILS_ENV=production bin/rails assets:precompile
 ➤ YN0000: └ Completed
 ➤ YN0000: ┌ Link step
 ➤ YN0000: └ Completed
-➤ YN0000: · Done in 0s 317ms
+➤ YN0000: · Done in 0s 312ms
 Building with Vite ⚡️
-vite v5.0.12 building for production...
+vite v5.1.1 building for production...
 transforming...
 ✓ 47 modules transformed.
 rendering chunks...
 computing gzip size...
 ../../public/vite/.vite/manifest-assets.json         0.10 kB │ gzip:  0.09 kB
-../../public/vite/assets/logo-3amqgDdM.svg           0.50 kB │ gzip:  0.30 kB
-../../public/vite/.vite/manifest.json                0.79 kB │ gzip:  0.28 kB
-../../public/vite/assets/application-khfDISII.css   23.42 kB │ gzip:  5.03 kB
-../../public/vite/assets/application-gKBorXeO.js     3.65 kB │ gzip:  1.44 kB │ map:   9.85 kB
-../../public/vite/assets/index-chyaxaBb.js           9.52 kB │ gzip:  3.03 kB │ map:  31.50 kB
-../../public/vite/assets/vendor-0KvYb4F5.js        198.59 kB │ gzip: 54.86 kB │ map: 680.10 kB
-✓ built in 777ms
+../../public/vite/assets/logo-DdqaqAN0.svg           0.50 kB │ gzip:  0.30 kB
+../../public/vite/.vite/manifest.json                0.79 kB │ gzip:  0.29 kB
+../../public/vite/assets/application-CSF8MhIg.css   23.42 kB │ gzip:  5.03 kB
+../../public/vite/assets/application-BzmKZiV0.js     3.65 kB │ gzip:  1.44 kB │ map:   9.85 kB
+../../public/vite/assets/index-BAb4QarR.js           9.52 kB │ gzip:  3.04 kB │ map:  31.50 kB
+../../public/vite/assets/vendor-BmMgSTZz.js        198.82 kB │ gzip: 54.94 kB │ map: 680.86 kB
+✓ built in 750ms
 Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
 ```
 
