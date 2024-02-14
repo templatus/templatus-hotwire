@@ -21,8 +21,7 @@ coverage
 Brewfile
 Brewfile.lock.json
 Dockerfile
-docker-compose.yml
-docker-volumes
+compose.yml
 Procfile*
 Guardfile
 log/*

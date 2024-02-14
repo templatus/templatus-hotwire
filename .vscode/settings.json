@@ -9,9 +9,7 @@
     "**/.yarn": true,
     "**/public/vite*": true
   },
-  "files.exclude": {
-    "**/docker-volumes": true
-  },
+  "files.exclude": {},
 
   "search.exclude": {
     "**/tmp": true,

@@ -39,10 +39,6 @@ public/assets
 # SimpleCoverage report
 /coverage/*
 
-# Docker volumes
-/docker-volumes
-!/docker-volumes/.keep
-
 /public/vite*
 
 Brewfile.lock.json

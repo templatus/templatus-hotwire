@@ -22,7 +22,6 @@ AllCops:
     - spec/javascript/**/*
     - tmp/**/*
     - vendor/**/*
-    - docker-volumes/**/*
   EnabledByDefault: true
 
 ### Rails

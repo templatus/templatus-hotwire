@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.9'
 
 x-app-base: &app_base
   build: .
@@ -7,15 +7,15 @@ x-app-base: &app_base
     - redis
   environment: &app_environment
     APP_HOST: localhost
-    ASSET_HOST: ''
+    ASSET_HOST: null
     FORCE_SSL: 'false'
     DB_HOST: db
     DB_PASSWORD: my-secret-database-password
     DB_USER: postgres
     SECRET_KEY_BASE: something-long-and-secret
-    HONEYBADGER_API_KEY: ''
-    PLAUSIBLE_URL: ''
-    LOCKUP_CODEWORD: ''
+    HONEYBADGER_API_KEY: null
+    PLAUSIBLE_URL: null
+    LOCKUP_CODEWORD: null
 
 services:
   db:
@@ -27,16 +27,16 @@ services:
     healthcheck:
       test: ['CMD-SHELL', 'pg_isready -U postgres']
     volumes:
-      - ./docker-volumes/postgresql:/var/lib/postgresql/data
+      - postgresql:/var/lib/postgresql/data
 
   redis:
     networks:
       - internal
-    image: redis:alpine
+    image: redis:7-alpine
     healthcheck:
       test: ['CMD', 'redis-cli', 'ping']
     volumes:
-      - ./docker-volumes/redis:/data
+      - redis:/data
 
   worker:
     <<: *app_base
@@ -73,6 +73,10 @@ services:
     networks:
       - public
       - internal
+
+volumes:
+  postgresql:
+  redis:
 
 networks:
   public:

@@ -263,5 +263,5 @@ bin/cypress run
 
 ```
 docker network create public
-docker-compose up
+docker compose up
 ```
