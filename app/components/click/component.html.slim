@@ -7,13 +7,12 @@ li[
   data-transition-leave-start="opacity-100"
   data-transition-leave-end="opacity-0"
 ]
-  - cache click do
-    p
-      span class='px-2 py-1 font-mono bg-gray-900 rounded text-tertiary'
-        = click.ip
+  p
+    span class='px-2 py-1 font-mono bg-gray-900 rounded text-tertiary'
+      = click.ip
 
-      span class='px-1 ml-2 font-medium text-gray-900'
-        = click.created_at.to_fs(:long)
+    span class='px-1 ml-2 font-medium text-gray-900'
+      = click.created_at.to_fs(:long)
 
-    code class="block mt-4 text-gray-500 font-extralight"
-      = click.user_agent
+  code class="block mt-4 text-gray-500 font-extralight"
+    = click.user_agent

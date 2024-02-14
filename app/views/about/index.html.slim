@@ -1,3 +1,4 @@
 = render PageTitle::Component.new('About')
 
-= render About::Component.new
+- cache Rails.configuration.x.git.commit_version do
+  = render About::Component.new
