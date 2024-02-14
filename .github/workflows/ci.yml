@@ -110,6 +110,22 @@ jobs:
         # https://github.com/actions/checkout/issues/290
         run: git fetch --tags --force
 
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          # list of Docker images to use as base name for tags
+          images: |
+            ghcr.io/templatus/templatus-hotwire
+          # generate Docker tags based on the following events/attributes
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'main') }}
+
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v3
         with:
@@ -117,26 +133,26 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build the production image
+      - name: Set ENV values
         run: |
-          export COMMIT_TIME=$(git show -s --format=%cI ${GITHUB_SHA})
-          export COMMIT_VERSION=$(git describe --always)
-          echo $GITHUB_SHA
-          echo $COMMIT_TIME
-          echo $COMMIT_VERSION
-          docker buildx build --build-arg COMMIT_TIME --build-arg COMMIT_VERSION -t app .
+          echo "COMMIT_TIME=$(git show -s --format=%cI $GITHUB_SHA)" >> $GITHUB_ENV
+          echo "COMMIT_VERSION=$(git describe --always)" >> $GITHUB_ENV
 
-      - name: Push the image tagged as LATEST to the container registry
-        if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags')
-        run: |
-          docker tag app ghcr.io/${{ github.repository }}:latest
-          docker push ghcr.io/${{ github.repository }}:latest
-
-      - name: Push the image tagged with version to the container registry
-        if: startsWith(github.ref, 'refs/tags')
-        run: |
-          docker tag app ghcr.io/${{ github.repository }}:${GITHUB_REF##*/}
-          docker push ghcr.io/${{ github.repository }}:${GITHUB_REF##*/}
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          platforms: linux/amd64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            COMMIT_SHA=${{ github.sha }}
+            COMMIT_TIME=${{ env.COMMIT_TIME }}
+            COMMIT_VERSION=${{ env.COMMIT_VERSION }}
+            COMMIT_BRANCH=${{ github.head_ref || github.ref_name }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
       - name: Send webhook to start deployment
         env:
