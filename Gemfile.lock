@@ -215,7 +215,7 @@ GEM
     parser (3.3.0.5)
       ast (~> 2.4.1)
       racc
-    pg (1.5.4)
+    pg (1.5.5)
     prettier (4.0.4)
       syntax_tree (>= 4.0.1)
       syntax_tree-haml (>= 2.0.0)
