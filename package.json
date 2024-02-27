@@ -25,7 +25,7 @@
     "@prettier/plugin-ruby": "^4.0.4",
     "@size-limit/file": "^11.0.2",
     "@types/rails__actioncable": "^6.1.10",
-    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.0.2",
     "cypress": "^13.6.6",
     "eslint": "^8.57.0",
