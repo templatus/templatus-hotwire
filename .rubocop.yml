@@ -38,6 +38,9 @@ Rails/SchemaComment:
 Rails/DefaultScope:
   Enabled: false
 
+Rails/EnvironmentVariableAccess:
+  AllowReads: true
+
 ### Bundler
 
 Bundler/OrderedGems:
