@@ -146,8 +146,9 @@ GEM
     honeybadger (5.5.1)
     htmlbeautifier (1.4.3)
     htmlentities (4.3.4)
-    i18n (1.14.1)
+    i18n (1.14.3)
       concurrent-ruby (~> 1.0)
+      racc (~> 1.7)
     io-console (0.7.2)
     irb (1.11.2)
       rdoc
