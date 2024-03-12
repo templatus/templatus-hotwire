@@ -1311,7 +1311,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chokidar@npm:^3.5.3":
+"chokidar@npm:^3.5.3, chokidar@npm:^3.6.0":
   version: 3.6.0
   resolution: "chokidar@npm:3.6.0"
   dependencies:
@@ -2391,7 +2391,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby@npm:^14.0.0":
+"globby@npm:^14.0.1":
   version: 14.0.1
   resolution: "globby@npm:14.0.1"
   dependencies:
@@ -2865,7 +2865,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lilconfig@npm:^3.0.0":
+"lilconfig@npm:^3.0.0, lilconfig@npm:^3.1.1":
   version: 3.1.1
   resolution: "lilconfig@npm:3.1.1"
   checksum: 10c0/311b559794546894e3fe176663427326026c1c644145be9e8041c58e268aa9328799b8dfe7e4dd8c6a4ae305feae95a1c9e007db3569f35b42b6e1bc8274754c
@@ -3990,19 +3990,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"size-limit@npm:^11.0.2":
-  version: 11.0.2
-  resolution: "size-limit@npm:11.0.2"
+"size-limit@npm:^11.0.3":
+  version: 11.0.3
+  resolution: "size-limit@npm:11.0.3"
   dependencies:
     bytes-iec: "npm:^3.1.1"
-    chokidar: "npm:^3.5.3"
-    globby: "npm:^14.0.0"
-    lilconfig: "npm:^3.0.0"
+    chokidar: "npm:^3.6.0"
+    globby: "npm:^14.0.1"
+    lilconfig: "npm:^3.1.1"
     nanospinner: "npm:^1.1.0"
     picocolors: "npm:^1.0.0"
   bin:
     size-limit: bin.js
-  checksum: 10c0/943161c0d13bc600d264025b0755ffe247f6b956deb4b87ce2f6a2753444777ef38306f1529450fcf2bb742c1407a5f20d3c3b5e8ce72bc5fceb2f2e6f96e4e7
+  checksum: 10c0/491a9069d9dff0e278d67291ccbbbcdce43261544ef9ce163396f1a485485ea677495e7c55e47a921370aa01bf75f8e04e0e8f0ef65e7c33a25c20067690baa5
   languageName: node
   linkType: hard
 
@@ -4312,7 +4312,7 @@ __metadata:
     prettier-plugin-tailwindcss: "npm:^0.5.12"
     register-service-worker: "npm:^1.7.2"
     rollup: "npm:^4.12.1"
-    size-limit: "npm:^11.0.2"
+    size-limit: "npm:^11.0.3"
     tailwindcss: "npm:^3.4.1"
     timeago.js: "npm:^4.0.2"
     typescript: "npm:^5.4.2"
