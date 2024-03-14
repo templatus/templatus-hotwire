@@ -2822,7 +2822,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jiti@npm:^1.19.1":
+"jiti@npm:^1.19.1, jiti@npm:^1.21.0":
   version: 1.21.0
   resolution: "jiti@npm:1.21.0"
   bin:
@@ -4135,19 +4135,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"size-limit@npm:^11.0.3":
-  version: 11.0.3
-  resolution: "size-limit@npm:11.0.3"
+"size-limit@npm:^11.1.0":
+  version: 11.1.0
+  resolution: "size-limit@npm:11.1.0"
   dependencies:
     bytes-iec: "npm:^3.1.1"
     chokidar: "npm:^3.6.0"
     globby: "npm:^14.0.1"
+    jiti: "npm:^1.21.0"
     lilconfig: "npm:^3.1.1"
     nanospinner: "npm:^1.1.0"
     picocolors: "npm:^1.0.0"
   bin:
     size-limit: bin.js
-  checksum: 10c0/491a9069d9dff0e278d67291ccbbbcdce43261544ef9ce163396f1a485485ea677495e7c55e47a921370aa01bf75f8e04e0e8f0ef65e7c33a25c20067690baa5
+  checksum: 10c0/80969b20cba02b5bafa2db4725063104c1e4138e77b2698a4e62bf75d2ac80f52001d475e48dd8c5c616a7c98bef424ebed1974ee47e221212897586359c879c
   languageName: node
   linkType: hard
 
@@ -4457,7 +4458,7 @@ __metadata:
     prettier-plugin-tailwindcss: "npm:^0.5.12"
     register-service-worker: "npm:^1.7.2"
     rollup: "npm:^4.13.0"
-    size-limit: "npm:^11.0.3"
+    size-limit: "npm:^11.1.0"
     tailwindcss: "npm:^3.4.1"
     timeago.js: "npm:^4.0.2"
     typescript: "npm:^5.4.2"
