@@ -3648,6 +3648,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss@npm:^8.4.36":
+  version: 8.4.36
+  resolution: "postcss@npm:8.4.36"
+  dependencies:
+    nanoid: "npm:^3.3.7"
+    picocolors: "npm:^1.0.0"
+    source-map-js: "npm:^1.1.0"
+  checksum: 10c0/e7c834e31d8f4e8dfd0a427df36fdc7bdc58a16e373551618e2c3ac172019eb816b24f1b4709311ebcade8d3ba31b2d75522d28ef45ecbbeb11eb01f265579fb
+  languageName: node
+  linkType: hard
+
 "prelude-ls@npm:^1.2.1":
   version: 1.2.1
   resolution: "prelude-ls@npm:1.2.1"
@@ -4223,6 +4234,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"source-map-js@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "source-map-js@npm:1.1.0"
+  checksum: 10c0/d1f016efe4fcf67fd92e36da0670f2889b13a36cc453329758336450e811c61164376eb451b453b4dd4e89a760f841b0a014942d54f240af31a791829bc0e336
+  languageName: node
+  linkType: hard
+
 "sprintf-js@npm:^1.1.3":
   version: 1.1.3
   resolution: "sprintf-js@npm:1.1.3"
@@ -4453,7 +4471,7 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.1.3"
     eslint-plugin-tailwindcss: "npm:^3.15.1"
     plausible-tracker: "npm:^0.3.8"
-    postcss: "npm:^8.4.35"
+    postcss: "npm:^8.4.36"
     prettier: "npm:^3.2.5"
     prettier-plugin-tailwindcss: "npm:^0.5.12"
     register-service-worker: "npm:^1.7.2"
