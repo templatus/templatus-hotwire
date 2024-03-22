@@ -280,7 +280,7 @@ GEM
       ffi (~> 1.0)
     rbs (3.4.4)
       abbrev
-    rdoc (6.6.2)
+    rdoc (6.6.3.1)
       psych (>= 4.0.0)
     redcarpet (3.6.0)
     redis (5.1.0)
