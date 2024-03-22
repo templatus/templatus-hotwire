@@ -23,7 +23,7 @@
   "version": "0.1.0",
   "devDependencies": {
     "@prettier/plugin-ruby": "^4.0.4",
-    "@size-limit/file": "^11.1.1",
+    "@size-limit/file": "^11.1.2",
     "@types/rails__actioncable": "^6.1.10",
     "@typescript-eslint/eslint-plugin": "^7.3.1",
     "@typescript-eslint/parser": "^7.3.1",
