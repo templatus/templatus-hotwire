@@ -105,7 +105,7 @@ GEM
     css_parser (1.16.0)
       addressable
     date (3.3.4)
-    debug (1.9.1)
+    debug (1.9.2)
       irb (~> 1.10)
       reline (>= 0.3.8)
     diff-lcs (1.5.1)
