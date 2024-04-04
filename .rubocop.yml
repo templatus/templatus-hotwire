@@ -115,7 +115,7 @@ Layout/LineLength:
 ### Metrics
 
 Metrics/BlockLength:
-  AllowedMethods: ['configure', 'content_security_policy', 'task']
+  AllowedMethods: ['configure', 'content_security_policy', 'task', 'namespace']
 
 RSpec/ExampleLength:
   Enabled: false
