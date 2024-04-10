@@ -37,7 +37,7 @@
     "prettier-plugin-tailwindcss": "^0.5.13",
     "rollup": "^4.14.1",
     "size-limit": "^11.1.2",
-    "typescript": "^5.4.4",
+    "typescript": "^5.4.5",
     "vite": "^5.2.8",
     "vite-plugin-full-reload": "^1.1.0",
     "vite-plugin-ruby": "^5.0.0",
