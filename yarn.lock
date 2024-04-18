@@ -1589,9 +1589,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:^13.7.3":
-  version: 13.7.3
-  resolution: "cypress@npm:13.7.3"
+"cypress@npm:^13.8.0":
+  version: 13.8.0
+  resolution: "cypress@npm:13.8.0"
   dependencies:
     "@cypress/request": "npm:^3.0.0"
     "@cypress/xvfb": "npm:^1.2.4"
@@ -1637,7 +1637,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 10c0/51643d6bcf647abb50e5f3a88fbffe5c41bb680394e8900162aded05547f473018070146df923ec8a7908356e3ff9e9c26629b51523f4361046e0c447f757d63
+  checksum: 10c0/9aefeec1949cb20a22c02f3095f88574196f6a77e182e86578144e1ae1d990f6ffcd32a2f87dd53c827eeb0fc2a90fbaa8a155c717fe22d0a397428157ec7b4d
   languageName: node
   linkType: hard
 
@@ -4489,7 +4489,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^7.7.0"
     "@typescript-eslint/parser": "npm:^7.7.0"
     autoprefixer: "npm:^10.4.19"
-    cypress: "npm:^13.7.3"
+    cypress: "npm:^13.8.0"
     el-transition: "npm:^0.0.7"
     eslint: "npm:^8.57.0"
     eslint-config-prettier: "npm:^9.1.0"
