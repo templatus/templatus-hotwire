@@ -2015,9 +2015,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^9.1.0":
-  version: 9.1.0
-  resolution: "eslint@npm:9.1.0"
+"eslint@npm:^9.1.1":
+  version: 9.1.1
+  resolution: "eslint@npm:9.1.1"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.2.0"
     "@eslint-community/regexpp": "npm:^4.6.1"
@@ -2055,7 +2055,7 @@ __metadata:
     text-table: "npm:^0.2.0"
   bin:
     eslint: bin/eslint.js
-  checksum: 10c0/1773d9324bab94f9e89caab4340aa6a1bc0bf55cd3468c9a6a4e878b7594c1a35eda8cf2f3d77b0e2c19b8ca00108bc993e59d9d82fb2f07728f52e4e73e4f46
+  checksum: 10c0/0173fbc561d2272802315726283f63df0cf7197949ca1f80afd8ef92e95867677d54601ff6cad5467c44745160ba0f9cef7ac1154ccbd097d0269a4c6eb21041
   languageName: node
   linkType: hard
 
@@ -4443,7 +4443,7 @@ __metadata:
     autoprefixer: "npm:^10.4.19"
     cypress: "npm:^13.8.0"
     el-transition: "npm:^0.0.7"
-    eslint: "npm:^9.1.0"
+    eslint: "npm:^9.1.1"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-cypress: "npm:^2.15.2"
     eslint-plugin-prettier: "npm:^5.1.3"
