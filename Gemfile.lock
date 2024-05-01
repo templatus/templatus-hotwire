@@ -292,7 +292,7 @@ GEM
     regexp_parser (2.9.0)
     reline (0.5.4)
       io-console (~> 0.5)
-    request_store (1.6.0)
+    request_store (1.7.0)
       rack (>= 1.4)
     rexml (3.2.6)
     rorvswild (1.7.0)
