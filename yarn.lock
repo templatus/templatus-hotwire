@@ -1948,14 +1948,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-cypress@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "eslint-plugin-cypress@npm:3.0.3"
+"eslint-plugin-cypress@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "eslint-plugin-cypress@npm:3.1.1"
   dependencies:
     globals: "npm:^13.20.0"
   peerDependencies:
     eslint: ">=7 <9"
-  checksum: 10c0/c5ec7e1e89d60a2a35f178edeb2b67ab53e5210c30261d9ce20950b2fd1be5e4b7d04c5e38b64cfb8a5f2f0b2ce0400abbbe3b8bf260f6555388acb9d1d42b80
+  checksum: 10c0/a64cdee00b1f9511127eeef3e6b8f1559b58cd092c724c8023d091c82ece926f20d39e746bea357b2591e27bc8344945bfa9062249b6fca81a7e79f0f36c9dac
   languageName: node
   linkType: hard
 
@@ -4445,7 +4445,7 @@ __metadata:
     el-transition: "npm:^0.0.7"
     eslint: "npm:^9.1.1"
     eslint-config-prettier: "npm:^9.1.0"
-    eslint-plugin-cypress: "npm:^3.0.3"
+    eslint-plugin-cypress: "npm:^3.1.1"
     eslint-plugin-prettier: "npm:^5.1.3"
     eslint-plugin-tailwindcss: "npm:^3.15.1"
     plausible-tracker: "npm:^0.3.8"
