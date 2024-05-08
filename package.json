@@ -25,7 +25,7 @@
     "@prettier/plugin-ruby": "^4.0.4",
     "@size-limit/file": "^11.1.2",
     "@types/rails__actioncable": "^6.1.10",
-    "cypress": "^13.8.1",
+    "cypress": "^13.9.0",
     "eslint": "^9.2.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-cypress": "^3.2.0",
