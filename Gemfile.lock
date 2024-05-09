@@ -143,7 +143,7 @@ GEM
       tilt
     heroicon (1.0.0)
       rails (>= 5.2)
-    honeybadger (5.8.1)
+    honeybadger (5.9.0)
     htmlbeautifier (1.4.3)
     htmlentities (4.3.4)
     i18n (1.14.5)
@@ -470,4 +470,4 @@ RUBY VERSION
    ruby 3.3.1p55
 
 BUNDLED WITH
-   2.5.9
+   2.5.10
