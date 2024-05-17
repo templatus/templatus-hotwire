@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '3.3.1'
 
 # Full-stack web application framework. (https://rubyonrails.org)
-gem 'rails', '~> 7.1.0'
+gem 'rails', '~> 7.1.3', '>= 7.1.3.3'
 
 # Use Vite in Rails and bring joy to your JavaScript experience (https://github.com/ElMassimo/vite_ruby)
 gem 'vite_rails'
