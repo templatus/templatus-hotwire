@@ -1834,15 +1834,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-tailwindcss@npm:^3.15.2":
-  version: 3.15.2
-  resolution: "eslint-plugin-tailwindcss@npm:3.15.2"
+"eslint-plugin-tailwindcss@npm:^3.16.0":
+  version: 3.16.0
+  resolution: "eslint-plugin-tailwindcss@npm:3.16.0"
   dependencies:
     fast-glob: "npm:^3.2.5"
     postcss: "npm:^8.4.4"
   peerDependencies:
     tailwindcss: ^3.4.0
-  checksum: 10c0/c38420361f793616522cf912a6e969998065b574f858da1a2d455094db9a8289cce5499ca9177c76675df7cf22735c98a0390d9bba115ed0044542af3562f636
+  checksum: 10c0/d1b7c871ebe8acf1fe39d66ffaebe1a62c0061f256fb44954c269fab9725e1b9276f16e311d5fc9cb67616dd5dd4a4b825fb003f4fa71af55fec8995baaff5e9
   languageName: node
   linkType: hard
 
@@ -4236,7 +4236,7 @@ __metadata:
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-cypress: "npm:^3.2.0"
     eslint-plugin-prettier: "npm:^5.1.3"
-    eslint-plugin-tailwindcss: "npm:^3.15.2"
+    eslint-plugin-tailwindcss: "npm:^3.16.0"
     plausible-tracker: "npm:^0.3.8"
     postcss: "npm:^8.4.38"
     prettier: "npm:^3.2.5"
