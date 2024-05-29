@@ -15,9 +15,7 @@ export default [
       'prettier',
       'plugin:prettier/recommended',
       'plugin:tailwindcss/recommended',
-
-      // 'plugin:cypress/recommended',
-      // Not ready for ESLint 9 yet, see https://github.com/cypress-io/eslint-plugin-cypress/issues/156
+      'plugin:cypress/recommended',
     ],
     rules: {
       'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
