@@ -68,7 +68,7 @@ There are two sister repositories:
 ### Production
 
 - [Lograge](https://github.com/roidrage/lograge) for single-line logging
-- Gzip compression of dynamic responses (HTML, JSON) using [Rack::Deflater](https://github.com/rack/rack/blob/master/lib/rack/deflater.rb)
+- Gzip and Brotli compression of dynamic responses (HTML, JSON) using [Rack::Deflater](https://github.com/rack/rack/blob/master/lib/rack/deflater.rb), [Rack::Brotli](https://github.com/marcotc/rack-brotli)
 - Fine-tuned Content Security Policy (CSP)
 - Ready for PWA (manifest, service-worker)
 
