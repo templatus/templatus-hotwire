@@ -300,8 +300,8 @@ GEM
       io-console (~> 0.5)
     request_store (1.7.0)
       rack (>= 1.4)
-    rexml (3.2.8)
-      strscan (>= 3.0.9)
+    rexml (3.2.9)
+      strscan
     rorvswild (1.7.1)
     rouge (4.2.1)
     rspec (3.13.0)
