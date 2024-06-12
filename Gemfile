@@ -84,6 +84,15 @@ group :development, :test do
   # Code style checking for RSpec files (https://github.com/rubocop/rubocop-rspec)
   gem 'rubocop-rspec', require: false
 
+  # Code style checking for RSpec Rails files (https://github.com/rubocop/rubocop-rspec_rails)
+  gem 'rubocop-rspec_rails', require: false
+
+  # Code style checking for Capybara test files (https://github.com/rubocop/rubocop-capybara)
+  gem 'rubocop-capybara', require: false
+
+  # Code style checking for factory_bot files (https://github.com/rubocop/rubocop-factory_bot)
+  gem 'rubocop-factory_bot', require: false
+
   # Slim template linting tool (https://github.com/sds/slim-lint)
   gem 'slim_lint'
 end
