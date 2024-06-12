@@ -10,7 +10,7 @@ class ClicksController < ApplicationController
     flash.now[:notice] = t('.success')
   rescue StandardError
     flash.now[:alert] = t('.fail')
-    render status: :unprocessable_entity
+    render status: :unprocessable_content
   end
 
   private
