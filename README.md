@@ -42,7 +42,7 @@ There are two sister repositories:
 - [dotenv](https://github.com/bkeepers/dotenv) to load environment variables from .env into ENV
 - [Prettier](https://prettier.io/) for auto-formatting JavaScript and Ruby code in Visual Studio Code
 - [Lookbook](https://github.com/allmarkedup/lookbook) as development UI for ViewComponent
-- [annotate](https://github.com/ctran/annotate_models) for annotating models and routes
+- [annotaterb](https://github.com/drwl/annotaterb) for annotating models and routes
 - Live reloading
 
 ### Linting and testing

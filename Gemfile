@@ -110,14 +110,14 @@ group :development do
   # Guard gem for RSpec (https://github.com/guard/guard-rspec)
   gem 'guard-rspec', require: false
 
-  # A native development UI for ViewComponent (https://github.com/ViewComponent/lookbook)
+  # A native development UI for ViewComponent (https://github.com/lookbook-hq/lookbook)
   gem 'lookbook'
 
   # prettier plugin for the Ruby programming language (https://github.com/prettier/plugin-ruby#readme)
   gem 'prettier'
 
-  # Annotates Rails Models, routes, fixtures, and others based on the database schema. (https://github.com/ctran/annotate_models)
-  gem 'annotate'
+  # A gem for generating annotations for Rails projects. (https://github.com/drwl/annotaterb)
+  gem 'annotaterb'
 
   # Pretty print Ruby objects with proper indentation and colors (https://github.com/amazing-print/amazing_print)
   gem 'amazing_print'
