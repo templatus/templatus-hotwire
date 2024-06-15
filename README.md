@@ -116,7 +116,7 @@ https://github.com/rails/rails/pull/41994
 
 ```
 $ RAILS_ENV=production bin/rails assets:precompile
-➤ YN0000: · Yarn 4.2.2
+➤ YN0000: · Yarn 4.3.0
 ➤ YN0000: ┌ Resolution step
 ➤ YN0000: └ Completed
 ➤ YN0000: ┌ Fetch step
@@ -125,7 +125,7 @@ $ RAILS_ENV=production bin/rails assets:precompile
 ➤ YN0000: └ Completed
 ➤ YN0000: · Done in 0s 312ms
 Building with Vite ⚡️
-vite v5.2.13 building for production...
+vite v5.3.1 building for production...
 transforming...
 ✓ 47 modules transformed.
 rendering chunks...
@@ -134,10 +134,10 @@ computing gzip size...
 ../../public/vite/assets/logo-DdqaqAN0.svg           0.50 kB │ gzip:  0.30 kB
 ../../public/vite/.vite/manifest.json                0.87 kB │ gzip:  0.30 kB
 ../../public/vite/assets/application-COmwGGl-.css   23.65 kB │ gzip:  5.07 kB
-../../public/vite/assets/application-CpiPidm5.js     3.65 kB │ gzip:  1.44 kB │ map:   9.73 kB
-../../public/vite/assets/index-BAb4QarR.js           9.52 kB │ gzip:  3.04 kB │ map:  31.50 kB
-../../public/vite/assets/vendor-Bsprbyd8.js        199.18 kB │ gzip: 55.08 kB │ map: 683.85 kB
-✓ built in 744ms
+../../public/vite/assets/application-DQD6g6Dk.js     3.64 kB │ gzip:  1.44 kB │ map:   9.72 kB
+../../public/vite/assets/index-FRQGQGEM.js           9.50 kB │ gzip:  3.02 kB │ map:  31.39 kB
+../../public/vite/assets/vendor-BjjGhd2B.js        198.53 kB │ gzip: 54.83 kB │ map: 682.42 kB
+✓ built in 728ms
 Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
 ```
 
