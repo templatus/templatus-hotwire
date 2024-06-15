@@ -303,7 +303,7 @@ GEM
     rexml (3.3.0)
       strscan
     rorvswild (1.7.1)
-    rouge (4.2.1)
+    rouge (4.3.0)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
