@@ -298,7 +298,7 @@ GEM
       io-console (~> 0.5)
     request_store (1.7.0)
       rack (>= 1.4)
-    rexml (3.3.0)
+    rexml (3.3.1)
       strscan
     rorvswild (1.8.0)
     rouge (4.3.0)
@@ -478,4 +478,4 @@ RUBY VERSION
    ruby 3.3.3p89
 
 BUNDLED WITH
-   2.5.13
+   2.5.14
