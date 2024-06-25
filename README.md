@@ -116,7 +116,7 @@ https://github.com/rails/rails/pull/41994
 
 ```
 $ RAILS_ENV=production bin/rails assets:precompile
-➤ YN0000: · Yarn 4.3.0
+➤ YN0000: · Yarn 4.3.1
 ➤ YN0000: ┌ Resolution step
 ➤ YN0000: └ Completed
 ➤ YN0000: ┌ Fetch step
