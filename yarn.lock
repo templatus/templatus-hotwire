@@ -698,10 +698,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/rails__actioncable@npm:^6.1.10":
-  version: 6.1.10
-  resolution: "@types/rails__actioncable@npm:6.1.10"
-  checksum: 10c0/7f877b4974a6afd4b08e402f116e828aeb6dc171a36897bb306c3d232b0f9fd29e1954c4493ab82b2e269de27de8d23200fbc1b7a8cedb3f165e9dbb25a34e4b
+"@types/rails__actioncable@npm:^6.1.11":
+  version: 6.1.11
+  resolution: "@types/rails__actioncable@npm:6.1.11"
+  checksum: 10c0/b326c0a3c8ea6cac90e6f7d3c1050b61528c8c3f3bdb9394e66634d778b4adb86b5400cf232949088634d2d5d42094f31d2831ed891e98ad0adc5a6202c52db3
   languageName: node
   linkType: hard
 
@@ -4236,7 +4236,7 @@ __metadata:
     "@rails/actioncable": "npm:7.1.3"
     "@size-limit/file": "npm:^11.1.4"
     "@tailwindcss/forms": "npm:^0.5.7"
-    "@types/rails__actioncable": "npm:^6.1.10"
+    "@types/rails__actioncable": "npm:^6.1.11"
     autoprefixer: "npm:^10.4.19"
     cypress: "npm:^13.12.0"
     el-transition: "npm:^0.0.7"
