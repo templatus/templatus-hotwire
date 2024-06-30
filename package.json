@@ -15,7 +15,7 @@
     "autoprefixer": "^10.4.19",
     "el-transition": "^0.0.7",
     "plausible-tracker": "^0.3.9",
-    "postcss": "^8.4.38",
+    "postcss": "^8.4.39",
     "register-service-worker": "^1.7.2",
     "tailwindcss": "^3.4.4",
     "timeago.js": "^4.0.2"
