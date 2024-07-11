@@ -117,9 +117,9 @@ GEM
     factory_bot_rails (6.4.3)
       factory_bot (~> 6.4)
       railties (>= 5.0.0)
-    ffi (1.17.0)
     ffi (1.17.0-arm64-darwin)
     ffi (1.17.0-x86_64-linux-gnu)
+    ffi (1.17.0-x86_64-linux-musl)
     formatador (1.1.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -190,7 +190,6 @@ GEM
     matrix (0.4.2)
     method_source (1.1.0)
     mini_mime (1.1.5)
-    mini_portile2 (2.8.7)
     minitest (5.24.1)
     msgpack (1.7.2)
     mutex_m (0.2.0)
@@ -205,9 +204,6 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     nio4r (2.7.3)
-    nokogiri (1.16.6)
-      mini_portile2 (~> 2.8.2)
-      racc (~> 1.4)
     nokogiri (1.16.6-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.16.6-x86_64-linux)
@@ -431,8 +427,8 @@ GEM
 
 PLATFORMS
   arm64-darwin-23
-  ruby
   x86_64-linux
+  x86_64-linux-musl
 
 DEPENDENCIES
   amazing_print
