@@ -1,6 +1,3 @@
-inherit_from:
-  - node_modules/@prettier/plugin-ruby/rubocop.yml
-
 require:
   - rubocop-performance
   - rubocop-rails
@@ -107,11 +104,25 @@ Style/QuotedSymbols:
 Style/RequireOrder:
   Enabled: false
 
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/Lambda:
+  EnforcedStyle: line_count_dependent
+
+Style/EmptyMethod:
+  Enabled: false
+
 ### Layout
 
-Layout/LineLength:
-  Max: 190
-  AllowedPatterns: ['\A#'] # Allow long comments
+Layout:
+  Enabled: false
 
 ### Metrics
 

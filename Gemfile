@@ -113,9 +113,6 @@ group :development do
   # A native development UI for ViewComponent (https://github.com/lookbook-hq/lookbook)
   gem 'lookbook'
 
-  # prettier plugin for the Ruby programming language (https://github.com/prettier/plugin-ruby#readme)
-  gem 'prettier'
-
   # A gem for generating annotations for Rails projects. (https://github.com/drwl/annotaterb)
   gem 'annotaterb'
 

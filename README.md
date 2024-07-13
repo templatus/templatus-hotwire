@@ -40,7 +40,8 @@ There are two sister repositories:
 - [Puma-dev](https://github.com/puma/puma-dev) for using .test-domain and HTTPS in development
 - [Overmind](https://github.com/DarthSim/overmind) for starting up the application locally (Procfile handling like Foreman)
 - [dotenv](https://github.com/bkeepers/dotenv) to load environment variables from .env into ENV
-- [Prettier](https://prettier.io/) for auto-formatting JavaScript and Ruby code in Visual Studio Code
+- [Prettier](https://prettier.io/) for auto-formatting JavaScript code in Visual Studio Code
+- [SyntaxTree](https://github.com/ruby-syntax-tree/syntax_tree) for auto-formatting Ruby code in Visual Studio Code
 - [Lookbook](https://github.com/allmarkedup/lookbook) as development UI for ViewComponent
 - [annotaterb](https://github.com/drwl/annotaterb) for annotating models and routes
 - Live reloading
