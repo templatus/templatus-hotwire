@@ -110,7 +110,7 @@ GEM
     docile (1.4.0)
     dotenv (3.1.2)
     drb (2.2.1)
-    dry-cli (1.0.0)
+    dry-cli (1.1.0)
     erubi (1.13.0)
     factory_bot (6.4.6)
       activesupport (>= 5.0.0)
