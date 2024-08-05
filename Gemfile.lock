@@ -139,7 +139,7 @@ GEM
       rspec (>= 2.99.0, < 4.0)
     heroicon (1.0.0)
       rails (>= 5.2)
-    honeybadger (5.15.4)
+    honeybadger (5.15.5)
     htmlbeautifier (1.4.3)
     htmlentities (4.3.4)
     i18n (1.14.5)
