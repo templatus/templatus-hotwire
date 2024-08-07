@@ -4160,9 +4160,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.4.7":
-  version: 3.4.7
-  resolution: "tailwindcss@npm:3.4.7"
+"tailwindcss@npm:^3.4.8":
+  version: 3.4.8
+  resolution: "tailwindcss@npm:3.4.8"
   dependencies:
     "@alloc/quick-lru": "npm:^5.2.0"
     arg: "npm:^5.0.2"
@@ -4189,7 +4189,7 @@ __metadata:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: 10c0/dd74c29ae0ec314d46300a1163b106b84d3ca58d71e4e16c2c8ad9ee3d7ba6cfeab4a97176c0e9bfeebc5e9cd9636531648a3f3874ede376751a572d230dd979
+  checksum: 10c0/f4be9663f9ae3363e9de141541248c1455ef21a2fbdb84f7c44ae29cf535061b5380fadaa8d2bf6cdac42cb9dfa92ad9a4c50d1752d1db0ae8d26caace3a7216
   languageName: node
   linkType: hard
 
@@ -4233,7 +4233,7 @@ __metadata:
     register-service-worker: "npm:^1.7.2"
     rollup: "npm:^4.20.0"
     size-limit: "npm:^11.1.4"
-    tailwindcss: "npm:^3.4.7"
+    tailwindcss: "npm:^3.4.8"
     timeago.js: "npm:^4.0.2"
     typescript: "npm:^5.5.4"
     typescript-eslint: "npm:^8.0.1"
