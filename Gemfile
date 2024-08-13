@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby file: '.ruby-version'
 
 # Full-stack web application framework. (https://rubyonrails.org)
-gem 'rails', '~> 7.1.3', '>= 7.1.3.3'
+gem 'rails', '~> 7.2.0'
 
 # Use Vite in Rails and bring joy to your JavaScript experience (https://github.com/ElMassimo/vite_ruby)
 gem 'vite_rails'
@@ -54,14 +54,17 @@ gem 'rack-brotli'
 gem 'sidekiq'
 
 # Lock staging servers from search engines and prying eyes. (http://lockup.interdiscipline.com)
-gem 'lockup'
+gem 'lockup', github: 'ledermann/lockup', branch: 'rails-7-2'
 
 # Ruby on Rails applications monitoring (https://www.rorvswild.com)
 gem 'rorvswild'
 
 group :development, :test do
   # Debugging functionality for Ruby (https://github.com/ruby/debug)
-  gem 'debug', platforms: %i[mri windows]
+  gem 'debug', platforms: %i[mri windows], require: 'debug/prelude'
+
+  # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
+  gem 'brakeman', require: false
 
   # Loads environment variables from `.env`. (https://github.com/bkeepers/dotenv)
   gem 'dotenv'
@@ -100,9 +103,6 @@ end
 group :development do
   # A debugging tool for your Ruby on Rails applications. (https://github.com/rails/web-console)
   gem 'web-console', '>= 4.1.0'
-
-  # Profiles loading speed for rack applications. (https://miniprofiler.com)
-  # gem 'rack-mini-profiler', '~> 2.0'
 
   # Listen to file modifications (https://github.com/guard/listen)
   gem 'listen', '~> 3.3'

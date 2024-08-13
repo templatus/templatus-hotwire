@@ -65,6 +65,9 @@ jobs:
       - name: Compile assets
         run: bin/rails assets:precompile
 
+      - name: Scan for common Rails security vulnerabilities using static analysis
+        run: bin/brakeman --no-pager
+
       - name: Run Ruby Tests
         run: bin/rspec
 

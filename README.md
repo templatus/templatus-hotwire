@@ -19,7 +19,7 @@ There are two sister repositories:
 ### Backend
 
 - [Ruby](https://www.ruby-lang.org/de/) 3.3
-- [Ruby on Rails](https://rubyonrails.org/) 7.1
+- [Ruby on Rails](https://rubyonrails.org/) 7.2
 - [ActionCable](https://guides.rubyonrails.org/action_cable_overview.html) for WebSocket communication
 - [PostgreSQL](https://www.postgresql.org/) for using as SQL database
 - [Sidekiq](https://sidekiq.org/) for background processing

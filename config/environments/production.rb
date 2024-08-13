@@ -51,6 +51,9 @@ Rails.application.configure do
   config.force_ssl =
     ActiveModel::Type::Boolean.new.cast ENV.fetch('FORCE_SSL', true)
 
+  # Skip http-to-https redirect for the default health check endpoint.
+  # config.ssl_options = { redirect: { exclude: ->(request) { request.path == "/up" } } }
+
   # Log to STDOUT by default
   config.logger =
     ActiveSupport::Logger
@@ -61,7 +64,7 @@ Rails.application.configure do
   # Prepend all log lines with the following tags.
   config.log_tags = %i[remote_ip request_id]
 
-  # Info include generic and useful information about system operation, but avoids logging too much
+  # "info" includes generic and useful information about system operation, but avoids logging too much
   # information to avoid inadvertent exposure of personally identifiable information (PII). If you
   # want to log everything, set the level to "debug".
   config.log_level = ENV.fetch('RAILS_LOG_LEVEL', 'info')
@@ -76,6 +79,8 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "templatus_production"
   config.active_job.queue_adapter = :sidekiq
 
+  # Disable caching for Action Mailer templates even if Action Controller
+  # caching is enabled.
   config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.

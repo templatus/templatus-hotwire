@@ -1,80 +1,84 @@
+GIT
+  remote: https://github.com/ledermann/lockup.git
+  revision: d3b7154d322b6268a95ffc0dbb8c8fcc439c0157
+  branch: rails-7-2
+  specs:
+    lockup (1.7.1)
+      rails (>= 3)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    actioncable (7.1.3.4)
-      actionpack (= 7.1.3.4)
-      activesupport (= 7.1.3.4)
+    actioncable (7.2.0)
+      actionpack (= 7.2.0)
+      activesupport (= 7.2.0)
       nio4r (~> 2.0)
       websocket-driver (>= 0.6.1)
       zeitwerk (~> 2.6)
-    actionmailbox (7.1.3.4)
-      actionpack (= 7.1.3.4)
-      activejob (= 7.1.3.4)
-      activerecord (= 7.1.3.4)
-      activestorage (= 7.1.3.4)
-      activesupport (= 7.1.3.4)
-      mail (>= 2.7.1)
-      net-imap
-      net-pop
-      net-smtp
-    actionmailer (7.1.3.4)
-      actionpack (= 7.1.3.4)
-      actionview (= 7.1.3.4)
-      activejob (= 7.1.3.4)
-      activesupport (= 7.1.3.4)
-      mail (~> 2.5, >= 2.5.4)
-      net-imap
-      net-pop
-      net-smtp
+    actionmailbox (7.2.0)
+      actionpack (= 7.2.0)
+      activejob (= 7.2.0)
+      activerecord (= 7.2.0)
+      activestorage (= 7.2.0)
+      activesupport (= 7.2.0)
+      mail (>= 2.8.0)
+    actionmailer (7.2.0)
+      actionpack (= 7.2.0)
+      actionview (= 7.2.0)
+      activejob (= 7.2.0)
+      activesupport (= 7.2.0)
+      mail (>= 2.8.0)
       rails-dom-testing (~> 2.2)
-    actionpack (7.1.3.4)
-      actionview (= 7.1.3.4)
-      activesupport (= 7.1.3.4)
+    actionpack (7.2.0)
+      actionview (= 7.2.0)
+      activesupport (= 7.2.0)
       nokogiri (>= 1.8.5)
       racc
-      rack (>= 2.2.4)
+      rack (>= 2.2.4, < 3.2)
       rack-session (>= 1.0.1)
       rack-test (>= 0.6.3)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
-    actiontext (7.1.3.4)
-      actionpack (= 7.1.3.4)
-      activerecord (= 7.1.3.4)
-      activestorage (= 7.1.3.4)
-      activesupport (= 7.1.3.4)
+      useragent (~> 0.16)
+    actiontext (7.2.0)
+      actionpack (= 7.2.0)
+      activerecord (= 7.2.0)
+      activestorage (= 7.2.0)
+      activesupport (= 7.2.0)
       globalid (>= 0.6.0)
       nokogiri (>= 1.8.5)
-    actionview (7.1.3.4)
-      activesupport (= 7.1.3.4)
+    actionview (7.2.0)
+      activesupport (= 7.2.0)
       builder (~> 3.1)
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
-    activejob (7.1.3.4)
-      activesupport (= 7.1.3.4)
+    activejob (7.2.0)
+      activesupport (= 7.2.0)
       globalid (>= 0.3.6)
-    activemodel (7.1.3.4)
-      activesupport (= 7.1.3.4)
-    activerecord (7.1.3.4)
-      activemodel (= 7.1.3.4)
-      activesupport (= 7.1.3.4)
+    activemodel (7.2.0)
+      activesupport (= 7.2.0)
+    activerecord (7.2.0)
+      activemodel (= 7.2.0)
+      activesupport (= 7.2.0)
       timeout (>= 0.4.0)
-    activestorage (7.1.3.4)
-      actionpack (= 7.1.3.4)
-      activejob (= 7.1.3.4)
-      activerecord (= 7.1.3.4)
-      activesupport (= 7.1.3.4)
+    activestorage (7.2.0)
+      actionpack (= 7.2.0)
+      activejob (= 7.2.0)
+      activerecord (= 7.2.0)
+      activesupport (= 7.2.0)
       marcel (~> 1.0)
-    activesupport (7.1.3.4)
+    activesupport (7.2.0)
       base64
       bigdecimal
-      concurrent-ruby (~> 1.0, >= 1.0.2)
+      concurrent-ruby (~> 1.0, >= 1.3.1)
       connection_pool (>= 2.2.5)
       drb
       i18n (>= 1.6, < 2)
+      logger (>= 1.4.2)
       minitest (>= 5.1)
-      mutex_m
-      tzinfo (~> 2.0)
+      securerandom (>= 0.3)
+      tzinfo (~> 2.0, >= 2.0.5)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
     amazing_print (1.6.0)
@@ -85,6 +89,8 @@ GEM
     bindex (0.8.1)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
+    brakeman (6.1.2)
+      racc
     brotli (0.5.0)
     builder (3.3.0)
     capybara (3.40.0)
@@ -153,8 +159,6 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    lockup (1.7.1)
-      rails (>= 3, < 7.2)
     logger (1.6.0)
     lograge (0.14.0)
       actionpack (>= 4)
@@ -188,7 +192,6 @@ GEM
     mini_mime (1.1.5)
     minitest (5.24.1)
     msgpack (1.7.2)
-    mutex_m (0.2.0)
     nenv (0.3.0)
     net-imap (0.4.14)
       date
@@ -239,20 +242,20 @@ GEM
     rackup (2.1.0)
       rack (>= 3)
       webrick (~> 1.8)
-    rails (7.1.3.4)
-      actioncable (= 7.1.3.4)
-      actionmailbox (= 7.1.3.4)
-      actionmailer (= 7.1.3.4)
-      actionpack (= 7.1.3.4)
-      actiontext (= 7.1.3.4)
-      actionview (= 7.1.3.4)
-      activejob (= 7.1.3.4)
-      activemodel (= 7.1.3.4)
-      activerecord (= 7.1.3.4)
-      activestorage (= 7.1.3.4)
-      activesupport (= 7.1.3.4)
+    rails (7.2.0)
+      actioncable (= 7.2.0)
+      actionmailbox (= 7.2.0)
+      actionmailer (= 7.2.0)
+      actionpack (= 7.2.0)
+      actiontext (= 7.2.0)
+      actionview (= 7.2.0)
+      activejob (= 7.2.0)
+      activemodel (= 7.2.0)
+      activerecord (= 7.2.0)
+      activestorage (= 7.2.0)
+      activesupport (= 7.2.0)
       bundler (>= 1.15.0)
-      railties (= 7.1.3.4)
+      railties (= 7.2.0)
     rails-dom-testing (2.2.0)
       activesupport (>= 5.0.0)
       minitest
@@ -260,10 +263,10 @@ GEM
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
-    railties (7.1.3.4)
-      actionpack (= 7.1.3.4)
-      activesupport (= 7.1.3.4)
-      irb
+    railties (7.2.0)
+      actionpack (= 7.2.0)
+      activesupport (= 7.2.0)
+      irb (~> 1.13)
       rackup (>= 1.0.0)
       rake (>= 12.2)
       thor (~> 1.0, >= 1.2.2)
@@ -341,6 +344,7 @@ GEM
       rubocop (~> 1.61)
       rubocop-rspec (~> 3, >= 3.0.1)
     ruby-progressbar (1.13.0)
+    securerandom (0.3.1)
     shellany (0.0.1)
     sidekiq (7.3.0)
       concurrent-ruby (< 2)
@@ -379,6 +383,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.5.0)
+    useragent (0.16.10)
     view_component (3.13.0)
       activesupport (>= 5.2.0, < 8.0)
       concurrent-ruby (~> 1.0)
@@ -413,6 +418,7 @@ DEPENDENCIES
   amazing_print
   annotaterb
   bootsnap (>= 1.4.4)
+  brakeman
   capybara
   debug
   dotenv
@@ -421,7 +427,7 @@ DEPENDENCIES
   heroicon
   honeybadger
   listen (~> 3.3)
-  lockup
+  lockup!
   lograge
   lookbook
   pg (~> 1.1)
@@ -429,7 +435,7 @@ DEPENDENCIES
   rack-brotli
   rack-canonical-host
   rack-cors
-  rails (~> 7.1.3, >= 7.1.3.3)
+  rails (~> 7.2.0)
   redis (>= 4.0.1)
   rorvswild
   rspec-rails
