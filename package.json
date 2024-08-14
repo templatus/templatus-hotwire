@@ -24,7 +24,7 @@
   "devDependencies": {
     "@size-limit/file": "^11.1.4",
     "@types/rails__actioncable": "^6.1.11",
-    "cypress": "^13.13.2",
+    "cypress": "^13.13.3",
     "eslint": "^9.9.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-cypress": "^3.5.0",
