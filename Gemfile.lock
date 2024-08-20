@@ -91,7 +91,7 @@ GEM
       msgpack (~> 1.2)
     brakeman (6.1.2)
       racc
-    brotli (0.5.0)
+    brotli (0.6.0)
     builder (3.3.0)
     capybara (3.40.0)
       addressable
