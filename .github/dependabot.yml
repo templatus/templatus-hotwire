@@ -19,6 +19,39 @@ updates:
     labels:
       - 'dependencies'
       - 'ruby'
+    groups:
+      rails:
+        patterns:
+          - 'actioncable'
+          - 'actionmailbox'
+          - 'actionmailer'
+          - 'actionpack'
+          - 'actiontext'
+          - 'actionview'
+          - 'activejob'
+          - 'activemodel'
+          - 'activerecord'
+          - 'activestorage'
+          - 'activesupport'
+          - 'rails'
+          - 'railties'
+          - 'globalid'
+          - 'i18n'
+          - 'mail'
+          - 'rack'
+          - 'rackup'
+      rubocop:
+        patterns:
+          - 'rubocop*'
+      turbo:
+        patterns:
+          - 'turbo-rails'
+          - 'stimulus-rails'
+      rspec:
+        patterns:
+          - 'rspec*'
+          - 'factory_bot'
+          - 'factory_bot_rails'
 
   - package-ecosystem: npm
     directory: '/'
