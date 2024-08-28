@@ -193,7 +193,7 @@ GEM
     minitest (5.25.1)
     msgpack (1.7.2)
     nenv (0.3.0)
-    net-imap (0.4.14)
+    net-imap (0.4.15)
       date
       net-protocol
     net-pop (0.1.2)
