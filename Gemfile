@@ -63,7 +63,7 @@ group :development, :test do
   # Debugging functionality for Ruby (https://github.com/ruby/debug)
   gem 'debug', platforms: %i[mri windows], require: 'debug/prelude'
 
-  # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
+  # Security vulnerability scanner for Ruby on Rails. (https://brakemanscanner.org)
   gem 'brakeman', require: false
 
   # Loads environment variables from `.env`. (https://github.com/bkeepers/dotenv)
