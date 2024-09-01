@@ -1,7 +1,6 @@
 GIT
-  remote: https://github.com/ledermann/lockup.git
-  revision: d3b7154d322b6268a95ffc0dbb8c8fcc439c0157
-  branch: rails-7-2
+  remote: https://github.com/interdiscipline/lockup.git
+  revision: 72624656305e9c5f37aabd713ea8dfdab372f3d6
   specs:
     lockup (1.7.1)
       rails (>= 3)

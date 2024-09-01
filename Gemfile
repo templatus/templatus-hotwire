@@ -54,7 +54,7 @@ gem 'rack-brotli'
 gem 'sidekiq'
 
 # Lock staging servers from search engines and prying eyes. (http://lockup.interdiscipline.com)
-gem 'lockup', github: 'ledermann/lockup', branch: 'rails-7-2'
+gem 'lockup', github: 'interdiscipline/lockup'
 
 # Ruby on Rails applications monitoring (https://www.rorvswild.com)
 gem 'rorvswild'
