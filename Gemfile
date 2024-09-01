@@ -98,6 +98,9 @@ group :development, :test do
 
   # Slim template linting tool (https://github.com/sds/slim-lint)
   gem 'slim_lint'
+
+  # An XML toolkit for Ruby (https://github.com/ruby/rexml)
+  gem 'rexml'
 end
 
 group :development do
