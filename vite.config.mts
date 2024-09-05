@@ -1,22 +1,34 @@
-import { defineConfig, splitVendorChunkPlugin } from 'vite';
-import RubyPlugin from 'vite-plugin-ruby';
-import FullReload from 'vite-plugin-full-reload';
-import StimulusHMR from 'vite-plugin-stimulus-hmr';
-import { fileURLToPath, URL } from 'url';
+import { defineConfig } from 'vite';
+import ViteRails from 'vite-plugin-rails';
+import { resolve } from 'path';
 
 export default defineConfig({
   build: {
     assetsInlineLimit: 0,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        },
+      },
+    },
   },
   plugins: [
-    splitVendorChunkPlugin(),
-    RubyPlugin(),
-    StimulusHMR(),
-    FullReload(['config/routes.rb', 'app/views/**/*', 'app/components/**/*']),
+    ViteRails({
+      fullReload: {
+        additionalPaths: [
+          'config/routes.rb',
+          'app/views/**/*',
+          'app/components/**/*',
+        ],
+      },
+    }),
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./app/frontend', import.meta.url)),
+      '@': resolve(__dirname, 'app/frontend'),
     },
   },
   server: {
