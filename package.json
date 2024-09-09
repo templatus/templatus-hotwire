@@ -22,7 +22,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@size-limit/file": "^11.1.4",
+    "@size-limit/file": "^11.1.5",
     "@types/rails__actioncable": "^6.1.11",
     "cypress": "^13.14.2",
     "eslint": "^9.10.0",
