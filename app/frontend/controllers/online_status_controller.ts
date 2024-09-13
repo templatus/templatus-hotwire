@@ -6,14 +6,20 @@ export default class extends Controller {
   declare readonly hasIndicatorTarget: boolean;
   declare readonly indicatorTarget: HTMLElement;
 
+  declare boundSetOnline: () => void;
+  declare boundSetOffline: () => void;
+
   connect() {
-    window.addEventListener('online', this.setOnline.bind(this));
-    window.addEventListener('offline', this.setOffline.bind(this));
+    this.boundSetOnline = this.setOnline.bind(this);
+    window.addEventListener('online', this.boundSetOnline);
+
+    this.boundSetOffline = this.setOffline.bind(this);
+    window.addEventListener('offline', this.boundSetOffline);
   }
 
   disconnect() {
-    window.removeEventListener('online', this.setOnline.bind(this));
-    window.removeEventListener('offline', this.setOffline.bind(this));
+    window.removeEventListener('online', this.boundSetOnline);
+    window.removeEventListener('offline', this.boundSetOffline);
   }
 
   setOnline() {
