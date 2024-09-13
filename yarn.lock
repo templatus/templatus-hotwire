@@ -315,20 +315,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hotwired/turbo-rails@npm:^8.0.5":
-  version: 8.0.5
-  resolution: "@hotwired/turbo-rails@npm:8.0.5"
+"@hotwired/turbo-rails@npm:^8.0.6":
+  version: 8.0.6
+  resolution: "@hotwired/turbo-rails@npm:8.0.6"
   dependencies:
-    "@hotwired/turbo": "npm:^8.0.5"
+    "@hotwired/turbo": "npm:^8.0.6"
     "@rails/actioncable": "npm:^7.0"
-  checksum: 10c0/eed67bcf4258500897772d38831bce5954a851e457a584e377518e10c5b09bab81eaa2902f5e689bdb60f4433ef9765c2cd6cd6760033e39b962fdc2d4fc08aa
+  checksum: 10c0/121cf28f31447e8209d92ad69497a85c5e56f6b9fa7fc49960e2ce9a9d92d5a07ef22daaf5b3d435bc9a06ee05c0dc550d45606e5d1b41562886fe09e26c4e8d
   languageName: node
   linkType: hard
 
-"@hotwired/turbo@npm:^8.0.5":
-  version: 8.0.5
-  resolution: "@hotwired/turbo@npm:8.0.5"
-  checksum: 10c0/fc8d1bcb2707c601f98c47d7598b538faaa894f0b16a00e88de0d9d514ebc105631261381acef1ba5c1fa2b8c638a1f4ff2583c881f8da520afa42931884bd88
+"@hotwired/turbo@npm:^8.0.6":
+  version: 8.0.6
+  resolution: "@hotwired/turbo@npm:8.0.6"
+  checksum: 10c0/d4f63dae16e84e78dc121e6174dd3c5dc85034b90adf9922666fe2050ce643209465a3acc894f7e1f20c9415c404e18c5717191b836ef9f3b096c3f5142ee6ff
   languageName: node
   linkType: hard
 
@@ -4172,7 +4172,7 @@ __metadata:
   dependencies:
     "@honeybadger-io/js": "npm:^6.10.0"
     "@hotwired/stimulus": "npm:^3.2.2"
-    "@hotwired/turbo-rails": "npm:^8.0.5"
+    "@hotwired/turbo-rails": "npm:^8.0.6"
     "@rails/actioncable": "npm:^7.2.100"
     "@size-limit/file": "npm:^11.1.5"
     "@tailwindcss/forms": "npm:^0.5.9"
