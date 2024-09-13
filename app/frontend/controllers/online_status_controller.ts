@@ -1,11 +1,10 @@
 import { Controller } from '@hotwired/stimulus';
 
 export default class extends Controller {
-  static targets = ['indicator'];
+  static readonly targets = ['indicator'];
 
   declare readonly hasIndicatorTarget: boolean;
   declare readonly indicatorTarget: HTMLElement;
-  declare readonly indicatorTargets: HTMLElement[];
 
   connect() {
     window.addEventListener('online', this.setOnline.bind(this));
@@ -18,12 +17,16 @@ export default class extends Controller {
   }
 
   setOnline() {
-    this.indicatorTarget.textContent = '';
-    this.indicatorTarget.classList.add('hidden');
+    if (this.hasIndicatorTarget) {
+      this.indicatorTarget.textContent = '';
+      this.indicatorTarget.classList.add('hidden');
+    }
   }
 
   setOffline() {
-    this.indicatorTarget.textContent = 'You are offline';
-    this.indicatorTarget.classList.remove('hidden');
+    if (this.hasIndicatorTarget) {
+      this.indicatorTarget.textContent = 'You are offline';
+      this.indicatorTarget.classList.remove('hidden');
+    }
   }
 }
