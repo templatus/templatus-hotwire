@@ -5,6 +5,12 @@ GIT
     lockup (1.7.1)
       rails (>= 3)
 
+GIT
+  remote: https://github.com/nejdetkadir/phlex-heroicons.git
+  revision: 59ac37f9bb41580858845926ed21cd62ec7de6d2
+  specs:
+    phlex-heroicons (1.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -142,8 +148,6 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    heroicon (1.0.0)
-      rails (>= 5.2)
     honeybadger (5.16.0)
       logger
     htmlbeautifier (1.4.3)
@@ -216,6 +220,10 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.8)
+    phlex (1.10.3)
+    phlex-rails (1.2.1)
+      phlex (~> 1.10.0)
+      railties (>= 6.1, < 8)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -357,23 +365,10 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.13.1)
     simplecov_json_formatter (0.1.4)
-    slim (5.2.1)
-      temple (~> 0.10.0)
-      tilt (>= 2.1.0)
-    slim-rails (3.6.3)
-      actionpack (>= 3.1)
-      railties (>= 3.1)
-      slim (>= 3.0, < 6.0, != 5.0.0)
-    slim_lint (0.29.0)
-      rexml (~> 3.2)
-      rubocop (>= 1.0, < 2.0)
-      slim (>= 3.0, < 6.0)
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringio (3.1.1)
-    temple (0.10.3)
     thor (1.3.2)
-    tilt (2.4.0)
     timeout (0.4.1)
     turbo-rails (2.0.10)
       actionpack (>= 6.0.0)
@@ -422,7 +417,6 @@ DEPENDENCIES
   dotenv
   factory_bot_rails
   guard-rspec
-  heroicon
   honeybadger
   listen (~> 3.3)
   lockup!
@@ -430,6 +424,8 @@ DEPENDENCIES
   lookbook
   ostruct
   pg (~> 1.1)
+  phlex-heroicons!
+  phlex-rails
   puma (>= 5.0)
   rack-brotli
   rack-canonical-host
@@ -448,12 +444,9 @@ DEPENDENCIES
   rubocop-rspec_rails
   sidekiq
   simplecov
-  slim-rails
-  slim_lint
   stimulus-rails
   turbo-rails
   tzinfo-data
-  view_component
   vite_rails
   web-console (>= 4.1.0)
 

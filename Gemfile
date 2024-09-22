@@ -14,14 +14,11 @@ gem 'turbo-rails'
 # A modest JavaScript framework for the HTML you already have. (https://stimulus.hotwired.dev)
 gem 'stimulus-rails'
 
-# A framework for building reusable, testable & encapsulated view components in Ruby on Rails. (https://viewcomponent.org)
-gem 'view_component'
+# A Phlex adapter for Rails (https://www.phlex.fun)
+gem 'phlex-rails'
 
-# Slim templates generator for Rails (https://github.com/slim-template/slim-rails)
-gem 'slim-rails'
-
-# Rails View Helpers for Heroicons. (https://github.com/bharget/heroicon)
-gem 'heroicon'
+# Heroicons extension for Phlex (https://github.com/nejdetkadir/phlex-heroicons)
+gem 'phlex-heroicons', github: 'nejdetkadir/phlex-heroicons'
 
 # Pg is the Ruby interface to the PostgreSQL RDBMS (https://github.com/ged/ruby-pg)
 gem 'pg', '~> 1.1'
@@ -98,9 +95,6 @@ group :development, :test do
 
   # Code style checking for factory_bot files (https://github.com/rubocop/rubocop-factory_bot)
   gem 'rubocop-factory_bot', require: false
-
-  # Slim template linting tool (https://github.com/sds/slim-lint)
-  gem 'slim_lint'
 
   # An XML toolkit for Ruby (https://github.com/ruby/rexml)
   gem 'rexml'

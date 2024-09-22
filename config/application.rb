@@ -27,6 +27,10 @@ module TemplatusHotwire
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w[assets tasks middleware])
 
+    config.autoload_paths << "#{root}/app/views"
+    config.autoload_paths << "#{root}/app/views/layouts"
+    config.autoload_paths << "#{root}/app/views/components"
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
@@ -53,7 +57,5 @@ module TemplatusHotwire
     config.x.cypress =
       Rails.env.local? &&
         ActiveModel::Type::Boolean.new.cast(ENV.fetch('CYPRESS', false))
-
-    config.view_component.capture_compatibility_patch_enabled = true
   end
 end

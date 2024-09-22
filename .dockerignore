@@ -14,7 +14,6 @@
 .yarnclean
 .prettierignore
 .prettierrc.json
-.slim-lint.yml
 docs
 coverage
 **/*.DS_Store

@@ -19,11 +19,11 @@ end
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
-require 'view_component/test_helpers'
+require 'phlex/testing/rails/view_helper'
 require 'capybara/rspec'
 
 RSpec.configure do |config|
-  config.include ViewComponent::TestHelpers, type: :component
+  config.include Phlex::Testing::Rails::ViewHelper, type: :component
   config.include Capybara::RSpecMatchers, type: :component
 end
 

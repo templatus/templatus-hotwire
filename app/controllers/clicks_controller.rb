@@ -1,16 +1,17 @@
 class ClicksController < ApplicationController
   def index
-    @clicks = Click.order(created_at: :desc).limit(5).load_async
-    @clicks_count = Click.count
+    render Clicks::IndexView.new(
+             clicks: Click.order(created_at: :desc).limit(5).load_async,
+             count: Click.count,
+           )
   end
 
   def create
     Click.create! user_agent: request.user_agent,
                   ip: anonymize(request.remote_ip)
-    flash.now[:notice] = t('.success')
+    render_flash_update notice: t('.success')
   rescue StandardError
-    flash.now[:alert] = t('.fail')
-    render status: :unprocessable_content
+    render_flash_update alert: t('.fail'), status: :unprocessable_entity
   end
 
   private

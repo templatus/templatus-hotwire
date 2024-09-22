@@ -100,12 +100,8 @@ Rails.application.configure do
 
   Rails.application.config.hosts << ENV.fetch('APP_HOST', nil)
 
-  config.view_component.default_preview_layout = 'preview'
-
-  config.view_component.preview_paths << Rails.root.join(
-    'spec',
-    'component_previews',
-  )
+  config.lookbook.preview_paths = ['spec/views/component_previews']
+  config.lookbook.preview_layout = 'preview'
 
   # Enable load_async
   config.active_record.async_query_executor = :global_thread_pool
