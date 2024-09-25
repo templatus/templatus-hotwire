@@ -19,7 +19,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/request@npm:^3.0.1":
+"@cypress/request@npm:^3.0.4":
   version: 3.0.5
   resolution: "@cypress/request@npm:3.0.5"
   dependencies:
@@ -1456,11 +1456,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:^13.14.2":
-  version: 13.14.2
-  resolution: "cypress@npm:13.14.2"
+"cypress@npm:^13.15.0":
+  version: 13.15.0
+  resolution: "cypress@npm:13.15.0"
   dependencies:
-    "@cypress/request": "npm:^3.0.1"
+    "@cypress/request": "npm:^3.0.4"
     "@cypress/xvfb": "npm:^1.2.4"
     "@types/sinonjs__fake-timers": "npm:8.1.1"
     "@types/sizzle": "npm:^2.3.2"
@@ -1504,7 +1504,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 10c0/ca838bbf878c46aa643e879c83c1532250cb3ec12cdc4e94e9c483bf042179a8de2b9d30fcc7777820793d71c44627c75c35c472b9de8b8dd39500ffbea75a34
+  checksum: 10c0/d453c89f8220aecb726f842ea2895f452a4ec0c74f718834354533da62d28545eb68fc3ac21209df52d4314b4db4221d26ce8f33a6f08641eec3b4269f037717
   languageName: node
   linkType: hard
 
@@ -4202,7 +4202,7 @@ __metadata:
     "@tailwindcss/forms": "npm:^0.5.9"
     "@types/rails__actioncable": "npm:^6.1.11"
     autoprefixer: "npm:^10.4.20"
-    cypress: "npm:^13.14.2"
+    cypress: "npm:^13.15.0"
     el-transition: "npm:^0.0.7"
     eslint: "npm:^9.11.1"
     eslint-config-prettier: "npm:^9.1.0"
