@@ -1825,14 +1825,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-cypress@npm:^3.5.0":
-  version: 3.5.0
-  resolution: "eslint-plugin-cypress@npm:3.5.0"
+"eslint-plugin-cypress@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "eslint-plugin-cypress@npm:4.0.0"
   dependencies:
-    globals: "npm:^13.20.0"
+    globals: "npm:^15.11.0"
   peerDependencies:
-    eslint: ">=7"
-  checksum: 10c0/45b26d454a101e6e3adc4f4c213f660f5b09ceedab692768b06533e05fe40295344ca744f75d23e552ca6ae512bf18efe154cd7c341389a60e35ef252f29431d
+    eslint: ">=9"
+  checksum: 10c0/56711e177c272e01a90116a94508a829d40143b2d20c93e31623d905050d18312d6055842127bc3cfded1533c253b2f0eb76bf2ee8c56e5431ce5d54664867c9
   languageName: node
   linkType: hard
 
@@ -2362,19 +2362,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^13.20.0":
-  version: 13.24.0
-  resolution: "globals@npm:13.24.0"
-  dependencies:
-    type-fest: "npm:^0.20.2"
-  checksum: 10c0/d3c11aeea898eb83d5ec7a99508600fbe8f83d2cf00cbb77f873dbf2bcb39428eff1b538e4915c993d8a3b3473fa71eeebfe22c9bb3a3003d1e26b1f2c8a42cd
-  languageName: node
-  linkType: hard
-
 "globals@npm:^14.0.0":
   version: 14.0.0
   resolution: "globals@npm:14.0.0"
   checksum: 10c0/b96ff42620c9231ad468d4c58ff42afee7777ee1c963013ff8aabe095a451d0ceeb8dcd8ef4cbd64d2538cef45f787a78ba3a9574f4a634438963e334471302d
+  languageName: node
+  linkType: hard
+
+"globals@npm:^15.11.0":
+  version: 15.11.0
+  resolution: "globals@npm:15.11.0"
+  checksum: 10c0/861e39bb6bd9bd1b9f355c25c962e5eb4b3f0e1567cf60fa6c06e8c502b0ec8706b1cce055d69d84d0b7b8e028bec5418cf629a54e7047e116538d1c1c1a375c
   languageName: node
   linkType: hard
 
@@ -4246,7 +4244,7 @@ __metadata:
     el-transition: "npm:^0.0.7"
     eslint: "npm:^9.12.0"
     eslint-config-prettier: "npm:^9.1.0"
-    eslint-plugin-cypress: "npm:^3.5.0"
+    eslint-plugin-cypress: "npm:^4.0.0"
     eslint-plugin-prettier: "npm:^5.2.1"
     eslint-plugin-tailwindcss: "npm:^3.17.5"
     plausible-tracker: "npm:^0.3.9"
@@ -4396,13 +4394,6 @@ __metadata:
   dependencies:
     prelude-ls: "npm:^1.2.1"
   checksum: 10c0/7b3fd0ed43891e2080bf0c5c504b418fbb3e5c7b9708d3d015037ba2e6323a28152ec163bcb65212741fa5d2022e3075ac3c76440dbd344c9035f818e8ecee58
-  languageName: node
-  linkType: hard
-
-"type-fest@npm:^0.20.2":
-  version: 0.20.2
-  resolution: "type-fest@npm:0.20.2"
-  checksum: 10c0/dea9df45ea1f0aaa4e2d3bed3f9a0bfe9e5b2592bddb92eb1bf06e50bcf98dbb78189668cd8bc31a0511d3fc25539b4cd5c704497e53e93e2d40ca764b10bfc3
   languageName: node
   linkType: hard
 
