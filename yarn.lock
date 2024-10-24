@@ -1482,9 +1482,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:^13.15.0":
-  version: 13.15.0
-  resolution: "cypress@npm:13.15.0"
+"cypress@npm:^13.15.1":
+  version: 13.15.1
+  resolution: "cypress@npm:13.15.1"
   dependencies:
     "@cypress/request": "npm:^3.0.4"
     "@cypress/xvfb": "npm:^1.2.4"
@@ -1526,11 +1526,12 @@ __metadata:
     semver: "npm:^7.5.3"
     supports-color: "npm:^8.1.1"
     tmp: "npm:~0.2.3"
+    tree-kill: "npm:1.2.2"
     untildify: "npm:^4.0.0"
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 10c0/d453c89f8220aecb726f842ea2895f452a4ec0c74f718834354533da62d28545eb68fc3ac21209df52d4314b4db4221d26ce8f33a6f08641eec3b4269f037717
+  checksum: 10c0/9deb474949cbd4c87e9b26a0b51c29f86f7c8ecdf865848f9e41bf7359f1887908856864b0fd722e4aa78e263fa4e0ff8bb5190495ff5f89fed89a6b3d38bb27
   languageName: node
   linkType: hard
 
@@ -4240,7 +4241,7 @@ __metadata:
     "@tailwindcss/forms": "npm:^0.5.9"
     "@types/rails__actioncable": "npm:^6.1.11"
     autoprefixer: "npm:^10.4.20"
-    cypress: "npm:^13.15.0"
+    cypress: "npm:^13.15.1"
     el-transition: "npm:^0.0.7"
     eslint: "npm:^9.13.0"
     eslint-config-prettier: "npm:^9.1.0"
@@ -4346,6 +4347,15 @@ __metadata:
     universalify: "npm:^0.2.0"
     url-parse: "npm:^1.5.3"
   checksum: 10c0/aca7ff96054f367d53d1e813e62ceb7dd2eda25d7752058a74d64b7266fd07be75908f3753a32ccf866a2f997604b414cfb1916d6e7f69bc64d9d9939b0d6c45
+  languageName: node
+  linkType: hard
+
+"tree-kill@npm:1.2.2":
+  version: 1.2.2
+  resolution: "tree-kill@npm:1.2.2"
+  bin:
+    tree-kill: cli.js
+  checksum: 10c0/7b1b7c7f17608a8f8d20a162e7957ac1ef6cd1636db1aba92f4e072dc31818c2ff0efac1e3d91064ede67ed5dc57c565420531a8134090a12ac10cf792ab14d2
   languageName: node
   linkType: hard
 
