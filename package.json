@@ -35,7 +35,7 @@
     "rollup": "^4.24.3",
     "size-limit": "^11.1.6",
     "typescript": "^5.6.3",
-    "typescript-eslint": "^8.12.1",
+    "typescript-eslint": "^8.12.2",
     "vite": "^5.4.10",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-rails": "^0.5.0",
