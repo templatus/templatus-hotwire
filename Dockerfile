@@ -1,10 +1,10 @@
-FROM ghcr.io/ledermann/rails-base-builder:3.3.5-alpine AS builder
+FROM ghcr.io/ledermann/rails-base-builder:3.3.6-alpine AS builder
 
 # Remove some files not needed in resulting image.
 # Because they are required for building the image, they can't be added to .dockerignore
 RUN rm -r package.json tailwind.config.js postcss.config.js vite.config.mts tsconfig.json
 
-FROM ghcr.io/ledermann/rails-base-final:3.3.5-alpine
+FROM ghcr.io/ledermann/rails-base-final:3.3.6-alpine
 LABEL maintainer="georg@ledermann.dev"
 
 # Workaround to trigger builder's ONBUILDs to finish:
