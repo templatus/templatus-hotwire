@@ -150,7 +150,7 @@ GEM
       guard (~> 2.1)
       guard-compat (~> 1.1)
       rspec (>= 2.99.0, < 4.0)
-    honeybadger (5.19.1)
+    honeybadger (5.19.2)
       logger
     htmlbeautifier (1.4.3)
     htmlentities (4.3.4)
