@@ -30,7 +30,7 @@
     "eslint-plugin-cypress": "^4.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-tailwindcss": "^3.17.5",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.0",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "rollup": "^4.27.4",
     "size-limit": "^11.1.6",
