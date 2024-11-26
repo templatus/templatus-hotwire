@@ -503,10 +503,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rails/actioncable@npm:^7.0, @rails/actioncable@npm:^7.2.200":
+"@rails/actioncable@npm:^7.0":
   version: 7.2.200
   resolution: "@rails/actioncable@npm:7.2.200"
   checksum: 10c0/bc5fb1fc032346b85bfbea2c25cf0225903f7fe5dfd7c49073f5faff135042edf068cdec58982000b317e663126215dd4feb57a80c14b0e48e4ab989734e46a6
+  languageName: node
+  linkType: hard
+
+"@rails/actioncable@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "@rails/actioncable@npm:8.0.0"
+  checksum: 10c0/07cf13277594e530cdeff85b0416d0872b09ebfe40f9bfb5bbe612c74d7439c401981f8b29971e914af502bfafbf95ab661199a648da8dfa46058c1fbd40d658
   languageName: node
   linkType: hard
 
@@ -4238,7 +4245,7 @@ __metadata:
     "@honeybadger-io/js": "npm:^6.10.1"
     "@hotwired/stimulus": "npm:^3.2.2"
     "@hotwired/turbo-rails": "npm:^8.0.12"
-    "@rails/actioncable": "npm:^7.2.200"
+    "@rails/actioncable": "npm:^8.0.0"
     "@size-limit/file": "npm:^11.1.6"
     "@tailwindcss/forms": "npm:^0.5.9"
     "@types/rails__actioncable": "npm:^6.1.11"
