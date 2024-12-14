@@ -25,7 +25,7 @@
     "@size-limit/file": "^11.1.6",
     "@types/rails__actioncable": "^6.1.11",
     "cypress": "^13.16.1",
-    "eslint": "^9.16.0",
+    "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-cypress": "^4.1.0",
     "eslint-plugin-prettier": "^5.2.1",
