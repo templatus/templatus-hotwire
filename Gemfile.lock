@@ -356,7 +356,7 @@ GEM
     ruby-progressbar (1.13.0)
     securerandom (0.4.1)
     shellany (0.0.1)
-    sidekiq (7.3.6)
+    sidekiq (7.3.7)
       connection_pool (>= 2.3.0)
       logger
       rack (>= 2.2.4)
