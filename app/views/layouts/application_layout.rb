@@ -39,6 +39,7 @@ class ApplicationLayout < ApplicationView
     meta name: 'apple-mobile-web-app-title',
          content: 'Templatus (Hotwire edition)'
     meta name: 'apple-mobile-web-app-status-bar-style', content: 'black'
+    meta name: 'turbo-refresh-method', content: 'morph'
 
     if Rails.configuration.x.honeybadger.api_key
       meta name: 'honeybadger-api-key',

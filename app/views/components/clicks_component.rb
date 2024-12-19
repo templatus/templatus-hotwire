@@ -30,7 +30,7 @@ class ClicksComponent < ApplicationComponent
               'transition-leave': 'transition-transform duration-200 ease-in',
               'transition-leave-start': 'scale-100',
               'transition-leave-end': 'scale-0',
-              'turbo-temporary': '',
+              'turbo-permanent': '',
             },
           ) do
             ' ' # Non-breaking space
