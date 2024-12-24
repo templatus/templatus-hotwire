@@ -2660,10 +2660,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"idiomorph@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "idiomorph@npm:0.3.0"
-  checksum: 10c0/414658823da6106d5a82c47ffde59b7fca6641c91818a0f2205d74fffa57f2c01584d5c6d20dbd29b4f9277d5761e07e4439cae75315358aaf0c4d94ef9aaafb
+"idiomorph@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "idiomorph@npm:0.4.0"
+  checksum: 10c0/d13702e2ac2d019320e95629aec6f6cd88ed10f35570b3456d4ce3fcd239b46f72cb433cda2ff7bf829e069c0d3b596d88630f7040d59f9c1f17c0d9da0aee2f
   languageName: node
   linkType: hard
 
@@ -4496,7 +4496,7 @@ __metadata:
     eslint-plugin-cypress: "npm:^4.1.0"
     eslint-plugin-prettier: "npm:^5.2.1"
     eslint-plugin-tailwindcss: "npm:^3.17.5"
-    idiomorph: "npm:^0.3.0"
+    idiomorph: "npm:^0.4.0"
     plausible-tracker: "npm:^0.3.9"
     postcss: "npm:^8.4.49"
     prettier: "npm:^3.4.2"
