@@ -11,7 +11,7 @@
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.12",
     "@rails/actioncable": "^8.0.100",
-    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/forms": "^0.5.10",
     "autoprefixer": "^10.4.20",
     "el-transition": "^0.0.7",
     "idiomorph": "^0.4.0",
