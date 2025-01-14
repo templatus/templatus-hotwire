@@ -16,7 +16,7 @@
     "el-transition": "^0.0.7",
     "idiomorph": "^0.4.0",
     "plausible-tracker": "^0.3.9",
-    "postcss": "^8.4.49",
+    "postcss": "^8.5.1",
     "register-service-worker": "^1.7.2",
     "tailwindcss": "^3.4.17",
     "timeago.js": "^4.0.2"
