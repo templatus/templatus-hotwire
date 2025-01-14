@@ -27,7 +27,7 @@
     "@types/rails__actioncable": "^6.1.11",
     "cypress": "^13.17.0",
     "eslint": "^9.18.0",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-cypress": "^4.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-tailwindcss": "^3.17.5",
