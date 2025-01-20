@@ -157,7 +157,7 @@ GEM
       ostruct
     htmlbeautifier (1.4.3)
     htmlentities (4.3.4)
-    i18n (1.14.6)
+    i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     io-console (0.8.0)
     irb (1.14.3)
