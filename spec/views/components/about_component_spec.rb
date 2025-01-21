@@ -3,5 +3,4 @@ describe AboutComponent, type: :component do
 
   it { is_expected.to have_content('Ruby on Rails') }
   it { is_expected.to have_content(Rails::VERSION::STRING) }
-  it { is_expected.to have_link(href: '/sidekiq') }
 end

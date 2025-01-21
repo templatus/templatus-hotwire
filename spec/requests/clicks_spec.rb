@@ -38,7 +38,7 @@ describe 'Clicks' do
       it 'save click and returns http success' do
         call(ipv6)
 
-        expect(Click.last.ip).to eq('2001:0db8:0:0:0:0:0:0')
+        expect(Click.last.ip).to eq('2001:db8::')
         expect(response).to have_http_status(:success)
         expect(Click.last.user_agent).to eq(user_agent)
       end

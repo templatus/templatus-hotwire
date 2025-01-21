@@ -54,23 +54,7 @@ class AboutComponent < ApplicationComponent
 
       dd(class: 'mt-2 text-base text-gray-600 ml-9') do
         plain item[:description]
-
-        sidekiq_link if item[:gem] == 'sidekiq'
       end
-    end
-  end
-
-  def sidekiq_link
-    p(class: 'mt-2 text-xs') do
-      plain ' → '
-
-      a(
-        href: sidekiq_web_path,
-        class: 'font-medium uppercase hover:underline',
-        data: {
-          turbo: false,
-        },
-      ) { 'Admin frontend' }
     end
   end
 
@@ -93,10 +77,10 @@ class AboutComponent < ApplicationComponent
             'Rails is a web application development framework written in the Ruby programming language. It is designed to make programming web applications easier by making assumptions about what every developer needs to get started.',
         },
         {
-          name: 'PostgreSQL',
-          href: 'https://www.postgresql.org/',
+          name: 'SQLite',
+          href: 'https://www.sqlite.org/',
           description:
-            'PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.',
+            'SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. SQLite is the most used database engine in the world. ',
         },
         {
           name: 'Puma',
@@ -104,18 +88,6 @@ class AboutComponent < ApplicationComponent
           href: 'https://puma.io/',
           description:
             'Puma is a simple, fast, multi-threaded, and highly concurrent HTTP 1.1 server for Ruby/Rack applications.',
-        },
-        {
-          name: 'Redis',
-          href: 'https://redis.io/',
-          description:
-            'Redis is an open source, in-memory data structure store, used as a database, cache, and message broker.',
-        },
-        {
-          name: 'Sidekiq',
-          gem: 'sidekiq',
-          href: 'https://sidekiq.org/',
-          description: 'Simple, efficient background processing for Ruby',
         },
       ],
     },
@@ -251,14 +223,6 @@ class AboutComponent < ApplicationComponent
     # :nocov:
   end
 
-  def postgres_version
-    ActiveRecord::Base.connection.select_value('SHOW server_version;')
-  end
-
-  def redis_version
-    Redis.new.info['redis_version']
-  end
-
   def ruby_version
     RUBY_VERSION
   end
@@ -272,12 +236,7 @@ class AboutComponent < ApplicationComponent
       Rails
         .cache
         .fetch('versions', expires_in: 1.hour) do
-          {
-            'Alpine Linux' => alpine_version,
-            'PostgreSQL' => postgres_version,
-            'Redis' => redis_version,
-            'Ruby' => ruby_version,
-          }
+          { 'Alpine Linux' => alpine_version, 'Ruby' => ruby_version }
         end
 
     @external_version[name]

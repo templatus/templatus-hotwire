@@ -9,9 +9,7 @@ module Cypress
       tables.delete 'schema_migrations'
       tables.each do |table|
         sanitized_table = ActiveRecord::Base.connection.quote_table_name(table)
-        ActiveRecord::Base.connection.execute(
-          "TRUNCATE #{sanitized_table} CASCADE",
-        )
+        ActiveRecord::Base.connection.execute("DELETE FROM #{sanitized_table}")
       end
 
       head :ok
