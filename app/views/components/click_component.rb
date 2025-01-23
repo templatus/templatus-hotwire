@@ -18,7 +18,7 @@ class ClickComponent < ApplicationComponent
       },
     ) do
       p do
-        span(class: 'px-2 py-1 font-mono bg-gray-900 rounded text-tertiary') do
+        span(class: 'px-2 py-1 font-mono bg-gray-900 rounded-sm text-tertiary') do
           @click.ip.to_s
         end
         span(class: 'px-1 ml-2 font-medium text-gray-900') do

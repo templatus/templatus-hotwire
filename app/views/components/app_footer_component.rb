@@ -47,7 +47,7 @@ class AppFooterComponent < ApplicationComponent
     div(class: 'w-full sm:w-auto', data: { controller: 'online-status' }) do
       span(
         class:
-          'hidden px-1 py-px font-bold tracking-wide text-red-700 uppercase bg-white rounded',
+          'hidden px-1 py-px font-bold tracking-wide text-red-700 uppercase bg-white rounded-sm',
         data: {
           'online-status-target': 'indicator',
         },

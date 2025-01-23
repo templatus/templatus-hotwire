@@ -13,7 +13,7 @@ class AppHeaderComponent < ApplicationComponent
     ) do
       image_tag helpers.vite_asset_path('images/logo.svg'),
                 class:
-                  'p-3 w-20 h-20 bg-gradient-to-br from-tertiary to-white rounded lg:w-56 lg:h-56',
+                  'p-3 w-20 h-20 bg-linear-to-br from-tertiary to-white rounded-sm lg:w-56 lg:h-56',
                 alt: 'Logo',
                 width: 150,
                 height: 150

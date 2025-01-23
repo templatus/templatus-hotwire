@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import ViteRails from 'vite-plugin-rails';
+import tailwindcss from '@tailwindcss/vite';
 import { resolve } from 'path';
 
 export default defineConfig({
@@ -16,6 +17,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    tailwindcss(),
     ViteRails({
       fullReload: {
         additionalPaths: [
