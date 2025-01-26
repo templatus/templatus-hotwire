@@ -20,20 +20,26 @@ gem 'phlex-rails'
 # Heroicons extension for Phlex (https://github.com/nejdetkadir/phlex-heroicons)
 gem 'phlex-heroicons', github: 'nejdetkadir/phlex-heroicons'
 
-# Pg is the Ruby interface to the PostgreSQL RDBMS (https://github.com/ged/ruby-pg)
-gem 'pg', '~> 1.1'
+# Ruby library to interface with the SQLite3 database engine (http://www.sqlite.org). (https://github.com/sparklemotion/sqlite3-ruby)
+gem 'sqlite3', '>= 2.1'
 
-# Puma is a simple, fast, threaded, and highly parallel HTTP 1.1 server for Ruby/Rack applications (https://puma.io)
+# A Ruby/Rack web server built for parallelism. (https://puma.io)
 gem 'puma', '>= 5.0'
+
+# A database backed ActiveSupport::Cache::Store (http://github.com/rails/solid_cache)
+gem 'solid_cache'
+
+# Database-backed Active Job backend. (https://github.com/rails/solid_queue)
+gem 'solid_queue'
+
+# Database-backed Action Cable backend. (https://github.com/rails/solid_cable)
+gem 'solid_cable'
 
 # Boot large ruby/rails apps faster (https://github.com/Shopify/bootsnap)
 gem 'bootsnap', '>= 1.4.4', require: false
 
 # Timezone Data for TZInfo (https://tzinfo.github.io)
 gem 'tzinfo-data', platforms: %i[windows jruby]
-
-# A Ruby client library for Redis (https://github.com/redis/redis-rb)
-gem 'redis', '>= 4.0.1'
 
 # Tame Rails' multi-line logging into a single line per request (https://github.com/roidrage/lograge)
 gem 'lograge'
@@ -46,9 +52,6 @@ gem 'rack-canonical-host'
 
 # Brotli compression for Rack responses (http://github.com/marcotc/rack-brotli/)
 gem 'rack-brotli'
-
-# Simple, efficient background processing for Ruby (https://sidekiq.org)
-gem 'sidekiq'
 
 # Lock staging servers from search engines and prying eyes. (http://lockup.interdiscipline.com)
 gem 'lockup', github: 'interdiscipline/lockup'

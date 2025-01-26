@@ -21,9 +21,8 @@ There are two sister repositories:
 - [Ruby](https://www.ruby-lang.org/de/) 3.4
 - [Ruby on Rails](https://rubyonrails.org/) 8.0
 - [ActionCable](https://guides.rubyonrails.org/action_cable_overview.html) for WebSocket communication
-- [PostgreSQL](https://www.postgresql.org/) for using as SQL database
-- [Sidekiq](https://sidekiq.org/) for background processing
-- [Redis](https://redis.io/) for Caching, ActionCable, and Sidekiq
+- [SQLite](https://www.sqlite.org/) for using as SQL database
+- [SolideQueue](https://github.com/rails/solid_queue) for background processing
 
 ### Frontend
 
@@ -175,7 +174,7 @@ git clone git@github.com:templatus/templatus-hotwire.git
 cd templatus-hotwire
 ```
 
-2. Install PostgreSQL, Redis, and puma-dev (if not already present). On a Mac with HomeBrew, run this to install from the `Brewfile`:
+2. Install puma-dev (if not already present). On a Mac with HomeBrew, run this to install from the `Brewfile`:
 
 ```bash
 brew bundle

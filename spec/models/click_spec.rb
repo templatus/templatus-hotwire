@@ -2,8 +2,8 @@
 #
 # Table name: clicks
 #
-#  id         :bigint           not null, primary key
-#  ip         :inet             not null
+#  id         :integer          not null, primary key
+#  ip         :string           not null
 #  user_agent :string           not null
 #  created_at :datetime         not null
 #

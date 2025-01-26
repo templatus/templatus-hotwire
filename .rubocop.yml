@@ -13,6 +13,9 @@ AllCops:
     - bin/**/*
     - coverage/**/*
     - db/schema.rb
+    - db/cable_schema.rb
+    - db/cache_schema.rb
+    - db/queue_schema.rb
     - db/migrate/**/*
     - log/**/*
     - node_modules/**/*

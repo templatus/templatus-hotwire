@@ -17,39 +17,30 @@ Rails.application.configure do
 
   # Cache assets for far-future expiry since they are all digest stamped.
   config.public_file_server.headers = {
-    'X-Content-Type-Options' => 'nosniff',
-    'cache-control' => 'public, s-maxage=31536000, max-age=31536000, immutable',
+    'cache-control' => "public, max-age=#{Integer(1.year, 10)}",
   }
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.asset_host = ENV.fetch('ASSET_HOST', nil).presence
+  # config.asset_host = "http://assets.example.com"
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
   # Assume all access to the app is happening through a SSL-terminating reverse proxy.
-  config.assume_ssl =
-    ActiveModel::Type::Boolean.new.cast ENV.fetch('FORCE_SSL', true)
+  config.assume_ssl = true
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  config.force_ssl =
-    ActiveModel::Type::Boolean.new.cast ENV.fetch('FORCE_SSL', true)
+  config.force_ssl = true
 
   # Skip http-to-https redirect for the default health check endpoint.
   # config.ssl_options = { redirect: { exclude: ->(request) { request.path == "/up" } } }
 
-  # Log to STDOUT with the current IP and request id as a default log tag.
-  config.log_tags = %i[remote_ip request_id]
+  # Log to STDOUT with the current request id as a default log tag.
+  config.log_tags = [:request_id]
   config.logger = ActiveSupport::TaggedLogging.logger($stdout)
 
   # Change to "debug" to log everything (including potentially personally-identifiable information!)
   config.log_level = ENV.fetch('RAILS_LOG_LEVEL', 'info')
-
-  # Use lograge gem
-  config.lograge.enabled = true
-  config.lograge.custom_payload do |controller|
-    { user_agent: controller.request.user_agent }
-  end
 
   # Prevent health checks from clogging up the logs.
   config.silence_healthcheck_path = '/up'
@@ -58,12 +49,11 @@ Rails.application.configure do
   config.active_support.report_deprecations = false
 
   # Replace the default in-process memory cache store with a durable alternative.
-  config.cache_store =
-    :redis_cache_store,
-    { url: ENV.fetch('REDIS_URL', 'redis://localhost:6379/0') }
+  config.cache_store = :solid_cache_store
 
   # Replace the default in-process and non-durable queuing backend for Active Job.
-  config.active_job.queue_adapter = :sidekiq
+  config.active_job.queue_adapter = :solid_queue
+  config.solid_queue.connects_to = { database: { writing: :queue } }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -88,9 +78,6 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # Enable load_async
-  config.active_record.async_query_executor = :global_thread_pool
-
   # Only use :id for inspections in production.
   config.active_record.attributes_for_inspect = [:id]
 
@@ -99,9 +86,7 @@ Rails.application.configure do
   #   "example.com",     # Allow requests from example.com
   #   /.*\.example\.com/ # Allow requests from subdomains like `www.example.com`
   # ]
-  config.hosts = [ENV.fetch('APP_HOST', nil)]
-
   #
   # Skip DNS rebinding protection for the default health check endpoint.
-  config.host_authorization = { exclude: ->(request) { request.path == '/up' } }
+  # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 end

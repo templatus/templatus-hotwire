@@ -2,7 +2,6 @@
 #
 #                                   Prefix Verb URI Pattern                                                                                       Controller#Action
 #                       rails_health_check GET  /up(.:format)                                                                                     rails/health#show
-#                              sidekiq_web      /sidekiq                                                                                          Sidekiq::Web
 #                                 lookbook      /lookbook                                                                                         Lookbook::Engine
 #                                   clicks GET  /clicks(.:format)                                                                                 clicks#index
 #                                          POST /clicks(.:format)                                                                                 clicks#create
@@ -47,7 +46,6 @@
 #        lookbook_embed GET  /embed/*path(.:format)   lookbook/embeds#show
 #                       GET  /*path(.:format)         lookbook/application#not_found
 
-require 'sidekiq/web'
 require 'lockup'
 
 Rails.application.routes.draw do
@@ -58,7 +56,6 @@ Rails.application.routes.draw do
   get 'up' => 'rails/health#show', :as => :rails_health_check
 
   mount Lockup::Engine, at: '/lockup' if Rails.env.production?
-  mount Sidekiq::Web => '/sidekiq'
   mount Lookbook::Engine, at: '/lookbook' if Rails.env.development?
 
   if Rails.configuration.x.cypress
