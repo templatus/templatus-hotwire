@@ -144,7 +144,7 @@ class AboutComponent < ApplicationComponent
             'TypeScript is an open-source language which builds on JavaScript, one of the world’s most used tools, by adding static type definitions.',
         },
         {
-          name: 'Tailwind CSS 3',
+          name: 'Tailwind CSS 4',
           href: 'https://tailwindcss.com/',
           description:
             'A utility-first CSS framework packed with classes that can be composed to build any design, directly in your markup.',

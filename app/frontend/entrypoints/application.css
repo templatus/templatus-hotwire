@@ -1,22 +1,24 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@source '../../../app/**/*.{rb,js,ts}';
+@plugin '@tailwindcss/forms';
 
-:root {
-  --color-primary: 105 0 0; /* dark red */
-  --color-secondary: 211 0 1; /* light red */
-  --color-tertiary: 240 231 233; /* rose */
-  --color-accent: 21 209 216; /* cyan */
+@theme {
+  --color-primary: oklch(33.07% 0.1305 28.4); /* dark red */
+  --color-secondary: oklch(54.44% 0.2233 29.15); /* light red */
+  --color-tertiary: oklch(93.56% 0.0101 1.99); /* rose */
+  --color-accent: oklch(78.28% 0.1309 199.19); /* cyan */
 }
 
-.gradient__primary {
-  stop-color: rgb(var(--color-primary));
-}
+@layer base {
+  .gradient__primary {
+    stop-color: var(--color-primary);
+  }
 
-.gradient__secondary {
-  stop-color: rgb(var(--color-secondary));
-}
+  .gradient__secondary {
+    stop-color: var(--color-secondary);
+  }
 
-.gradient__accent {
-  stop-color: rgb(var(--color-accent));
+  .gradient__accent {
+    stop-color: var(--color-accent);
+  }
 }

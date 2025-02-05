@@ -103,7 +103,7 @@ class ApplicationLayout < ApplicationView
   def html_body(&) # rubocop:disable Metrics/AbcSize
     body(
       class:
-        'min-h-screen flex flex-col bg-gradient-to-br from-primary to-secondary lg:bg-tertiary lg:from-inherit lg:to-inherit',
+        'min-h-screen flex flex-col bg-linear-to-br from-primary to-secondary lg:bg-tertiary lg:from-inherit lg:to-inherit',
     ) do
       render AppBackgroundComponent.new
 

@@ -16,7 +16,7 @@ class ClicksComponent < ApplicationComponent
     div(data: { controller: 'clicks', 'clicks-count-value': count }) do
       div(
         class:
-          'flex flex-col w-full mt-5 lg:absolute lg:-top-5 lg:-right-10 lg:p-3 lg:mt-0 lg:w-56 lg:bg-gradient-to-br lg:from-slate-100 lg:to-white lg:rounded lg:shadow',
+          'flex flex-col w-full mt-5 lg:absolute lg:-top-5 lg:-right-10 lg:p-3 lg:mt-0 lg:w-56 lg:bg-linear-to-br lg:from-slate-100 lg:to-white lg:rounded-sm lg:shadow-sm',
       ) do
         div(class: 'h-12') do
           div(
@@ -42,7 +42,7 @@ class ClicksComponent < ApplicationComponent
         button_to 'Click me!',
                   clicks_path,
                   class:
-                    'mt-3 w-full rounded bg-tertiary py-2 font-medium text-black transition hover:bg-secondary hover:text-white active:outline-none active:ring-2 active:ring-secondary active:ring-offset-1'
+                    'mt-3 w-full rounded-sm bg-tertiary py-2 font-medium text-black transition hover:bg-secondary hover:text-white active:outline-hidden active:ring-2 active:ring-secondary active:ring-offset-1'
 
         p(class: 'hidden mt-3 text-xs text-center text-gray-600 sm:block') do
           'Tip: Open two browser windows in parallel and see what happens.'

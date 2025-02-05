@@ -14,13 +14,11 @@ export default [
     extends: [
       'prettier',
       'plugin:prettier/recommended',
-      'plugin:tailwindcss/recommended',
       'plugin:cypress/recommended',
     ],
     rules: {
       'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
       'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-      'tailwindcss/no-custom-classname': 'off',
     },
   }),
 

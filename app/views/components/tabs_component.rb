@@ -13,7 +13,7 @@ class TabsComponent < ApplicationComponent
     link_to text,
             href,
             class: [
-              'rounded-md px-2 py-1 transition lg:shadow',
+              'rounded-md px-2 py-1 transition lg:shadow-sm',
               (
                 if current_page?(href)
                   'bg-white text-primary lg:bg-primary lg:text-white'
