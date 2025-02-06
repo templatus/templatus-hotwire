@@ -23,7 +23,7 @@
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/vite": "^4.0.3",
     "@types/rails__actioncable": "^6.1.11",
-    "cypress": "^14.0.1",
+    "cypress": "^14.0.2",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-cypress": "^4.1.0",
