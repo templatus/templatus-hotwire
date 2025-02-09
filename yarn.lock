@@ -4292,10 +4292,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:4.0.4, tailwindcss@npm:^4.0.4":
+"tailwindcss@npm:4.0.4":
   version: 4.0.4
   resolution: "tailwindcss@npm:4.0.4"
   checksum: 10c0/2f430f81a981c9dfd7072ce7cd6f9935a5e36187a4f12e998caa2b5d159f1acf4ebd1d608b06272bf94a041c24b17cd5f625d049972dccdf6a75027eb03f916e
+  languageName: node
+  linkType: hard
+
+"tailwindcss@npm:^4.0.5":
+  version: 4.0.5
+  resolution: "tailwindcss@npm:4.0.5"
+  checksum: 10c0/f7cd995e83e07d1ada1b1de57474bcd7cfc09f3e8014cbaec644a794330f6cb244bd819cce9612a5714fe57ecfa7cb7a5386bb1988473e4fb5f550ae619663ff
   languageName: node
   linkType: hard
 
@@ -4345,7 +4352,7 @@ __metadata:
     register-service-worker: "npm:^1.7.2"
     rollup: "npm:^4.34.6"
     size-limit: "npm:^11.1.6"
-    tailwindcss: "npm:^4.0.4"
+    tailwindcss: "npm:^4.0.5"
     timeago.js: "npm:^4.0.2"
     typescript: "npm:^5.7.3"
     typescript-eslint: "npm:^8.23.0"
