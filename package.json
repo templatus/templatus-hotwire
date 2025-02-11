@@ -21,7 +21,7 @@
   "devDependencies": {
     "@size-limit/file": "^11.1.6",
     "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/vite": "^4.0.5",
+    "@tailwindcss/vite": "^4.0.6",
     "@types/rails__actioncable": "^6.1.11",
     "cypress": "^14.0.2",
     "eslint": "^9.20.0",
