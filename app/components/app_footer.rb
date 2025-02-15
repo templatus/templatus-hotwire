@@ -1,4 +1,4 @@
-class AppFooterComponent < ApplicationComponent
+class Components::AppFooter < Components::Base
   def initialize(class:)
     super()
     @class = binding.local_variable_get(:class)
@@ -36,10 +36,14 @@ class AppFooterComponent < ApplicationComponent
         end
       end
 
-      render GitVersionComponent.new commit_version:
-                                       Rails.configuration.x.git.commit_version,
-                                     commit_time:
-                                       Rails.configuration.x.git.commit_time
+      render Components::GitVersion.new commit_version:
+                                          Rails
+                                            .configuration
+                                            .x
+                                            .git
+                                            .commit_version,
+                                        commit_time:
+                                          Rails.configuration.x.git.commit_time
     end
   end
 

@@ -1,4 +1,4 @@
-class TabsComponent < ApplicationComponent
+class Components::Tabs < Components::Base
   include Phlex::Rails::Helpers::CurrentPage
 
   def view_template(&)

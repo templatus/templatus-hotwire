@@ -1,6 +1,6 @@
-class ClicksComponentPreview < ViewComponent::Preview
+class ClicksPreview < ViewComponent::Preview
   def with_default
-    render(ClicksComponent.new(clicks: [click1, click2, click3], count: 1))
+    render(Components::Clicks.new(clicks: [click1, click2, click3], count: 1))
   end
 
   private

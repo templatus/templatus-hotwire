@@ -1,5 +1,5 @@
 class AboutController < ApplicationController
   def index
-    render About::IndexView.new
+    render Views::About::Index.new
   end
 end

@@ -129,17 +129,17 @@ Layout:
 Metrics/BlockLength:
   AllowedMethods: ['configure', 'content_security_policy', 'task', 'namespace']
   Exclude:
-    - 'app/views/components/**/*'
+    - 'app/components/**/*'
     - 'app/views/layouts/**/*'
 
 Metrics/MethodLength:
   Exclude:
-    - 'app/views/components/**/*'
+    - 'app/components/**/*'
     - 'app/views/layouts/**/*'
 
 Metrics/ClassLength:
   Exclude:
-    - 'app/views/components/**/*'
+    - 'app/components/**/*'
     - 'app/views/layouts/**/*'
 
 RSpec/ExampleLength:

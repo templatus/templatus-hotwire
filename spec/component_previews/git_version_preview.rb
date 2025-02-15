@@ -1,7 +1,7 @@
-class GitVersionComponentPreview < ViewComponent::Preview
+class GitVersionPreview < ViewComponent::Preview
   def with_default
     render(
-      GitVersionComponent.new(
+      Components::GitVersion.new(
         commit_version: 'abc1234',
         commit_time: Time.current.utc.to_s,
       ),

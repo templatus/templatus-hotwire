@@ -15,7 +15,7 @@ class Click < ApplicationRecord
     broadcast_prepend_to 'clicks',
                          target: 'list',
                          html:
-                           ClickComponent.new(
+                           Components::Click.new(
                              click: self,
                              will_animate: true,
                            ).call

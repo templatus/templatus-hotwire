@@ -1,4 +1,4 @@
-class GitVersionComponent < ApplicationComponent
+class Components::GitVersion < Components::Base
   def initialize(commit_version:, commit_time:)
     super()
     @commit_version = commit_version

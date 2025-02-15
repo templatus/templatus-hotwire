@@ -1,4 +1,4 @@
-class ClickComponent < ApplicationComponent
+class Components::Click < Components::Base
   def initialize(click:, will_animate: false)
     super()
     @click = click
@@ -18,9 +18,9 @@ class ClickComponent < ApplicationComponent
       },
     ) do
       p do
-        span(class: 'px-2 py-1 font-mono bg-gray-900 rounded-sm text-tertiary') do
-          @click.ip.to_s
-        end
+        span(
+          class: 'px-2 py-1 font-mono bg-gray-900 rounded-sm text-tertiary',
+        ) { @click.ip.to_s }
         span(class: 'px-1 ml-2 font-medium text-gray-900') do
           @click.created_at.to_fs(:long)
         end

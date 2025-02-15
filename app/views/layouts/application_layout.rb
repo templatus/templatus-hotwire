@@ -1,4 +1,4 @@
-class ApplicationLayout < ApplicationView
+class ApplicationLayout < Views::Base
   include Phlex::Rails::Layout
   include Phlex::Rails::Helpers::AssetPath
   include Phlex::Rails::Helpers::TurboFrameTag
@@ -86,18 +86,20 @@ class ApplicationLayout < ApplicationView
     )
     link(href: webmanifest_path, rel: 'manifest')
     link(
-      href: helpers.vite_asset_path('images/logo.svg'),
+      href: view_context.vite_asset_path('images/logo.svg'),
       rel: 'preload',
       as: 'image',
     )
   end
 
   def vite_tags
-    unsafe_raw helpers.vite_client_tag
-    unsafe_raw helpers.vite_typescript_tag 'application',
-                                           'data-turbo-track': 'reload'
-    unsafe_raw helpers.vite_stylesheet_tag 'application',
-                                           'data-turbo-track': 'reload'
+    # rubocop:disable Rails/OutputSafety
+    raw view_context.vite_client_tag
+    raw view_context.vite_typescript_tag 'application',
+                                         'data-turbo-track': 'reload'
+    raw view_context.vite_stylesheet_tag 'application',
+                                         'data-turbo-track': 'reload'
+    # rubocop:enable Rails/OutputSafety
   end
 
   def html_body(&) # rubocop:disable Metrics/AbcSize
@@ -105,14 +107,14 @@ class ApplicationLayout < ApplicationView
       class:
         'min-h-screen flex flex-col bg-linear-to-br from-primary to-secondary lg:bg-tertiary lg:from-inherit lg:to-inherit',
     ) do
-      render AppBackgroundComponent.new
+      render Components::AppBackground.new
 
-      render AppHeaderComponent.new class: 'lg:fixed lg:top-10 lg:left-10'
+      render Components::AppHeader.new class: 'lg:fixed lg:top-10 lg:left-10'
 
       turbo_frame_tag 'flash' do
         if flash.present?
-          render AppFlashComponent.new notice: flash[:notice],
-                                       alert: flash[:alert]
+          render Components::AppFlashComponent.new notice: flash[:notice],
+                                                   alert: flash[:alert]
         end
       end
 
@@ -122,8 +124,8 @@ class ApplicationLayout < ApplicationView
         &
       )
 
-      render AppFooterComponent.new class:
-                                      'relative mt-2 mb-6 lg:px-0 lg:mr-16 lg:ml-96 lg:max-w-5xl'
+      render Components::AppFooter.new class:
+                                         'relative mt-2 mb-6 lg:px-0 lg:mr-16 lg:ml-96 lg:max-w-5xl'
     end
   end
 end

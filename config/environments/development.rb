@@ -94,7 +94,7 @@ Rails.application.configure do
 
   Rails.application.config.hosts << ENV.fetch('APP_HOST', nil)
 
-  config.lookbook.preview_paths = ['spec/views/component_previews']
+  config.lookbook.preview_paths = ['spec/component_previews']
   config.lookbook.preview_layout = 'preview'
 
   # Enable load_async

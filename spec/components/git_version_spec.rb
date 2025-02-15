@@ -1,4 +1,4 @@
-describe GitVersionComponent, type: :component do
+describe Components::GitVersion, type: :component do
   subject(:output) { render(instance) }
 
   let(:instance) do

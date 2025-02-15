@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     render turbo_stream:
              turbo_stream.update(
                'flash',
-               AppFlashComponent.new(notice:, alert:),
+               Components::AppFlash.new(notice:, alert:),
              ),
            status:
   end

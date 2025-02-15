@@ -1,4 +1,4 @@
-class AppHeaderComponent < ApplicationComponent
+class Components::AppHeader < Components::Base
   def initialize(class: nil)
     @class = binding.local_variable_get(:class)
     super()
@@ -11,14 +11,14 @@ class AppHeaderComponent < ApplicationComponent
         @class,
       ],
     ) do
-      image_tag helpers.vite_asset_path('images/logo.svg'),
+      image_tag view_context.vite_asset_path('images/logo.svg'),
                 class:
                   'p-3 w-20 h-20 bg-linear-to-br from-tertiary to-white rounded-sm lg:w-56 lg:h-56',
                 alt: 'Logo',
                 width: 150,
                 height: 150
 
-      render TabsComponent.new do |t|
+      render Components::Tabs.new do |t|
         t.tab text: 'Home', href: root_path
         t.tab text: 'About', href: about_path
       end

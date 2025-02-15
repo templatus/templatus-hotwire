@@ -1,4 +1,4 @@
-describe PageTitleComponent, type: :component do
+describe Components::PageTitle, type: :component do
   subject(:output) { render(instance) }
 
   let(:instance) { described_class.new('Hello, world!') }

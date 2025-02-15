@@ -1,4 +1,4 @@
-class ClicksComponent < ApplicationComponent
+class Components::Clicks < Components::Base
   include Phlex::Rails::Helpers::TurboFrameTag
   include Phlex::Rails::Helpers::TurboStreamFrom
 
@@ -68,7 +68,7 @@ class ClicksComponent < ApplicationComponent
             'transition-enter-start': 'translate-y-0',
             'transition-enter-end': 'translate-y-32',
           },
-        ) { @clicks.each { |click| render ClickComponent.new(click:) } }
+        ) { @clicks.each { |click| render Components::Click.new(click:) } }
       end
     end
   end

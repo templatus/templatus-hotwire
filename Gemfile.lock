@@ -230,9 +230,9 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.9)
-    phlex (1.11.0)
-    phlex-rails (1.2.2)
-      phlex (>= 1.10, < 2)
+    phlex (2.0.0)
+    phlex-rails (2.0.0)
+      phlex (~> 2.0.0)
       railties (>= 6.1, < 9)
     pp (0.6.2)
       prettyprint

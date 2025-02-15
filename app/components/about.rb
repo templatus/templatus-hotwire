@@ -1,4 +1,4 @@
-class AboutComponent < ApplicationComponent
+class Components::About < Components::Base
   def view_template
     div(class: 'mt-20 space-y-24') { FEATURES.each { |item| group(item) } }
   end

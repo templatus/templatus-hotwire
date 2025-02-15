@@ -1,4 +1,4 @@
-describe AppFlashComponent, type: :component do
+describe Components::AppFlash, type: :component do
   it 'renders notice' do
     result = render(described_class.new(notice: 'All good!'))
 

@@ -1,4 +1,4 @@
-class AppBackgroundComponent < ApplicationComponent
+class Components::AppBackground < Components::Base
   def view_template
     svg(
       class: 'fixed inset-0 hidden w-full h-96 drop-shadow-xl lg:block',

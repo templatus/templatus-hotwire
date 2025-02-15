@@ -1,4 +1,4 @@
-class AppFlashComponent < ApplicationComponent
+class Components::AppFlash < Components::Base
   def initialize(alert: nil, notice: nil)
     super()
     @alert = alert

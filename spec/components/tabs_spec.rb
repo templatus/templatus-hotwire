@@ -1,4 +1,4 @@
-describe TabsComponent, type: :component do
+describe Components::Tabs, type: :component do
   subject(:component) { described_class.new }
 
   it 'renders links' do
