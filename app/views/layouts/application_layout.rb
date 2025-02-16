@@ -40,6 +40,7 @@ class ApplicationLayout < Views::Base
          content: 'Templatus (Hotwire edition)'
     meta name: 'apple-mobile-web-app-status-bar-style', content: 'black'
     meta name: 'turbo-refresh-method', content: 'morph'
+    meta name: 'turbo-refresh-scroll', content: 'preserve'
 
     if Rails.configuration.x.honeybadger.api_key
       meta name: 'honeybadger-api-key',
