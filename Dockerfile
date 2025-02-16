@@ -7,9 +7,6 @@ RUN rm -r package.json vite.config.mts tsconfig.json
 FROM ghcr.io/ledermann/rails-base-final:3.4.1-alpine
 LABEL maintainer="georg@ledermann.dev"
 
-# Workaround to trigger builder's ONBUILDs to finish:
-COPY --from=builder /etc/alpine-release /tmp/dummy
-
 USER app
 
 # Enable YJIT
