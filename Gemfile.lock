@@ -230,8 +230,8 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.9)
-    phlex (2.0.0)
-    phlex-rails (2.0.0)
+    phlex (2.0.1)
+    phlex-rails (2.0.1)
       phlex (~> 2.0.0)
       railties (>= 6.1, < 9)
     pp (0.6.2)
