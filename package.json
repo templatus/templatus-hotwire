@@ -12,7 +12,7 @@
     "@hotwired/turbo-rails": "^8.0.12",
     "@rails/actioncable": "^8.0.100",
     "el-transition": "^0.0.7",
-    "idiomorph": "^0.7.1",
+    "idiomorph": "^0.7.2",
     "plausible-tracker": "^0.3.9",
     "register-service-worker": "^1.7.2",
     "timeago.js": "^4.0.2"
