@@ -68,6 +68,12 @@ updates:
     labels:
       - 'dependencies'
       - 'javascript'
+    groups:
+      tailwindcss:
+        patterns:
+          - '@tailwindcss/*'
+          - 'tailwindcss'
+          - 'prettier-plugin-tailwindcss'
 
   - package-ecosystem: 'github-actions'
     directory: '/'
