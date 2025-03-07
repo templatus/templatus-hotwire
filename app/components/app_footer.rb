@@ -7,7 +7,7 @@ class Components::AppFooter < Components::Base
   def view_template
     footer(
       class: [
-        'flex flex-wrap justify-between items-end px-4 space-y-2 text-sm text-white sm:px-6 lg:px-0',
+        'flex flex-wrap justify-between items-center px-4 space-y-2 text-sm text-white sm:px-6 lg:px-0',
         @class,
       ],
     ) do
@@ -20,7 +20,7 @@ class Components::AppFooter < Components::Base
   private
 
   def github
-    div(class: 'flex items-end w-full space-x-2 sm:w-auto') do
+    div(class: 'flex items-center w-full space-x-2 sm:w-auto') do
       a(
         class: 'hover:underline',
         target: '_blank',
@@ -60,7 +60,7 @@ class Components::AppFooter < Components::Base
   end
 
   def author
-    div(class: 'flex items-end w-full sm:w-auto') do
+    div(class: 'flex items-center w-full sm:w-auto') do
       link_to(
         'https://ledermann.dev',
         class: 'hover:underline',
