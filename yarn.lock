@@ -309,26 +309,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@honeybadger-io/core@npm:^6.6.0":
-  version: 6.6.0
-  resolution: "@honeybadger-io/core@npm:6.6.0"
+"@honeybadger-io/core@npm:^6.7.0":
+  version: 6.7.0
+  resolution: "@honeybadger-io/core@npm:6.7.0"
   dependencies:
     json-nd: "npm:^1.0.0"
     stacktrace-parser: "npm:^0.1.10"
-  checksum: 10c0/842e13f41eec89c39a0264fec77b72cd157afbc84b885130f704c5cd946fcacbc9b43eeadd5e309bb7073f847c4c690d2f4674929895b139df10e570823e4dad
+  checksum: 10c0/00238d40d404de244267e7838293f0930f59850563bb7f641137163c01370b3ca6a013342f213f4402aa59b0443e04b5b81f06e956bc3d660a7d187f3520347a
   languageName: node
   linkType: hard
 
-"@honeybadger-io/js@npm:^6.10.1":
-  version: 6.10.1
-  resolution: "@honeybadger-io/js@npm:6.10.1"
+"@honeybadger-io/js@npm:^6.11.0":
+  version: 6.11.0
+  resolution: "@honeybadger-io/js@npm:6.11.0"
   dependencies:
-    "@honeybadger-io/core": "npm:^6.6.0"
+    "@honeybadger-io/core": "npm:^6.7.0"
     "@types/aws-lambda": "npm:^8.10.89"
     "@types/express": "npm:^4.17.13"
   bin:
     honeybadger-checkins-sync: scripts/check-ins-sync-bin.js
-  checksum: 10c0/603955bd3925625e835bec8cde4a60be6e1b3ed72d73ac946183a41b88d8d3371d617d37e4ae30e1c20cd59b60de83c3426d3330788e7206fc1dd4d2b890346e
+  checksum: 10c0/48c0ef90998f83a8edfeaff6330132edbb58de19f5949635c11894eb8d55583dea7278a046ef2b86ca6e81825d19b0cebe2cc75645b327245043554193022090
   languageName: node
   linkType: hard
 
@@ -4343,7 +4343,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "templatus-hotwire@workspace:."
   dependencies:
-    "@honeybadger-io/js": "npm:^6.10.1"
+    "@honeybadger-io/js": "npm:^6.11.0"
     "@hotwired/stimulus": "npm:^3.2.2"
     "@hotwired/turbo-rails": "npm:^8.0.13"
     "@rails/actioncable": "npm:^8.0.200"
