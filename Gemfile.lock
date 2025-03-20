@@ -89,7 +89,7 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     amazing_print (1.7.2)
     annotaterb (4.14.0)
-    ast (2.4.2)
+    ast (2.4.3)
     base64 (0.2.0)
     benchmark (0.4.0)
     bigdecimal (3.1.9)
