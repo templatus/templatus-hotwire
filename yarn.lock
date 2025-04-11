@@ -482,10 +482,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pkgr/core@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "@pkgr/core@npm:0.2.0"
-  checksum: 10c0/29cb9c15f4788096b8b8b786b19c75b6398b6afe814a97189922c3046d8acb5d24f1217fd2537c3f8e42c04e48d572295e7ee56d77964ddc932c44eb5a615931
+"@pkgr/core@npm:^0.2.1":
+  version: 0.2.2
+  resolution: "@pkgr/core@npm:0.2.2"
+  checksum: 10c0/86a0507731f2c5172e2225abb42d947b3908d06f0330e7050b5e6ad0c29dab4d586358f2d984aa00fd32bf421ed3405fa97878b352f16c3c23d20398b5fd14e4
   languageName: node
   linkType: hard
 
@@ -808,9 +808,9 @@ __metadata:
   linkType: hard
 
 "@types/aws-lambda@npm:^8.10.89":
-  version: 8.10.148
-  resolution: "@types/aws-lambda@npm:8.10.148"
-  checksum: 10c0/b2cf5c991263a9276490757ec8f78fa42e41ac5029588d87f6b01f03321ee97eeaed8d66d259165d941717242a84e5b67e5d3a8872e9642a47645c6610f85287
+  version: 8.10.149
+  resolution: "@types/aws-lambda@npm:8.10.149"
+  checksum: 10c0/9ef41214a1b69fa30d89cab575429793f1ccc49cfe3a7aa75228aef31a202bb6d2c306a5b33def61ef29e0d0a1a324412bf6a4fa5a615e61117685584a394047
   languageName: node
   linkType: hard
 
@@ -1072,9 +1072,9 @@ __metadata:
   linkType: hard
 
 "abbrev@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "abbrev@npm:3.0.0"
-  checksum: 10c0/049704186396f571650eb7b22ed3627b77a5aedf98bb83caf2eac81ca2a3e25e795394b0464cfb2d6076df3db6a5312139eac5b6a126ca296ac53c5008069c28
+  version: 3.0.1
+  resolution: "abbrev@npm:3.0.1"
+  checksum: 10c0/21ba8f574ea57a3106d6d35623f2c4a9111d9ee3e9a5be47baed46ec2457d2eac46e07a5c4a60186f88cb98abbe3e24f2d4cca70bc2b12f1692523e2209a9ccf
   languageName: node
   linkType: hard
 
@@ -4104,12 +4104,12 @@ __metadata:
   linkType: hard
 
 "synckit@npm:^0.11.0":
-  version: 0.11.2
-  resolution: "synckit@npm:0.11.2"
+  version: 0.11.3
+  resolution: "synckit@npm:0.11.3"
   dependencies:
-    "@pkgr/core": "npm:^0.2.0"
+    "@pkgr/core": "npm:^0.2.1"
     tslib: "npm:^2.8.1"
-  checksum: 10c0/e7744abce8041233d6be40c05dcbff6177aec88f2625a586a01855aa97757d3b6c640714e0c73eed917a382bd76eb815d4af66ca80ca8f94f880fd4dfb9429c6
+  checksum: 10c0/7b08187eb13047314ddb71d4868fb7c1f75b15f3a60ce7881bc2adf1d1353c478c1643e3d5e27525b23a09f04f87630fdbe4581af67f90d57741856658c1fb95
   languageName: node
   linkType: hard
 
