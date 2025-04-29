@@ -205,7 +205,7 @@ GEM
     msgpack (1.8.0)
     mutex_m (0.3.0)
     nenv (0.3.0)
-    net-imap (0.5.7)
+    net-imap (0.5.8)
       date
       net-protocol
     net-pop (0.1.2)
