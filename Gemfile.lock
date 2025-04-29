@@ -315,7 +315,7 @@ GEM
       rack (>= 1.4)
     rexml (3.4.1)
     rorvswild (1.9.1)
-    rouge (4.5.1)
+    rouge (4.5.2)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
       rspec-expectations (~> 3.13.0)
