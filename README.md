@@ -27,7 +27,7 @@ There are two sister repositories:
 
 ### Frontend
 
-- [Hotwire](https://hotwire.io/) for building the frontend without using much JavaScript by sending HTML instead of JSON over the wire
+- [Hotwire](https://hotwired.dev/) for building the frontend without using much JavaScript by sending HTML instead of JSON over the wire
 - [TypeScript](https://www.typescriptlang.org/) for static type checking in Stimulus controllers and other script code
 - [Phlex-Rails](https://www.phlex.fun) as an object-oriented alternative to ActionView for Ruby on Rails
 - [Tailwind CSS 4](https://tailwindcss.com/) to not have to write CSS at all
