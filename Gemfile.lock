@@ -124,6 +124,7 @@ GEM
     dotenv (3.1.8)
     drb (2.2.1)
     dry-cli (1.2.0)
+    erb (5.0.1)
     erubi (1.13.1)
     factory_bot (6.5.1)
       activesupport (>= 6.1.0)
@@ -302,7 +303,8 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
-    rdoc (6.13.1)
+    rdoc (6.14.0)
+      erb
       psych (>= 4.0.0)
     redcarpet (3.6.1)
     redis (5.4.0)
