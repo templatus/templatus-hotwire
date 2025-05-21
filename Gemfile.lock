@@ -122,7 +122,7 @@ GEM
     diff-lcs (1.6.2)
     docile (1.4.1)
     dotenv (3.1.8)
-    drb (2.2.1)
+    drb (2.2.3)
     dry-cli (1.2.0)
     erb (5.0.1)
     erubi (1.13.1)
