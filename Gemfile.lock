@@ -87,7 +87,7 @@ GEM
       uri (>= 0.13.1)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
-    amazing_print (1.8.0)
+    amazing_print (1.8.1)
     annotaterb (4.14.0)
     ast (2.4.3)
     base64 (0.2.0)
