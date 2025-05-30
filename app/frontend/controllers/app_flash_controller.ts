@@ -1,6 +1,6 @@
 import { Controller } from '@hotwired/stimulus';
 
-// @ts-ignore
+// @ts-expect-error No declaration file for 'el-transition'
 import { enter, leave } from 'el-transition';
 
 export default class extends Controller {
