@@ -1,42 +1,31 @@
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
-import { FlatCompat } from '@eslint/eslintrc';
-const compat = new FlatCompat();
+import pluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
+import pluginCypress from 'eslint-plugin-cypress/flat';
 
 export default [
-  ...compat.env({
-    browser: true,
-    node: true,
-  }),
+  eslint.configs.recommended,
+  ...tseslint.configs.recommended,
+  pluginPrettierRecommended,
 
-  ...compat.config({
-    extends: [
-      'prettier',
-      'plugin:prettier/recommended',
-      'plugin:cypress/recommended',
-    ],
+  {
+    files: ['**/*.{js,ts}'],
     rules: {
-      'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-      'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+        },
+      ],
+      '@typescript-eslint/no-var-requires': 'off',
     },
-  }),
+  },
 
-  ...[eslint.configs.recommended, ...tseslint.configs.recommended].map(
-    (conf) => ({
-      ...conf,
-      files: ['**/*.ts'],
-      rules: {
-        '@typescript-eslint/no-unused-vars': [
-          'error',
-          {
-            argsIgnorePattern: '^_',
-          },
-        ],
-        '@typescript-eslint/no-var-requires': 'off',
-      },
-    }),
-  ),
+  {
+    files: ['spec/cypress/**'],
+    ...pluginCypress.configs.recommended,
+  },
 
   {
     ignores: [
