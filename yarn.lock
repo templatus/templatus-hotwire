@@ -370,13 +370,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hotwired/turbo-rails@npm:^8.0.13":
-  version: 8.0.13
-  resolution: "@hotwired/turbo-rails@npm:8.0.13"
+"@hotwired/turbo-rails@npm:^8.0.14":
+  version: 8.0.14
+  resolution: "@hotwired/turbo-rails@npm:8.0.14"
   dependencies:
     "@hotwired/turbo": "npm:^8.0.13"
-    "@rails/actioncable": "npm:^7.0"
-  checksum: 10c0/3987981f08fdc56942e0f01daa3e53bff69edb167f7cdfc8d96841dbec9c86d89ba48d00d4a5fa296225dc0aee275d4a19a77bce89cf8fcd38b7e100799b73e8
+    "@rails/actioncable": "npm:>=7.0"
+  checksum: 10c0/b1106cbc47dea8bac528bfc9ce6c9a5ee788bced8ebb4d0a196107d7e66a352006c6c82c2a8c0feb96c3bba5f9bc7253177725415b11d9f17a58c77701df9d16
   languageName: node
   linkType: hard
 
@@ -564,14 +564,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rails/actioncable@npm:^7.0":
-  version: 7.2.201
-  resolution: "@rails/actioncable@npm:7.2.201"
-  checksum: 10c0/65463467f1473f810273432b85a272798c8fbe6c8a200be4f8ecbced152deac7bc3f159cd3db7ce7ab05b34cce25582d384cf51f0028c3c2baf303186e0f24f5
-  languageName: node
-  linkType: hard
-
-"@rails/actioncable@npm:^8.0.200":
+"@rails/actioncable@npm:>=7.0, @rails/actioncable@npm:^8.0.200":
   version: 8.0.200
   resolution: "@rails/actioncable@npm:8.0.200"
   checksum: 10c0/42c861f3b43131ab523d37125e30e802bd5bab98bf8150a780531f82f05177cd0071a75a7f1341eac9de772732625194ac16205a40b82dc567cc05c21c56e412
@@ -4512,7 +4505,7 @@ __metadata:
   dependencies:
     "@honeybadger-io/js": "npm:^6.11.0"
     "@hotwired/stimulus": "npm:^3.2.2"
-    "@hotwired/turbo-rails": "npm:^8.0.13"
+    "@hotwired/turbo-rails": "npm:^8.0.14"
     "@rails/actioncable": "npm:^8.0.200"
     "@size-limit/file": "npm:^11.2.0"
     "@tailwindcss/forms": "npm:^0.5.10"
