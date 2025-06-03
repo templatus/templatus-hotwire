@@ -34,7 +34,7 @@
     "size-limit": "^11.2.0",
     "tailwindcss": "^4.1.8",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.33.0",
+    "typescript-eslint": "^8.33.1",
     "vite": "^6.3.5",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-rails": "^0.5.0",
