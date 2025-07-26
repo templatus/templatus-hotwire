@@ -229,7 +229,7 @@ GEM
       shellany (~> 0.0)
     ostruct (0.6.3)
     parallel (1.27.0)
-    parser (3.3.8.0)
+    parser (3.3.9.0)
       ast (~> 2.4.1)
       racc
     pg (1.5.9)
