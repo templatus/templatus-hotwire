@@ -357,16 +357,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@honeybadger-io/js@npm:^6.11.1":
-  version: 6.11.1
-  resolution: "@honeybadger-io/js@npm:6.11.1"
+"@honeybadger-io/js@npm:^6.11.2":
+  version: 6.11.2
+  resolution: "@honeybadger-io/js@npm:6.11.2"
   dependencies:
     "@honeybadger-io/core": "npm:^6.7.1"
     "@types/aws-lambda": "npm:^8.10.89"
-    "@types/express": "npm:^4.17.13"
+    "@types/express": "npm:^5.0.3"
   bin:
     honeybadger-checkins-sync: scripts/check-ins-sync-bin.js
-  checksum: 10c0/f35695a5b488fd67bc7dfc41847e2d6f902fb91157a38fe28eeb7c845bc6616efb6f31348cbb4756711ed7adfba505aebdd6a3a9f5cda85f11022bf950d48a8e
+  checksum: 10c0/00081b65b22b9fa5933ae850d3888c697e262adb81960b0e8dbcf8718e1b4dc88917620df20a96588dcb452eb92a4422aa08cfc9950557d43dbdc5b71a4fa196
   languageName: node
   linkType: hard
 
@@ -947,27 +947,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express-serve-static-core@npm:^4.17.33":
-  version: 4.19.6
-  resolution: "@types/express-serve-static-core@npm:4.19.6"
+"@types/express-serve-static-core@npm:^5.0.0":
+  version: 5.0.7
+  resolution: "@types/express-serve-static-core@npm:5.0.7"
   dependencies:
     "@types/node": "npm:*"
     "@types/qs": "npm:*"
     "@types/range-parser": "npm:*"
     "@types/send": "npm:*"
-  checksum: 10c0/4281f4ead71723f376b3ddf64868ae26244d434d9906c101cf8d436d4b5c779d01bd046e4ea0ed1a394d3e402216fabfa22b1fa4dba501061cd7c81c54045983
+  checksum: 10c0/28666f6a0743b8678be920a6eed075bc8afc96fc7d8ef59c3c049bd6b51533da3b24daf3b437d061e053fba1475e4f3175cb4972f5e8db41608e817997526430
   languageName: node
   linkType: hard
 
-"@types/express@npm:^4.17.13":
-  version: 4.17.23
-  resolution: "@types/express@npm:4.17.23"
+"@types/express@npm:^5.0.3":
+  version: 5.0.3
+  resolution: "@types/express@npm:5.0.3"
   dependencies:
     "@types/body-parser": "npm:*"
-    "@types/express-serve-static-core": "npm:^4.17.33"
-    "@types/qs": "npm:*"
+    "@types/express-serve-static-core": "npm:^5.0.0"
     "@types/serve-static": "npm:*"
-  checksum: 10c0/60490cd4f73085007247e7d4fafad0a7abdafa34fa3caba2757512564ca5e094ece7459f0f324030a63d513f967bb86579a8682af76ae2fd718e889b0a2a4fe8
+  checksum: 10c0/f0fbc8daa7f40070b103cf4d020ff1dd08503477d866d1134b87c0390bba71d5d7949cb8b4e719a81ccba89294d8e1573414e6dcbb5bb1d097a7b820928ebdef
   languageName: node
   linkType: hard
 
@@ -4320,7 +4319,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "templatus-hotwire@workspace:."
   dependencies:
-    "@honeybadger-io/js": "npm:^6.11.1"
+    "@honeybadger-io/js": "npm:^6.11.2"
     "@hotwired/stimulus": "npm:^3.2.2"
     "@hotwired/turbo-rails": "npm:^8.0.16"
     "@rails/actioncable": "npm:^8.0.200"
