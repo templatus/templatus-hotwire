@@ -24,7 +24,7 @@
     "@tailwindcss/vite": "^4.1.12",
     "@types/rails__actioncable": "^6.1.11",
     "cypress": "^15.0.0",
-    "eslint": "^9.33.0",
+    "eslint": "^9.34.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-cypress": "^5.1.1",
     "eslint-plugin-prettier": "^5.5.4",
