@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@source '../../../app/**/*.{rb,js,ts}';
+@source '../../../app/**/*.{html.erb,rb,js,ts}';
 @plugin '@tailwindcss/forms';
 
 @theme {

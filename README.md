@@ -29,7 +29,7 @@ There are two sister repositories:
 
 - [Hotwire](https://hotwired.dev/) for building the frontend without using much JavaScript by sending HTML instead of JSON over the wire
 - [TypeScript](https://www.typescriptlang.org/) for static type checking in Stimulus controllers and other script code
-- [Phlex-Rails](https://www.phlex.fun) as an object-oriented alternative to ActionView for Ruby on Rails
+- [ViewComponent](https://viewcomponent.org/) for building reusable, testable & encapsulated view components
 - [Tailwind CSS 4](https://tailwindcss.com/) to not have to write CSS at all
 - [Heroicons](https://heroicons.com/) for beautiful hand-crafted SVG icons
 - [Vite](https://vitejs.dev/) for bundling JavaScript and CSS with Hot Module Replacement (HMR) in development

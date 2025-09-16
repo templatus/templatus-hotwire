@@ -20,9 +20,14 @@ require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 require 'capybara/rspec'
+require 'view_component/test_helpers'
 
 RSpec.configure do |config|
   config.include Capybara::RSpecMatchers, type: :component
+
+  config.include ViewComponent::TestHelpers, type: :component
+  config.include ViewComponent::SystemSpecHelpers, type: :feature
+  config.include ViewComponent::SystemSpecHelpers, type: :system
 end
 
 # Requires supporting ruby files with custom matchers and macros, etc, in

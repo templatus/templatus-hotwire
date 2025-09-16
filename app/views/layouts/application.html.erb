@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="description" content="Ruby on Rails template for using Hotwire">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Templatus (Hotwire edition)">
+    <meta name="theme-color" content="#991c1c">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Templatus (Hotwire edition)">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="turbo-refresh-method" content="morph">
+    <meta name="turbo-refresh-scroll" content="preserve">
+
+    <% if Rails.configuration.x.honeybadger.api_key %>
+      <meta name="honeybadger-api-key" content="<%= Rails.configuration.x.honeybadger.api_key %>">
+    <% end %>
+
+    <% if Rails.configuration.x.app_host %>
+      <meta name="app-host" content="<%= Rails.configuration.x.app_host %>">
+    <% end %>
+
+    <% if Rails.configuration.x.plausible_url %>
+      <meta name="plausible-url" content="<%= Rails.configuration.x.plausible_url %>">
+    <% end %>
+
+    <meta name="git-commit-version" content="<%= Rails.configuration.x.git.commit_version %>">
+    <meta name="git-commit-time" content="<%= Rails.configuration.x.git.commit_time %>">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= action_cable_meta_tag %>
+
+    <title>Templatus-Hotwire</title>
+
+    <%= tag.link href: asset_path('/apple-touch-icon.png'), rel: 'apple-touch-icon', type: 'image/png', sizes: '180x180' %>
+    <%= tag.link href: asset_path('/favicon-32x32.png'), rel: 'icon', type: 'image/png', sizes: '32x32' %>
+    <%= tag.link href: asset_path('/favicon-16x16.png'), rel: 'icon', type: 'image/png', sizes: '16x16' %>
+    <%= tag.link href: asset_path('/safari-pinned-tab.svg'), rel: 'mask-icon', color: '#d30001' %>
+    <%= tag.link href: webmanifest_path, rel: 'manifest' %>
+    <%= tag.link href: vite_asset_path('images/logo.svg'), rel: 'preload', as: 'image' %>
+
+    <%= vite_client_tag %>
+    <%= vite_typescript_tag 'application', 'data-turbo-track': 'reload' %>
+    <%= vite_stylesheet_tag 'application', 'data-turbo-track': 'reload' %>
+  </head>
+
+  <body class="min-h-screen flex flex-col bg-linear-to-br from-primary to-secondary lg:bg-tertiary lg:from-inherit lg:to-inherit">
+    <%= render AppBackground::Component.new %>
+
+    <%= render AppHeader::Component.new(css_class: 'lg:fixed lg:top-10 lg:left-10') %>
+
+    <%= turbo_frame_tag 'flash' do %>
+      <% if flash.present? %>
+        <%= render AppFlash::Component.new(notice: flash[:notice], alert: flash[:alert]) %>
+      <% end %>
+    <% end %>
+
+    <main class="relative flex-1 px-4 py-5 bg-white shadow-md sm:px-6 lg:px-8 lg:mt-10 lg:mr-16 lg:ml-96 lg:max-w-5xl lg:rounded-xl">
+      <%= yield %>
+    </main>
+
+    <%= render AppFooter::Component.new(css_class: 'relative mt-2 mb-6 lg:px-0 lg:mr-16 lg:ml-96 lg:max-w-5xl') %>
+  </body>
+</html>

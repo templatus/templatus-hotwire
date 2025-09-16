@@ -14,10 +14,7 @@ class Click < ApplicationRecord
   after_create_commit do
     broadcast_prepend_to 'clicks',
                          target: 'list',
-                         html:
-                           Components::Click.new(
-                             click: self,
-                             will_animate: true,
-                           ).call
+                         partial: 'clicks/click',
+                         locals: { click: self, will_animate: true }
   end
 end

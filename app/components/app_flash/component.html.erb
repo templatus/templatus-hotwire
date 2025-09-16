@@ -1,0 +1,25 @@
+<div class="<%= background_class %>"
+     data-controller="app-flash"
+     data-transition-enter="transition duration-500 ease-out"
+     data-transition-enter-start="translate-y-32"
+     data-transition-enter-end="translate-y-0"
+     data-transition-leave="transition duration-500 ease-in"
+     data-transition-leave-start="translate-y-0"
+     data-transition-leave-end="translate-y-32"
+     data-turbo-temporary="true">
+  <div class="flex justify-center items-center mx-auto">
+    <% if notice %>
+      <!-- Check Circle Icon -->
+      <svg class="<%= icon_class %>" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.236 4.53L7.53 10.06a.75.75 0 00-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+      </svg>
+    <% elsif alert %>
+      <!-- Exclamation Circle Icon -->
+      <svg class="<%= icon_class %>" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-5a.75.75 0 01.75.75v4.5a.75.75 0 01-1.5 0v-4.5A.75.75 0 0110 5zm0 10a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+      </svg>
+    <% end %>
+
+    <p class="<%= text_class %>"><%= text %></p>
+  </div>
+</div>

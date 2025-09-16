@@ -1,0 +1,57 @@
+<div class="mt-20 space-y-24">
+  <% FEATURES.each do |item| %>
+    <div class="lg:grid lg:grid-cols-3 lg:gap-x-8">
+      <div>
+        <h2 class="text-base font-semibold tracking-wide uppercase text-primary">
+          <%= item[:slogan] %>
+        </h2>
+        <p class="mt-2 text-3xl font-extrabold text-gray-900">
+          <%= item[:name] %>
+        </p>
+      </div>
+
+      <div class="mt-12 lg:col-span-2 lg:mt-0">
+        <dl class="space-y-10 sm:grid sm:grid-cols-2 sm:gap-x-6 lg:gap-x-8 sm:gap-y-10 sm:space-y-0">
+          <% item[:items].each do |feature| %>
+            <div class="relative">
+              <dt>
+                <!-- Check Icon -->
+                <svg class="absolute h-6 w-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+                </svg>
+
+                <p class="flex items-center text-lg font-medium leading-6 ml-9 text-primary">
+                  <%= link_to feature[:name],
+                              feature[:href],
+                              class: 'hover:underline',
+                              target: '_blank',
+                              rel: 'noopener noreferrer' %>
+
+                  <% if (v = version_for_feature(feature)) %>
+                    <span class="inline-flex items-center py-0.5 px-2.5 ml-2 text-xs font-medium text-black bg-tertiary rounded-full">
+                      <%= v %>
+                    </span>
+                  <% end %>
+                </p>
+              </dt>
+
+              <dd class="mt-2 text-base text-gray-600 ml-9">
+                <%= feature[:description] %>
+
+                <% if feature[:gem] == 'sidekiq' %>
+                  <p class="mt-2 text-xs">
+                    →
+                    <%= link_to 'Admin frontend',
+                                helpers.sidekiq_web_path,
+                                class: 'font-medium uppercase hover:underline',
+                                data: { turbo: false } %>
+                  </p>
+                <% end %>
+              </dd>
+            </div>
+          <% end %>
+        </dl>
+      </div>
+    </div>
+  <% end %>
+</div>

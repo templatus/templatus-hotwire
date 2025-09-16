@@ -52,10 +52,6 @@ updates:
           - 'rspec*'
           - 'factory_bot'
           - 'factory_bot_rails'
-      phlex:
-        patterns:
-          - 'phlex'
-          - 'phlex-rails'
 
   - package-ecosystem: npm
     directory: '/'

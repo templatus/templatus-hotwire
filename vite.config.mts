@@ -24,6 +24,7 @@ export default defineConfig({
           'config/routes.rb',
           'app/views/**/*',
           'app/components/**/*',
+          'app/helpers/**/*',
         ],
       },
     }),

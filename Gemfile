@@ -14,11 +14,8 @@ gem 'turbo-rails'
 # A modest JavaScript framework for the HTML you already have. (https://stimulus.hotwired.dev)
 gem 'stimulus-rails'
 
-# A Phlex adapter for Rails (https://www.phlex.fun)
-gem 'phlex-rails'
-
-# Heroicons extension for Phlex (https://github.com/nejdetkadir/phlex-heroicons)
-gem 'phlex-heroicons', github: 'nejdetkadir/phlex-heroicons'
+# A framework for building reusable, testable & encapsulated view components in Ruby on Rails. (https://viewcomponent.org)
+gem 'view_component'
 
 # Pg is the Ruby interface to the PostgreSQL RDBMS (https://github.com/ged/ruby-pg)
 gem 'pg', '~> 1.1'
@@ -118,6 +115,9 @@ group :development do
 
   # Pretty print Ruby objects with proper indentation and colors (https://github.com/amazing-print/amazing_print)
   gem 'amazing_print'
+
+  # ERB lint tool (https://github.com/Shopify/erb_lint)
+  gem 'erb_lint', require: false
 end
 
 group :test do

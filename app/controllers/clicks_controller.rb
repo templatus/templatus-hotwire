@@ -1,9 +1,7 @@
 class ClicksController < ApplicationController
   def index
-    render Views::Clicks::Index.new(
-             clicks: Click.order(created_at: :desc).limit(5).load_async,
-             count: Click.count,
-           )
+    @clicks = Click.order(created_at: :desc).limit(5).load_async
+    @clicks_count = Click.count
   end
 
   def create

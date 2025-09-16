@@ -5,12 +5,6 @@ GIT
     lockup (1.7.1)
       rails (>= 3)
 
-GIT
-  remote: https://github.com/nejdetkadir/phlex-heroicons.git
-  revision: 59ac37f9bb41580858845926ed21cd62ec7de6d2
-  specs:
-    phlex-heroicons (1.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -94,6 +88,13 @@ GEM
     ast (2.4.3)
     base64 (0.3.0)
     benchmark (0.4.1)
+    better_html (2.1.1)
+      actionview (>= 6.0)
+      activesupport (>= 6.0)
+      ast (~> 2.0)
+      erubi (~> 1.4)
+      parser (>= 2.4)
+      smart_properties
     bigdecimal (3.2.3)
     bindex (0.8.1)
     bootsnap (1.18.6)
@@ -127,6 +128,13 @@ GEM
     drb (2.2.3)
     dry-cli (1.3.0)
     erb (5.0.2)
+    erb_lint (0.9.0)
+      activesupport
+      better_html (>= 2.0.1)
+      parser (>= 2.7.1.4)
+      rainbow
+      rubocop (>= 1)
+      smart_properties
     erubi (1.13.1)
     factory_bot (6.5.5)
       activesupport (>= 6.1.0)
@@ -236,12 +244,6 @@ GEM
     pg (1.6.2-arm64-darwin)
     pg (1.6.2-x86_64-linux)
     pg (1.6.2-x86_64-linux-musl)
-    phlex (2.3.1)
-      zeitwerk (~> 2.7)
-    phlex-rails (2.3.1)
-      phlex (~> 2.3.0)
-      railties (>= 7.1, < 9)
-      zeitwerk (~> 2.7)
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
@@ -398,6 +400,7 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.13.2)
     simplecov_json_formatter (0.1.4)
+    smart_properties (1.17.0)
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringio (3.1.7)
@@ -452,6 +455,7 @@ DEPENDENCIES
   capybara
   debug
   dotenv
+  erb_lint
   factory_bot_rails
   guard-rspec
   honeybadger
@@ -461,8 +465,6 @@ DEPENDENCIES
   lookbook
   ostruct
   pg (~> 1.1)
-  phlex-heroicons!
-  phlex-rails
   puma (>= 5.0)
   rack-brotli
   rack-canonical-host
@@ -484,6 +486,7 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
+  view_component
   vite_rails
   web-console (>= 4.1.0)
 
