@@ -11,7 +11,7 @@ class ClicksController < ApplicationController
                   ip: anonymize(request.remote_ip)
     render_flash_update notice: t('.success')
   rescue StandardError
-    render_flash_update alert: t('.fail'), status: :unprocessable_entity
+    render_flash_update alert: t('.fail'), status: :unprocessable_content
   end
 
   private
