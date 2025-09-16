@@ -347,16 +347,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@honeybadger-io/js@npm:^6.11.3":
-  version: 6.11.3
-  resolution: "@honeybadger-io/js@npm:6.11.3"
+"@honeybadger-io/js@npm:^6.12.1":
+  version: 6.12.1
+  resolution: "@honeybadger-io/js@npm:6.12.1"
   dependencies:
     "@honeybadger-io/core": "npm:^6.7.2"
     "@types/aws-lambda": "npm:^8.10.89"
     "@types/express": "npm:^5.0.3"
   bin:
     honeybadger-checkins-sync: scripts/check-ins-sync-bin.js
-  checksum: 10c0/7e8df7bf4f71172238cb35856d490ebedd41b1796da6cdb8f2e8749a071c854c5b30bd67e5d0c5b14db8a0cbb0659c8fe41fd33c401f993c3f2ea58113112053
+  checksum: 10c0/d16cd4bff2753b349ce3caae6d6b2119d345e546ef92f7f2307d568ee1aeae1e515c0f1c3ef1c4c1400390a91fa1eaa4009ed07c779e24f023b3c8b02e8c0621
   languageName: node
   linkType: hard
 
@@ -4290,7 +4290,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "templatus-hotwire@workspace:."
   dependencies:
-    "@honeybadger-io/js": "npm:^6.11.3"
+    "@honeybadger-io/js": "npm:^6.12.1"
     "@hotwired/stimulus": "npm:^3.2.2"
     "@hotwired/turbo-rails": "npm:^8.0.16"
     "@rails/actioncable": "npm:^8.0.201"
