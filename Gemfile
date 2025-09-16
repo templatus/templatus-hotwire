@@ -23,7 +23,7 @@ gem 'phlex-heroicons', github: 'nejdetkadir/phlex-heroicons'
 # Pg is the Ruby interface to the PostgreSQL RDBMS (https://github.com/ged/ruby-pg)
 gem 'pg', '~> 1.1'
 
-# Puma is a simple, fast, threaded, and highly parallel HTTP 1.1 server for Ruby/Rack applications (https://puma.io)
+# A Ruby/Rack web server built for parallelism. (https://puma.io)
 gem 'puma', '>= 5.0'
 
 # Boot large ruby/rails apps faster (https://github.com/Shopify/bootsnap)
@@ -72,7 +72,7 @@ group :development, :test do
   # RSpec for Rails (https://github.com/rspec/rspec-rails)
   gem 'rspec-rails'
 
-  # factory_bot_rails provides integration between factory_bot and rails 5.0 or newer (https://github.com/thoughtbot/factory_bot_rails)
+  # factory_bot_rails provides integration between factory_bot and Rails 6.1 or newer (https://github.com/thoughtbot/factory_bot_rails)
   gem 'factory_bot_rails'
 
   # Automatic Ruby code style checking tool. (https://github.com/rubocop/rubocop)
@@ -110,7 +110,7 @@ group :development do
   # Guard gem for RSpec (https://github.com/guard/guard-rspec)
   gem 'guard-rspec', require: false
 
-  # A native development UI for ViewComponent (https://github.com/lookbook-hq/lookbook)
+  # Lookbook is a UI development environment for Ruby on Rails applications (https://github.com/lookbook-hq/lookbook)
   gem 'lookbook'
 
   # A gem for generating annotations for Rails projects. (https://github.com/drwl/annotaterb)
@@ -129,6 +129,6 @@ group :test do
 end
 
 group :production do
-  # Error reports you can be happy about. (https://www.honeybadger.io/for/ruby/)
+  # Full-stack error tracking, performance monitoring, logging, and more. (https://www.honeybadger.io/for/ruby/)
   gem 'honeybadger'
 end
