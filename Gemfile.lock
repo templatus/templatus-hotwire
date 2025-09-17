@@ -144,7 +144,7 @@ GEM
     ffi (1.17.2-arm64-darwin)
     ffi (1.17.2-x86_64-linux-gnu)
     ffi (1.17.2-x86_64-linux-musl)
-    formatador (1.2.0)
+    formatador (1.2.1)
       reline
     globalid (1.2.1)
       activesupport (>= 6.1)
