@@ -40,6 +40,20 @@
     "vite-plugin-rails": "^0.5.0",
     "vite-plugin-stimulus-hmr": "^3.0.0"
   },
+  "dependenciesMeta": {
+    "@tailwindcss/oxide": {
+      "built": true
+    },
+    "cypress": {
+      "built": true
+    },
+    "esbuild": {
+      "built": true
+    },
+    "vite": {
+      "built": true
+    }
+  },
   "size-limit": [
     {
       "limit": "55 kB",

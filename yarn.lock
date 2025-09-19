@@ -4319,6 +4319,15 @@ __metadata:
     vite-plugin-full-reload: "npm:^1.2.0"
     vite-plugin-rails: "npm:^0.5.0"
     vite-plugin-stimulus-hmr: "npm:^3.0.0"
+  dependenciesMeta:
+    "@tailwindcss/oxide":
+      built: true
+    cypress:
+      built: true
+    esbuild:
+      built: true
+    vite:
+      built: true
   languageName: unknown
   linkType: soft
 
