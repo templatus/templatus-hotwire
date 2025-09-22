@@ -10,7 +10,7 @@
     "@honeybadger-io/js": "^6.12.2",
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.16",
-    "@rails/actioncable": "^8.0.201",
+    "@rails/actioncable": "^8.0.300",
     "el-transition": "^0.0.7",
     "idiomorph": "^0.7.3",
     "plausible-tracker": "^0.3.9",
