@@ -2681,10 +2681,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"idiomorph@npm:^0.7.3":
-  version: 0.7.3
-  resolution: "idiomorph@npm:0.7.3"
-  checksum: 10c0/13d9953d1791070b688250c2b38c3e2a25e1b0a7c8c8ff4517998543cb2faa42a725276686c77da22b718830a01df14450c82906f01ae0c6f04810195aba0729
+"idiomorph@npm:^0.7.4":
+  version: 0.7.4
+  resolution: "idiomorph@npm:0.7.4"
+  checksum: 10c0/1eec0b868c5e00cb69b7b32fd3a85e9116570d2447dbad4fab80d6a54783df59e7214f675e8cd40ca453df9bf948b9393d67b0d93fac93c91468172a6255d908
   languageName: node
   linkType: hard
 
@@ -4306,7 +4306,7 @@ __metadata:
     eslint-config-prettier: "npm:^10.1.8"
     eslint-plugin-cypress: "npm:^5.1.1"
     eslint-plugin-prettier: "npm:^5.5.4"
-    idiomorph: "npm:^0.7.3"
+    idiomorph: "npm:^0.7.4"
     plausible-tracker: "npm:^0.3.9"
     prettier: "npm:^3.6.2"
     prettier-plugin-tailwindcss: "npm:^0.6.14"
