@@ -3661,9 +3661,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:^0.6.14":
-  version: 0.6.14
-  resolution: "prettier-plugin-tailwindcss@npm:0.6.14"
+"prettier-plugin-tailwindcss@npm:^0.7.0":
+  version: 0.7.0
+  resolution: "prettier-plugin-tailwindcss@npm:0.7.0"
   peerDependencies:
     "@ianvs/prettier-plugin-sort-imports": "*"
     "@prettier/plugin-hermes": "*"
@@ -3675,14 +3675,12 @@ __metadata:
     prettier: ^3.0
     prettier-plugin-astro: "*"
     prettier-plugin-css-order: "*"
-    prettier-plugin-import-sort: "*"
     prettier-plugin-jsdoc: "*"
     prettier-plugin-marko: "*"
     prettier-plugin-multiline-arrays: "*"
     prettier-plugin-organize-attributes: "*"
     prettier-plugin-organize-imports: "*"
     prettier-plugin-sort-imports: "*"
-    prettier-plugin-style-order: "*"
     prettier-plugin-svelte: "*"
   peerDependenciesMeta:
     "@ianvs/prettier-plugin-sort-imports":
@@ -3703,8 +3701,6 @@ __metadata:
       optional: true
     prettier-plugin-css-order:
       optional: true
-    prettier-plugin-import-sort:
-      optional: true
     prettier-plugin-jsdoc:
       optional: true
     prettier-plugin-marko:
@@ -3717,11 +3713,9 @@ __metadata:
       optional: true
     prettier-plugin-sort-imports:
       optional: true
-    prettier-plugin-style-order:
-      optional: true
     prettier-plugin-svelte:
       optional: true
-  checksum: 10c0/1bf635be28b30b3f171a184497eecf512601d19328e402dd2eb1ede52aa57b4f5b605eae2929f4916de9ba22526f3d730d9afa90334db09d17c59f463f7b26d8
+  checksum: 10c0/8a7d7d2f77cd45bbd3b3c8f630da4ee2739def1c88185a74dcf3758b78644d35b6a3d1f2ee562ca177c0f8aec524dab9e88adac4c5999d386cd01527fa51eb77
   languageName: node
   linkType: hard
 
@@ -4334,7 +4328,7 @@ __metadata:
     idiomorph: "npm:^0.7.4"
     plausible-tracker: "npm:^0.3.9"
     prettier: "npm:^3.6.2"
-    prettier-plugin-tailwindcss: "npm:^0.6.14"
+    prettier-plugin-tailwindcss: "npm:^0.7.0"
     register-service-worker: "npm:^1.7.2"
     rollup: "npm:^4.52.4"
     size-limit: "npm:^11.2.0"
