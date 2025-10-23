@@ -21,7 +21,7 @@
   "devDependencies": {
     "@size-limit/file": "^11.2.0",
     "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/vite": "^4.1.15",
+    "@tailwindcss/vite": "^4.1.16",
     "@types/rails__actioncable": "^8.0.0",
     "cypress": "^15.5.0",
     "eslint": "^9.38.0",
@@ -32,7 +32,7 @@
     "prettier-plugin-tailwindcss": "^0.7.1",
     "rollup": "^4.52.5",
     "size-limit": "^11.2.0",
-    "tailwindcss": "^4.1.15",
+    "tailwindcss": "^4.1.16",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.2",
     "vite": "^7.1.12",
