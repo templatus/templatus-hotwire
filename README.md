@@ -238,12 +238,6 @@ bin/rspec
 open coverage/index.html
 ```
 
-JavaScript unit tests:
-
-```
-bin/yarn test
-```
-
 E2E tests with Cypress:
 
 ```
