@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby file: '.ruby-version'
 
 # Full-stack web application framework. (https://rubyonrails.org)
-gem 'rails', '~> 8.0.0'
+gem 'rails', '~> 8.1.0'
 
 # Use Vite in Rails and bring joy to your JavaScript experience (https://github.com/ElMassimo/vite_ruby)
 gem 'vite_rails'
@@ -95,6 +95,9 @@ group :development, :test do
 
   # An XML toolkit for Ruby (https://github.com/ruby/rexml)
   gem 'rexml'
+
+  # Patch-level verification for Bundler (https://github.com/rubysec/bundler-audit#readme)
+  gem 'bundler-audit', require: false
 end
 
 group :development do
