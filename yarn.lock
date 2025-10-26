@@ -1005,10 +1005,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/rails__actioncable@npm:^8.0.0":
-  version: 8.0.0
-  resolution: "@types/rails__actioncable@npm:8.0.0"
-  checksum: 10c0/a91baf44bef619732c026aa8bb0d8e562f21856d440a89fe4ca4aa32022d8d330bd8ab74cceeabea009c4c26174609cf2c1b443b2e7e0e11f52405b215e7ec2c
+"@types/rails__actioncable@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "@types/rails__actioncable@npm:8.0.1"
+  checksum: 10c0/d42188e357f189c564aa40a8eb3a38ebd0a5e9c6db1c0ad73d6cc7ecc493af1cf6755674e0b402a60395e548b6ba4e9553192485160577bbeaba9e4446a9e70d
   languageName: node
   linkType: hard
 
@@ -4325,7 +4325,7 @@ __metadata:
     "@size-limit/file": "npm:^11.2.0"
     "@tailwindcss/forms": "npm:^0.5.10"
     "@tailwindcss/vite": "npm:^4.1.16"
-    "@types/rails__actioncable": "npm:^8.0.0"
+    "@types/rails__actioncable": "npm:^8.0.1"
     cypress: "npm:^15.5.0"
     el-transition: "npm:^0.0.7"
     eslint: "npm:^9.38.0"
