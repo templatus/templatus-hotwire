@@ -558,6 +558,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@plausible-analytics/tracker@npm:^0.4.3":
+  version: 0.4.3
+  resolution: "@plausible-analytics/tracker@npm:0.4.3"
+  checksum: 10c0/2958454b9f01db5c64aec1d74e820de2cb9645cbadf109c591b33521a62fa1118de5a6b7358a421e61f118ce18c4b699a4d836a3386b020e6983c245e741870d
+  languageName: node
+  linkType: hard
+
 "@rails/actioncable@npm:>=7.0, @rails/actioncable@npm:^8.1.0":
   version: 8.1.0
   resolution: "@rails/actioncable@npm:8.1.0"
@@ -3634,13 +3641,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"plausible-tracker@npm:^0.3.9":
-  version: 0.3.9
-  resolution: "plausible-tracker@npm:0.3.9"
-  checksum: 10c0/750018ad255119f7a5e6d108b35c1c7e4dd04ad9b0e950951812658b02b464865fdcb22a72f8a29881bcf3e5a4da7653ff881d333362ee6c319e63fae03153fb
-  languageName: node
-  linkType: hard
-
 "postcss@npm:^8.5.6":
   version: 8.5.6
   resolution: "postcss@npm:8.5.6"
@@ -4321,6 +4321,7 @@ __metadata:
     "@honeybadger-io/js": "npm:^6.12.3"
     "@hotwired/stimulus": "npm:^3.2.2"
     "@hotwired/turbo-rails": "npm:^8.0.18"
+    "@plausible-analytics/tracker": "npm:^0.4.3"
     "@rails/actioncable": "npm:^8.1.0"
     "@size-limit/file": "npm:^11.2.0"
     "@tailwindcss/forms": "npm:^0.5.10"
@@ -4333,7 +4334,6 @@ __metadata:
     eslint-plugin-cypress: "npm:^5.2.0"
     eslint-plugin-prettier: "npm:^5.5.4"
     idiomorph: "npm:^0.7.4"
-    plausible-tracker: "npm:^0.3.9"
     prettier: "npm:^3.6.2"
     prettier-plugin-tailwindcss: "npm:^0.7.1"
     register-service-worker: "npm:^1.7.2"

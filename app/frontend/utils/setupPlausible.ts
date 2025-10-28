@@ -1,14 +1,14 @@
-import Plausible from 'plausible-tracker';
+import { init, track } from '@plausible-analytics/tracker';
 import { metaContent } from './metaContent';
 
 const plausibleUrl = metaContent('plausible-url');
 if (plausibleUrl) {
-  const plausible = Plausible({
-    domain: metaContent('app-host') || window.location.host,
-    apiHost: plausibleUrl,
+  init({
+    domain: metaContent('app-host') || globalThis.location.host,
+    endpoint: plausibleUrl,
+    autoCapturePageviews: false,
+    outboundLinks: true,
   });
 
-  plausible.enableAutoOutboundTracking();
-
-  document.addEventListener('turbo:load', () => plausible.trackPageview());
+  document.addEventListener('turbo:load', () => track('pageview', {}));
 }
