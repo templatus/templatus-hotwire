@@ -131,10 +131,15 @@ module AboutHelper # rubocop:disable Metrics/ModuleLength
           description: 'Test, build and deliver on every push to GitHub',
         },
         {
-          name: 'Cypress',
-          href: 'https://cypress.io/',
+          name: 'Capybara',
+          href: 'https://github.com/teamcapybara/capybara',
           description:
-            'Fast, easy and reliable testing for anything that runs in a browser.',
+            'Acceptance test framework for web applications.',
+        },
+        {
+          name: 'Playwright',
+          href: 'https://playwright.dev/',
+          description: 'Reliable end-to-end testing for modern web apps.',
         },
       ],
     },

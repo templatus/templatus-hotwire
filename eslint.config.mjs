@@ -2,7 +2,6 @@ import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
 import pluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
-import pluginCypress from 'eslint-plugin-cypress/flat';
 
 export default [
   eslint.configs.recommended,
@@ -20,11 +19,6 @@ export default [
       ],
       '@typescript-eslint/no-var-requires': 'off',
     },
-  },
-
-  {
-    files: ['spec/cypress/**'],
-    ...pluginCypress.configs.recommended,
   },
 
   {

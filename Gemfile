@@ -129,6 +129,9 @@ group :test do
 
   # Capybara aims to simplify the process of integration testing Rack applications, such as Rails, Sinatra or Merb (https://github.com/teamcapybara/capybara)
   gem 'capybara'
+
+  # Playwright driver for Capybara (https://github.com/YusukeIwaki/capybara-playwright-driver)
+  gem 'capybara-playwright-driver'
 end
 
 group :production do

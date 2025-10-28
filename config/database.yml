@@ -50,8 +50,7 @@ default: &default
 
 development:
   <<: *default
-  # Use test database in Cypress mode. This allows writing Cypress tests without having to restart the server
-  database: "<%= Rails.configuration.x.cypress ? 'templatus-hotwire_test' : 'templatus-hotwire_development' %>"
+  database: templatus-hotwire_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

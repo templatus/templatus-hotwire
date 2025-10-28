@@ -1,1 +1,0 @@
-cypress: bin/yarn cypress ${CYPRESS_COMMANDS}

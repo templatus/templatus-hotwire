@@ -65,22 +65,23 @@ jobs:
       - name: Scan for common Rails security vulnerabilities using static analysis
         run: bin/brakeman --no-pager
 
+      - name: Get Playwright version
+        id: playwright-version
+        run: echo "version=$(node -p "require('./node_modules/playwright/package.json').version")" >> $GITHUB_OUTPUT
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-browsers-${{ runner.os }}-${{ steps.playwright-version.outputs.version }}
+
+      - name: Install Playwright browsers
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: yarn playwright install --with-deps chromium
+
       - name: Run Ruby Tests
         run: bin/rspec
-
-      - name: End-to-end tests
-        uses: cypress-io/github-action@v6
-        with:
-          start: bundle exec rails server
-          wait-on: http://localhost:3000
-          browser: chrome
-          record: true
-        env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CYPRESS_BASE_URL: http://localhost:3000
-          CYPRESS: true
-        if: env.CYPRESS_RECORD_KEY != null
 
       - name: Check JS size limit
         run: yarn size-limit
@@ -88,10 +89,8 @@ jobs:
       - uses: actions/upload-artifact@v5
         if: failure()
         with:
-          name: Cypress screenshots and videos
-          path: |
-            tmp/cypress_screenshots/
-            tmp/cypress_videos/
+          name: capybara-screenshots
+          path: tmp/capybara/
           if-no-files-found: ignore
 
   deploy:

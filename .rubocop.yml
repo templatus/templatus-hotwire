@@ -160,3 +160,8 @@ RSpec/AlignLeftLetBrace:
 
 RSpec/AlignRightLetBrace:
   Enabled: false
+
+# Capybara
+
+Capybara/AmbiguousClick:
+  Enabled: false
