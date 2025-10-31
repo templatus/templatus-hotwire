@@ -5,7 +5,7 @@ const plausibleUrl = metaContent('plausible-url');
 if (plausibleUrl) {
   init({
     domain: metaContent('app-host') || globalThis.location.host,
-    endpoint: plausibleUrl,
+    endpoint: `${plausibleUrl}/api/event`,
     autoCapturePageviews: false,
     outboundLinks: true,
   });
