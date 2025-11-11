@@ -29,7 +29,7 @@
     "playwright": "^1.56.1",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.7.1",
-    "rollup": "^4.53.1",
+    "rollup": "^4.53.2",
     "size-limit": "^11.2.0",
     "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3",
