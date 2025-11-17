@@ -39,6 +39,9 @@ Rails/DefaultScope:
 Rails/EnvironmentVariableAccess:
   AllowReads: true
 
+Rails/Env:
+  Enabled: false
+
 ### Bundler
 
 Bundler/OrderedGems:
