@@ -699,12 +699,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@size-limit/file@npm:^11.2.0":
-  version: 11.2.0
-  resolution: "@size-limit/file@npm:11.2.0"
+"@size-limit/file@npm:^12.0.0":
+  version: 12.0.0
+  resolution: "@size-limit/file@npm:12.0.0"
   peerDependencies:
-    size-limit: 11.2.0
-  checksum: 10c0/25fb431c2afa9293774842f3abb12ee0aaa988585a2be545f2a4f90ffd5c638a13bada10a0b71e376cefb426bd991793d0e1ffe970b94a4e0bb8b0a8b504f343
+    size-limit: 12.0.0
+  checksum: 10c0/bd19f971031778f6ee41acbb6acebf97d4cd8a58f164576f68b7241380e430680ca9ddbe2a2ac0ce92236007a72a51a7ca2a05af079c09fe48c010f517349987
   languageName: node
   linkType: hard
 
@@ -3102,7 +3102,7 @@ __metadata:
     "@hotwired/turbo-rails": "npm:^8.0.20"
     "@plausible-analytics/tracker": "npm:^0.4.4"
     "@rails/actioncable": "npm:^8.1.100"
-    "@size-limit/file": "npm:^11.2.0"
+    "@size-limit/file": "npm:^12.0.0"
     "@tailwindcss/forms": "npm:^0.5.10"
     "@tailwindcss/vite": "npm:^4.1.17"
     "@types/rails__actioncable": "npm:^8.0.3"
