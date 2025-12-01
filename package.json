@@ -27,7 +27,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "playwright": "^1.57.0",
-    "prettier": "^3.7.2",
+    "prettier": "^3.7.3",
     "prettier-plugin-tailwindcss": "^0.7.1",
     "rollup": "^4.53.3",
     "size-limit": "^12.0.0",
