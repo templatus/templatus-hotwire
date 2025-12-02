@@ -2657,9 +2657,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-tailwindcss@npm:^0.7.1":
-  version: 0.7.1
-  resolution: "prettier-plugin-tailwindcss@npm:0.7.1"
+"prettier-plugin-tailwindcss@npm:^0.7.2":
+  version: 0.7.2
+  resolution: "prettier-plugin-tailwindcss@npm:0.7.2"
   peerDependencies:
     "@ianvs/prettier-plugin-sort-imports": "*"
     "@prettier/plugin-hermes": "*"
@@ -2711,7 +2711,7 @@ __metadata:
       optional: true
     prettier-plugin-svelte:
       optional: true
-  checksum: 10c0/915a0fdff68fd86f809719fef883a1eb314d2cdf0ef571d9547780d06815ad2158a30a101dd1476752c0975c370d3f1ca73643ced18bfa12647ca3f205a709e2
+  checksum: 10c0/072fb79be58ba6b9743eb4b85be7da06f7d719764e293fdaf6515f15b21af2d22ab0e6476c636c69983949e42c4382e9566b17e3b123a2df6cf5100336729f3c
   languageName: node
   linkType: hard
 
@@ -3113,7 +3113,7 @@ __metadata:
     idiomorph: "npm:^0.7.4"
     playwright: "npm:^1.57.0"
     prettier: "npm:^3.7.3"
-    prettier-plugin-tailwindcss: "npm:^0.7.1"
+    prettier-plugin-tailwindcss: "npm:^0.7.2"
     register-service-worker: "npm:^1.7.2"
     rollup: "npm:^4.53.3"
     size-limit: "npm:^12.0.0"
