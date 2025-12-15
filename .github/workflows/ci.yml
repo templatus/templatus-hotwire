@@ -86,7 +86,7 @@ jobs:
       - name: Check JS size limit
         run: yarn size-limit
 
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         if: failure()
         with:
           name: capybara-screenshots
