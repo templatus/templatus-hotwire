@@ -35,6 +35,13 @@ Rails.application.configure do
   config.force_ssl =
     ActiveModel::Type::Boolean.new.cast ENV.fetch('FORCE_SSL', true)
 
+  # Skip http-to-https redirect for the default health check endpoint
+  config.ssl_options = {
+    redirect: {
+      exclude: ->(request) { request.path == '/up' },
+    },
+  }
+
   # Skip http-to-https redirect for the default health check endpoint.
   # config.ssl_options = { redirect: { exclude: ->(request) { request.path == "/up" } } }
 
@@ -99,7 +106,7 @@ Rails.application.configure do
   #   "example.com",     # Allow requests from example.com
   #   /.*\.example\.com/ # Allow requests from subdomains like `www.example.com`
   # ]
-  config.hosts = [ENV.fetch('APP_HOST', nil)]
+  config.hosts = [ENV.fetch('APP_HOST', nil), 'localhost', '127.0.0.1'].compact
 
   #
   # Skip DNS rebinding protection for the default health check endpoint.

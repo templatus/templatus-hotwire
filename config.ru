@@ -6,7 +6,8 @@ if Rails.env.production? && Rails.configuration.x.app_host
   # Redirect to a canonical host
   use Rack::CanonicalHost,
       Rails.configuration.x.app_host,
-      cache_control: 'no-cache'
+      cache_control: 'no-cache',
+      ignore: ->(uri) { uri.path == '/up' }
 end
 
 run Rails.application
