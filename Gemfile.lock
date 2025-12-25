@@ -345,7 +345,7 @@ GEM
     request_store (1.7.0)
       rack (>= 1.4)
     rexml (3.4.4)
-    rorvswild (1.10.0)
+    rorvswild (1.10.1)
     rouge (4.6.1)
     rspec (3.13.2)
       rspec-core (~> 3.13.0)
