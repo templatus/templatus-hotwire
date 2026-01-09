@@ -495,7 +495,7 @@ DEPENDENCIES
   rack-brotli
   rack-canonical-host
   rack-cors
-  rails (~> 8.1.0)
+  rails (~> 8.1.2)
   redis (>= 4.0.1)
   rexml
   rorvswild
