@@ -157,7 +157,7 @@ GEM
       reline
     globalid (1.3.0)
       activesupport (>= 6.1)
-    guard (2.20.0)
+    guard (2.20.1)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
       logger (~> 1.6)
