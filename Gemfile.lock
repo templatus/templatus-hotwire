@@ -136,7 +136,7 @@ GEM
     dotenv (3.2.0)
     drb (2.2.3)
     dry-cli (1.4.1)
-    erb (6.0.1)
+    erb (6.0.2)
     erb_lint (0.9.0)
       activesupport
       better_html (>= 2.0.1)
@@ -228,7 +228,8 @@ GEM
       mime-types-data (~> 3.2025, >= 3.2025.0507)
     mime-types-data (3.2026.0203)
     mini_mime (1.1.5)
-    minitest (6.0.1)
+    minitest (6.0.2)
+      drb (~> 2.0)
       prism (~> 1.5)
     msgpack (1.8.0)
     mutex_m (0.3.0)
@@ -453,11 +454,10 @@ GEM
       mutex_m
       rack-proxy (~> 0.6, >= 0.6.1)
       zeitwerk (~> 2.2)
-    web-console (4.2.1)
-      actionview (>= 6.0.0)
-      activemodel (>= 6.0.0)
+    web-console (4.3.0)
+      actionview (>= 8.0.0)
       bindex (>= 0.4.0)
-      railties (>= 6.0.0)
+      railties (>= 8.0.0)
     websocket-driver (0.8.0)
       base64
       websocket-extensions (>= 0.1.0)
