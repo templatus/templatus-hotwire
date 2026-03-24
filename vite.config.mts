@@ -8,10 +8,13 @@ export default defineConfig({
     assetsInlineLimit: 0,
     rolldownOptions: {
       output: {
-        manualChunks(id) {
-          if (id.includes('node_modules')) {
-            return 'vendor';
-          }
+        codeSplitting: {
+          groups: [
+            {
+              test: /node_modules/,
+              name: 'vendor',
+            },
+          ],
         },
       },
     },
