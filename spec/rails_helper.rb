@@ -1,3 +1,11 @@
+# Bootsnap's ISeq compile cache is incompatible with Coverage - Ruby's
+# `iseq.to_binary` raises "should not compile with coverage". Until
+# Ruby 4.0.3 this only quietly broke coverage of Bootsnap-cached files;
+# 4.0.4 made it a hard error (bugs.ruby-lang.org/issues/22018). Bootsnap
+# has no ISeq-only switch, so this disables YAML caching too; load-path
+# cache stays on.
+ENV['DISABLE_BOOTSNAP_COMPILE_CACHE'] = '1'
+
 require 'simplecov'
 SimpleCov.start 'rails' do
   add_filter 'app/jobs/application_job.rb'
