@@ -150,7 +150,12 @@ GEM
     factory_bot_rails (6.5.1)
       factory_bot (~> 6.5)
       railties (>= 6.1.0)
+    ffi (1.17.4-aarch64-linux-gnu)
+    ffi (1.17.4-aarch64-linux-musl)
+    ffi (1.17.4-arm-linux-gnu)
+    ffi (1.17.4-arm-linux-musl)
     ffi (1.17.4-arm64-darwin)
+    ffi (1.17.4-x86_64-darwin)
     ffi (1.17.4-x86_64-linux-gnu)
     ffi (1.17.4-x86_64-linux-musl)
     formatador (1.2.3)
@@ -244,7 +249,17 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.5)
+    nokogiri (1.19.3-aarch64-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.19.3-aarch64-linux-musl)
+      racc (~> 1.4)
+    nokogiri (1.19.3-arm-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.19.3-arm-linux-musl)
+      racc (~> 1.4)
     nokogiri (1.19.3-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.19.3-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.19.3-x86_64-linux-gnu)
       racc (~> 1.4)
@@ -258,7 +273,11 @@ GEM
     parser (3.3.11.1)
       ast (~> 2.4.1)
       racc
+    pg (1.6.3)
+    pg (1.6.3-aarch64-linux)
+    pg (1.6.3-aarch64-linux-musl)
     pg (1.6.3-arm64-darwin)
+    pg (1.6.3-x86_64-darwin)
     pg (1.6.3-x86_64-linux)
     pg (1.6.3-x86_64-linux-musl)
     playwright-ruby-client (1.59.1)
@@ -468,9 +487,15 @@ GEM
     zeitwerk (2.7.5)
 
 PLATFORMS
-  arm64-darwin-23
-  arm64-darwin-25
+  aarch64-linux
+  aarch64-linux-gnu
+  aarch64-linux-musl
+  arm-linux-gnu
+  arm-linux-musl
+  arm64-darwin
+  x86_64-darwin
   x86_64-linux
+  x86_64-linux-gnu
   x86_64-linux-musl
 
 DEPENDENCIES
