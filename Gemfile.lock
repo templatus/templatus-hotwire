@@ -484,7 +484,7 @@ GEM
     xpath (3.2.0)
       nokogiri (~> 1.8)
     yard (0.9.43)
-    zeitwerk (2.8.0)
+    zeitwerk (2.8.1)
 
 PLATFORMS
   aarch64-linux
