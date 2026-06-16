@@ -53,7 +53,7 @@ updates:
           - 'factory_bot'
           - 'factory_bot_rails'
 
-  - package-ecosystem: npm
+  - package-ecosystem: bun
     directory: '/'
     schedule:
       interval: daily

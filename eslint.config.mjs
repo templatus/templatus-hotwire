@@ -24,7 +24,6 @@ export default [
   {
     ignores: [
       '.ruby-lsp/',
-      '.yarn/',
       'config/',
       'coverage/',
       'db/',

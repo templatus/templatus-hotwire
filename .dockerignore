@@ -11,7 +11,6 @@
 .rspec
 .rubocop.yml
 .vscode
-.yarnclean
 .prettierignore
 .prettierrc.json
 docs
@@ -29,7 +28,6 @@ public/assets
 tmp/*
 !/tmp/pids/
 !/tmp/pids/.keep
-yarn-error.log
 config/environments/test.rb
 config/environments/development.rb
 spec
@@ -39,5 +37,4 @@ bin/dev
 bin/rspec
 bin/rubocop
 bin/setup
-bin/yarn
 bin/open

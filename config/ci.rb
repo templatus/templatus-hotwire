@@ -4,11 +4,11 @@ CI.run do
   step 'Setup', 'bin/setup --skip-server'
 
   step 'Style: Ruby', 'bin/rubocop'
-  step 'Style: JavaScript', 'bin/yarn lint'
-  step 'Style: TypeScript', 'bin/yarn tsc'
+  step 'Style: JavaScript', 'bun run lint'
+  step 'Style: TypeScript', 'bun run tsc'
 
   step 'Security: Gem audit', 'bin/bundler-audit'
-  step 'Security: Yarn vulnerability audit', 'bin/yarn npm audit --recursive'
+  step 'Security: JavaScript vulnerability audit', 'bun audit'
   step 'Security: Brakeman code analysis',
        'bin/brakeman --quiet --no-pager --exit-on-warn --exit-on-error'
 

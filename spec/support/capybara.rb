@@ -3,6 +3,8 @@ require 'capybara/rspec'
 Capybara.register_driver :my_playwright do |app|
   Capybara::Playwright::Driver.new(
     app,
+    # Use Bun to run the Playwright CLI so Node.js is not required
+    playwright_cli_executable_path: 'bunx playwright',
     browser_type: ENV.fetch('PLAYWRIGHT_BROWSER', 'chromium').to_sym,
     headless: ENV['CI'].present? || ENV['PLAYWRIGHT_HEADLESS'].present?,
   )

@@ -32,6 +32,7 @@ There are two sister repositories:
 - [Tailwind CSS 4](https://tailwindcss.com/) to not have to write CSS at all
 - [Heroicons](https://heroicons.com/) for beautiful hand-crafted SVG icons
 - [Vite](https://vitejs.dev/) for bundling JavaScript and CSS with Hot Module Replacement (HMR) in development
+- [Bun](https://bun.sh/) as package manager for JavaScript dependencies
 
 ### Development
 
@@ -114,28 +115,25 @@ https://github.com/rails/rails/pull/41994
 - Honeybadger (25 KB)
 
 ```
-$ RAILS_ENV=production bin/rails assets:precompile
-➤ YN0000: · Yarn 4.4.1
-➤ YN0000: ┌ Resolution step
-➤ YN0000: └ Completed
-➤ YN0000: ┌ Fetch step
-➤ YN0000: └ Completed
-➤ YN0000: ┌ Link step
-➤ YN0000: └ Completed
-➤ YN0000: · Done in 0s 312ms
+$ SECRET_KEY_BASE_DUMMY=1 RAILS_ENV=production bin/rails assets:precompile
+bun install v1.3.14 (0d9b296a)
+
+Checked 171 installs across 213 packages (no changes) [11.00ms]
 Building with Vite ⚡️
-vite v5.4.3 building for production...
+vite v8.0.16 building client environment for production...
 transforming...
-✓ 47 modules transformed.
+✓ 44 modules transformed.
 rendering chunks...
 computing gzip size...
-../../public/vite/.vite/manifest-assets.json         0.10 kB │ gzip:  0.09 kB
-../../public/vite/assets/logo-DdqaqAN0.svg           0.50 kB │ gzip:  0.30 kB
-../../public/vite/.vite/manifest.json                0.57 kB │ gzip:  0.22 kB
-../../public/vite/assets/application-Buqxuzrp.css   23.64 kB │ gzip:  5.07 kB
-../../public/vite/assets/application-CFMovW7N.js     3.64 kB │ gzip:  1.44 kB │ map:   9.72 kB
-../../public/vite/assets/vendor-CjM9kOWQ.js        208.59 kB │ gzip: 57.68 kB │ map: 715.99 kB
-✓ built in 1.03s
+public/vite/.vite/manifest-assets.json             0.09 kB │ gzip:  0.09 kB
+public/vite/assets/logo-DdqaqAN0.svg               0.49 kB │ gzip:  0.30 kB
+public/vite/.vite/manifest.json                    0.97 kB │ gzip:  0.28 kB
+public/vite/assets/application-DyB2HwVb.css       31.45 kB │ gzip:  6.28 kB
+public/vite/assets/rolldown-runtime-QTnfLwEv.js    0.69 kB │ gzip:  0.42 kB
+public/vite/assets/application-BxqRxSM_.js         3.18 kB │ gzip:  1.30 kB │ map:   9.09 kB
+public/vite/assets/vendor-Br1roBAV.js            209.27 kB │ gzip: 57.28 kB │ map: 691.85 kB
+
+✓ built in 443ms
 Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
 ```
 
@@ -192,7 +190,7 @@ puma-dev link
 echo 3036 > ~/.puma-dev/vite.templatus-hotwire
 ```
 
-4. Setup the application to install gems and NPM packages and create the database:
+4. Setup the application to install gems and JavaScript packages and create the database:
 
 ```bash
 bin/setup
@@ -225,7 +223,7 @@ bin/rubocop
 ESLint:
 
 ```
-bin/yarn lint
+bun run lint
 ```
 
 ### Running tests locally
