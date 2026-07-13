@@ -1,5 +1,5 @@
 task routes: :environment do
-  # :nocov:
+  # simplecov:disable
   puts `bundle exec rails routes`
-  # :nocov:
+  # simplecov:enable
 end
