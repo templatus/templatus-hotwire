@@ -7,6 +7,8 @@ export default class extends Controller<HTMLElement> {
   }
 
   disconnect() {
-    timeago.cancel();
+    // Scoped to this element: a bare cancel() would stop the timers of every
+    // other timeago element on the page as well.
+    timeago.cancel(this.element);
   }
 }
