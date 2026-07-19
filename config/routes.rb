@@ -58,6 +58,19 @@ Rails.application.routes.draw do
   get 'up' => 'rails/health#show', :as => :rails_health_check
 
   mount Lockup::Engine, at: '/lockup' if Rails.env.production?
+  # SECURITY: Mounted without authentication on purpose, so the public demo can
+  # show it off. Sidekiq::Web is a separate Rack app, so neither Lockup nor any
+  # ApplicationController before_action applies to it - anyone reaching this URL
+  # can read job arguments and retry, kill or delete queues.
+  #
+  # Before using this template for anything real, restrict it, e.g.:
+  #
+  #   Sidekiq::Web.use Rack::Auth::Basic do |user, password|
+  #     ActiveSupport::SecurityUtils.secure_compare(user, ENV.fetch('SIDEKIQ_USER')) &
+  #       ActiveSupport::SecurityUtils.secure_compare(password, ENV.fetch('SIDEKIQ_PASSWORD'))
+  #   end
+  #
+  # ...or simply mount it in development only.
   mount Sidekiq::Web => '/sidekiq'
   mount Lookbook::Engine, at: '/lookbook' if Rails.env.development?
 
