@@ -1,9 +1,21 @@
-<div class="dropdown dropdown-end" data-controller="theme">
-  <div
-    tabindex="0"
-    role="button"
+<div
+  class="dropdown dropdown-end"
+  data-controller="theme"
+  data-action="focusin->theme#focusChanged focusout->theme#focusChanged"
+>
+  <%#
+    A real <button>, so Enter and Space activate it natively - a div with
+    role="button" only opens via daisyUI's :focus rule.
+  %>
+
+  <button
+    type="button"
     class="btn btn-ghost btn-circle btn-sm"
     aria-label="Change theme"
+    aria-haspopup="menu"
+    aria-expanded="false"
+    data-theme-target="trigger"
+    data-action="keydown.esc->theme#close"
   >
     <%#
       The button never shows the system mode, only the theme it resolves to.
@@ -15,15 +27,21 @@
         <span class="size-5 <%= options[:icon] %>" aria-hidden="true"></span>
       </span>
     <% end %>
-  </div>
+  </button>
 
   <ul
     tabindex="0"
     role="menu"
+    data-action="keydown.esc->theme#close"
     class="dropdown-content menu menu-sm bg-base-100 border-base-300 rounded-box z-50 mt-2 w-36 border p-2 shadow-lg"
   >
     <% modes.each do |mode, options| %>
-      <li>
+      <%#
+        role="menu" only permits menuitem* children, so the <li> must not
+        contribute a listitem role of its own.
+      %>
+
+      <li role="none">
         <button
           type="button"
           role="menuitemradio"

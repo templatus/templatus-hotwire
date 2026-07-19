@@ -36,7 +36,12 @@
     <%= csp_meta_tag %>
     <%= action_cable_meta_tag %>
 
-    <title>Templatus-Hotwire</title>
+    <%#
+      Pages set their own title with `content_for :title`. Without a per-page
+      title, history entries, bookmarks and screen-reader announcements can't
+      tell one page from another.
+    %>
+    <title><%= [content_for(:title), 'Templatus-Hotwire'].compact_blank.join(' · ') %></title>
 
     <%= tag.link href: asset_path('/apple-touch-icon.png'), rel: 'apple-touch-icon', type: 'image/png', sizes: '180x180' %>
     <%= tag.link href: asset_path('/favicon-32x32.png'), rel: 'icon', type: 'image/png', sizes: '32x32' %>
@@ -50,6 +55,14 @@
 
   <%# Bottom padding leaves room for the fixed footer %>
   <body class="bg-base-200 text-base-content flex min-h-dvh flex-col pb-16 antialiased">
+    <%# Lets keyboard users jump past the sticky header on every page %>
+    <a
+      href="#main"
+      class="btn btn-primary sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50"
+    >
+      Skip to main content
+    </a>
+
     <%= render AppHeader::Component.new %>
 
     <%= turbo_frame_tag 'flash' do %>
@@ -58,7 +71,7 @@
       <% end %>
     <% end %>
 
-    <main class="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6 lg:py-12">
+    <main id="main" class="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6 lg:py-12">
       <%= yield %>
     </main>
 

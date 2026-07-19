@@ -22,5 +22,19 @@
     <span class="size-5 shrink-0 <%= icon_class %>" aria-hidden="true"></span>
 
     <span class="font-medium"><%= text %></span>
+
+    <%#
+      The toast dismisses itself after a couple of seconds. WCAG 2.2.1 asks
+      for a way out that does not depend on waiting, so offer one.
+    %>
+
+    <button
+      type="button"
+      class="btn btn-ghost btn-circle btn-xs"
+      aria-label="Dismiss"
+      data-action="app-flash#remove"
+    >
+      <span class="icon-[lucide--x] size-4" aria-hidden="true"></span>
+    </button>
   </div>
 </div>

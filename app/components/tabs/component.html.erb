@@ -1,4 +1,11 @@
-<nav role="tablist" class="tabs tabs-box tabs-sm bg-base-200 font-medium">
+<%#
+  No role="tablist"/"tab" here: these are links that navigate to another page,
+  not tabs that swap a panel in place. The ARIA tab pattern would promise
+  arrow-key switching and an associated tabpanel, neither of which exists.
+  The daisyUI classes stay - they are purely visual.
+%>
+
+<nav aria-label="Main" class="tabs tabs-box tabs-sm bg-base-200 font-medium">
   <% tabs.each do |tab| %>
     <%= tab %>
   <% end %>

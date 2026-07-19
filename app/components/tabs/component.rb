@@ -12,7 +12,6 @@ class Tabs::Component < ViewComponent::Base
       link_to text,
               href,
               class: css_classes,
-              role: 'tab',
               aria: {
                 current: ('page' if current_page?(href)),
               },

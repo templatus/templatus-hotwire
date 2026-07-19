@@ -2,6 +2,9 @@ import { Controller } from '@hotwired/stimulus';
 
 type Mode = 'light' | 'dark' | 'auto';
 
+const isMode = (value: string): value is Mode =>
+  value === 'light' || value === 'dark' || value === 'auto';
+
 // The mode lives in a cookie, not in localStorage, so the server can render
 // `data-theme` on <html> right away. That avoids both a flash of the wrong
 // theme and an inline script needing a CSP exception.
@@ -20,10 +23,12 @@ const THEME_COLORS: Record<'light' | 'dark', string> = {
 };
 
 export default class extends Controller {
-  static readonly targets = ['icon', 'option'];
+  static readonly targets = ['icon', 'option', 'trigger'];
 
   declare readonly iconTargets: HTMLElement[];
   declare readonly optionTargets: HTMLElement[];
+  declare readonly hasTriggerTarget: boolean;
+  declare readonly triggerTarget: HTMLElement;
 
   declare boundRender: () => void;
 
@@ -51,12 +56,41 @@ export default class extends Controller {
     this.darkQuery.removeEventListener('change', this.boundRender);
   }
 
-  select({ params }: { params: { mode: Mode } }) {
+  select({ params }: { params: { mode: string } }) {
+    // The mode comes from a data attribute, so validate it instead of trusting
+    // the cast - a typo would otherwise end up as the string "undefined".
+    if (!isMode(params.mode)) return;
+
     this.mode = params.mode;
     this.render();
+    this.close();
+  }
 
-    // Close the daisyUI dropdown, which stays open as long as it has focus
+  // The daisyUI dropdown stays open as long as it holds focus, so blurring is
+  // what actually closes it. Also bound to Escape, so opening the menu with the
+  // keyboard isn't a one-way trip.
+  close() {
     (document.activeElement as HTMLElement | null)?.blur();
+    this.setExpanded(false);
+  }
+
+  // daisyUI has no open/close event, so aria-expanded follows focus instead.
+  // Moving between the trigger and a menu item must still count as open, hence
+  // the relatedTarget check.
+  focusChanged(event: FocusEvent) {
+    if (event.type === 'focusin') {
+      this.setExpanded(true);
+      return;
+    }
+
+    const next = event.relatedTarget;
+    this.setExpanded(next instanceof Node && this.element.contains(next));
+  }
+
+  private setExpanded(expanded: boolean) {
+    if (this.hasTriggerTarget) {
+      this.triggerTarget.setAttribute('aria-expanded', String(expanded));
+    }
   }
 
   private render() {
