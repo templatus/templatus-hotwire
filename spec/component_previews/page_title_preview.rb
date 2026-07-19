@@ -1,5 +1,5 @@
 class PageTitlePreview < ViewComponent::Preview
   def with_default
-    render(Components::PageTitle.new('Example component default'))
+    render(PageTitle::Component.new('Example component default'))
   end
 end

@@ -27,6 +27,11 @@ module TemplatusHotwire
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w[assets tasks middleware])
 
+    # Previews are rendered by Lookbook in development, but they are declared
+    # here so the test environment can render them too - a smoke spec keeps
+    # them from rotting when a component's API changes.
+    config.view_component.previews.paths = ["#{root}/spec/component_previews"]
+
     config.autoload_paths << "#{root}/app/views"
     config.autoload_paths << "#{root}/app/views/layouts"
     config.autoload_paths << "#{root}/app/views/components"
