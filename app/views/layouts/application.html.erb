@@ -9,8 +9,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Templatus (Hotwire edition)">
-    <meta name="theme-color" content="#fef7f6" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#241a19" media="(prefers-color-scheme: dark)">
+
+    <%#
+      Matches the sticky header (`base-200` at 80% over `base-100`), not the
+      page background - the header is what sits directly below the browser
+      chrome, so any other value shows up as a seam on mobile.
+    %>
+    <meta name="theme-color" content="#faf3f3" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#18100f" media="(prefers-color-scheme: dark)">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Templatus (Hotwire edition)">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -53,8 +59,24 @@
     <%= vite_stylesheet_tag 'application.css', data: { turbo_track: 'reload' } %>
   </head>
 
-  <%# Bottom padding leaves room for the fixed footer %>
-  <body class="bg-base-200 text-base-content flex min-h-dvh flex-col pb-16 antialiased">
+  <%#
+    Bottom padding leaves room for the fixed footer. The gradient is
+    `bg-fixed` so it stays anchored to the viewport instead of stretching
+    over the endlessly growing click list.
+  %>
+
+  <body
+    class="
+      bg-base-200 text-base-content from-base-100 via-base-200 to-base-300 flex min-h-dvh flex-col bg-linear-to-b
+      bg-fixed pb-16 antialiased
+    "
+  >
+    <%# Soft brand glow behind the header, purely decorative %>
+    <div
+      class="from-primary/10 pointer-events-none fixed inset-x-0 top-0 -z-10 h-64 bg-linear-to-b to-transparent"
+      aria-hidden="true"
+    ></div>
+
     <%# Lets keyboard users jump past the sticky header on every page %>
     <a
       href="#main"

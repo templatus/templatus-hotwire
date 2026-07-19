@@ -1,4 +1,10 @@
-<header class="bg-base-100/85 border-base-300 sticky top-0 z-40 border-b backdrop-blur">
+<%#
+  `base-200` sets the bar apart from the `base-100` the page gradient starts
+  with - on `base-100` the header would blend into the background and only the
+  border would separate it.
+%>
+
+<header class="bg-base-200/80 border-base-300 sticky top-0 z-40 border-b backdrop-blur">
   <div class="navbar mx-auto max-w-5xl gap-4 px-4 sm:px-6">
     <div class="navbar-start">
       <%= link_to helpers.root_path, class: 'flex items-center gap-3', data: { turbo_action: 'replace' } do %>
