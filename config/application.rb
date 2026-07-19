@@ -32,10 +32,6 @@ module TemplatusHotwire
     # them from rotting when a component's API changes.
     config.view_component.previews.paths = ["#{root}/spec/component_previews"]
 
-    config.autoload_paths << "#{root}/app/views"
-    config.autoload_paths << "#{root}/app/views/layouts"
-    config.autoload_paths << "#{root}/app/views/components"
-
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
