@@ -1,12 +1,25 @@
-<header class="flex justify-between items-end p-5 space-x-5 lg:flex-col lg:items-stretch lg:p-0 lg:space-y-36 lg:space-x-0 <%= css_class %>">
-  <%= image_tag helpers.vite_asset_path('images/logo.svg'),
-                class: 'p-3 w-20 h-20 bg-linear-to-br from-tertiary to-white rounded-sm lg:w-56 lg:h-56',
-                alt: 'Logo',
-                width: 150,
-                height: 150 %>
+<header class="bg-base-100/85 border-base-300 sticky top-0 z-40 border-b backdrop-blur">
+  <div class="navbar mx-auto max-w-5xl gap-4 px-4 sm:px-6">
+    <div class="navbar-start">
+      <%= link_to helpers.root_path, class: 'flex items-center gap-3', data: { turbo_action: 'replace' } do %>
+        <%= image_tag helpers.vite_asset_path('images/logo.svg'),
+                      class: 'size-9',
+                      alt: '',
+                      width: 36,
+                      height: 36 %>
 
-  <%= render Tabs::Component.new do |t| %>
-    <% t.with_tab text: 'Home', href: helpers.root_path %>
-    <% t.with_tab text: 'About', href: helpers.about_path %>
-  <% end %>
+        <span class="text-lg font-semibold tracking-tight whitespace-nowrap">
+          Templatus <%# The edition suffix would wrap the brand onto a second line on narrow screens %>
+          <span class="text-base-content/50 hidden font-normal sm:inline">Hotwire</span>
+        </span>
+      <% end %>
+    </div>
+
+    <div class="navbar-end gap-2">
+      <%= render Tabs::Component.new do |t| %>
+        <% t.with_tab text: 'Home', href: helpers.root_path %>
+        <% t.with_tab text: 'About', href: helpers.about_path %>
+      <% end %>
+    </div>
+  </div>
 </header>

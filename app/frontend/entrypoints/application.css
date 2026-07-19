@@ -1,24 +1,10 @@
 @import 'tailwindcss';
+
+/* Icons. Emits CSS only for the `icon-[lucide--*]` classes actually found by
+   the @source scan below, so unused icons cost nothing. */
+@plugin '@iconify/tailwind4';
+
+/* Project styles */
+@import '../styles/daisyui.css';
+
 @source '../../../app/**/*.{html.erb,rb,js,ts}';
-@plugin '@tailwindcss/forms';
-
-@theme {
-  --color-primary: oklch(33.07% 0.1305 28.4); /* dark red */
-  --color-secondary: oklch(54.44% 0.2233 29.15); /* light red */
-  --color-tertiary: oklch(93.56% 0.0101 1.99); /* rose */
-  --color-accent: oklch(78.28% 0.1309 199.19); /* cyan */
-}
-
-@layer base {
-  .gradient__primary {
-    stop-color: var(--color-primary);
-  }
-
-  .gradient__secondary {
-    stop-color: var(--color-secondary);
-  }
-
-  .gradient__accent {
-    stop-color: var(--color-accent);
-  }
-}

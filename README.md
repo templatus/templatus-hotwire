@@ -30,7 +30,8 @@ There are two sister repositories:
 - [TypeScript](https://www.typescriptlang.org/) for static type checking in Stimulus controllers and other script code
 - [ViewComponent](https://viewcomponent.org/) for building reusable, testable & encapsulated view components
 - [Tailwind CSS 4](https://tailwindcss.com/) to not have to write CSS at all
-- [Heroicons](https://heroicons.com/) for beautiful hand-crafted SVG icons
+- [daisyUI 5](https://daisyui.com/) for semantic component classes and a themeable color system (custom light and dark theme, switchable between light/dark/system)
+- [Lucide](https://lucide.dev/) icons via [Iconify](https://iconify.design/) for Tailwind, rendered as CSS masks (no runtime JS, CSS is emitted only for the icons actually used)
 - [Vite](https://vitejs.dev/) for bundling JavaScript and CSS with Hot Module Replacement (HMR) in development
 - [Bun](https://bun.sh/) as package manager for JavaScript dependencies
 
@@ -111,33 +112,42 @@ https://github.com/rails/rails/pull/41994
 
 ### JavaScript size
 
-159 KB of compiled JavaScript (minified, uncompressed). The largest parts are:
+215 KB of compiled JavaScript (minified, uncompressed). The largest parts are:
 
 - Turbo with ActionCable (72 KB)
 - Stimulus (32 KB)
 - Honeybadger (25 KB)
 
+There is no JavaScript for icons at all: they are CSS masks generated at build
+time, and only for the icons actually used.
+
 ```
 $ SECRET_KEY_BASE_DUMMY=1 RAILS_ENV=production bin/rails assets:precompile
 bun install v1.3.14 (0d9b296a)
 
-Checked 171 installs across 213 packages (no changes) [11.00ms]
-Building with Vite ⚡️
-vite v8.0.16 building client environment for production...
-transforming...
-✓ 44 modules transformed.
-rendering chunks...
+Checked 222 installs across 266 packages (no changes) [14.00ms]
+vite v8.1.5 building client environment for production...
+/*! 🌼 daisyUI 5.6.18 */
+✓ 47 modules transformed.
 computing gzip size...
-public/vite/.vite/manifest-assets.json             0.09 kB │ gzip:  0.09 kB
-public/vite/assets/logo-DdqaqAN0.svg               0.49 kB │ gzip:  0.30 kB
-public/vite/.vite/manifest.json                    0.97 kB │ gzip:  0.28 kB
-public/vite/assets/application-DyB2HwVb.css       31.45 kB │ gzip:  6.28 kB
-public/vite/assets/rolldown-runtime-QTnfLwEv.js    0.69 kB │ gzip:  0.42 kB
-public/vite/assets/application-BxqRxSM_.js         3.18 kB │ gzip:  1.30 kB │ map:   9.09 kB
-public/vite/assets/vendor-Br1roBAV.js            209.27 kB │ gzip: 57.28 kB │ map: 691.85 kB
-
-✓ built in 443ms
-Build with Vite complete: /Users/ledermann/Projects/templatus-hotwire/public/vite
+public/vite/manifest.json.br                          0.26 kB
+public/vite/assets/logo-DdqaqAN0.svg.br               0.26 kB
+public/vite/manifest.json.gz                          0.30 kB
+public/vite/assets/logo-DdqaqAN0.svg.gz               0.30 kB
+public/vite/assets/rolldown-runtime-QTnfLwEv.js.br    0.37 kB
+public/vite/assets/rolldown-runtime-QTnfLwEv.js.gz    0.42 kB
+public/vite/assets/logo-DdqaqAN0.svg                  0.49 kB │ gzip:  0.30 kB
+public/vite/manifest.json                             1.00 kB │ gzip:  0.30 kB
+public/vite/assets/application-_WYGBmFW.js.br         1.61 kB
+public/vite/assets/application-_WYGBmFW.js.gz         1.89 kB
+public/vite/assets/application-RQtmhSlY.css.br       12.77 kB
+public/vite/assets/application-RQtmhSlY.css.gz       14.85 kB
+public/vite/assets/vendor-njP3BUuM.js.br             49.30 kB
+public/vite/assets/vendor-njP3BUuM.js.gz             56.31 kB
+public/vite/assets/application-RQtmhSlY.css          91.05 kB │ gzip: 14.98 kB
+public/vite/assets/rolldown-runtime-QTnfLwEv.js       0.69 kB │ gzip:  0.42 kB
+public/vite/assets/application-_WYGBmFW.js            4.80 kB │ gzip:  1.89 kB
+public/vite/assets/vendor-njP3BUuM.js               209.83 kB │ gzip: 57.41 kB
 ```
 
 ### Network transfer

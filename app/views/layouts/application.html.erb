@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
 
     <meta name="description" content="Ruby on Rails template for using Hotwire">
 
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Templatus (Hotwire edition)">
     <meta name="theme-color" content="#991c1c">
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Templatus (Hotwire edition)">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="turbo-refresh-method" content="morph">
     <meta name="turbo-refresh-scroll" content="preserve">
 
@@ -42,16 +43,14 @@
     <%= tag.link href: asset_path('/favicon-16x16.png'), rel: 'icon', type: 'image/png', sizes: '16x16' %>
     <%= tag.link href: asset_path('/safari-pinned-tab.svg'), rel: 'mask-icon', color: '#d30001' %>
     <%= tag.link href: webmanifest_path, rel: 'manifest' %>
-    <%= tag.link href: vite_asset_path('images/logo.svg'), rel: 'preload', as: 'image' %>
 
     <%= vite_typescript_tag 'application', data: { turbo_track: 'reload' } %>
     <%= vite_stylesheet_tag 'application.css', data: { turbo_track: 'reload' } %>
   </head>
 
-  <body class="min-h-screen flex flex-col bg-linear-to-br from-primary to-secondary lg:bg-tertiary lg:from-inherit lg:to-inherit">
-    <%= render AppBackground::Component.new %>
-
-    <%= render AppHeader::Component.new(css_class: 'lg:fixed lg:top-10 lg:left-10') %>
+  <%# Bottom padding leaves room for the fixed footer %>
+  <body class="bg-base-200 text-base-content flex min-h-dvh flex-col pb-16 antialiased">
+    <%= render AppHeader::Component.new %>
 
     <%= turbo_frame_tag 'flash' do %>
       <% if flash.present? %>
@@ -59,10 +58,10 @@
       <% end %>
     <% end %>
 
-    <main class="relative flex-1 px-4 py-5 bg-white shadow-md sm:px-6 lg:px-8 lg:mt-10 lg:mr-16 lg:ml-96 lg:max-w-5xl lg:rounded-xl">
+    <main class="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6 lg:py-12">
       <%= yield %>
     </main>
 
-    <%= render AppFooter::Component.new(css_class: 'relative mt-2 mb-6 lg:px-0 lg:mr-16 lg:ml-96 lg:max-w-5xl') %>
+    <%= render AppFooter::Component.new %>
   </body>
 </html>

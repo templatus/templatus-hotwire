@@ -1,20 +1,30 @@
-<li class="py-5 <%= 'hidden' if will_animate %>"
-    data-transition-enter="transition duration-200 ease-out"
-    data-transition-enter-start="scale-0 bg-secondary"
-    data-transition-enter-end="scale-100"
-    data-transition-leave="transition duration-200 ease-out"
-    data-transition-leave-start="opacity-100"
-    data-transition-leave-end="opacity-0">
-  <p>
-    <span class="px-2 py-1 font-mono bg-gray-900 rounded-sm text-tertiary">
-      <%= click.ip.to_s %>
-    </span>
-    <span class="px-1 ml-2 font-medium text-gray-900">
-      <%= click.created_at.to_fs(:long) %>
-    </span>
-  </p>
+<li
+  class="list-row <%= 'hidden' if will_animate %>"
+  data-transition-enter="transition duration-200 ease-out"
+  data-transition-enter-start="scale-95 opacity-0"
+  data-transition-enter-end="scale-100 opacity-100"
+>
+  <%# col-span-full: list-row is a two column grid, the row is one single block %>
+  <div class="col-span-full flex min-w-0 flex-wrap items-baseline gap-x-3 gap-y-1">
+    <%#
+      Relative time reads faster in a live list; the exact timestamp stays
+      available as a tooltip instead of competing for the same line.
+    %>
 
-  <code class="block mt-4 text-gray-500 font-extralight">
-    <%= click.user_agent %>
-  </code>
+    <%# tooltip-bottom: a top tooltip on the first row would slide under the sticky header %>
+    <time
+      class="tooltip tooltip-bottom text-sm font-medium whitespace-nowrap"
+      datetime="<%= click.created_at.iso8601 %>"
+      data-tip="<%= click.created_at.to_fs(:long) %>"
+      data-controller="timeago"
+    >
+      <%= click.created_at.to_fs(:long) %>
+    </time>
+
+    <span class="text-base-content/70 min-w-0 truncate text-sm">
+      <%= click.user_agent %>
+    </span>
+
+    <code class="text-base-content/60 ms-auto font-mono text-xs whitespace-nowrap"><%= click.ip.to_s %></code>
+  </div>
 </li>

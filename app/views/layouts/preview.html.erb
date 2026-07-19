@@ -7,7 +7,8 @@
     <%= vite_typescript_tag 'application', data: { turbo_track: 'reload' } %>
     <%= vite_stylesheet_tag 'application.css', data: { turbo_track: 'reload' } %>
   </head>
-  <body>
+
+  <body class="bg-base-200 text-base-content">
     <div class="p-4">
       <%= yield %>
     </div>

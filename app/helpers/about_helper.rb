@@ -75,10 +75,16 @@ module AboutHelper # rubocop:disable Metrics/ModuleLength
             'A utility-first CSS framework packed with classes that can be composed to build any design, directly in your markup.',
         },
         {
-          name: 'Heroicons',
-          href: 'https://heroicons.com/',
+          name: 'daisyUI',
+          href: 'https://daisyui.com/',
           description:
-            'Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.',
+            'Component library for Tailwind CSS, providing semantic class names and themeable colors. Ships with a custom light and dark theme here, switchable between light, dark and the system preference.',
+        },
+        {
+          name: 'Lucide',
+          href: 'https://lucide.dev/',
+          description:
+            'Icon library, wired up through the Iconify plugin for Tailwind. Icons are CSS masks, so there is no webfont and no icon JavaScript, and only the icons actually used end up in the stylesheet.',
         },
         {
           name: 'Vite',

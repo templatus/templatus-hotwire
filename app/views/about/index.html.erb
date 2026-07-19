@@ -1,3 +1,5 @@
-<%= render PageTitle::Component.new('About') %>
+<%= render PageTitle::Component.new('About') do %>
+  Every library this template ships with, what it is good for, and the version currently running.
+<% end %>
 
 <%= render About::Component.new %>

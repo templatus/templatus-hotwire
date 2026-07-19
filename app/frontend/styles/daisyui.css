@@ -1,0 +1,82 @@
+/* No `themes:` list here: it only accepts built-in theme names and silently
+   swallows the `--prefersdark` of the custom themes defined below. */
+@plugin 'daisyui';
+
+/* Light theme, built around the Templatus red */
+@plugin 'daisyui/theme' {
+  name: 'templatus';
+  default: true;
+  color-scheme: light;
+
+  --color-base-100: oklch(99% 0.003 20);
+  --color-base-200: oklch(96.5% 0.008 20);
+  --color-base-300: oklch(92.5% 0.014 20);
+  --color-base-content: oklch(24% 0.03 25);
+
+  --color-primary: oklch(48% 0.19 27);
+  --color-primary-content: oklch(98% 0.01 27);
+  --color-secondary: oklch(33% 0.13 28);
+  --color-secondary-content: oklch(97% 0.01 28);
+  --color-accent: oklch(72% 0.12 199);
+  --color-accent-content: oklch(20% 0.04 199);
+  --color-neutral: oklch(28% 0.02 25);
+  --color-neutral-content: oklch(96% 0.01 25);
+
+  --color-info: oklch(67% 0.15 233);
+  --color-info-content: oklch(98% 0.01 233);
+  --color-success: oklch(62% 0.15 150);
+  --color-success-content: oklch(98% 0.01 150);
+  --color-warning: oklch(78% 0.16 75);
+  --color-warning-content: oklch(22% 0.05 75);
+  --color-error: oklch(58% 0.22 27);
+  --color-error-content: oklch(98% 0.01 27);
+
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+/* Dark theme, same hues on a warm near-black base */
+@plugin 'daisyui/theme' {
+  name: 'templatus-dark';
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: oklch(21% 0.014 25);
+  --color-base-200: oklch(17.5% 0.013 25);
+  --color-base-300: oklch(14% 0.011 25);
+  --color-base-content: oklch(92% 0.012 25);
+
+  --color-primary: oklch(66% 0.19 27);
+  --color-primary-content: oklch(16% 0.04 27);
+  --color-secondary: oklch(52% 0.16 28);
+  --color-secondary-content: oklch(97% 0.01 28);
+  --color-accent: oklch(78% 0.13 199);
+  --color-accent-content: oklch(18% 0.04 199);
+  --color-neutral: oklch(28% 0.02 25);
+  --color-neutral-content: oklch(92% 0.012 25);
+
+  --color-info: oklch(70% 0.15 233);
+  --color-info-content: oklch(16% 0.04 233);
+  --color-success: oklch(70% 0.15 150);
+  --color-success-content: oklch(16% 0.04 150);
+  --color-warning: oklch(80% 0.16 75);
+  --color-warning-content: oklch(18% 0.05 75);
+  --color-error: oklch(68% 0.2 27);
+  --color-error-content: oklch(16% 0.04 27);
+
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
