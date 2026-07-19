@@ -11,12 +11,12 @@
     <meta name="application-name" content="Templatus (Hotwire edition)">
 
     <%#
-      Matches the sticky header (`base-200` at 80% over `base-100`), not the
+      Matches the sticky header (`base-100` at 80% over `base-200`), not the
       page background - the header is what sits directly below the browser
       chrome, so any other value shows up as a seam on mobile.
     %>
-    <meta name="theme-color" content="#faf3f3" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#18100f" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#fdf9f9" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#221a19" media="(prefers-color-scheme: dark)">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Templatus (Hotwire edition)">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -60,15 +60,17 @@
   </head>
 
   <%#
-    Bottom padding leaves room for the fixed footer. The gradient is
-    `bg-fixed` so it stays anchored to the viewport instead of stretching
-    over the endlessly growing click list.
+    Bottom padding leaves room for the fixed footer. The gradient stays out of
+    `base-100` and starts one step down: `base-100` is the raised surface every
+    card, the header and the footer sit on, and on the dark theme a background
+    starting there would swallow them. `bg-fixed` anchors the gradient to the
+    viewport instead of stretching it over the endlessly growing click list.
   %>
 
   <body
     class="
-      bg-base-200 text-base-content from-base-100 via-base-200 to-base-300 flex min-h-dvh flex-col bg-linear-to-b
-      bg-fixed pb-16 antialiased
+      bg-base-200 text-base-content from-base-200 to-base-300 flex min-h-dvh flex-col bg-linear-to-b bg-fixed pb-16
+      antialiased
     "
   >
     <%# Soft brand glow behind the header, purely decorative %>

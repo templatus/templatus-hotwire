@@ -48,10 +48,12 @@
   prefersdark: true;
   color-scheme: dark;
 
-  --color-base-100: oklch(21% 0.014 25);
-  --color-base-200: oklch(17.5% 0.013 25);
-  --color-base-300: oklch(14% 0.011 25);
-  --color-base-content: oklch(92% 0.012 25);
+  /* Wider steps than the light theme: the same lightness delta reads much
+     weaker on a dark base, so 3.5% apart would collapse into one flat fill. */
+  --color-base-100: oklch(24% 0.013 25);
+  --color-base-200: oklch(17% 0.012 25);
+  --color-base-300: oklch(12% 0.01 25);
+  --color-base-content: oklch(93% 0.012 25);
 
   --color-primary: oklch(66% 0.19 27);
   --color-primary-content: oklch(16% 0.04 27);

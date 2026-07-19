@@ -1,10 +1,10 @@
 <%#
-  `base-200` sets the bar apart from the `base-100` the page gradient starts
-  with - on `base-100` the header would blend into the background and only the
-  border would separate it.
+  `base-100` is the raised surface, same as the cards and the footer: the page
+  gradient runs from `base-200` down, so the bar reads as sitting above it in
+  both themes instead of relying on its border alone.
 %>
 
-<header class="bg-base-200/80 border-base-300 sticky top-0 z-40 border-b backdrop-blur">
+<header class="bg-base-100/80 border-base-300 sticky top-0 z-40 border-b backdrop-blur">
   <div class="navbar mx-auto max-w-5xl gap-4 px-4 sm:px-6">
     <div class="navbar-start">
       <%= link_to helpers.root_path, class: 'flex items-center gap-3', data: { turbo_action: 'replace' } do %>

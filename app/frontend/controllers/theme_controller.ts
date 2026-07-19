@@ -18,8 +18,8 @@ const THEMES: Record<'light' | 'dark', string> = {
 
 // Keep in sync with the `theme-color` metas in the layout
 const THEME_COLORS: Record<'light' | 'dark', string> = {
-  light: '#fef7f6',
-  dark: '#241a19',
+  light: '#fdf9f9',
+  dark: '#221a19',
 };
 
 export default class extends Controller {
