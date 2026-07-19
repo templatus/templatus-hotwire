@@ -1,0 +1,13 @@
+# Local development only: Caddy terminates TLS for the app and the Vite dev
+# server, so both run under HTTPS without any manual certificate setup.
+# Started by bin/dev via Procfile.dev.
+
+# Main Rails application
+https://templatus.localhost {
+	reverse_proxy localhost:3001
+}
+
+# Vite dev server for HMR
+https://vite.templatus.localhost {
+	reverse_proxy localhost:3036
+}

@@ -36,8 +36,10 @@ export default defineConfig({
   server: {
     port: 3036,
     hmr: {
-      host: 'vite.templatus-hotwire.test',
+      // Caddy terminates TLS in front of the Vite dev server, see Caddyfile
+      host: 'vite.templatus.localhost',
       clientPort: 443,
+      protocol: 'wss',
     },
   },
 });

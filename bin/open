@@ -1,53 +1,199 @@
-#!/usr/bin/env bash
+#!/usr/bin/env ruby
 
-# Load environment variables
-source .env.development
+require 'net/http'
+require 'open3'
 
-# Set the protocol based on FORCE_SSL value
-if [ "$FORCE_SSL" == "false" ]; then
-  PROTOCOL="http"
-else
-  PROTOCOL="https"
-fi
+# Read APP_HOST and FORCE_SSL from the development environment file
+def env_from_file(path)
+  return {} unless File.exist?(path)
+
+  File.readlines(path).each_with_object({}) do |line, env|
+    key, value = line.strip.split('=', 2)
+    next if key.nil? || key.start_with?('#') || value.nil?
+
+    env[key] = value
+  end
+end
+
+env = env_from_file(File.expand_path('../.env.development', __dir__))
+protocol = env['FORCE_SSL'] == 'false' ? 'http' : 'https'
 
 # Set the application URL
-URL="$PROTOCOL://$APP_HOST"
+url = "#{protocol}://#{env.fetch('APP_HOST', 'localhost:3000')}"
 
-# Open the URL in Google Chrome
-osascript <<EOD
-tell application "Google Chrome"
-    if it is running then
-        set tabFound to false
-        # Loop through windows
-        repeat with w from 1 to count of windows
-            set tabCount to count of tabs in window w
-            # Loop through tabs
-            repeat with t from 1 to tabCount
-                if URL of tab t of window w starts with "$URL" then
-                    set tabFound to true
-                    set theTabIndex to t
-                    set theWindow to window w
-                    exit repeat
-                end if
-            end repeat
-            if tabFound then exit repeat
-        end repeat
-        # If the tab with the URL was found, activate it.
-        if tabFound then
-            set active tab index of theWindow to theTabIndex
-            set index of theWindow to 1
-            activate
-        else
-            # If the tab wasn't found, open a new one.
-            tell window 1
-                make new tab with properties {URL:"$URL"}
-                activate
-            end tell
-        end if
-    else
-        # If Chrome isn't running, just open the URL.
-        activate
-        open location "$URL"
-    end if
-end tell
-EOD
+# Check if server responds successfully
+def server_ready?(uri)
+  http = Net::HTTP.new(uri.host, uri.port)
+  http.use_ssl = uri.scheme == 'https'
+  http.open_timeout = 1
+  http.read_timeout = 1
+  http.verify_mode = OpenSSL::SSL::VERIFY_NONE # Accept self-signed certificates from Caddy
+  response = http.head('/')
+  response.is_a?(Net::HTTPSuccess) || response.is_a?(Net::HTTPRedirection)
+rescue Errno::ECONNREFUSED, Errno::EHOSTUNREACH, Net::OpenTimeout, Net::ReadTimeout, OpenSSL::SSL::SSLError
+  false
+end
+
+# Wait for the server to be ready
+def wait_for_server(url, timeout: 30)
+  uri = URI(url)
+  start_time = Process.clock_gettime(Process::CLOCK_MONOTONIC)
+
+  loop do
+    return true if server_ready?(uri)
+
+    if Process.clock_gettime(Process::CLOCK_MONOTONIC) - start_time > timeout
+      warn "Timeout waiting for #{url}"
+      return false
+    end
+
+    sleep 0.5
+  end
+end
+
+# Wait for server before proceeding
+exit unless wait_for_server(url)
+
+# Get the default browser
+default_browser =
+  `defaults read ~/Library/Preferences/com.apple.LaunchServices/com.apple.launchservices.secure | awk -F'\"' '/http;/{print window[(NR-1)]}{window[NR]=$2}'`.chomp
+
+# Function to check if the browser is running
+def running?(browser)
+  stdout, _stderr, _status = Open3.capture3("pgrep -x '#{browser}'")
+  !stdout.strip.empty?
+end
+
+def select_tab_script_chromium(browser, url)
+  <<-APPLESCRIPT
+      tell application "#{browser}"
+          set tabFound to false
+
+          -- Loop through windows
+          repeat with w from 1 to count of windows
+              set tabCount to count of tabs in window w
+
+              -- Loop through tabs
+              repeat with t from 1 to tabCount
+                  if URL of tab t of window w starts with "#{url}" then
+                      set tabFound to true
+                      set theTabIndex to t
+                      set theWindow to window w
+                      exit repeat
+                  end if
+              end repeat
+
+              if tabFound then exit repeat
+          end repeat
+
+          -- If the tab with the URL was found, activate it and reload.
+          if tabFound then
+              set active tab index of theWindow to theTabIndex
+              set index of theWindow to 1
+              activate
+              reload active tab of theWindow
+          else
+              -- If the tab wasn't found, open a new one.
+              tell window 1
+                  make new tab with properties {URL:"#{url}"}
+                  activate
+              end tell
+          end if
+      end tell
+  APPLESCRIPT
+end
+
+def select_tab_script_safari(url)
+  <<-APPLESCRIPT
+      tell application "Safari"
+          set tabFound to false
+
+          -- Loop through windows
+          repeat with w from 1 to count of windows
+              set tabCount to count of tabs in window w
+
+              -- Loop through tabs
+              repeat with t from 1 to tabCount
+                  if URL of tab t of window w starts with "#{url}" then
+                      set tabFound to true
+                      set theTabIndex to t
+                      set theWindow to window w
+                      exit repeat
+                  end if
+              end repeat
+
+              if tabFound then exit repeat
+          end repeat
+
+          -- If the tab with the URL was found, activate it and reload.
+          if tabFound then
+              tell theWindow
+                  set current tab to tab theTabIndex
+                  set index to 1
+              end tell
+              activate
+              tell theWindow
+                  do JavaScript "location.reload()" in current tab
+              end tell
+          else
+              -- If the tab wasn't found, open a new one.
+              tell window 1
+                  set newTab to make new tab with properties {URL:"#{url}"}
+                  set current tab to newTab
+                  activate
+              end tell
+          end if
+      end tell
+  APPLESCRIPT
+end
+
+def select_tab_script_firefox(url)
+  # For Firefox, we unfortunately cannot reliably switch to existing tabs
+  # via AppleScript due to limited browser automation support.
+  # As a workaround, we'll just activate Firefox and open the URL.
+  # This will create a new tab, but it's the most reliable approach.
+  <<-APPLESCRIPT
+      tell application "Firefox"
+          activate
+          open location "#{url}"
+      end tell
+  APPLESCRIPT
+end
+
+def open_url(browser, url)
+  if running?(browser)
+    script =
+      case browser
+      when 'Safari'
+        select_tab_script_safari(url)
+      when 'Google Chrome', 'Brave Browser', 'Vivaldi'
+        select_tab_script_chromium(browser, url)
+      when 'Firefox'
+        select_tab_script_firefox(url)
+      else
+        raise "Unknown browser: #{browser.inspect}"
+      end
+
+    Open3.popen3('osascript', '-e', script) do |_stdin, stdout, _stderr, _wait_thr|
+      stdout.read
+    end
+  else
+    # If Browser is not running, open the URL directly
+    system("open -a '#{browser}' '#{url}'")
+  end
+end
+
+case default_browser
+when 'com.apple.safari'
+  open_url('Safari', url)
+when 'com.google.Chrome'
+  open_url('Google Chrome', url)
+when 'com.brave.browser'
+  open_url('Brave Browser', url)
+when 'com.vivaldi.vivaldi'
+  open_url('Vivaldi', url)
+when 'org.mozilla.firefox'
+  open_url('Firefox', url)
+else
+  puts "Unknown browser: #{default_browser}"
+end

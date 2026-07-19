@@ -36,7 +36,7 @@ There are two sister repositories:
 
 ### Development
 
-- [Puma-dev](https://github.com/puma/puma-dev) for using .test-domain and HTTPS in development
+- [Caddy](https://caddyserver.com/) for automatic HTTPS on `.localhost` domains in development
 - [Overmind](https://github.com/DarthSim/overmind) for starting up the application locally (Procfile handling like Foreman)
 - [dotenv](https://github.com/bkeepers/dotenv) to load environment variables from .env into ENV
 - [Prettier](https://prettier.io/) for auto-formatting JavaScript code in Visual Studio Code
@@ -172,22 +172,16 @@ git clone git@github.com:templatus/templatus-hotwire.git
 cd templatus-hotwire
 ```
 
-2. Install PostgreSQL, Redis, and puma-dev (if not already present). On a Mac with HomeBrew, run this to install from the `Brewfile`:
+2. Install PostgreSQL, Redis, Caddy and Overmind (if not already present). On a Mac with HomeBrew, run this to install from the `Brewfile`:
 
 ```bash
 brew bundle
 ```
 
-3. Install and set up [puma-dev](https://github.com/puma/puma-dev) to use HTTPS for development. Do this on macOS:
+3. Let Caddy install its local certificate authority, so HTTPS works without browser warnings:
 
 ```bash
-sudo puma-dev -setup
-puma-dev -install
-puma-dev link
-
-# Use Vite via puma-dev proxy
-# Adopted from https://github.com/puma/puma-dev#webpack-dev-server
-echo 3036 > ~/.puma-dev/vite.templatus-hotwire
+caddy trust
 ```
 
 4. Setup the application to install gems and JavaScript packages and create the database:
@@ -202,7 +196,7 @@ bin/setup
 bin/dev
 ```
 
-Then open https://templatus-hotwire.test in your browser.
+Then open https://templatus.localhost in your browser.
 
 ### Preview components in LookBook
 
@@ -210,7 +204,7 @@ Then open https://templatus-hotwire.test in your browser.
 bin/dev
 ```
 
-Then open https://templatus-hotwire.test/lookbook/ in your browser.
+Then open https://templatus.localhost/lookbook/ in your browser.
 
 ### Running linters
 

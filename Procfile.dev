@@ -1,2 +1,5 @@
+caddy: caddy run --config Caddyfile
+web: bin/rails server -p 3001
 vite: bunx vite
+worker: bundle exec sidekiq
 browser: bin/open && while true; do sleep 60; done
