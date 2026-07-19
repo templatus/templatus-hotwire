@@ -23,7 +23,7 @@ There are two sister repositories:
 - [PostgreSQL](https://www.postgresql.org/) for using as SQL database
 - [Sidekiq](https://sidekiq.org/) for background processing
 - [Pagy](https://ddnexus.github.io/pagy/) with keyset (cursor) pagination for endless scrolling with constant query time
-- [Redis](https://redis.io/) for Caching, ActionCable, and Sidekiq
+- [Redis](https://redis.io/) for Caching, ActionCable, and Sidekiq, each on its own database
 
 ### Frontend
 

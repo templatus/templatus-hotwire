@@ -65,9 +65,16 @@ Rails.application.configure do
   config.active_support.report_deprecations = false
 
   # Replace the default in-process memory cache store with a durable alternative.
+  # Cache, Action Cable and Sidekiq each get their own Redis database, so that
+  # clearing the cache (which issues FLUSHDB) can't wipe the job queues.
   config.cache_store =
     :redis_cache_store,
-    { url: ENV.fetch('REDIS_URL', 'redis://localhost:6379/0') }
+    {
+      url:
+        ENV.fetch('REDIS_CACHE_URL') do
+          ENV.fetch('REDIS_URL', 'redis://localhost:6379/0')
+        end,
+    }
 
   # Replace the default in-process and non-durable queuing backend for Active Job.
   config.active_job.queue_adapter = :sidekiq
