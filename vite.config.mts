@@ -1,11 +1,25 @@
 import { defineConfig } from 'vite';
-import ViteRails from 'vite-plugin-rails';
+import RailsVite from 'rails-vite-plugin';
 import tailwindcss from '@tailwindcss/vite';
-import { resolve } from 'path';
+import { compression } from 'vite-plugin-compression2';
 
 export default defineConfig({
+  plugins: [
+    tailwindcss(),
+    compression({ algorithm: 'gzip' }),
+    compression({ algorithm: 'brotliCompress' }),
+    RailsVite({
+      sourceDir: 'app/frontend',
+      refresh: [
+        'config/routes.rb',
+        'app/views/**/*',
+        'app/components/**/*',
+        'app/helpers/**/*',
+        'config/locales/**/*.yml',
+      ],
+    }),
+  ],
   build: {
-    assetsInlineLimit: 0,
     rolldownOptions: {
       output: {
         codeSplitting: {
@@ -19,25 +33,8 @@ export default defineConfig({
       },
     },
   },
-  plugins: [
-    tailwindcss(),
-    ViteRails({
-      fullReload: {
-        additionalPaths: [
-          'config/routes.rb',
-          'app/views/**/*',
-          'app/components/**/*',
-          'app/helpers/**/*',
-        ],
-      },
-    }),
-  ],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'app/frontend'),
-    },
-  },
   server: {
+    port: 3036,
     hmr: {
       host: 'vite.templatus-hotwire.test',
       clientPort: 443,

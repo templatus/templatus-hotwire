@@ -9,16 +9,20 @@ Rails.application.configure do
     if Rails.env.development?
       policy.style_src :self,
                        # Allow @vite/client to hot reload style changes
-                       :unsafe_inline
+                       :unsafe_inline,
+                       # Allow loading the stylesheet from the Vite dev server
+                       RailsVite.dev_server_csp_source
 
       policy.script_src :self,
                         :unsafe_inline,
                         # Allow Lookbook to build component previews
                         :unsafe_eval,
                         # Allow @vite/client to hot reload JavaScript changes
-                        "https://#{ViteRuby.config.host}"
+                        RailsVite.dev_server_csp_source
 
       policy.connect_src :self,
+                         :ws,
+                         :wss,
                          # Allow ActionCable connection
                          (
                            if Rails.configuration.x.app_host
@@ -26,7 +30,7 @@ Rails.application.configure do
                            end
                          ),
                          # Allow @vite/client to hot reload CSS changes
-                         "wss://#{ViteRuby.config.host}"
+                         RailsVite.dev_server_csp_source(websocket: true)
     else
       policy.default_src :none
       policy.font_src(

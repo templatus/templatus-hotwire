@@ -16,6 +16,7 @@
     "el-transition": "^0.0.7",
     "idiomorph": "^0.7.4",
     "register-service-worker": "^1.7.2",
+    "stimulus-vite-helpers": "^3.1.0",
     "timeago.js": "^4.0.2"
   },
   "version": "0.1.0",
@@ -31,14 +32,13 @@
     "playwright": "^1.61.1",
     "prettier": "^3.9.5",
     "prettier-plugin-tailwindcss": "^0.8.1",
+    "rails-vite-plugin": "^0.2.5",
     "size-limit": "^12.1.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.64.0",
     "vite": "^8.1.5",
-    "vite-plugin-full-reload": "^1.2.0",
-    "vite-plugin-rails": "^0.6.0",
-    "vite-plugin-stimulus-hmr": "^3.0.0"
+    "vite-plugin-compression2": "^2.5.3"
   },
   "trustedDependencies": [
     "@tailwindcss/oxide",
@@ -47,7 +47,7 @@
   "size-limit": [
     {
       "limit": "55 kB",
-      "path": "public/{vite,vite-dev,vite-test}/assets/*.js"
+      "path": "public/vite-test/assets/*.js"
     }
   ],
   "engines": {

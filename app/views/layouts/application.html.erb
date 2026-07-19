@@ -44,9 +44,8 @@
     <%= tag.link href: webmanifest_path, rel: 'manifest' %>
     <%= tag.link href: vite_asset_path('images/logo.svg'), rel: 'preload', as: 'image' %>
 
-    <%= vite_client_tag %>
-    <%= vite_typescript_tag 'application', 'data-turbo-track': 'reload' %>
-    <%= vite_stylesheet_tag 'application', 'data-turbo-track': 'reload' %>
+    <%= vite_typescript_tag 'application', data: { turbo_track: 'reload' } %>
+    <%= vite_stylesheet_tag 'application.css', data: { turbo_track: 'reload' } %>
   </head>
 
   <body class="min-h-screen flex flex-col bg-linear-to-br from-primary to-secondary lg:bg-tertiary lg:from-inherit lg:to-inherit">

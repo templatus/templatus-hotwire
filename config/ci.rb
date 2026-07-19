@@ -12,6 +12,9 @@ CI.run do
   step 'Security: Brakeman code analysis',
        'bin/brakeman --quiet --no-pager --exit-on-warn --exit-on-error'
 
+  step 'Build: Vite assets', 'bunx vite build --mode test'
+  step 'Build: JavaScript size limit', 'bun run size'
+
   step 'Tests: Rails', 'env PLAYWRIGHT_HEADLESS=true bin/rspec'
   step 'Tests: Seeds', 'env RAILS_ENV=test bin/rails db:seed:replant'
 

@@ -57,7 +57,7 @@ jobs:
         run: bin/rails db:create
 
       - name: Compile assets
-        run: bin/rails assets:precompile
+        run: bunx vite build --mode test
 
       - name: Scan for common Rails security vulnerabilities using static analysis
         run: bin/brakeman --no-pager
@@ -79,6 +79,9 @@ jobs:
 
       - name: Run Ruby Tests
         run: bin/rspec
+        env:
+          # Assets were already built by the "Compile assets" step above
+          SKIP_VITE_BUILD: 1
 
       - name: Check JS size limit
         run: bun run size

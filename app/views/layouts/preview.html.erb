@@ -4,9 +4,8 @@
   <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Component Preview</title>
-    <%= vite_client_tag %>
-    <%= vite_typescript_tag 'application', 'data-turbo-track': 'reload' %>
-    <%= vite_stylesheet_tag 'application', 'data-turbo-track': 'reload' %>
+    <%= vite_typescript_tag 'application', data: { turbo_track: 'reload' } %>
+    <%= vite_stylesheet_tag 'application.css', data: { turbo_track: 'reload' } %>
   </head>
   <body>
     <div class="p-4">

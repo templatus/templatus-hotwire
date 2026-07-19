@@ -1,2 +1,2 @@
-vite: bin/vite dev
+vite: bunx vite
 browser: bin/open && while true; do sleep 60; done
