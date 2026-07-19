@@ -1,7 +1,15 @@
 class ClicksController < ApplicationController
+  PER_PAGE = 20
+  public_constant :PER_PAGE
+
   def index
-    @clicks = Click.order(created_at: :desc).limit(5).load_async
+    @pagy, @clicks = paginated_clicks
     @clicks_count = Click.count
+
+    respond_to do |format|
+      format.html
+      format.turbo_stream
+    end
   end
 
   def create
@@ -13,6 +21,27 @@ class ClicksController < ApplicationController
   end
 
   private
+
+  # Keyset (cursor) pagination instead of OFFSET: the query time stays constant
+  # no matter how far the user has scrolled, and - unlike OFFSET - the pages
+  # don't shift when new clicks get broadcasted into the top of the list.
+  def paginated_clicks
+    pagy(
+      :keyset,
+      Click.order(created_at: :desc, id: :desc),
+      limit: PER_PAGE,
+      pre_serialize: SERIALIZE_CURSOR,
+    )
+  end
+
+  # Postgres stores microseconds, but Time#as_json truncates to milliseconds.
+  # Without this the cursor would silently skip clicks that were created within
+  # the same millisecond as the last click of the previous page.
+  SERIALIZE_CURSOR =
+    lambda do |attributes|
+      attributes[:created_at] = attributes[:created_at].strftime('%F %T.%6N')
+    end
+  private_constant :SERIALIZE_CURSOR
 
   def anonymize(ip)
     addr = IPAddr.new(ip.to_s)

@@ -22,6 +22,7 @@ There are two sister repositories:
 - [ActionCable](https://guides.rubyonrails.org/action_cable_overview.html) for WebSocket communication
 - [PostgreSQL](https://www.postgresql.org/) for using as SQL database
 - [Sidekiq](https://sidekiq.org/) for background processing
+- [Pagy](https://ddnexus.github.io/pagy/) with keyset (cursor) pagination for endless scrolling with constant query time
 - [Redis](https://redis.io/) for Caching, ActionCable, and Sidekiq
 
 ### Frontend

@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include Pagy::Method
+
   def render_flash_update(notice: nil, alert: nil, status: :ok)
     render turbo_stream:
              turbo_stream.update(

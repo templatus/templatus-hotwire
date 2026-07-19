@@ -11,5 +11,8 @@ interface Document {
 declare module '@hotwired/turbo' {
   export class StreamElement extends HTMLElement {
     target: string;
+    action: string;
   }
+
+  export function renderStreamMessage(message: string): void;
 }

@@ -37,6 +37,13 @@ module AboutHelper # rubocop:disable Metrics/ModuleLength
             'Redis is an open source, in-memory data structure store, used as a database, cache, and message broker.',
         },
         {
+          name: 'Pagy',
+          gem: 'pagy',
+          href: 'https://ddnexus.github.io/pagy/',
+          description:
+            'Pagination for the endlessly scrolling click list. Uses keyset (cursor) pagination, so the query time stays constant no matter how far you scroll.',
+        },
+        {
           name: 'Sidekiq',
           gem: 'sidekiq',
           href: 'https://sidekiq.org/',

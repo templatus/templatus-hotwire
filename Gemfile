@@ -17,6 +17,9 @@ gem 'stimulus-rails'
 # A framework for building reusable, testable & encapsulated view components in Ruby on Rails. (https://viewcomponent.org)
 gem 'view_component'
 
+# Fast pagination, used here in its keyset (cursor) flavor (https://ddnexus.github.io/pagy)
+gem 'pagy'
+
 # Pg is the Ruby interface to the PostgreSQL RDBMS (https://github.com/ged/ruby-pg)
 gem 'pg', '~> 1.1'
 

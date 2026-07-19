@@ -31,6 +31,8 @@
           <%= render Click::Component.new(click: click) %>
         <% end %>
       </ul>
+
+      <%= render LoadMore::Component.new(id: LOAD_MORE_ID, url: next_url) %>
     <% end %>
   </div>
 

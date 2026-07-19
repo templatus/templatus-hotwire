@@ -7,6 +7,10 @@
 #  user_agent :string           not null
 #  created_at :datetime         not null
 #
+# Indexes
+#
+#  index_clicks_on_created_at_desc_id_desc  (created_at,id)
+#
 class Click < ApplicationRecord
   validates :ip, presence: true
   validates :user_agent, presence: true

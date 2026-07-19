@@ -1,0 +1,11 @@
+<%# Next batch for the endless scrolling, requested by the load-more controller %>
+<%= turbo_stream.append 'list' do %>
+  <% @clicks.each do |click| %>
+    <%= render Click::Component.new(click:) %>
+  <% end %>
+<% end %>
+
+<%= turbo_stream.replace Clicks::Component::LOAD_MORE_ID do %>
+  <%= render LoadMore::Component.new(id: Clicks::Component::LOAD_MORE_ID,
+                                     url: @pagy.page_url(:next)) %>
+<% end %>

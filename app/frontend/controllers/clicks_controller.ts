@@ -29,10 +29,15 @@ export default class extends Controller {
   }
 
   receive(event: Event) {
-    if ((event.target as StreamElement).target === 'list') {
-      this.updateList();
-      this.increaseCounter();
-    }
+    const stream = event.target as StreamElement;
+
+    // Only react to clicks broadcasted by other visitors, which are prepended
+    // to the top of the list. Appends come from the endless scrolling and must
+    // neither animate nor count.
+    if (stream.target !== 'list' || stream.action !== 'prepend') return;
+
+    this.updateList();
+    this.increaseCounter();
   }
 
   increaseCounter() {
@@ -51,12 +56,6 @@ export default class extends Controller {
       // Fade in new element
       enter(this.listTarget.firstElementChild);
     });
-
-    if (this.currentCount > 5)
-      // Fade out and remove last element
-      leave(this.listTarget.lastElementChild).then(() =>
-        this.listTarget.lastElementChild?.remove(),
-      );
   }
 
   renderCount() {

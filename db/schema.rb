@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2021_05_22_144348) do
+ActiveRecord::Schema[8.1].define(version: 2026_07_19_061418) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -18,5 +18,6 @@ ActiveRecord::Schema[8.1].define(version: 2021_05_22_144348) do
     t.datetime "created_at", null: false
     t.inet "ip", null: false
     t.string "user_agent", null: false
+    t.index ["created_at", "id"], name: "index_clicks_on_created_at_desc_id_desc", order: :desc
   end
 end
