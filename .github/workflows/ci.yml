@@ -62,6 +62,9 @@ jobs:
       - name: Check for TypeScript errors
         run: bun run tsc
 
+      - name: Lint shell scripts
+        run: shellcheck $(git ls-files '*.sh')
+
       - name: Setup PostgreSQL
         run: bin/rails db:create
 

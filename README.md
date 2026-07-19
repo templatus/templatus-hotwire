@@ -50,6 +50,8 @@ There are two sister repositories:
 
 - [RuboCop](https://rubocop.org/) for Ruby static code analysis
 - [ESLint](https://eslint.org/) for JavaScript static code analysis
+- [ShellCheck](https://www.shellcheck.net/) for linting shell scripts
+- [size-limit](https://github.com/ai/size-limit) to keep the compiled JavaScript below a fixed budget
 - [RSpec](https://rspec.info/) for Ruby testing
 - [Factory Bot](https://github.com/thoughtbot/factory_bot) for setting up Ruby objects as test data
 - [Capybara](https://github.com/teamcapybara/capybara) with [Playwright](https://playwright.dev/docs/intro) for system tests
@@ -173,7 +175,7 @@ git clone git@github.com:templatus/templatus-hotwire.git
 cd templatus-hotwire
 ```
 
-2. Install PostgreSQL, Redis, Caddy and Overmind (if not already present). On a Mac with HomeBrew, run this to install from the `Brewfile`:
+2. Install PostgreSQL, Redis, Caddy, Overmind and ShellCheck (if not already present). On a Mac with HomeBrew, run this to install from the `Brewfile`:
 
 ```bash
 brew bundle
@@ -229,7 +231,13 @@ bun run erb:check   # or `bun run erb:format` to fix
 bin/herb analyze .
 ```
 
-All of the above (plus security scans and the test suite), exactly as CI runs it:
+Shell scripts:
+
+```
+shellcheck $(git ls-files '*.sh')
+```
+
+All of the above (plus security scans, the JavaScript size budget and the test suite), exactly as CI runs it:
 
 ```
 bin/ci

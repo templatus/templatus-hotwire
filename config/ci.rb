@@ -7,6 +7,7 @@ CI.run do
   step 'Style: ERB', 'bun run erb:check'
   step 'Style: JavaScript', 'bun run lint'
   step 'Style: TypeScript', 'bun run tsc'
+  step 'Style: Shell', "shellcheck $(git ls-files '*.sh')"
 
   step 'Lint: ERB', 'bin/herb lint'
   step 'Validate: ERB', 'bin/herb analyze .'
