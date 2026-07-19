@@ -6,6 +6,7 @@
     "erb:check": "herb-format --check .",
     "lint": "eslint --cache .",
     "format": "prettier . --write --plugin=prettier-plugin-tailwindcss",
+    "format:check": "prettier . --check --plugin=prettier-plugin-tailwindcss",
     "tsc": "tsc --noEmit",
     "size": "bun run size-limit"
   },

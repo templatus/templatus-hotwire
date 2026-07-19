@@ -56,6 +56,9 @@ jobs:
       - name: Validate ERB with Herb
         run: bin/herb analyze .
 
+      - name: Check Prettier formatting
+        run: bun run format:check
+
       - name: Run ESLint
         run: bun run lint
 
@@ -72,7 +75,13 @@ jobs:
         run: bunx vite build --mode test
 
       - name: Scan for common Rails security vulnerabilities using static analysis
-        run: bin/brakeman --no-pager
+        run: bin/brakeman --quiet --no-pager --exit-on-warn --exit-on-error
+
+      - name: Run security audit for Ruby gems
+        run: bin/bundler-audit check --update
+
+      - name: Run security audit for JavaScript packages
+        run: bun audit
 
       - name: Get Playwright version
         id: playwright-version
@@ -97,6 +106,9 @@ jobs:
 
       - name: Check JS size limit
         run: bun run size
+
+      - name: Check seeds
+        run: bin/rails db:seed:replant
 
       - uses: actions/upload-artifact@v7
         if: failure()
