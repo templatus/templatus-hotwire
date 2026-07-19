@@ -4,10 +4,11 @@ class ClicksController < ApplicationController
 
   def index
     @pagy, @clicks = paginated_clicks
-    @clicks_count = Click.count
 
     respond_to do |format|
-      format.html
+      # Only the full page shows a total, so the endless-scrolling requests
+      # must not pay for a COUNT(*) over the whole table.
+      format.html { @clicks_count = Click.count }
       format.turbo_stream
     end
   end
@@ -16,7 +17,7 @@ class ClicksController < ApplicationController
     Click.create! user_agent: request.user_agent,
                   ip: anonymize(request.remote_ip)
     render_flash_update notice: t('.success')
-  rescue StandardError
+  rescue ActiveRecord::RecordInvalid, IPAddr::InvalidAddressError
     render_flash_update alert: t('.fail'), status: :unprocessable_content
   end
 
