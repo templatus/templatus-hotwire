@@ -20,6 +20,16 @@ describe CloudfrontDenier do
     expect(code).to eq(200)
   end
 
+  it 'accepts request for Vite-built asset from CloudFront' do
+    code, =
+      middleware.call env_for(
+                        'http://example.com/vite/assets/application-abc123.js',
+                        'HTTP_USER_AGENT' => 'Amazon CloudFront',
+                      )
+
+    expect(code).to eq(200)
+  end
+
   it 'accepts request for non-assets from browser' do
     code, =
       middleware.call env_for(
@@ -38,7 +48,7 @@ describe CloudfrontDenier do
                       )
 
     expect(code).to eq(302)
-    expect(env['Location']).to eq(host)
+    expect(env['location']).to eq(host)
   end
 
   def env_for(url, **opts)

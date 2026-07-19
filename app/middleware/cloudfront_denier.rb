@@ -9,14 +9,17 @@ class CloudfrontDenier
 
   def call(env)
     if cloudfront?(env) && !asset?(env)
-      [302, { 'Location' => @target }, []]
+      # Rack 3 mandates lowercase header names.
+      [302, { 'location' => @target, 'content-type' => 'text/plain' }, []]
     else
       @app.call(env)
     end
   end
 
+  # Vite writes the bundles to public/vite; /assets is kept for anything
+  # still served by Propshaft.
   def asset?(env)
-    env['PATH_INFO'] =~ %r{^/assets/}
+    env['PATH_INFO'] =~ %r{^/(vite|assets)/}
   end
 
   def cloudfront?(env)
