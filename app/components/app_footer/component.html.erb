@@ -29,7 +29,12 @@
     </div>
 
     <div data-controller="online-status">
-      <span class="badge badge-warning badge-sm hidden gap-1" data-online-status-target="indicator">
+      <span
+        class="badge badge-warning badge-sm hidden gap-1"
+        role="status"
+        aria-live="polite"
+        data-online-status-target="indicator"
+      >
         <span class="status status-warning"></span>
         You are offline
       </span>

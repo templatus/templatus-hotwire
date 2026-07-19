@@ -15,6 +15,10 @@ export default class extends Controller {
 
     this.boundSetOffline = this.setOffline.bind(this);
     window.addEventListener('offline', this.boundSetOffline);
+
+    // Pick up the state the page was loaded in - without this the indicator
+    // stays hidden until the connection actually changes.
+    this.render();
   }
 
   disconnect() {
@@ -23,16 +27,18 @@ export default class extends Controller {
   }
 
   setOnline() {
-    if (this.hasIndicatorTarget) {
-      this.indicatorTarget.textContent = '';
-      this.indicatorTarget.classList.add('hidden');
-    }
+    this.render();
   }
 
   setOffline() {
+    this.render();
+  }
+
+  // The indicator's markup (status dot plus label) is server-rendered, so only
+  // toggle its visibility here - writing textContent would destroy the dot.
+  private render() {
     if (this.hasIndicatorTarget) {
-      this.indicatorTarget.textContent = 'You are offline';
-      this.indicatorTarget.classList.remove('hidden');
+      this.indicatorTarget.classList.toggle('hidden', navigator.onLine);
     }
   }
 }
