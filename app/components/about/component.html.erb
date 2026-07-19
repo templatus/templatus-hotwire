@@ -19,7 +19,7 @@
           <%# An odd item count would leave a blank cell, so the last one spans the full row %>
           <% last_and_odd = item[:items].size.odd? && index == item[:items].size - 1 %>
 
-          <article class="bg-base-100 hover:bg-base-200/60 p-5 transition-colors <%= 'sm:col-span-2' if last_and_odd %>">
+          <article class="bg-base-100 p-5 <%= 'sm:col-span-2' if last_and_odd %>">
             <h3 class="flex flex-wrap items-center gap-x-2 gap-y-1">
               <%= link_to feature[:name],
                           feature[:href],
