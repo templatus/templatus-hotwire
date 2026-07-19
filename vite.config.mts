@@ -6,8 +6,10 @@ import { compression } from 'vite-plugin-compression2';
 export default defineConfig({
   plugins: [
     tailwindcss(),
-    compression({ algorithm: 'gzip' }),
-    compression({ algorithm: 'brotliCompress' }),
+    // One instance handling both: the option is `algorithms` (plural), so two
+    // instances passing `algorithm` were silently falling back to the default -
+    // which is both algorithms - and compressing everything twice.
+    compression({ algorithms: ['gzip', 'brotliCompress'] }),
     RailsVite({
       sourceDir: 'app/frontend',
       refresh: [
