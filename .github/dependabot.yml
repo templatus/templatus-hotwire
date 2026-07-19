@@ -61,6 +61,9 @@ updates:
       timezone: Europe/Berlin
     open-pull-requests-limit: 10
     versioning-strategy: auto
+    cooldown:
+      # Matches `minimumReleaseAge` in bunfig.toml
+      default-days: 1
     labels:
       - 'dependencies'
       - 'javascript'
@@ -69,7 +72,25 @@ updates:
         patterns:
           - '@tailwindcss/*'
           - 'tailwindcss'
+          - 'daisyui'
           - 'prettier-plugin-tailwindcss'
+      herb:
+        patterns:
+          - '@herb-tools/*'
+      vite:
+        patterns:
+          - 'vite'
+          - 'rails-vite-plugin'
+          - 'vite-plugin-*'
+      hotwired:
+        patterns:
+          - '@hotwired/*'
+      eslint:
+        patterns:
+          - 'eslint'
+          - 'eslint-*'
+          - '@eslint/*'
+          - 'typescript-eslint'
 
   - package-ecosystem: 'github-actions'
     directory: '/'

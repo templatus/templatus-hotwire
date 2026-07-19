@@ -63,7 +63,7 @@ There are two sister repositories:
 - [Docker](https://www.docker.com/) for production deployment, NOT for development
 - [DockerRailsBase](https://github.com/ledermann/docker-rails-base) for fast building an optimized Docker image based on Alpine Linux
 - [GitHub Actions](https://docs.github.com/en/actions) for testing, linting, and building Docker image
-- [Dependabot](https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/about-dependabot-version-updates) configuration for updating dependencies (with auto-merge)
+- [Dependabot](https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/about-dependabot-version-updates) configuration for updating dependencies (with auto-merge), grouped per toolchain and with a cooldown that matches Bun's `minimumReleaseAge`, so freshly published (and possibly malicious) versions are never installed right away
 - Ready for serving assets via CDN like CloudFront
 - [Honeybadger](https://www.honeybadger.io/) for error tracking in Ruby and JavaScript
 - [RorVsWild](https://www.rorvswild.com/) for performance monitoring
