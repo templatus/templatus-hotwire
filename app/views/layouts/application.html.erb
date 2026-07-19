@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html <%= tag.attributes(lang: 'en', data: { theme: }) %>>
+<%= tag.html(lang: 'en', data: { theme: }) do %>
   <head>
     <meta charset="utf-8">
 
@@ -77,4 +77,4 @@
 
     <%= render AppFooter::Component.new %>
   </body>
-</html>
+<% end %>
