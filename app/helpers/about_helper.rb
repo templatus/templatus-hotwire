@@ -202,11 +202,14 @@ module AboutHelper # rubocop:disable Metrics/ModuleLength
   end
 
   def postgres_version
-    ActiveRecord::Base.connection.select_value('SHOW server_version;')
+    ActiveRecord::Base.with_connection { |c| c.select_value('SHOW server_version;') }
   end
 
   def redis_version
-    Redis.new.info['redis_version']
+    url = ENV.fetch('REDIS_CACHE_URL') { ENV.fetch('REDIS_URL', nil) }
+    Redis.new(url:).info['redis_version']
+  rescue Redis::BaseError
+    nil
   end
 
   def ruby_version
