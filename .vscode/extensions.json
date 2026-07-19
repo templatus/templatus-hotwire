@@ -5,6 +5,6 @@
     "esbenp.prettier-vscode",
     "foxundermoon.shell-format",
     "github.copilot",
-    "ruby-syntax-tree.vscode-syntax-tree"
+    "Shopify.ruby-lsp"
   ]
 }

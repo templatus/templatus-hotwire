@@ -16,7 +16,7 @@
     "**/node_modules": true
   },
 
-  "eslint.validate": ["javascript"],
+  "eslint.validate": ["javascript", "typescript"],
 
   "ruby.lint": {
     "rubocop": {
@@ -25,9 +25,10 @@
   },
 
   "[ruby]": {
-    "editor.defaultFormatter": "ruby-syntax-tree.vscode-syntax-tree",
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
     "editor.formatOnSave": true
   },
+  "rubyLsp.formatter": "rubocop",
 
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"

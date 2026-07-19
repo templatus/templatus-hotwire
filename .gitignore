@@ -32,6 +32,10 @@ public/assets
 /node_modules
 .eslintcache
 
+# macOS folder metadata. Usually a global ignore, but this is a template -
+# don't rely on everyone who clones it having one configured.
+.DS_Store
+
 # Ignore all environment files (except templates).
 /.env*
 !/.env*.erb
