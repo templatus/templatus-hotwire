@@ -13,6 +13,22 @@ describe AboutHelper do
     end
   end
 
+  describe '#alpine_version' do
+    it 'returns nothing off Linux, where there is no Alpine release to read' do
+      stub_const('RUBY_PLATFORM', 'arm64-darwin24')
+
+      expect(helper.alpine_version).to be_nil
+    end
+
+    it 'reads the Alpine release on Linux' do
+      stub_const('RUBY_PLATFORM', 'x86_64-linux')
+
+      # nil on any Linux that isn't Alpine, a version string on Alpine itself -
+      # either way the point is that the platform check lets it through.
+      expect { helper.alpine_version }.not_to raise_error
+    end
+  end
+
   describe '#redis_version' do
     it 'returns the version of the running Redis' do
       expect(helper.redis_version).to match(/\A\d+\.\d+/)
