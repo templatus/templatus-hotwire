@@ -1,15 +1,23 @@
 // View Transitions API is currently available in Chrome only
 // https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API#browser_compatibility
+
+type TurboRender = (
+  currentElement: HTMLElement,
+  newElement: HTMLElement,
+) => void;
+
+interface BeforeRenderDetail {
+  render: TurboRender;
+}
+
 if (document.startViewTransition)
   addEventListener('turbo:before-render', (event) => {
-    const turboEvent = event as CustomEvent;
-    const originalRender = turboEvent.detail.render;
+    const { detail } = event as CustomEvent<BeforeRenderDetail>;
+    const originalRender = detail.render;
 
-    turboEvent.detail.render = (
-      currentElement: HTMLElement,
-      newElement: HTMLElement,
-    ) =>
-      document.startViewTransition?.(() =>
-        originalRender(currentElement, newElement),
-      );
+    detail.render = (currentElement, newElement) => {
+      document.startViewTransition?.(() => {
+        originalRender(currentElement, newElement);
+      });
+    };
   });

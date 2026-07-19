@@ -79,6 +79,13 @@
 
     /* Type Checking */
     "strict": true /* Enable all strict type-checking options. */,
+    "allowJs": true /* Allow JavaScript files to be a part of your program. Needed to type-check eslint.config.mjs. */,
+    "noUncheckedIndexedAccess": true /* Add 'undefined' to a type when accessed using an index. */,
+    "noUnusedLocals": true /* Enable error reporting when local variables aren't read. */,
+    "noUnusedParameters": true /* Raise an error when a function parameter isn't read. */,
+    /* noImplicitOverride is deliberately off: it would demand an `override`
+       modifier on every Stimulus lifecycle hook (connect, disconnect, targets),
+       which is noise rather than safety. */
     // "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
     "strictNullChecks": true /* When type checking, take into account 'null' and 'undefined'. */,
     // "strictFunctionTypes": true,                      /* When assigning functions, check to ensure parameters and the return values are subtype-compatible. */
@@ -102,5 +109,5 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "include": ["app/frontend/**/*.ts", "app/components/**/*.ts"]
+  "include": ["app/frontend/**/*.ts", "vite.config.mts", "eslint.config.mjs"]
 }
