@@ -20,6 +20,8 @@
         <% t.with_tab text: 'Home', href: helpers.root_path %>
         <% t.with_tab text: 'About', href: helpers.about_path %>
       <% end %>
+
+      <%= render ThemeToggle::Component.new %>
     </div>
   </div>
 </header>

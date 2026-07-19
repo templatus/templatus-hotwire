@@ -1,0 +1,43 @@
+<div class="dropdown dropdown-end" data-controller="theme">
+  <div
+    tabindex="0"
+    role="button"
+    class="btn btn-ghost btn-circle btn-sm"
+    aria-label="Change theme"
+  >
+    <%#
+      The button never shows the system mode, only the theme it resolves to.
+      Only one icon is visible, the controller does the switching.
+    %>
+
+    <% icon_modes.each do |mode, options| %>
+      <span class="<%= 'hidden' unless mode == 'light' %>" data-theme-target="icon" data-mode="<%= mode %>">
+        <span class="size-5 <%= options[:icon] %>" aria-hidden="true"></span>
+      </span>
+    <% end %>
+  </div>
+
+  <ul
+    tabindex="0"
+    role="menu"
+    class="dropdown-content menu menu-sm bg-base-100 border-base-300 rounded-box z-50 mt-2 w-36 border p-2 shadow-lg"
+  >
+    <% modes.each do |mode, options| %>
+      <li>
+        <button
+          type="button"
+          role="menuitemradio"
+          aria-checked="<%= mode == 'auto' %>"
+          class="<%= 'menu-active' if mode == 'auto' %>"
+          data-theme-target="option"
+          data-mode="<%= mode %>"
+          data-action="theme#select"
+          data-theme-mode-param="<%= mode %>"
+        >
+          <span class="size-4 <%= options[:icon] %>" aria-hidden="true"></span>
+          <%= options[:label] %>
+        </button>
+      </li>
+    <% end %>
+  </ul>
+</div>

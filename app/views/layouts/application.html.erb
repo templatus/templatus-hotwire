@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html <%= tag.attributes(lang: 'en', data: { theme: }) %>>
   <head>
     <meta charset="utf-8">
 
@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Templatus (Hotwire edition)">
-    <meta name="theme-color" content="#991c1c">
-    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#fef7f6" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#241a19" media="(prefers-color-scheme: dark)">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Templatus (Hotwire edition)">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
