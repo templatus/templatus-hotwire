@@ -95,7 +95,14 @@ module AboutHelper # rubocop:disable Metrics/ModuleLength
           name: 'Prettier',
           href: 'https://prettier.io/',
           description:
-            'Auto-formatting JavaScript and Ruby code in Visual Studio Code',
+            'Auto-formatting JavaScript, TypeScript and CSS in Visual Studio Code',
+        },
+        {
+          name: 'Herb',
+          gem: 'herb',
+          href: 'https://herb-tools.dev/',
+          description:
+            'HTML-aware ERB parser, linter and formatter. Sorts Tailwind classes inside ERB, where Prettier cannot reach them.',
         },
         {
           name: 'Lookbook',

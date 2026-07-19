@@ -47,6 +47,15 @@ jobs:
       - name: Lint with RuboCop
         run: bin/rubocop --parallel
 
+      - name: Check ERB formatting
+        run: bun run erb:check
+
+      - name: Lint ERB with Herb
+        run: bin/herb lint
+
+      - name: Validate ERB with Herb
+        run: bin/herb analyze .
+
       - name: Run ESLint
         run: bun run lint
 

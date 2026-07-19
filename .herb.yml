@@ -1,0 +1,23 @@
+formatter:
+  enabled: true
+  indentWidth: 2
+  maxLineLength: 120
+
+  exclude:
+    - 'public/**'
+    - 'node_modules/**'
+
+  rewriter:
+    # Sorts Tailwind/daisyUI classes into the canonical order. This is why Herb
+    # is here at all: the classes live in ERB and in helper strings, where
+    # prettier-plugin-tailwindcss cannot reach them (it has no ERB parser).
+    pre:
+      - tailwind-class-sorter
+    post: []
+
+linter:
+  rules:
+    # False positive: `>` is standard Stimulus action syntax
+    # (e.g. click->controller#method)
+    html-no-unescaped-entities:
+      enabled: false

@@ -2,6 +2,8 @@
   "name": "templatus-hotwire",
   "private": true,
   "scripts": {
+    "erb:format": "herb-format .",
+    "erb:check": "herb-format --check .",
     "lint": "eslint --cache .",
     "format": "prettier . --write --plugin=prettier-plugin-tailwindcss",
     "tsc": "tsc --noEmit",
@@ -22,6 +24,8 @@
   "version": "0.1.0",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@herb-tools/formatter": "^0.10.2",
+    "@herb-tools/linter": "^0.10.2",
     "@size-limit/file": "^12.1.0",
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/vite": "^4.3.3",

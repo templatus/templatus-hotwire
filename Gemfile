@@ -119,8 +119,8 @@ group :development do
   # Pretty print Ruby objects with proper indentation and colors (https://github.com/amazing-print/amazing_print)
   gem 'amazing_print'
 
-  # ERB lint tool (https://github.com/Shopify/erb_lint)
-  gem 'erb_lint', require: false
+  # HTML-aware ERB parser, linter and formatter (https://herb-tools.dev)
+  gem 'herb', require: false
 end
 
 group :test do

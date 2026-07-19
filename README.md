@@ -39,7 +39,8 @@ There are two sister repositories:
 - [Caddy](https://caddyserver.com/) for automatic HTTPS on `.localhost` domains in development
 - [Overmind](https://github.com/DarthSim/overmind) for starting up the application locally (Procfile handling like Foreman)
 - [dotenv](https://github.com/bkeepers/dotenv) to load environment variables from .env into ENV
-- [Prettier](https://prettier.io/) for auto-formatting JavaScript code in Visual Studio Code
+- [Prettier](https://prettier.io/) for auto-formatting JavaScript, TypeScript and CSS in Visual Studio Code
+- [Herb](https://herb-tools.dev/) for linting and formatting ERB templates, including Tailwind class sorting
 - [SyntaxTree](https://github.com/ruby-syntax-tree/syntax_tree) for auto-formatting Ruby code in Visual Studio Code
 - [Lookbook](https://github.com/allmarkedup/lookbook) as development UI for ViewComponent
 - [annotaterb](https://github.com/drwl/annotaterb) for annotating models and routes
@@ -218,6 +219,20 @@ ESLint:
 
 ```
 bun run lint
+```
+
+ERB (linting, formatting and validation with Herb):
+
+```
+bin/herb lint
+bun run erb:check   # or `bun run erb:format` to fix
+bin/herb analyze .
+```
+
+All of the above (plus security scans and the test suite), exactly as CI runs it:
+
+```
+bin/ci
 ```
 
 ### Running tests locally
