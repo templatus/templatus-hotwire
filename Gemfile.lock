@@ -526,6 +526,7 @@ DEPENDENCIES
   stimulus-rails
   turbo-rails
   tzinfo-data
+  useragent
   view_component
   web-console (>= 4.1.0)
 

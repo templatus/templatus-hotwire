@@ -20,6 +20,10 @@ gem 'view_component'
 # Fast pagination, used here in its keyset (cursor) flavor (https://ddnexus.github.io/pagy)
 gem 'pagy'
 
+# Turns the raw user agent of a click into a readable browser and platform.
+# Ships with actionpack anyway, declared here because we use it directly.
+gem 'useragent'
+
 # Pg is the Ruby interface to the PostgreSQL RDBMS (https://github.com/ged/ruby-pg)
 gem 'pg', '~> 1.1'
 

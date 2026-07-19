@@ -22,8 +22,17 @@
       <%= click.created_at.to_fs(:long) %>
     </time>
 
-    <span class="text-base-content/70 min-w-0 truncate text-sm">
-      <%= click.user_agent %>
+    <%# Raw user agent kept in the tooltip, the parsed parts are what people read %>
+    <span
+      class="tooltip tooltip-bottom text-base-content/70 min-w-0 truncate text-sm"
+      data-tip="<%= click.user_agent %>"
+    >
+      <%= browser_label %>
+
+      <% if platform_label %>
+        <span class="text-base-content/40">·</span>
+        <%= platform_label %>
+      <% end %>
     </span>
 
     <code class="text-base-content/60 ms-auto font-mono text-xs whitespace-nowrap"><%= click.ip.to_s %></code>
