@@ -130,6 +130,7 @@ module AboutHelper # rubocop:disable Metrics/ModuleLength
         },
         {
           name: 'Lookbook',
+          gem: 'lookbook',
           href: 'https://github.com/allmarkedup/lookbook',
           description: 'A native development UI for ViewComponent',
         },
@@ -141,12 +142,14 @@ module AboutHelper # rubocop:disable Metrics/ModuleLength
       items: [
         {
           name: 'RSpec',
+          gem: 'rspec-rails',
           href: 'https://rspec.info/',
           description:
             'Behaviour Driven Development for Ruby. Making TDD Productive and Fun.',
         },
         {
           name: 'RuboCop',
+          gem: 'rubocop',
           href: 'https://rubocop.org/',
           description: 'The Ruby Linter/Formatter that Serves and Protects',
         },
@@ -163,6 +166,7 @@ module AboutHelper # rubocop:disable Metrics/ModuleLength
         },
         {
           name: 'Capybara',
+          gem: 'capybara',
           href: 'https://github.com/teamcapybara/capybara',
           description:
             'Acceptance test framework for web applications.',
@@ -229,8 +233,24 @@ module AboutHelper # rubocop:disable Metrics/ModuleLength
     RUBY_VERSION
   end
 
+  # Development-only gems are missing from the production bundle, so fall back
+  # to the lockfile to show their version on the deployed demo, too.
   def gem_version(name)
-    Gem.loaded_specs[name]&.version&.to_s if name
+    return unless name
+
+    Gem.loaded_specs[name]&.version&.to_s || AboutHelper.locked_gem_versions[name]
+  end
+
+  def self.locked_gem_versions
+    @locked_gem_versions ||=
+      begin
+        lockfile = Rails.root.join('Gemfile.lock')
+        if lockfile.exist?
+          Bundler::LockfileParser.new(lockfile.read).specs.to_h { |s| [s.name, s.version.to_s] }
+        else
+          {}
+        end
+      end
   end
 
   def external_version(name)

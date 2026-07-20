@@ -11,6 +11,27 @@ describe AboutHelper do
     it 'returns nil when no gem is given' do
       expect(helper.gem_version(nil)).to be_nil
     end
+
+    it 'falls back to the lockfile for gems outside the current bundle' do
+      # Development-only gems are absent from the production bundle
+      allow(Gem).to receive(:loaded_specs).and_return({})
+
+      expect(helper.gem_version('rubocop')).to match(/\A\d+\.\d+/)
+    end
+  end
+
+  describe '.locked_gem_versions' do
+    around do |example|
+      described_class.instance_variable_set(:@locked_gem_versions, nil)
+      example.run
+      described_class.instance_variable_set(:@locked_gem_versions, nil)
+    end
+
+    it 'copes with a missing lockfile' do
+      allow(Rails.root).to receive(:join).and_return(Pathname.new('/nope/Gemfile.lock'))
+
+      expect(described_class.locked_gem_versions).to eq({})
+    end
   end
 
   describe '#alpine_version' do
