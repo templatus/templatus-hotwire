@@ -105,9 +105,7 @@ export default class extends Controller {
     }
 
     for (const option of this.optionTargets) {
-      const active = option.dataset.mode === mode;
-      option.classList.toggle('menu-active', active);
-      option.setAttribute('aria-checked', String(active));
+      option.setAttribute('aria-checked', String(option.dataset.mode === mode));
     }
   }
 

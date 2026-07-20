@@ -33,7 +33,7 @@
     tabindex="0"
     role="menu"
     data-action="keydown.esc->theme#close"
-    class="dropdown-content menu menu-sm bg-base-100 border-base-300 rounded-box z-50 mt-2 w-36 border p-2 shadow-lg"
+    class="dropdown-content menu menu-sm bg-base-100 border-base-300 rounded-box z-50 mt-2 w-40 border p-2 shadow-lg"
   >
     <% modes.each do |mode, options| %>
       <%#
@@ -42,11 +42,16 @@
       %>
 
       <li role="none">
+        <%#
+          The checkmark is driven purely by aria-checked, so the controller only
+          has to keep that one attribute in sync.
+        %>
+
         <button
           type="button"
           role="menuitemradio"
           aria-checked="<%= mode == 'auto' %>"
-          class="<%= 'menu-active' if mode == 'auto' %>"
+          class="group"
           data-theme-target="option"
           data-mode="<%= mode %>"
           data-action="theme#select"
@@ -54,6 +59,7 @@
         >
           <span class="size-4 <%= options[:icon] %>" aria-hidden="true"></span>
           <%= options[:label] %>
+          <span class="icon-[lucide--check] ml-auto size-4 opacity-0 group-aria-checked:opacity-100" aria-hidden="true"></span>
         </button>
       </li>
     <% end %>
