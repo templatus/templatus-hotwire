@@ -8,20 +8,24 @@ module AboutHelper # rubocop:disable Metrics/ModuleLength
           name: 'Ruby',
           href: 'https://www.ruby-lang.org/',
           description:
-            'A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.',
+            'A dynamic, open source programming language with a focus on simplicity and productivity. It has an ' \
+            'elegant syntax that is natural to read and easy to write.',
         },
         {
           name: 'Ruby on Rails',
           gem: 'rails',
           href: 'https://rubyonrails.org/',
           description:
-            'Rails is a web application development framework written in the Ruby programming language. It is designed to make programming web applications easier by making assumptions about what every developer needs to get started.',
+            'Rails is a web application development framework written in the Ruby programming language. It is ' \
+            'designed to make programming web applications easier by making assumptions about what every developer ' \
+            'needs to get started.',
         },
         {
           name: 'PostgreSQL',
           href: 'https://www.postgresql.org/',
           description:
-            'PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.',
+            'PostgreSQL is a powerful, open source object-relational database system with over 30 years of active ' \
+            'development that has earned it a strong reputation for reliability, feature robustness, and performance.',
         },
         {
           name: 'Puma',
@@ -41,7 +45,8 @@ module AboutHelper # rubocop:disable Metrics/ModuleLength
           gem: 'pagy',
           href: 'https://ddnexus.github.io/pagy/',
           description:
-            'Pagination for the endlessly scrolling click list. Uses keyset (cursor) pagination, so the query time stays constant no matter how far you scroll.',
+            'Pagination for the endlessly scrolling click list. Uses keyset (cursor) pagination, so the query time ' \
+            'stays constant no matter how far you scroll.',
         },
         {
           name: 'Sidekiq',
@@ -60,7 +65,8 @@ module AboutHelper # rubocop:disable Metrics/ModuleLength
           gem: 'turbo-rails',
           href: 'https://hotwired.dev/',
           description:
-            'Hotwire is an alternative approach to building modern web applications without using much JavaScript by sending HTML instead of JSON over the wire',
+            'Hotwire is an alternative approach to building modern web applications without using much JavaScript by ' \
+            'sending HTML instead of JSON over the wire',
         },
         {
           name: 'ViewComponent',
@@ -73,25 +79,29 @@ module AboutHelper # rubocop:disable Metrics/ModuleLength
           name: 'TypeScript',
           href: 'https://www.typescriptlang.org/',
           description:
-            'TypeScript is an open-source language which builds on JavaScript, one of the world\'s most used tools, by adding static type definitions.',
+            'TypeScript is an open-source language which builds on JavaScript, one of the world\'s most used tools, ' \
+            'by adding static type definitions.',
         },
         {
           name: 'Tailwind CSS 4',
           href: 'https://tailwindcss.com/',
           description:
-            'A utility-first CSS framework packed with classes that can be composed to build any design, directly in your markup.',
+            'A utility-first CSS framework packed with classes that can be composed to build any design, directly in ' \
+            'your markup.',
         },
         {
           name: 'daisyUI',
           href: 'https://daisyui.com/',
           description:
-            'Component library for Tailwind CSS, providing semantic class names and themeable colors. Ships with a custom light and dark theme here, switchable between light, dark and the system preference.',
+            'Component library for Tailwind CSS, providing semantic class names and themeable colors. Ships with a ' \
+            'custom light and dark theme here, switchable between light, dark and the system preference.',
         },
         {
           name: 'Lucide',
           href: 'https://lucide.dev/',
           description:
-            'Icon library, wired up through the Iconify plugin for Tailwind. Icons are CSS masks, so there is no webfont and no icon JavaScript, and only the icons actually used end up in the stylesheet.',
+            'Icon library, wired up through the Iconify plugin for Tailwind. Icons are CSS masks, so there is no ' \
+            'webfont and no icon JavaScript, and only the icons actually used end up in the stylesheet.',
         },
         {
           name: 'Vite',
@@ -115,7 +125,8 @@ module AboutHelper # rubocop:disable Metrics/ModuleLength
           gem: 'herb',
           href: 'https://herb-tools.dev/',
           description:
-            'HTML-aware ERB parser, linter and formatter. Sorts Tailwind classes inside ERB, where Prettier cannot reach them.',
+            'HTML-aware ERB parser, linter and formatter. Sorts Tailwind classes inside ERB, where Prettier cannot ' \
+            'reach them.',
         },
         {
           name: 'Lookbook',
@@ -171,7 +182,8 @@ module AboutHelper # rubocop:disable Metrics/ModuleLength
           name: 'Alpine Linux',
           href: 'https://alpinelinux.org/',
           description:
-            'Alpine Linux is an independent, non-commercial, general purpose Linux distribution designed for power users who appreciate security, simplicity and resource efficiency.',
+            'Alpine Linux is an independent, non-commercial, general purpose Linux distribution designed for power ' \
+            'users who appreciate security, simplicity and resource efficiency.',
         },
         {
           name: 'Docker',
@@ -182,7 +194,8 @@ module AboutHelper # rubocop:disable Metrics/ModuleLength
           name: 'Plausible',
           href: 'https://plausible.io/',
           description:
-            'Plausible is lightweight and open source web analytics. No cookies and fully compliant with GDPR, CCPA and PECR.',
+            'Plausible is lightweight and open source web analytics. No cookies and fully compliant with GDPR, CCPA ' \
+            'and PECR.',
         },
       ],
     },
