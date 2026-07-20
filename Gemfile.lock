@@ -128,7 +128,7 @@ GEM
     diff-lcs (1.6.2)
     dotenv (3.2.0)
     drb (2.2.3)
-    erb (6.0.5)
+    erb (6.0.6)
     erubi (1.13.1)
     factory_bot (6.6.0)
       activesupport (>= 6.1.0)
