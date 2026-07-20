@@ -1,3 +1,6 @@
 db/schema.rb
 coverage/*
 public/*
+
+# Bundled gems (CI installs them here via bundler-cache)
+vendor/
