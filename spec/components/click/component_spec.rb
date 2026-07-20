@@ -2,10 +2,12 @@ describe Click::Component, type: :component do
   subject(:output) { render_inline(described_class.new(click:)) }
 
   let(:click) do
-    build_stubbed(:click,
-                  user_agent:,
-                  ip: '203.0.113.7',
-                  created_at: Time.zone.parse('2025-09-16 10:54'))
+    build_stubbed(
+      :click,
+      user_agent:,
+      ip: '203.0.113.7',
+      created_at: Time.zone.parse('2025-09-16 10:54'),
+    )
   end
 
   context 'with a desktop browser' do

@@ -23,6 +23,6 @@ if Rails.application.config.x.app_host
     require './app/middleware/cloudfront_denier'
 
     Rails.application.config.middleware.use CloudfrontDenier,
-                    target: "https://#{Rails.application.config.x.app_host}"
+                                            target: "https://#{Rails.application.config.x.app_host}"
   end
 end

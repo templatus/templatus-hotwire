@@ -27,7 +27,7 @@ class ClicksPreview < ViewComponent::Preview
       ip: '123.123.255.255',
       user_agent:
         'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) ' \
-          'Chrome/81.0.4044.138 Safari/537.36',
+        'Chrome/81.0.4044.138 Safari/537.36',
       created_at: 10.minutes.ago,
     )
   end

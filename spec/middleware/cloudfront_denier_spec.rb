@@ -13,9 +13,9 @@ describe CloudfrontDenier do
   it 'accepts request for asset from CloudFront' do
     code, =
       middleware.call env_for(
-                        'http://example.com/assets/example.js',
-                        'HTTP_USER_AGENT' => 'Amazon CloudFront',
-                      )
+        'http://example.com/assets/example.js',
+        'HTTP_USER_AGENT' => 'Amazon CloudFront',
+      )
 
     expect(code).to eq(200)
   end
@@ -23,9 +23,9 @@ describe CloudfrontDenier do
   it 'accepts request for Vite-built asset from CloudFront' do
     code, =
       middleware.call env_for(
-                        'http://example.com/vite/assets/application-abc123.js',
-                        'HTTP_USER_AGENT' => 'Amazon CloudFront',
-                      )
+        'http://example.com/vite/assets/application-abc123.js',
+        'HTTP_USER_AGENT' => 'Amazon CloudFront',
+      )
 
     expect(code).to eq(200)
   end
@@ -33,9 +33,9 @@ describe CloudfrontDenier do
   it 'accepts request for non-assets from browser' do
     code, =
       middleware.call env_for(
-                        'http://example.com/index.html',
-                        'HTTP_USER_AGENT' => 'Firefox',
-                      )
+        'http://example.com/index.html',
+        'HTTP_USER_AGENT' => 'Firefox',
+      )
 
     expect(code).to eq(200)
   end
@@ -43,9 +43,9 @@ describe CloudfrontDenier do
   it 'rejects request for non-assets from CloudFront' do
     code, env =
       middleware.call env_for(
-                        'http://example.com/index.html',
-                        'HTTP_USER_AGENT' => 'Amazon CloudFront',
-                      )
+        'http://example.com/index.html',
+        'HTTP_USER_AGENT' => 'Amazon CloudFront',
+      )
 
     expect(code).to eq(302)
     expect(env['location']).to eq(host)
