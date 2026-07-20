@@ -43,7 +43,7 @@ There are two sister repositories:
 - [dotenv](https://github.com/bkeepers/dotenv) to load environment variables from .env into ENV
 - [Prettier](https://prettier.io/) for auto-formatting JavaScript, TypeScript and CSS in Visual Studio Code
 - [Herb](https://herb-tools.dev/) for linting and formatting ERB templates, including Tailwind class sorting
-- [SyntaxTree](https://github.com/ruby-syntax-tree/syntax_tree) for auto-formatting Ruby code in Visual Studio Code
+- [Ruby LSP](https://github.com/Shopify/ruby-lsp) with RuboCop for auto-formatting Ruby code in Visual Studio Code
 - [Lookbook](https://github.com/allmarkedup/lookbook) as development UI for ViewComponent
 - [annotaterb](https://github.com/drwl/annotaterb) for annotating models and routes
 - Live reloading
@@ -53,6 +53,8 @@ There are two sister repositories:
 - [RuboCop](https://rubocop.org/) for Ruby static code analysis
 - [ESLint](https://eslint.org/) for JavaScript static code analysis
 - [ShellCheck](https://www.shellcheck.net/) for linting shell scripts
+- [Brakeman](https://brakemanscanner.org/) for static security analysis of Rails code
+- [bundler-audit](https://github.com/rubysec/bundler-audit) and `bun audit` for checking dependencies against known vulnerabilities
 - [size-limit](https://github.com/ai/size-limit) to keep the compiled JavaScript below a fixed budget
 - [RSpec](https://rspec.info/) for Ruby testing
 - [Factory Bot](https://github.com/thoughtbot/factory_bot) for setting up Ruby objects as test data
@@ -92,20 +94,9 @@ performed against the demo installation on production. It uses an inexpensive vi
 
 [![Security headers](docs/security-headers.png)](https://securityheaders.com/?q=templatus-hotwire.ledermann.dev&followRedirects=on)
 
-What's the red _Permissions-Policy_ badge? This seems to be fixed with one of the next Rails update:
-https://github.com/rails/rails/pull/41994
+### MDN HTTP Observatory
 
-### Mozilla Observatory
-
-[![Mozilla Observatory](docs/mozilla-observatory.png)](https://observatory.mozilla.org/analyze/templatus-hotwire.ledermann.dev)
-
-### WebPageTest
-
-[![WebPageTest](docs/web-page-test.png)](https://www.webpagetest.org/result/220530_BiDcQQ_83b754931114d99469b521e72731eb4d/)
-
-### GTmetrix
-
-[![GTmetrix](docs/GTmetrix.png)](https://gtmetrix.com/reports/templatus-hotwire.ledermann.dev/rSqolxsw/)
+[![HTTP Observatory](docs/mozilla-observatory.png)](https://developer.mozilla.org/en-US/observatory/analyze?host=templatus-hotwire.ledermann.dev)
 
 ### Check-your-website
 
@@ -232,6 +223,12 @@ ESLint:
 
 ```
 bun run lint
+```
+
+TypeScript:
+
+```
+bun run tsc
 ```
 
 ERB (linting, formatting and validation with Herb):
