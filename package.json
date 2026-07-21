@@ -32,7 +32,7 @@
     "@size-limit/file": "^12.1.0",
     "@tailwindcss/vite": "^4.3.3",
     "@types/rails__actioncable": "^8.0.3",
-    "daisyui": "^5.6.18",
+    "daisyui": "^5.7.0",
     "eslint": "^10.7.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.6",
