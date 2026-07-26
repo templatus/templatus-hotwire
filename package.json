@@ -47,6 +47,9 @@
     "vite": "^8.1.5",
     "vite-plugin-compression2": "^2.5.3"
   },
+  "overrides": {
+    "brace-expansion": "^5.0.8"
+  },
   "trustedDependencies": [
     "@tailwindcss/oxide",
     "vite"
