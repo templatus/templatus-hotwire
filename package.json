@@ -29,7 +29,7 @@
     "@herb-tools/linter": "^0.10.2",
     "@iconify-json/lucide": "^1.2.120",
     "@iconify/tailwind4": "^1.2.3",
-    "@size-limit/file": "^13.0.1",
+    "@size-limit/file": "^13.0.2",
     "@tailwindcss/vite": "^4.3.3",
     "@types/rails__actioncable": "^8.0.3",
     "daisyui": "^5.7.4",
