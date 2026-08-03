@@ -1,11 +1,13 @@
+# Rails ships pre-rendered, minified error pages in public/. They are framework
+# output, not source, so neither formatter nor linter should touch them.
+files:
+  exclude:
+    - 'public/**'
+
 formatter:
   enabled: true
   indentWidth: 2
   maxLineLength: 120
-
-  exclude:
-    - 'public/**'
-    - 'node_modules/**'
 
   rewriter:
     # Sorts Tailwind/daisyUI classes into the canonical order. This is why Herb
