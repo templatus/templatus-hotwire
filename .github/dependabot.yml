@@ -13,6 +13,8 @@ updates:
       timezone: Europe/Berlin
     open-pull-requests-limit: 10
     versioning-strategy: lockfile-only
+    cooldown:
+      default-days: 3
     allow:
       - dependency-type: direct
       - dependency-type: indirect
@@ -63,7 +65,7 @@ updates:
     versioning-strategy: auto
     cooldown:
       # Matches `minimumReleaseAge` in bunfig.toml
-      default-days: 1
+      default-days: 3
     labels:
       - 'dependencies'
       - 'javascript'
@@ -98,6 +100,8 @@ updates:
       interval: 'daily'
       time: '01:00'
       timezone: Europe/Berlin
+    cooldown:
+      default-days: 3
     labels:
       - 'dependencies'
       - 'gh-action'
