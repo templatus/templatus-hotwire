@@ -5,7 +5,7 @@
     "": {
       "name": "templatus-hotwire",
       "dependencies": {
-        "@honeybadger-io/js": "^6.16.0",
+        "@honeybadger-io/js": "^6.16.1",
         "@hotwired/stimulus": "^3.2.2",
         "@hotwired/turbo-rails": "^8.0.23",
         "@plausible-analytics/tracker": "^0.4.6",
@@ -85,9 +85,9 @@
 
     "@herb-tools/tailwind-class-sorter": ["@herb-tools/tailwind-class-sorter@0.10.3", "", { "dependencies": { "clear-module": "^4.1.3", "escalade": "^3.2.0", "jiti": "^2.7.0", "postcss": "^8.5.18", "postcss-import": "^16.1.1" }, "peerDependencies": { "tailwindcss": "^3.0 || ^4.0" } }, "sha512-KAowwSS6NmcRTQrQ591DR6dGI675KB0o/yxZt113BNDWiBB+bl4xdnd3hT19JV6Jsh3sS/0e90hYGUj/6PBW0g=="],
 
-    "@honeybadger-io/core": ["@honeybadger-io/core@6.11.0", "", { "dependencies": { "json-nd": "^1.0.0", "stacktrace-parser": "^0.1.10" } }, "sha512-cIo4VzV7PvQ3urJ3lA9f/sz5hEJavaypgALhhK0Kye+lBXLE1nttsG+W6e30Ii8mygyoRcla0uVgk2pDcTJTvw=="],
+    "@honeybadger-io/core": ["@honeybadger-io/core@6.11.1", "", { "dependencies": { "json-nd": "^1.0.0", "stacktrace-parser": "^0.1.10" } }, "sha512-ojVk6q2GUXqW80szrk/zp2XC1YQFJWQvGHdNNyc1RPGTekguSMpa7Pp9jKitHpdYIsbmEnj1wPTyZassOfSLeg=="],
 
-    "@honeybadger-io/js": ["@honeybadger-io/js@6.16.0", "", { "dependencies": { "@honeybadger-io/core": "^6.11.0", "@types/aws-lambda": "^8.10.89", "@types/express": "^5.0.3" }, "peerDependencies": { "fastify": ">=4", "fastify-plugin": ">=4" }, "optionalPeers": ["fastify", "fastify-plugin"], "bin": { "honeybadger-checkins-sync": "scripts/check-ins-sync-bin.js" } }, "sha512-5xGyk6+1W//a+wcHNrR7u0KMAqkoNFtaOCl3RGOtTeUxKFlAmo7jHp90zOmOvrU+Z/NbDB4U8fLhroBw7A028g=="],
+    "@honeybadger-io/js": ["@honeybadger-io/js@6.16.1", "", { "dependencies": { "@honeybadger-io/core": "^6.11.1", "@types/aws-lambda": "^8.10.89", "@types/express": "^5.0.3" }, "peerDependencies": { "fastify": ">=4", "fastify-plugin": ">=4" }, "optionalPeers": ["fastify", "fastify-plugin"], "bin": { "honeybadger-checkins-sync": "scripts/check-ins-sync-bin.js" } }, "sha512-QN16xawSoTytzNj2A/+eZ0N/iOo1sCETfm70A+mFSlwFqQF0Y50NMKK9DQ4WpeKUleESl5Szmv3FJCR9bW76sQ=="],
 
     "@hotwired/stimulus": ["@hotwired/stimulus@3.2.2", "", {}, "sha512-eGeIqNOQpXoPAIP7tC1+1Yc1yl1xnwYqg+3mzqxyrbE5pg5YFBZcA6YoTiByJB6DKAEsiWtl6tjTJS4IYtbB7A=="],
 
