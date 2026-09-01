@@ -27,7 +27,7 @@
     "@eslint/js": "^10.0.1",
     "@herb-tools/formatter": "^0.10.3",
     "@herb-tools/linter": "^0.10.3",
-    "@iconify-json/lucide": "^1.2.126",
+    "@iconify-json/lucide": "^1.2.127",
     "@iconify/tailwind4": "^1.2.3",
     "@size-limit/file": "^13.0.3",
     "@tailwindcss/vite": "^4.3.3",
