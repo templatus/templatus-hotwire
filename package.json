@@ -17,7 +17,7 @@
     "@plausible-analytics/tracker": "^0.4.6",
     "@rails/actioncable": "^8.1.301",
     "el-transition": "^0.0.7",
-    "idiomorph": "^0.7.4",
+    "idiomorph": "^0.8.0",
     "register-service-worker": "^1.7.2",
     "stimulus-vite-helpers": "^3.1.0",
     "timeago.js": "^4.0.2"
