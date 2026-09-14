@@ -230,7 +230,7 @@ GEM
     minitest (6.0.6)
       drb (~> 2.0)
       prism (~> 1.5)
-    msgpack (1.8.4)
+    msgpack (1.8.5)
     nenv (0.3.0)
     net-imap (0.6.7)
       date
