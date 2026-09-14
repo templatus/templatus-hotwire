@@ -65,6 +65,13 @@ gem 'rorvswild'
 # Class to build custom data structures, similar to a Hash. (https://github.com/ruby/ostruct)
 gem 'ostruct'
 
+# JSON implementation for Ruby (https://github.com/ruby/json)
+# Pinned below 3.0: ActiveSupport::JSON.decode passes a positional options hash
+# to JSON.parse, which json 3 rejects with ArgumentError. This breaks every
+# request that reads the session cookie. Fixed by rails/rails#58601, which is
+# not released yet (latest is Rails 8.1.3.1).
+gem 'json', '< 3'
+
 group :development, :test do
   # Debugging functionality for Ruby (https://github.com/ruby/debug)
   gem 'debug', platforms: %i[mri windows], require: 'debug/prelude'
