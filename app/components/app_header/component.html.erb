@@ -22,9 +22,9 @@
     </div>
 
     <div class="navbar-end gap-2">
-      <%= render Tabs::Component.new do |t| %>
-        <% t.with_tab text: 'Home', href: helpers.root_path %>
-        <% t.with_tab text: 'About', href: helpers.about_path %>
+      <%= render Tabs::Component.new do |tabs| %>
+        <% tabs.with_tab text: 'Home', href: helpers.root_path %>
+        <% tabs.with_tab text: 'About', href: helpers.about_path %>
       <% end %>
 
       <%= render ThemeToggle::Component.new %>
