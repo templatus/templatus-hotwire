@@ -32,7 +32,7 @@
         "playwright": "^1.64.0",
         "prettier": "^3.9.10",
         "prettier-plugin-tailwindcss": "^0.8.1",
-        "rails-vite-plugin": "^0.2.5",
+        "rails-vite-plugin": "^0.3.0",
         "size-limit": "^14.2.0",
         "tailwindcss": "^4.3.3",
         "typescript": "^6.0.3",
@@ -501,7 +501,7 @@
 
     "qified": ["qified@0.10.1", "", { "dependencies": { "hookified": "^2.1.1" } }, "sha512-+Owyggi9IxT1ePKGafcI87ubSmxol6smwJ+RAHDQlx9+9cPwFWDiKFFCPuWhr9ignlGpZ9vDQLw67N4dcTVFEA=="],
 
-    "rails-vite-plugin": ["rails-vite-plugin@0.2.5", "", { "dependencies": { "picomatch": "^4.0.0" }, "peerDependencies": { "vite": ">=5.0.0" } }, "sha512-/VLHDAiQLOl/NdH7Q+Bs2UP8eMJepZurDLYqq/EO2elNWdW3OTM7Krv/MdlU4j1LOgti9taZimZSjEwcHUrx5g=="],
+    "rails-vite-plugin": ["rails-vite-plugin@0.3.0", "", { "dependencies": { "picomatch": "^4.0.0" }, "peerDependencies": { "vite": ">=7.0.0" } }, "sha512-nrjisoAj+WhVcUCPh0EZz2KPcfgGlUx4U9CnF0HY535OunMIL5EmPJ+67aIb40jsAcot1bg1uF7JodEBRdG8jw=="],
 
     "read-cache": ["read-cache@1.0.2", "", {}, "sha512-/peqiBB/n07gQGLsWaHho3WfvUyRscw0gYTsEFMhrIe/nWLkYaf5SbKYjGYqtRV3aPwykJgF2VEMo1ac4bnsGA=="],
 
