@@ -192,6 +192,6 @@ jobs:
           DEPLOY_HOOK: ${{ secrets.DEPLOY_HOOK }}
           HONEYBADGER_API_KEY: ${{ secrets.HONEYBADGER_API_KEY }}
         if: env.DEPLOY_HOOK != null && env.HONEYBADGER_API_KEY != null
-        uses: honeybadger-io/github-notify-deploy-action@v1
+        uses: honeybadger-io/github-notify-deploy-action@v2
         with:
           api_key: ${{ secrets.HONEYBADGER_API_KEY }}
