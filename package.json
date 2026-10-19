@@ -33,7 +33,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "@types/rails__actioncable": "^8.0.3",
     "daisyui": "^5.7.50",
-    "eslint": "^10.12.0",
+    "eslint": "^10.13.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.7",
     "playwright": "^1.64.1",
