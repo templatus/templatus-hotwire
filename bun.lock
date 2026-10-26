@@ -22,7 +22,7 @@
         "@herb-tools/linter": "^0.11.1",
         "@iconify-json/lucide": "^1.2.147",
         "@iconify/tailwind4": "^1.2.3",
-        "@size-limit/file": "^14.2.0",
+        "@size-limit/file": "^14.3.0",
         "@tailwindcss/vite": "^4.3.3",
         "@types/rails__actioncable": "^8.0.3",
         "daisyui": "^5.7.50",
@@ -183,7 +183,7 @@
 
     "@ruby/prism": ["@ruby/prism@1.9.0", "", {}, "sha512-/j+JfP1eA0nCjx6c/8L6K/ENErmsqc6RMAba8rKYNz4RadrT7AW20u4WrjpWYWzdlk6k1YWHxoW9OS68w02+Vw=="],
 
-    "@size-limit/file": ["@size-limit/file@14.2.0", "", { "peerDependencies": { "size-limit": "14.2.0" } }, "sha512-ROqMjC8Pi/ogIIm79Y4u8YieXJb++MaZWbdv/am16l4cS9CxSUXmqP3igIXyv3gK3LMG6DkZdWSM5KVND2ug7g=="],
+    "@size-limit/file": ["@size-limit/file@14.3.0", "", { "peerDependencies": { "size-limit": "14.3.0" } }, "sha512-GWKOi0rorXPbYmwbT926Z91t28rg5gd5hv8ywY1FNcaYf8NbibgK5K5YabYbLkV6KpGwuuixBRtIzl3ZpPzUfw=="],
 
     "@tailwindcss/node": ["@tailwindcss/node@4.3.3", "", { "dependencies": { "@jridgewell/remapping": "^2.3.5", "enhanced-resolve": "^5.24.1", "jiti": "^2.7.0", "lightningcss": "1.32.0", "magic-string": "^0.30.21", "source-map-js": "^1.2.1", "tailwindcss": "4.3.3" } }, "sha512-/T8IKEsf9VTU6tLjgC7+sv2mOPtQxzE2jMw7u4Tt40Tx+QSZxpzh95/H6cMKoja9XuW7iMdLJYBB0o9G1CaAgg=="],
 
