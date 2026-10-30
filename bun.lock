@@ -38,7 +38,7 @@
         "typescript": "^6.0.3",
         "typescript-eslint": "^8.72.1",
         "vite": "^8.3.5",
-        "vite-plugin-compression2": "^2.5.3",
+        "vite-plugin-compression2": "^2.5.4",
       },
     },
   },
@@ -567,7 +567,7 @@
 
     "vite": ["vite@8.3.5", "", { "dependencies": { "lightningcss": "^1.33.0", "picomatch": "^4.0.7", "postcss": "^8.5.30", "rolldown": "~1.2.14", "tinyglobby": "^0.2.17" }, "optionalDependencies": { "fsevents": "~2.3.3" }, "peerDependencies": { "@types/node": "^20.19.0 || >=22.12.0", "@vitejs/devtools": "^0.7.1 || ^0.8.0", "esbuild": "^0.27.0 || ^0.28.0", "jiti": ">=1.21.0", "less": "^4.0.0", "sass": "^1.70.0", "sass-embedded": "^1.70.0", "stylus": ">=0.54.8", "sugarss": "^5.0.0", "terser": "^5.16.0", "tsx": "^4.8.1", "yaml": "^2.4.2" }, "optionalPeers": ["@types/node", "@vitejs/devtools", "esbuild", "jiti", "less", "sass", "sass-embedded", "stylus", "sugarss", "terser", "tsx", "yaml"], "bin": { "vite": "bin/vite.js" } }, "sha512-z1YpjieJ9g0ebTmQpLBv/oq9E3F9EIlOe+7LahW8SrE3LTiG3udBRUXQOlYXP9b+IC2q2phHeVxj9xGlw34OEQ=="],
 
-    "vite-plugin-compression2": ["vite-plugin-compression2@2.5.3", "", { "dependencies": { "@rollup/pluginutils": "^5.1.0", "tar-mini": "^0.2.0" } }, "sha512-ItPgqQWkcnBbVw7is9OKwiZ8v6+ju9rYROl5Lp6QfQDEx/d55AwJQb/KLpsQqsU9HoigYBsZ8tK6I02UwJNvEw=="],
+    "vite-plugin-compression2": ["vite-plugin-compression2@2.5.4", "", { "dependencies": { "@rollup/pluginutils": "^5.1.0", "tar-mini": "^0.2.0" } }, "sha512-zZ8gKdboMu+yoD1GD3MIgdEdN0ds8+leZ253/641yxMRa8bwa8Tl71DFcJR2IKLGLve1B+GRdLfIYyecv06QQQ=="],
 
     "which": ["which@2.0.2", "", { "dependencies": { "isexe": "^2.0.0" }, "bin": { "node-which": "./bin/node-which" } }, "sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA=="],
 
