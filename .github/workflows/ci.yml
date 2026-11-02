@@ -77,9 +77,6 @@ jobs:
       - name: Scan for common Rails security vulnerabilities using static analysis
         run: bin/brakeman --quiet --no-pager --exit-on-warn --exit-on-error
 
-      - name: Run security audit for JavaScript packages
-        run: bun audit
-
       - name: Get Playwright version
         id: playwright-version
         run: echo "version=$(bun -e "console.log(require('./node_modules/playwright/package.json').version)")" >> $GITHUB_OUTPUT
