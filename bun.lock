@@ -9,7 +9,7 @@
         "@hotwired/stimulus": "^3.2.2",
         "@hotwired/turbo-rails": "^8.0.23",
         "@plausible-analytics/tracker": "^0.4.7",
-        "@rails/actioncable": "^8.1.400",
+        "@rails/actioncable": "^8.1.401",
         "el-transition": "^0.0.7",
         "idiomorph": "^0.8.0",
         "register-service-worker": "^1.7.2",
@@ -145,7 +145,7 @@
 
     "@plausible-analytics/tracker": ["@plausible-analytics/tracker@0.4.7", "", {}, "sha512-majmq1uion4uLo88Tr0eMCMfi7TY00okp3I0Vql9egFaAz6DYCW4bJaV3t5LB3BfcvW5exJpmqzROU0a1b6nAA=="],
 
-    "@rails/actioncable": ["@rails/actioncable@8.1.400", "", {}, "sha512-Qffc3/I9xcpeaal12hmi9EPRV3hz9FvakUHBR7kL0jpZviWwO9dyaG8F1ltcjkHIdFxQ5QqzRyequAWHMq17xQ=="],
+    "@rails/actioncable": ["@rails/actioncable@8.1.401", "", {}, "sha512-eZdEy9UmnsaeDHr5G5nFhdgsaMo9EZVq2JMAjqtNmVDqnKWHwvTMt0Ah1CWBf7g7BDLR3WCDgHS2aOhbpjqkWw=="],
 
     "@rolldown/binding-android-arm-eabi": ["@rolldown/binding-android-arm-eabi@1.2.16", "", { "os": "android", "cpu": "arm" }, "sha512-ia3DwAs0OsMGS7+IConptSiyk9pEXkOx/AbJ2n/lAGxH3QkWQus1t8d7gnAT38FCU2sQu8lUbeR6AiZFv4JxaA=="],
 
