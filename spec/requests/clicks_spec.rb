@@ -133,6 +133,26 @@ describe 'Clicks' do
       end
     end
 
+    # Rails cannot tell which of the two headers to trust, so the spoofing
+    # check must stay active. Honeybadger ignores this error (see
+    # config/honeybadger.yml).
+    context 'when Client-IP contradicts X-Forwarded-For' do
+      def call
+        post clicks_path(format: :turbo_stream),
+             headers: {
+               HTTP_USER_AGENT: user_agent,
+               REMOTE_ADDR: '10.0.1.4',
+               HTTP_X_FORWARDED_FOR: '195.178.110.135',
+               HTTP_CLIENT_IP: '3.168.45.78',
+             }
+      end
+
+      it 'rejects the request as IP spoofing' do
+        expect { call }.to raise_error(ActionDispatch::RemoteIp::IpSpoofAttackError)
+        expect(Click.count).to eq(0)
+      end
+    end
+
     context 'when saving fails' do
       let(:ipv6) { 'invalid' }
 

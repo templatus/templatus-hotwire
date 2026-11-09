@@ -1,0 +1,9 @@
+# Settings from ENV (for example HONEYBADGER_API_KEY) take precedence.
+# https://docs.honeybadger.io/lib/ruby/gem-reference/configuration/
+exceptions:
+  # Added to the default list of ignored exceptions.
+  ignore:
+    # Rails raises this error when Client-IP and X-Forwarded-For disagree.
+    # Mostly bots send a forged Client-IP header. The spoofing check stays
+    # active, because it protects setups where a proxy sets Client-IP.
+    - ActionDispatch::RemoteIp::IpSpoofAttackError
