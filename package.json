@@ -37,7 +37,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.7",
     "playwright": "^1.65.0",
-    "prettier": "^3.9.10",
+    "prettier": "^3.10.0",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "rails-vite-plugin": "^0.3.0",
     "size-limit": "^14.3.0",
