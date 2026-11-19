@@ -269,7 +269,7 @@ GEM
       nenv (~> 0.1)
       shellany (~> 0.0)
     ostruct (0.6.3)
-    pagy (43.8.2)
+    pagy (43.8.3)
       json
       uri
       yaml
