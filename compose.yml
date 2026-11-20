@@ -28,11 +28,11 @@ services:
       POSTGRES_PASSWORD: my-secret-database-password
     networks:
       - internal
-    image: postgres:18-alpine
+    image: postgres:19-alpine
     healthcheck:
       test: ['CMD-SHELL', 'pg_isready -U postgres']
     volumes:
-      - postgresql:/var/lib/postgresql/data
+      - postgresql:/var/lib/postgresql
 
   redis:
     networks:
