@@ -177,7 +177,7 @@ git clone git@github.com:templatus/templatus-hotwire.git
 cd templatus-hotwire
 ```
 
-2. Install PostgreSQL, Redis, Caddy, Overmind and ShellCheck (if not already present). On a Mac with HomeBrew, run this to install from the `Brewfile`:
+2. Install PostgreSQL if it is not already present, for example with [Postgres.app](https://postgresapp.com/). Then install Redis, Caddy, Overmind and ShellCheck. On a Mac with HomeBrew, run this to install them from the `Brewfile`:
 
 ```bash
 brew bundle
