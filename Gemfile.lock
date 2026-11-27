@@ -370,7 +370,7 @@ GEM
       rbs (>= 4.0.0)
       tsort
     redcarpet (3.6.1)
-    redis (6.1.0)
+    redis (6.1.1)
       redis-client (= 0.31.0)
     redis-client (0.31.0)
       connection_pool
